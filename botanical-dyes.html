@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BOTANICAL DYES | 天然草木染与面料质感再造</title>
+  <meta name="description" content="Lumi Song (宋婷婷) — 天然草木染与面料质感再造：精通植物色素萃取与环保染色，运用石榴皮、核桃皮、紫甘蓝、紫苏、洋葱皮、枇杷叶、葡萄皮等纯天然材料打造高级呼吸感面料。">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Jost:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Noto+Serif+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-cream: #FAF8F5;
+      --bg-warm-oat: #F3EFEA;
+      --bg-pure: #FFFFFF;
+      --text-dark: #22201E;
+      --text-muted: #585550;
+      --text-light: #9E9A92;
+      --line-subtle: #E6E0D6;
+      --accent-terracotta: #9B634E;
+      --accent-sage: #4E6359;
+      
+      --font-display: 'Italiana', 'Noto Serif SC', serif;
+      --font-body: 'Jost', 'Noto Serif SC', -apple-system, sans-serif;
+      --font-serif: 'Noto Serif SC', serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg-cream);
+      color: var(--text-dark);
+      font-family: var(--font-body);
+      font-weight: 300;
+      line-height: 1.8;
+      letter-spacing: 0.02em;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    header {
+      background: var(--bg-cream);
+      border-bottom: 1px solid var(--line-subtle);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(8px);
+    }
+
+    .nav-wrapper {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 1.3rem 2rem;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+    }
+
+    .nav-left, .nav-right {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-right { justify-content: flex-end; }
+
+    .nav-item a {
+      text-decoration: none;
+      color: var(--text-dark);
+      font-size: 0.84rem;
+      letter-spacing: 0.12em;
+      text-transform: lowercase;
+      transition: color 0.25s ease;
+    }
+
+    .nav-item a:hover { color: var(--accent-terracotta); }
+
+    .lang-switcher {
+      display: inline-flex;
+      border: 1px solid var(--line-subtle);
+      border-radius: 20px;
+      padding: 2px;
+      background: var(--bg-pure);
+      margin-left: 0.5rem;
+    }
+
+    .lang-btn {
+      background: none;
+      border: none;
+      padding: 0.25rem 0.75rem;
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      cursor: pointer;
+      border-radius: 16px;
+      color: var(--text-muted);
+      transition: all 0.25s ease;
+    }
+
+    .lang-btn.active {
+      background: var(--text-dark);
+      color: var(--bg-cream);
+      font-weight: 500;
+    }
+
+    .brand-logo {
+      text-align: center;
+      text-decoration: none;
+      color: var(--text-dark);
+    }
+
+    .brand-logo h1 {
+      font-family: var(--font-display);
+      font-size: 2.2rem;
+      font-weight: 400;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      line-height: 1;
+    }
+
+    .brand-logo span {
+      display: block;
+      font-size: 0.65rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-top: 0.35rem;
+    }
+
+    /* Hero Manifesto Box */
+    .dyes-hero {
+      max-width: 1100px;
+      margin: 4.5rem auto 3.5rem;
+      padding: 0 2rem;
+      text-align: center;
+    }
+
+    .dyes-tag {
+      font-size: 0.8rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--accent-terracotta);
+      margin-bottom: 1.2rem;
+      display: block;
+    }
+
+    .dyes-title {
+      font-family: var(--font-display);
+      font-size: 3rem;
+      font-weight: 400;
+      line-height: 1.3;
+      margin-bottom: 2rem;
+      color: var(--text-dark);
+      text-transform: lowercase;
+    }
+
+    .dyes-statement-box {
+      background: var(--bg-warm-oat);
+      border: 1px solid var(--line-subtle);
+      padding: 2.5rem 3rem;
+      margin: 2.5rem auto;
+      max-width: 960px;
+      border-radius: 2px;
+      box-shadow: 0 10px 30px rgba(34, 32, 30, 0.03);
+    }
+
+    .dyes-statement {
+      font-family: var(--font-serif);
+      font-size: 1.12rem;
+      line-height: 2.2;
+      color: var(--text-dark);
+      text-align: justify;
+    }
+
+    /* Palette Grid Section */
+    .palette-section {
+      max-width: 1360px;
+      margin: 4rem auto 6rem;
+      padding: 0 2rem;
+    }
+
+    .section-lead {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .section-lead h2 {
+      font-family: var(--font-display);
+      font-size: 2.4rem;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+    }
+
+    .palette-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 2rem;
+    }
+
+    .palette-card {
+      background: var(--bg-pure);
+      border: 1px solid var(--line-subtle);
+      border-radius: 2px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.35s ease;
+    }
+
+    .palette-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 36px rgba(34, 32, 30, 0.08);
+      border-color: var(--text-dark);
+    }
+
+    .color-swatch-banner {
+      height: 190px;
+      width: 100%;
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      padding: 1.2rem;
+    }
+
+    .swatch-hex {
+      background: rgba(250, 248, 245, 0.92);
+      backdrop-filter: blur(8px);
+      padding: 0.25rem 0.75rem;
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      border-radius: 2px;
+      font-weight: 500;
+      color: var(--text-dark);
+      border: 1px solid rgba(0,0,0,0.06);
+    }
+
+    /* Bold Vivid Botanical Color Gradients */
+    .c-pomegranate { background: linear-gradient(135deg, #E69D3E 0%, #C47920 100%); }
+    .c-walnut { background: linear-gradient(135deg, #8B4A2F 0%, #5E2F1B 100%); }
+    .c-perilla { background: linear-gradient(135deg, #BD4370 0%, #852246 100%); }
+    .c-cabbage { background: linear-gradient(135deg, #5A6A8E 0%, #354260 100%); }
+    .c-onion { background: linear-gradient(135deg, #F39C12 0%, #D35400 100%); }
+    .c-loquat { background: linear-gradient(135deg, #E28873 0%, #B8563F 100%); }
+    .c-grape { background: linear-gradient(135deg, #8E44AD 0%, #5B2C6F 100%); }
+
+    .palette-info {
+      padding: 1.8rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: space-between;
+    }
+
+    .plant-title-wrap {
+      margin-bottom: 1.2rem;
+    }
+
+    .plant-tag {
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent-terracotta);
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+
+    .plant-name {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      font-weight: 400;
+      color: var(--text-dark);
+      line-height: 1.3;
+    }
+
+    .plant-tone {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-style: italic;
+    }
+
+    .plant-desc {
+      font-family: var(--font-serif);
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.85;
+      margin-bottom: 1.4rem;
+    }
+
+    .plant-meta {
+      border-top: 1px dashed var(--line-subtle);
+      padding-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      font-size: 0.78rem;
+      color: var(--accent-sage);
+    }
+
+    .plant-meta-item strong {
+      color: var(--text-dark);
+      font-weight: 500;
+    }
+
+    /* Craft Pillars Section */
+    .pillars-section {
+      background: var(--bg-warm-oat);
+      border-top: 1px solid var(--line-subtle);
+      border-bottom: 1px solid var(--line-subtle);
+      padding: 5.5rem 2rem;
+    }
+
+    .pillars-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      margin-top: 3.5rem;
+    }
+
+    .pillar-card {
+      background: var(--bg-pure);
+      border: 1px solid var(--line-subtle);
+      padding: 2.2rem 1.8rem;
+    }
+
+    .pillar-num {
+      font-family: var(--font-display);
+      font-size: 1.8rem;
+      color: var(--accent-terracotta);
+      margin-bottom: 0.8rem;
+      display: block;
+    }
+
+    .pillar-title {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      font-weight: 400;
+      margin-bottom: 0.8rem;
+      color: var(--text-dark);
+    }
+
+    .pillar-p {
+      font-family: var(--font-serif);
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+    }
+
+    /* Back Home Button */
+    .back-home-wrap {
+      text-align: center;
+      margin: 5rem 0 3rem;
+    }
+
+    .btn-back {
+      display: inline-block;
+      padding: 0.85rem 2.5rem;
+      border: 1px solid var(--text-dark);
+      color: var(--text-dark);
+      text-decoration: none;
+      font-size: 0.8rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+    }
+
+    .btn-back:hover {
+      background: var(--text-dark);
+      color: var(--bg-cream);
+    }
+
+    footer {
+      background: var(--bg-warm-oat);
+      border-top: 1px solid var(--line-subtle);
+      padding: 3.5rem 2rem;
+      text-align: center;
+      font-size: 0.78rem;
+      color: var(--text-light);
+      letter-spacing: 0.14em;
+    }
+
+    @media (max-width: 1024px) {
+      .pillars-grid { grid-template-columns: repeat(2, 1fr); }
+      .palette-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 640px) {
+      .nav-wrapper { grid-template-columns: 1fr; text-align: center; gap: 1rem; }
+      .nav-left, .nav-right { display: none; }
+      .dyes-title { font-size: 2.2rem; }
+      .palette-grid { grid-template-columns: 1fr; }
+      .pillars-grid { grid-template-columns: 1fr; }
+      .dyes-statement-box { padding: 1.8rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="nav-wrapper">
+      <ul class="nav-left">
+        <li class="nav-item"><a href="index.html#rag-dolls" data-i18n="nav_rag_dolls">rag dolls</a></li>
+        <li class="nav-item"><a href="index.html#bags" data-i18n="nav_bags">studio bags</a></li>
+        <li class="nav-item"><a href="botanical-dyes.html" style="color:var(--accent-terracotta);" data-i18n="nav_dyes">botanical dyes</a></li>
+        <li class="nav-item"><a href="index.html#accessories" data-i18n="nav_living">pet & living</a></li>
+      </ul>
+
+      <a href="index.html" class="brand-logo">
+        <h1>lumi song</h1>
+        <span data-i18n="brand_sub">design & atelier</span>
+      </a>
+
+      <ul class="nav-right">
+        <li class="nav-item"><a href="about.html" data-i18n="nav_about">about me</a></li>
+        <li class="nav-item"><a href="index.html#contact" data-i18n="nav_inquiries">inquiries</a></li>
+        <li class="nav-item">
+          <div class="lang-switcher">
+            <button class="lang-btn active" id="btn-zh" onclick="setLanguage('zh')">中文</button>
+            <button class="lang-btn" id="btn-en" onclick="setLanguage('en')">EN</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="dyes-hero">
+    <span class="dyes-tag" data-i18n="hero_tag">BOTANICAL DYES & TEXTURE REDEFINITION</span>
+    <h1 class="dyes-title" data-i18n="hero_title">天然草木染与面料质感再造</h1>
+
+    <div class="dyes-statement-box">
+      <p class="dyes-statement" data-i18n="manifesto_text">
+        精通植物色素萃取与环保染色；擅长运用石榴皮（暖金茶）、核桃皮（质感木褐）、紫苏与紫甘蓝（梦幻粉紫与冷蓝灰）、洋葱皮（鲜亮焦糖金黄）、枇杷叶（柔润珊瑚茶杏）、葡萄皮（浓郁浆果黛紫）等纯天然材料，结合媒染固色与扎染晕染，打造富有呼吸感的高级质感面料。
+      </p>
+    </div>
+  </section>
+
+  <!-- Palette Cards Showcase -->
+  <main class="palette-section">
+    <div class="section-lead">
+      <h2 data-i18n="palette_header">living botanical color spectrum / 草木原生色谱</h2>
+    </div>
+
+    <div class="palette-grid">
+
+      <!-- 1. Pomegranate -->
+      <div class="palette-card">
+        <div class="color-swatch-banner c-pomegranate">
+          <span class="swatch-hex">#D9923B · 暖金茶</span>
+        </div>
+        <div class="palette-info">
+          <div class="plant-title-wrap">
+            <span class="plant-tag" data-i18n="p1_tag">autumn harvest / 秋熟果实</span>
+            <h3 class="plant-name" data-i18n="p1_name">石榴皮染 · Pomegranate</h3>
+            <span class="plant-tone" data-i18n="p1_tone">Warm Amber Gold / 暖金茶色</span>
+          </div>
+          <p class="plant-desc" data-i18n="p1_desc">
+            采撷秋日成熟石榴外皮慢火煎煮，析出浓郁单宁与明亮金色调。色泽温暖华贵，具有天然抗菌与极高色牢度。
+          </p>
+          <div class="plant-meta">
+            <div class="plant-meta-item"><strong data-i18n="meta_mordant">媒染工艺：</strong><span data-i18n="p1_mordant">明矾媒染 (Alum Mordant)</span></div>
+            <div class="plant-meta-item"><strong data-i18n="meta_app">面料应用：</strong><span data-i18n="p1_app">高定布偶内衬、纯棉荷叶边托特包</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Walnut -->
+      <div class="palette-card">
+        <div class="color-swatch-banner c-walnut">
+          <span class="swatch-hex">#7A4128 · 质感木褐</span>
+        </div>
+        <div class="palette-info">
+          <div class="plant-title-wrap">
+            <span class="plant-tag" data-i18n="p2_tag">forest tannin / 森林硬壳</span>
+            <h3 class="plant-name" data-i18n="p2_name">核桃皮染 · Walnut Hull</h3>
+            <span class="plant-tone" data-i18n="p2_tone">Rich Timber Walnut / 质感木褐色</span>
+          </div>
+          <p class="plant-desc" data-i18n="p2_desc">
+            以青核桃硬壳与成熟内皮萃取厚重单宁酸，赋予棉麻面料如古董木器般深沉沉静的木质色泽与温润厚重质感。
+          </p>
+          <div class="plant-meta">
+            <div class="plant-meta-item"><strong data-i18n="meta_mordant">媒染工艺：</strong><span data-i18n="p2_mordant">铁媒染 / 直接媒染 (Iron & Tannin)</span></div>
+            <div class="plant-meta-item"><strong data-i18n="meta_app">面料应用：</strong><span data-i18n="p2_app">粗麻单肩包里布、复古泰迪熊配饰</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Perilla -->
+      <div class="palette-card">
+        <div class="color-swatch-banner c-perilla">
+          <span class="swatch-hex">#A63A60 · 梦幻粉紫</span>
+        </div>
+        <div class="palette-info">
+          <div class="plant-title-wrap">
+            <span class="plant-tag" data-i18n="p3_tag">garden flora / 庭院香草</span>
+            <h3 class="plant-name" data-i18n="p3_name">紫苏染 · Perilla Leaf</h3>
+            <span class="plant-tone" data-i18n="p3_tone">Dreamy Perilla Rose Mauve / 梦幻粉紫</span>
+          </div>
+          <p class="plant-desc" data-i18n="p3_desc">
+            鲜采紫苏叶经低温浸润萃取天然花青素，在微酸性草木环境中呈现宛如初开野蔷薇般梦幻、轻盈的法式粉紫色。
+          </p>
+          <div class="plant-meta">
+            <div class="plant-meta-item"><strong data-i18n="meta_mordant">媒染工艺：</strong><span data-i18n="p3_mordant">柠檬酸与明矾微酸显色 (Citric & Alum)</span></div>
+            <div class="plant-meta-item"><strong data-i18n="meta_app">面料应用：</strong><span data-i18n="p3_app">薄纱布偶围巾、宠物丝绒领结</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Red Cabbage -->
+      <div class="palette-card">
+        <div class="color-swatch-banner c-cabbage">
+          <span class="swatch-hex">#4B5878 · 暮霭冷蓝灰</span>
+        </div>
+        <div class="palette-info">
+          <div class="plant-title-wrap">
+            <span class="plant-tag" data-i18n="p4_tag">living alchemy / 奇妙酸碱</span>
+            <h3 class="plant-name" data-i18n="p4_name">紫甘蓝染 · Red Cabbage</h3>
+            <span class="plant-tone" data-i18n="p4_tone">Twilight Slate Indigo / 暮霭冷蓝灰</span>
+          </div>
+          <p class="plant-desc" data-i18n="p4_desc">
+            利用紫甘蓝中高灵敏度花青素，调配弱碱性天然苏打水浴，染就如北欧清晨与暮霭交界处的静谧冷灰蓝色调。
+          </p>
+          <div class="plant-meta">
+            <div class="plant-meta-item"><strong data-i18n="meta_mordant">媒染工艺：</strong><span data-i18n="p4_mordant">弱碱苏打水浴固色 (Alkaline Bath)</span></div>
+            <div class="plant-meta-item"><strong data-i18n="meta_app">面料应用：</strong><span data-i18n="p4_app">水洗亚麻单肩包、双面宠物围嘴</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. Onion Skin -->
+      <div class="palette-card">
+        <div class="color-swatch-banner c-onion">
+          <span class="swatch-hex">#E67E22 · 焦糖金橘</span>
+        </div>
+        <div class="palette-info">
+          <div class="plant-title-wrap">
+            <span class="plant-tag" data-i18n="p5_tag">vivid sun / 浓郁日光</span>
+            <h3 class="plant-name" data-i18n="p5_name">洋葱皮染 · Onion Skin</h3>
+            <span class="plant-tone" data-i18n="p5_tone">Vivid Saffron & Caramel Rust / 鲜亮姜黄与焦糖暖橘</span>
+          </div>
+          <p class="plant-desc" data-i18n="p5_desc">
+            收集干洋葱外皮浓缩提取槲皮素。色泽极其明艳饱满，在明矾媒染下呈夺目姜黄，在铁媒染下转为醇厚焦糖暖橘。
+          </p>
+          <div class="plant-meta">
+            <div class="plant-meta-item"><strong data-i18n="meta_mordant">媒染工艺：</strong><span data-i18n="p5_mordant">明矾/铁复合分层媒染 (Dual Mordanting)</span></div>
+            <div class="plant-meta-item"><strong data-i18n="meta_app">面料应用：</strong><span data-i18n="p5_app">手作复古小熊围裙、泼墨头巾</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6. Loquat Leaf -->
+      <div class="palette-card">
+        <div class="color-swatch-banner c-loquat">
+          <span class="swatch-hex">#D97C65 · 珊瑚茶杏</span>
+        </div>
+        <div class="palette-info">
+          <div class="plant-title-wrap">
+            <span class="plant-tag" data-i18n="p6_tag">evergreen warmth / 经冬老叶</span>
+            <h3 class="plant-name" data-i18n="p6_name">枇杷叶染 · Loquat Leaf</h3>
+            <span class="plant-tone" data-i18n="p6_tone">Warm Coral Apricot & Tea Rose / 柔润珊瑚茶杏</span>
+          </div>
+          <p class="plant-desc" data-i18n="p6_desc">
+            精选经冬厚实老枇杷叶刷净绒毛，经数小时慢火长煎，染就东方茶道与古琴般温润如玉、内敛含蓄的暖杏珊瑚粉。
+          </p>
+          <div class="plant-meta">
+            <div class="plant-meta-item"><strong data-i18n="meta_mordant">媒染工艺：</strong><span data-i18n="p6_mordant">草木灰水与明矾沉淀 (Wood Ash & Alum)</span></div>
+            <div class="plant-meta-item"><strong data-i18n="meta_app">面料应用：</strong><span data-i18n="p6_app">母婴亲肤三角巾、蕾丝布偶裙身</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7. Grape Skin -->
+      <div class="palette-card">
+        <div class="color-swatch-banner c-grape">
+          <span class="swatch-hex">#6C3483 · 浆果黛紫</span>
+        </div>
+        <div class="palette-info">
+          <div class="plant-title-wrap">
+            <span class="plant-tag" data-i18n="p7_tag">vineyard vintage / 醇厚果香</span>
+            <h3 class="plant-name" data-i18n="p7_name">葡萄皮染 · Grape Skin</h3>
+            <span class="plant-tone" data-i18n="p7_tone">Deep Berry Wine & Royal Violet / 浓郁浆果黛紫</span>
+          </div>
+          <p class="plant-desc" data-i18n="p7_desc">
+            采摘深紫黑葡萄鲜果皮萃取高浓度天然花青苷与多酚，在织物上呈现如熟成勃艮第红酒般深邃优雅、典雅高贵的黛紫色。
+          </p>
+          <div class="plant-meta">
+            <div class="plant-meta-item"><strong data-i18n="meta_mordant">媒染工艺：</strong><span data-i18n="p7_mordant">醋酸调控与矿物媒染 (Acetic & Mineral)</span></div>
+            <div class="plant-meta-item"><strong data-i18n="meta_app">面料应用：</strong><span data-i18n="p7_app">粗织结扣便当包、绅士微缩领结</span></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Craft Pillars -->
+  <section class="pillars-section">
+    <div class="pillars-wrapper">
+      <div class="section-lead">
+        <h2 data-i18n="pillars_header">the slow dyeing alchemy / 四步天然染艺法则</h2>
+      </div>
+      <div class="pillars-grid">
+        <div class="pillar-card">
+          <span class="pillar-num">01</span>
+          <h4 class="pillar-title" data-i18n="pil1_t">纯天然植物萃取</h4>
+          <p class="pillar-p" data-i18n="pil1_p">严格精选石榴皮、核桃皮、枇杷叶等可再生植物原料，经过浸泡、慢熬，提取纯净原汁色素。</p>
+        </div>
+        <div class="pillar-card">
+          <span class="pillar-num">02</span>
+          <h4 class="pillar-title" data-i18n="pil2_t">环保矿物媒染</h4>
+          <p class="pillar-p" data-i18n="pil2_p">采用传统明矾、铁媒与草木灰天然媒染剂，不含重金属与甲醛，让天然色素牢固附着纤维深处。</p>
+        </div>
+        <div class="pillar-card">
+          <span class="pillar-num">03</span>
+          <h4 class="pillar-title" data-i18n="pil3_t">扎染与肌理再造</h4>
+          <p class="pillar-p" data-i18n="pil3_p">结合手工打褶、捆扎、泼墨与局部浸染，创造工业印染无法复制的独一无二流淌艺术肌理。</p>
+        </div>
+        <div class="pillar-card">
+          <span class="pillar-num">04</span>
+          <h4 class="pillar-title" data-i18n="pil4_t">日光晾晒与呼吸感</h4>
+          <p class="pillar-p" data-i18n="pil4_p">经过多次反复清水漂洗与自然微风日光晾晒，赋予面料随岁月沉淀愈发温润的呼吸质感。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="back-home-wrap">
+    <a href="index.html" class="btn-back" data-i18n="btn_back">← BACK TO PORTFOLIO / 返回作品集</a>
+  </div>
+
+  <footer>
+    <p data-i18n="footer_copy">© 2026 LUMI SONG (宋婷婷). ALL RIGHTS RESERVED.</p>
+    <p data-i18n="footer_sub">INSPIRED BY ARTISAN RAG DOLLS, NATURAL BOTANICAL DYES & LIVING TEXTILES.</p>
+  </footer>
+
+  <script>
+    const translations = {
+      zh: {
+        nav_rag_dolls: "艺术布偶",
+        nav_bags: "原创布包",
+        nav_dyes: "草木染色",
+        nav_living: "宠物与生活",
+        brand_sub: "手作设计与工坊",
+        nav_about: "关于我",
+        nav_inquiries: "合作洽谈",
+        
+        hero_tag: "天然草木染与面料质感再造",
+        hero_title: "天然草木染与面料质感再造",
+        manifesto_text: "精通植物色素萃取与环保染色；擅长运用石榴皮（暖金茶）、核桃皮（质感木褐）、紫甘蓝与紫苏（梦幻粉紫与冷蓝灰）、洋葱皮（鲜亮焦糖金黄）、枇杷叶（柔润珊瑚茶杏）、葡萄皮（浓郁浆果黛紫）等纯天然材料，结合媒染固色与扎染晕染，打造富有呼吸感的高级质感面料。",
+        
+        palette_header: "天然植物色谱 · LIVING BOTANICAL SPECTRUM",
+        
+        p1_tag: "秋熟果实 · AUTUMN HARVEST",
+        p1_name: "石榴皮染 · Pomegranate",
+        p1_tone: "Warm Amber Gold / 暖金茶色",
+        p1_desc: "采撷秋日成熟石榴外皮慢火煎煮，析出浓郁单宁与明亮金色调。色泽温暖华贵，具有天然抗菌与极高色牢度。",
+        p1_mordant: "明矾媒染 (Alum Mordant)",
+        p1_app: "高定布偶内衬、纯棉荷叶边托特包",
+        
+        p2_tag: "森林硬壳 · FOREST TANNIN",
+        p2_name: "核桃皮染 · Walnut Hull",
+        p2_tone: "Rich Timber Walnut / 质感木褐色",
+        p2_desc: "以青核桃硬壳与成熟内皮萃取厚重单宁酸，赋予棉麻面料如古董木器般深沉沉静的木质色泽与温润厚重质感。",
+        p2_mordant: "铁媒染 / 直接媒染 (Iron & Tannin)",
+        p2_app: "粗麻单肩包里布、复古泰迪熊配饰",
+        
+        p3_tag: "庭院香草 · GARDEN FLORA",
+        p3_name: "紫苏染 · Perilla Leaf",
+        p3_tone: "Dreamy Perilla Rose Mauve / 梦幻粉紫",
+        p3_desc: "鲜采紫苏叶经低温浸润萃取天然花青素，在微酸性草木环境中呈现宛如初开野蔷薇般梦幻、轻盈的法式粉紫色。",
+        p3_mordant: "柠檬酸与明矾微酸显色 (Citric & Alum)",
+        p3_app: "薄纱布偶围巾、宠物丝绒领结",
+        
+        p4_tag: "奇妙酸碱 · LIVING ALCHEMY",
+        p4_name: "紫甘蓝染 · Red Cabbage",
+        p4_tone: "Twilight Slate Indigo / 暮霭冷蓝灰",
+        p4_desc: "利用紫甘蓝中高灵敏度花青素，调配弱碱性天然苏打水浴，染就如北欧清晨与暮霭交界处的静谧冷灰蓝色调。",
+        p4_mordant: "弱碱苏打水浴固色 (Alkaline Bath)",
+        p4_app: "水洗亚麻单肩包、双面宠物围嘴",
+        
+        p5_tag: "浓郁日光 · VIVID SUN",
+        p5_name: "洋葱皮染 · Onion Skin",
+        p5_tone: "Vivid Saffron & Caramel Rust / 鲜亮姜黄与焦糖暖橘",
+        p5_desc: "收集干洋葱外皮浓缩提取槲皮素。色泽极其明艳饱满，在明矾媒染下呈夺目姜黄，在铁媒染下转为醇厚焦糖暖橘。",
+        p5_mordant: "明矾/铁复合分层媒染 (Dual Mordanting)",
+        p5_app: "手作复古小熊围裙、泼墨头巾",
+        
+        p6_tag: "经冬老叶 · EVERGREEN WARMTH",
+        p6_name: "枇杷叶染 · Loquat Leaf",
+        p6_tone: "Warm Coral Apricot & Tea Rose / 柔润珊瑚茶杏",
+        p6_desc: "精选经冬厚实老枇杷叶刷净绒毛，经数小时慢火长煎，染就东方茶道与古琴般温润如玉、内敛含蓄的暖杏珊瑚粉。",
+        p6_mordant: "草木灰水与明矾沉淀 (Wood Ash & Alum)",
+        p6_app: "母婴亲肤三角巾、蕾丝布偶裙身",
+        
+        p7_tag: "醇厚果香 · VINEYARD VINTAGE",
+        p7_name: "葡萄皮染 · Grape Skin",
+        p7_tone: "Deep Berry Wine & Royal Violet / 浓郁浆果黛紫",
+        p7_desc: "采摘深紫黑葡萄鲜果皮萃取高浓度天然花青苷与多酚，在织物上呈现如熟成勃艮第红酒般深邃优雅、典雅高贵的黛紫色。",
+        p7_mordant: "醋酸调控与矿物媒染 (Acetic & Mineral)",
+        p7_app: "粗织结扣便当包、绅士微缩领结",
+        
+        meta_mordant: "媒染工艺：",
+        meta_app: "面料应用：",
+        
+        pillars_header: "四步天然染艺法则 · THE CRAFT ALCHEMY",
+        pil1_t: "纯天然植物萃取",
+        pil1_p: "严格精选石榴皮、核桃皮、枇杷叶等可再生植物原料，经过浸泡、慢熬，提取纯净原汁色素。",
+        pil2_t: "环保矿物媒染",
+        pil2_p: "采用传统明矾、铁媒与草木灰天然媒染剂，不含重金属与甲醛，让天然色素牢固附着纤维深处。",
+        pil3_t: "扎染与肌理再造",
+        pil3_p: "结合手工打褶、捆扎、泼墨与局部浸染，创造工业印染无法复制的独一无二流淌艺术肌理。",
+        pil4_t: "日光晾晒与呼吸感",
+        pil4_p: "经过多次反复清水漂洗与自然微风日光晾晒，赋予面料随岁月沉淀愈发温润的呼吸质感。",
+        
+        btn_back: "← 返回作品集",
+        footer_copy: "© 2026 LUMI SONG (宋婷婷). 保留所有权利.",
+        footer_sub: "标志性高定艺术布偶 · 天然草木染织物 · 独立生活方式美学."
+      },
+      en: {
+        nav_rag_dolls: "rag dolls",
+        nav_bags: "studio bags",
+        nav_dyes: "botanical dyes",
+        nav_living: "pet & living",
+        brand_sub: "design & atelier",
+        nav_about: "about me",
+        nav_inquiries: "inquiries",
+        
+        hero_tag: "BOTANICAL DYES & TEXTURE REDEFINITION",
+        hero_title: "botanical dyes & texture redefinition",
+        manifesto_text: "Mastery in plant pigment extraction and eco-friendly dyeing; adept in utilizing pomegranate rinds (warm golden tea), walnut hulls (rich timber walnut), perilla & red cabbage (dreamy rose mauve & twilight slate blue), onion skin (vivid saffron & caramel rust), loquat leaves (warm coral apricot), and grape skin (deep berry wine) to craft breathable, living artisan textiles through natural mordanting, tie-dye, and splatter techniques.",
+        
+        palette_header: "living botanical color spectrum / BOTANICAL COLOR PALETTE",
+        
+        p1_tag: "AUTUMN HARVEST",
+        p1_name: "Pomegranate Rind Dye",
+        p1_tone: "Warm Amber Gold",
+        p1_desc: "Simmered from autumn-harvested dried pomegranate rinds, yielding rich tannins and radiant golden hues with natural antimicrobial qualities and high colorfastness.",
+        p1_mordant: "Alum Mordant",
+        p1_app: "Artisan Doll Lining, Ruffle Cotton Totes",
+        
+        p2_tag: "FOREST TANNIN",
+        p2_name: "Walnut Hull Dye",
+        p2_tone: "Rich Timber Walnut",
+        p2_desc: "Concentrated tannin extracted from green walnut hulls, imparting deep antique timber tones and tactile grounded warmth to raw linen and cotton.",
+        p2_mordant: "Iron & Tannin Mordant",
+        p2_app: "Linen Hobo Lining, Teddy Bear Scarves",
+        
+        p3_tag: "GARDEN FLORA",
+        p3_name: "Perilla Leaf Dye",
+        p3_tone: "Dreamy Perilla Rose Mauve",
+        p3_desc: "Low-temperature anthocyanin extraction from fresh garden perilla leaves, developing into an ethereal, French vintage rose pink in micro-acidic baths.",
+        p3_mordant: "Citric & Alum Mordant",
+        p3_app: "Gauze Doll Scarves, Velvet Pet Bows",
+        
+        p4_tag: "LIVING ALCHEMY",
+        p4_name: "Red Cabbage Dye",
+        p4_tone: "Twilight Slate Indigo",
+        p4_desc: "Harnessing natural pH sensitivity to craft serene Nordic twilight slate-blue tones using mild alkaline soda water baths.",
+        p4_mordant: "Alkaline Bath Mordant",
+        p4_app: "Washed Linen Bags, Reversible Pet Bibs",
+        
+        p5_tag: "VIVID SUN",
+        p5_name: "Golden Onion Skin Dye",
+        p5_tone: "Vivid Saffron & Caramel Rust",
+        p5_desc: "High-concentration quercetin extracted from outer onion skins, yielding brilliant golden saffron with alum, and deep caramel rust with iron mordant.",
+        p5_mordant: "Dual Layer Mordanting",
+        p5_app: "Artisan Bear Aprons, Splatter Bandanas",
+        
+        p6_tag: "EVERGREEN WARMTH",
+        p6_name: "Loquat Leaf Dye",
+        p6_tone: "Warm Coral Apricot & Tea Rose",
+        p6_desc: "Simmered from wintered thick loquat leaves, producing a gentle, restrained coral apricot pink imbued with oriental tea aesthetics.",
+        p6_mordant: "Wood Ash & Alum Mordant",
+        p6_app: "Baby-safe Bandanas, Lace Doll Dresses",
+        
+        p7_tag: "VINEYARD VINTAGE",
+        p7_name: "Grape Skin Dye",
+        p7_tone: "Deep Berry Wine & Royal Violet",
+        p7_desc: "Extracted from dark purple grape skins rich in natural anthocyanins and polyphenols, creating a luxurious Burgundy berry violet.",
+        p7_mordant: "Acetic & Mineral Mordant",
+        p7_app: "Coarse Bento Bags, Gentleman Micro Ties",
+        
+        meta_mordant: "Mordant:",
+        meta_app: "Application:",
+        
+        pillars_header: "THE CRAFT ALCHEMY",
+        pil1_t: "Pure Botanical Extraction",
+        pil1_p: "Carefully selected pomegranate, walnut, loquat, and seasonal plants simmered slowly to yield pure pigment essence.",
+        pil2_t: "Eco-Friendly Mineral Mordant",
+        pil2_p: "Utilizing non-toxic alum, iron, and wood ash to permanently bond natural colors into fiber depths without harsh chemicals.",
+        pil3_t: "Tie-Dye & Surface Texture",
+        pil3_p: "Combining hand-shirring, clamping, and ink-splatter dyeing to create organic, unrepeatable fluid textures.",
+        pil4_t: "Sun-Cured & Living Breath",
+        pil4_p: "Repeatedly washed in fresh water and sun-dried in natural breezes, ensuring colors gain a graceful living patina over time.",
+        
+        btn_back: "← BACK TO PORTFOLIO",
+        footer_copy: "© 2026 LUMI SONG (TINGTING SONG). ALL RIGHTS RESERVED.",
+        footer_sub: "INSPIRED BY ARTISAN RAG DOLLS, NATURAL BOTANICAL DYES & LIVING TEXTILES."
+      }
+    };
+
+    let currentLang = localStorage.getItem('lumi_lang') || 'zh';
+
+    function setLanguage(lang) {
+      currentLang = lang;
+      localStorage.setItem('lumi_lang', lang);
+      
+      document.getElementById('btn-zh').classList.toggle('active', lang === 'zh');
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+      
+      const t = translations[lang];
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (t[key]) {
+          el.innerHTML = t[key];
+        }
+      });
+      
+      document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      setLanguage(currentLang);
+    });
+  </script>
+
+</body>
+</html>
