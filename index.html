@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>宋婷婷 Tingting Song | 资深手作艺术家 & 草木染设计师</title>
+  <meta name="description" content="宋婷婷 (LumiSong) 个人作品集与手作艺术工坊：俄罗斯布偶、纯天然草木染织物、原创布包、宠物服饰与生活美学设计。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Serif+SC:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-primary: #FAF8F5;
+      --bg-secondary: #F3EFEA;
+      --bg-card: #FFFFFF;
+      --text-main: #2C3531;
+      --text-muted: #626C66;
+      --accent-green: #2E4C42;
+      --accent-brown: #8C5E3C;
+      --accent-ochre: #C49758;
+      --accent-berry: #7D4E5B;
+      --border-color: #E2DBD2;
+      --shadow-sm: 0 4px 12px rgba(46, 76, 66, 0.05);
+      --shadow-md: 0 10px 30px rgba(46, 76, 66, 0.08);
+      --font-serif: 'Noto Serif SC', 'Cormorant Garamond', Georgia, serif;
+      --font-en: 'Cormorant Garamond', serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-primary);
+      color: var(--text-main);
+      font-family: var(--font-serif);
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(250, 248, 245, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-color);
+      z-index: 1000;
+      transition: all 0.3s ease;
+    }
+
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-logo {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--accent-green);
+      text-decoration: none;
+      letter-spacing: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-main);
+      font-size: 0.95rem;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent-brown);
+    }
+
+    /* Hero Section */
+    .hero {
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 7rem 2rem 4rem;
+      background: radial-gradient(circle at 50% 30%, rgba(226, 219, 210, 0.4) 0%, rgba(250, 248, 245, 0) 70%);
+    }
+
+    .hero-content {
+      max-width: 800px;
+    }
+
+    .hero-subtitle {
+      font-family: var(--font-en);
+      font-size: 1.25rem;
+      color: var(--accent-brown);
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .hero-title {
+      font-size: 2.8rem;
+      font-weight: 600;
+      color: var(--accent-green);
+      line-height: 1.3;
+      margin-bottom: 1.5rem;
+      letter-spacing: 1px;
+    }
+
+    .hero-desc {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      margin-bottom: 2.5rem;
+      line-height: 1.9;
+    }
+
+    .hero-badges {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+    }
+
+    .badge {
+      padding: 0.4rem 1.1rem;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: 30px;
+      font-size: 0.85rem;
+      color: var(--accent-green);
+      letter-spacing: 0.5px;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      padding: 0.85rem 2.2rem;
+      background: var(--accent-green);
+      color: #FFFFFF;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+      border: 1px solid var(--accent-green);
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-brown);
+      border-color: var(--accent-brown);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* Section Global */
+    section {
+      padding: 5.5rem 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .section-tag {
+      font-family: var(--font-en);
+      font-size: 1.1rem;
+      color: var(--accent-brown);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-title {
+      font-size: 2.1rem;
+      color: var(--accent-green);
+      position: relative;
+      display: inline-block;
+      padding-bottom: 0.8rem;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 40px;
+      height: 2px;
+      background: var(--accent-brown);
+    }
+
+    /* About Section */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+
+    .about-card {
+      background: var(--bg-card);
+      padding: 2.5rem;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .about-card h3 {
+      font-size: 1.4rem;
+      color: var(--accent-green);
+      margin-bottom: 1rem;
+    }
+
+    .about-card p {
+      color: var(--text-muted);
+      margin-bottom: 1.2rem;
+      text-align: justify;
+    }
+
+    .craft-highlights {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    .highlight-item {
+      background: var(--bg-secondary);
+      padding: 1.5rem;
+      border-radius: 6px;
+      border-left: 3px solid var(--accent-green);
+    }
+
+    .highlight-item h4 {
+      font-size: 1.05rem;
+      color: var(--accent-green);
+      margin-bottom: 0.5rem;
+    }
+
+    .highlight-item p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* Gallery / Categories */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 2rem;
+    }
+
+    .category-card {
+      background: var(--bg-card);
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+      padding: 2rem 1.8rem;
+      transition: all 0.3s ease;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .category-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--accent-ochre);
+    }
+
+    .card-icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .card-title {
+      font-size: 1.25rem;
+      color: var(--accent-green);
+      margin-bottom: 0.8rem;
+    }
+
+    .card-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    /* Botanical Palette */
+    .palette-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 2.5rem;
+      margin-top: 3rem;
+    }
+
+    .palette-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .palette-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem;
+      background: var(--bg-secondary);
+      border-radius: 6px;
+    }
+
+    .color-dot {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1);
+    }
+
+    .dot-pomegranate { background: #D4A359; }
+    .dot-walnut { background: #7A533E; }
+    .dot-cabbage { background: #6F5E76; }
+    .dot-perilla { background: #8E4B62; }
+
+    /* Contact Section */
+    .contact-section {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+      text-align: center;
+      margin-top: 4rem;
+    }
+
+    .contact-container {
+      max-width: 650px;
+      margin: 0 auto;
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .contact-pill {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: var(--bg-card);
+      padding: 0.8rem 1.6rem;
+      border-radius: 30px;
+      border: 1px solid var(--border-color);
+      text-decoration: none;
+      color: var(--text-main);
+      font-size: 0.95rem;
+      transition: all 0.2s;
+    }
+
+    .contact-pill:hover {
+      border-color: var(--accent-green);
+      color: var(--accent-green);
+      transform: translateY(-2px);
+    }
+
+    /* Footer */
+    footer {
+      padding: 2.5rem 2rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      letter-spacing: 0.5px;
+    }
+
+    @media (max-width: 768px) {
+      .hero-title { font-size: 2.1rem; }
+      .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .craft-highlights { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <a href="#" class="nav-logo">LUMISONG</a>
+      <ul class="nav-links">
+        <li><a href="#about">关于艺术家</a></li>
+        <li><a href="#collections">核心作品系列</a></li>
+        <li><a href="#botanical">草木染工艺</a></li>
+        <li><a href="#contact">合作与联系</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <p class="hero-subtitle">Handmade Textile & Botanical Dye Studio</p>
+      <h1 class="hero-title">自然温润，匠心缝缀</h1>
+      <p class="hero-desc">
+        我是宋婷婷（LumiSong）。深耕独立手作布艺设计与纯天然植物草木染，<br>
+        自建专属家庭缝纫室与手工创作工坊，融汇国际前沿手作灵感与东方温润器物美学。
+      </p>
+      <div class="hero-badges">
+        <span class="badge">🪡 独立立体剪裁打板</span>
+        <span class="badge">🧸 俄罗斯关节布偶研制</span>
+        <span class="badge">🌿 纯天然草木染艺</span>
+        <span class="badge">🧵 精工缝纫与刺绣</span>
+      </div>
+      <a href="#collections" class="btn-primary">探索作品系列</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="section-header">
+      <p class="section-tag">About The Artist</p>
+      <h2 class="section-title">艺术自述与工坊实践</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-card">
+        <h3>以针线为笔，以草木为色</h3>
+        <p>
+          专注手作布艺设计与天然草木染色多年，坚持以纯棉、亚麻、老织布、羊毛等天然纤维为载体，探索人、自然与日常织物的共生美感。
+        </p>
+        <p>
+          在专属家庭缝纫工坊中，独立完成从情绪板企划、立体剪裁打板、植物色素萃取、面料预缩染色到小批量精工制作的全链路工序。
+        </p>
+        <p>
+          深度追踪俄罗斯 VK（ВКонтакте）及 Instagram 全球顶尖手作艺术家社群，持续汲取先锋制式与微缩复古服饰灵感，以极高自律与严谨交付标准推动品牌共创。
+        </p>
+      </div>
+      <div class="craft-highlights">
+        <div class="highlight-item">
+          <h4>自建独立缝纫室</h4>
+          <p>配备专业平缝机、包缝机、专业整烫台及草木染器具，具备端到端打样与小批量制作能力。</p>
+        </div>
+        <div class="highlight-item">
+          <h4>国际前沿灵感库</h4>
+          <p>沉淀 VK 独联体手作社区与 Instagram 前沿版型、关节制式与穿搭企划灵感。</p>
+        </div>
+        <div class="highlight-item">
+          <h4>纯天然生态染色</h4>
+          <p>零化学添加，坚持石榴皮、核桃皮、紫甘蓝、紫苏等植物原材萃取与环保固色。</p>
+        </div>
+        <div class="highlight-item">
+          <h4>高标准精工细节</h4>
+          <p>考究走线针距、手工暗针收口、多层复古内衬包边与受力点精细加固。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Collections -->
+  <section id="collections">
+    <div class="section-header">
+      <p class="section-tag">Signature Collections</p>
+      <h2 class="section-title">核心作品品类</h2>
+    </div>
+    <div class="category-grid">
+      <div class="category-card">
+        <span class="card-icon">🧸</span>
+        <h3 class="card-title">俄罗斯布偶 & 艺术玩偶</h3>
+        <p class="card-desc">
+          采用立体剪裁制版、活动四肢关节结构、纯手工面部手绘/刺绣与多层次手缝复古微缩着装，赋予每件玩偶独特的性格与收藏质感。
+        </p>
+      </div>
+      <div class="category-card">
+        <span class="card-icon">🌿</span>
+        <h3 class="card-title">天然草木染织物</h3>
+        <p class="card-desc">
+          运用石榴皮（暖金茶）、核桃皮（质感木褐）、紫甘蓝与紫苏（梦幻粉紫与冷蓝灰）等植物精粹，结合扎染与吊染，色泽柔和富有呼吸感。
+        </p>
+      </div>
+      <div class="category-card">
+        <span class="card-icon">👜</span>
+        <h3 class="card-title">原创布包与生活配饰</h3>
+        <p class="card-desc">
+          复古棉麻托特包、口金包、抽绳水饺包、草木染褶皱发圈与多功能印染方巾/头巾，兼具美学质感与日常实用性。
+        </p>
+      </div>
+      <div class="category-card">
+        <span class="card-icon">🐾</span>
+        <h3 class="card-title">宠物服饰 & 亲肤口水巾</h3>
+        <p class="card-desc">
+          符合宠物工学的舒适剪裁版型，以及选用 A 类母婴级无荧光纯棉面料的亲肤婴儿口水巾，柔软透气不束缚。
+        </p>
+      </div>
+    </div>
+
+    <!-- Botanical Palette Box -->
+    <div class="palette-box" id="botanical">
+      <h3 style="color: var(--accent-green); font-size: 1.3rem; text-align: center;">天然草木植物色谱与材料萃取</h3>
+      <div class="palette-grid">
+        <div class="palette-item">
+          <div class="color-dot dot-pomegranate"></div>
+          <div>
+            <strong>石榴皮</strong>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">暖金茶色 / 明朗温润</p>
+          </div>
+        </div>
+        <div class="palette-item">
+          <div class="color-dot dot-walnut"></div>
+          <div>
+            <strong>核桃皮</strong>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">质感木褐 / 沉稳古雅</p>
+          </div>
+        </div>
+        <div class="palette-item">
+          <div class="color-dot dot-cabbage"></div>
+          <div>
+            <strong>紫甘蓝</strong>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">淡蓝冷灰 / 梦幻素净</p>
+          </div>
+        </div>
+        <div class="palette-item">
+          <div class="color-dot dot-perilla"></div>
+          <div>
+            <strong>紫苏</strong>
+            <p style="font-size: 0.8rem; color: var(--text-muted);">浅粉紫调 / 雅致浪漫</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact-section">
+    <div class="contact-container">
+      <p class="section-tag">Connect & Collaborate</p>
+      <h2 class="section-title">合伙共创与联系</h2>
+      <p style="color: var(--text-muted); margin-top: 1rem; line-height: 1.8;">
+        欢迎探讨独立手作店铺联合主理、布艺/草木染产品线研发定制及艺术品牌共建合作。
+      </p>
+      <div class="contact-links">
+        <a href="mailto:lumi.t.song@gmail.com" class="contact-pill">
+          <span>✉️</span> lumi.t.song@gmail.com
+        </a>
+        <a href="tel:18339931747" class="contact-pill">
+          <span>📞</span> 18339931747
+        </a>
+        <a href="https://github.com/realsongting" target="_blank" class="contact-pill">
+          <span>🐙</span> GitHub / realsongting
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 宋婷婷 Tingting Song (LumiSong Studio). All Rights Reserved.</p>
+    <p style="font-size: 0.75rem; margin-top: 0.3rem; color: #9EABA2;">Designed with Natural Aesthetics & Pure Craftsmanship</p>
+  </footer>
+
+</body>
+</html>
