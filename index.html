@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LUMI SONG | Artisan Rag Dolls, Botanical Dyes & Natural Textiles</title>
-  <meta name="description" content="Lumi Song (宋婷婷) - Inspired by timeless artisan aesthetics. Handcrafted heirloom rag dolls, botanical dyed linen, studio bags, pet pieces & living textiles.">
+  <title>LUMI SONG | Artisan Rag Dolls, Botanical Dyes & Living Textiles</title>
+  <meta name="description" content="Lumi Song (宋婷婷) — 独立手作艺术家与设计师作品集：高定俄罗斯布偶、纯天然草木染织物、原创棉麻布包、宠物服饰与生活方式美学。">
   
-  <!-- Google Fonts: Editorial Serif & Clean Sans -->
+  <!-- Google Fonts: Editorial Serif & Clean Modern Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Jost:wght@300;400;500;600&family=Noto+Serif+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -18,7 +18,7 @@
       --bg-pure: #FFFFFF;
       --text-dark: #22201E;
       --text-muted: #686560;
-      --text-light: #9B978F;
+      --text-light: #9E9A92;
       --line-subtle: #E6E0D6;
       --accent-terracotta: #9B634E;
       --accent-sage: #4E6359;
@@ -45,11 +45,11 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* Top Banner */
+    /* Top Announcement Note */
     .top-banner {
       background: var(--bg-warm-oat);
       text-align: center;
-      padding: 0.5rem 1rem;
+      padding: 0.55rem 1rem;
       font-size: 0.75rem;
       letter-spacing: 0.15em;
       text-transform: uppercase;
@@ -57,19 +57,20 @@
       border-bottom: 1px solid var(--line-subtle);
     }
 
-    /* Minimalist Editorial Header */
+    /* Editorial Navigation Header */
     header {
       background: var(--bg-cream);
       border-bottom: 1px solid var(--line-subtle);
       position: sticky;
       top: 0;
       z-index: 100;
+      backdrop-filter: blur(8px);
     }
 
     .nav-wrapper {
-      max-width: 1240px;
+      max-width: 1280px;
       margin: 0 auto;
-      padding: 1.8rem 2rem;
+      padding: 1.6rem 2rem;
       display: grid;
       grid-template-columns: 1fr auto 1fr;
       align-items: center;
@@ -77,7 +78,7 @@
 
     .nav-left, .nav-right {
       display: flex;
-      gap: 2rem;
+      gap: 2.2rem;
       list-style: none;
     }
 
@@ -89,7 +90,7 @@
       text-decoration: none;
       color: var(--text-dark);
       font-size: 0.82rem;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.14em;
       text-transform: lowercase;
       transition: color 0.25s ease;
     }
@@ -119,14 +120,14 @@
       letter-spacing: 0.3em;
       text-transform: uppercase;
       color: var(--text-muted);
-      margin-top: 0.4rem;
+      margin-top: 0.35rem;
     }
 
-    /* Hero Editorial */
+    /* Hero Editorial Section */
     .hero-editorial {
-      max-width: 1240px;
+      max-width: 1280px;
       margin: 0 auto;
-      padding: 5rem 2rem 4rem;
+      padding: 5.5rem 2rem 4rem;
       text-align: center;
     }
 
@@ -144,9 +145,9 @@
       font-size: 3.4rem;
       font-weight: 400;
       line-height: 1.25;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.04em;
       color: var(--text-dark);
-      max-width: 860px;
+      max-width: 900px;
       margin: 0 auto 1.8rem;
     }
 
@@ -154,14 +155,20 @@
       font-family: var(--font-serif);
       font-size: 1.05rem;
       color: var(--text-muted);
-      max-width: 680px;
+      max-width: 720px;
       margin: 0 auto 2.5rem;
       line-height: 2;
     }
 
-    .hero-cta {
+    .hero-cta-group {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    .btn-dark {
       display: inline-block;
-      padding: 0.9rem 2.8rem;
+      padding: 0.85rem 2.6rem;
       background: var(--text-dark);
       color: var(--bg-cream);
       text-decoration: none;
@@ -171,196 +178,261 @@
       transition: all 0.3s ease;
     }
 
-    .hero-cta:hover {
+    .btn-dark:hover {
       background: var(--accent-terracotta);
     }
 
-    /* Editorial Statement Box */
+    /* Editorial Statement Bar */
     .statement-section {
       background: var(--bg-warm-oat);
       padding: 4.5rem 2rem;
       border-top: 1px solid var(--line-subtle);
       border-bottom: 1px solid var(--line-subtle);
+      text-align: center;
     }
 
     .statement-content {
-      max-width: 820px;
+      max-width: 860px;
       margin: 0 auto;
-      text-align: center;
     }
 
     .statement-quote {
       font-family: var(--font-display);
-      font-size: 1.8rem;
+      font-size: 1.75rem;
       font-style: italic;
       color: var(--text-dark);
-      line-height: 1.5;
-      margin-bottom: 1.5rem;
+      line-height: 1.6;
+      margin-bottom: 1.2rem;
     }
 
     .statement-author {
-      font-size: 0.85rem;
-      letter-spacing: 0.18em;
+      font-size: 0.82rem;
+      letter-spacing: 0.2em;
       text-transform: uppercase;
       color: var(--text-muted);
     }
 
-    /* Collections Showcase (Shop/Grid) */
-    .collections-section {
-      max-width: 1240px;
+    /* Filter Bar for Portfolio */
+    .gallery-filter-wrap {
+      max-width: 1280px;
+      margin: 4.5rem auto 2.5rem;
+      padding: 0 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      background: none;
+      border: 1px solid var(--line-subtle);
+      background: var(--bg-pure);
+      padding: 0.6rem 1.6rem;
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.25s ease;
+      border-radius: 2px;
+    }
+
+    .filter-btn:hover, .filter-btn.active {
+      border-color: var(--text-dark);
+      background: var(--text-dark);
+      color: var(--bg-cream);
+    }
+
+    /* Portfolio Section (Editorial Grid) */
+    .portfolio-section {
+      max-width: 1280px;
       margin: 0 auto;
-      padding: 6rem 2rem;
+      padding: 0 2rem 6rem;
     }
 
-    .section-title-wrap {
-      text-align: center;
-      margin-bottom: 4rem;
-    }
-
-    .section-num {
+    .gallery-category-title {
       font-family: var(--font-display);
-      font-size: 0.9rem;
-      color: var(--accent-terracotta);
-      letter-spacing: 0.2em;
-      display: block;
-      margin-bottom: 0.4rem;
-    }
-
-    .section-main-title {
-      font-family: var(--font-display);
-      font-size: 2.3rem;
+      font-size: 2rem;
       font-weight: 400;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.08em;
       text-transform: lowercase;
+      margin: 4rem 0 2rem;
+      padding-bottom: 0.8rem;
+      border-bottom: 1px solid var(--line-subtle);
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
     }
 
-    .collection-grid {
+    .category-count {
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent-terracotta);
+    }
+
+    .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 2rem;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem 2rem;
     }
 
-    .collection-card {
+    .product-card {
       background: var(--bg-pure);
       border: 1px solid var(--line-subtle);
-      padding: 2.5rem 1.8rem;
-      text-decoration: none;
-      color: inherit;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      min-height: 380px;
       transition: all 0.35s ease;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .product-card:hover {
+      border-color: var(--text-dark);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(34, 32, 30, 0.06);
+    }
+
+    .product-img-wrap {
+      width: 100%;
+      height: 420px;
+      background: var(--bg-warm-oat);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       position: relative;
     }
 
-    .collection-card:hover {
-      border-color: var(--text-dark);
-      transform: translateY(-4px);
+    .product-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s cubic-bezier(0.2, 1, 0.3, 1);
     }
 
-    .card-badge {
-      font-size: 0.7rem;
+    .product-card:hover .product-img-wrap img {
+      transform: scale(1.04);
+    }
+
+    .product-info {
+      padding: 1.8rem 1.6rem 1.6rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: space-between;
+      background: var(--bg-pure);
+    }
+
+    .product-tag {
+      font-size: 0.68rem;
       letter-spacing: 0.2em;
       text-transform: uppercase;
       color: var(--accent-terracotta);
+      margin-bottom: 0.4rem;
     }
 
-    .card-symbol {
-      font-size: 2.8rem;
-      margin: 1.5rem 0;
-      opacity: 0.85;
-    }
-
-    .card-name {
+    .product-title {
       font-family: var(--font-display);
-      font-size: 1.5rem;
+      font-size: 1.35rem;
       font-weight: 400;
       line-height: 1.3;
-      margin-bottom: 0.8rem;
-      text-transform: lowercase;
+      margin-bottom: 0.6rem;
+      color: var(--text-dark);
     }
 
-    .card-detail {
+    .product-desc {
+      font-family: var(--font-serif);
       font-size: 0.85rem;
       color: var(--text-muted);
-      line-height: 1.7;
+      line-height: 1.75;
+      margin-bottom: 1.2rem;
     }
 
-    .card-explore {
-      margin-top: 1.5rem;
+    .product-craft-note {
       font-size: 0.75rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--text-dark);
-      border-bottom: 1px solid var(--text-dark);
-      align-self: flex-start;
-      padding-bottom: 2px;
+      color: var(--accent-sage);
+      letter-spacing: 0.05em;
+      border-top: 1px dashed var(--line-subtle);
+      padding-top: 0.8rem;
+      margin-top: auto;
     }
 
-    /* The Philosophy / Atelier Section */
+    /* Atelier & Botanical Dye Section */
     .atelier-section {
       background: var(--bg-warm-oat);
-      padding: 6rem 2rem;
+      padding: 6.5rem 2rem;
       border-top: 1px solid var(--line-subtle);
     }
 
     .atelier-grid {
-      max-width: 1240px;
+      max-width: 1280px;
       margin: 0 auto;
       display: grid;
       grid-template-columns: 1.1fr 0.9fr;
-      gap: 4.5rem;
+      gap: 5rem;
       align-items: center;
+    }
+
+    .atelier-text span {
+      font-size: 0.75rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--accent-terracotta);
+      margin-bottom: 0.8rem;
+      display: block;
     }
 
     .atelier-text h3 {
       font-family: var(--font-display);
-      font-size: 2.6rem;
+      font-size: 2.8rem;
       font-weight: 400;
-      line-height: 1.3;
+      line-height: 1.25;
       margin-bottom: 1.8rem;
     }
 
     .atelier-text p {
       font-size: 0.95rem;
       color: var(--text-muted);
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.4rem;
       line-height: 1.9;
     }
 
-    .palette-strip {
+    .palette-box {
       background: var(--bg-pure);
       border: 1px solid var(--line-subtle);
-      padding: 2.5rem;
+      padding: 2.8rem 2.4rem;
     }
 
-    .palette-strip h4 {
+    .palette-box h4 {
       font-family: var(--font-display);
-      font-size: 1.3rem;
+      font-size: 1.4rem;
       font-weight: 400;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.6rem;
       text-transform: lowercase;
     }
 
-    .botanical-swatches {
+    .swatch-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 1.5rem;
+      gap: 1.8rem;
     }
 
     .swatch-item {
       display: flex;
       align-items: center;
-      gap: 1rem;
+      gap: 1.2rem;
     }
 
-    .swatch-color {
-      width: 42px;
-      height: 42px;
+    .swatch-circle {
+      width: 46px;
+      height: 46px;
       border-radius: 50%;
       flex-shrink: 0;
       border: 1px solid var(--line-subtle);
+      box-shadow: inset 0 0 0 1px rgba(0,0,0,0.05);
     }
 
     .c-pomegranate { background: #D9A85B; }
@@ -369,9 +441,9 @@
     .c-cabbage { background: #6F5E76; }
 
     .swatch-info strong {
-      font-size: 0.85rem;
-      display: block;
+      font-size: 0.88rem;
       color: var(--text-dark);
+      display: block;
     }
 
     .swatch-info span {
@@ -381,15 +453,15 @@
 
     /* Inquiries & Connect Section */
     .inquiry-section {
-      max-width: 860px;
+      max-width: 900px;
       margin: 0 auto;
-      padding: 6rem 2rem;
+      padding: 6.5rem 2rem;
       text-align: center;
     }
 
     .inquiry-title {
       font-family: var(--font-display);
-      font-size: 2.4rem;
+      font-size: 2.6rem;
       font-weight: 400;
       margin-bottom: 1rem;
       text-transform: lowercase;
@@ -398,14 +470,14 @@
     .inquiry-desc {
       font-size: 0.95rem;
       color: var(--text-muted);
-      margin-bottom: 2.5rem;
-      line-height: 1.9;
+      margin-bottom: 2.8rem;
+      line-height: 2;
     }
 
     .inquiry-pills {
       display: flex;
       justify-content: center;
-      gap: 1.5rem;
+      gap: 1.6rem;
       flex-wrap: wrap;
     }
 
@@ -413,13 +485,13 @@
       display: inline-flex;
       align-items: center;
       gap: 0.6rem;
-      padding: 0.85rem 1.8rem;
+      padding: 0.9rem 2rem;
       border: 1px solid var(--line-subtle);
       background: var(--bg-pure);
       text-decoration: none;
       color: var(--text-dark);
       font-size: 0.82rem;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.12em;
       transition: all 0.25s ease;
     }
 
@@ -433,27 +505,57 @@
     footer {
       background: var(--bg-warm-oat);
       border-top: 1px solid var(--line-subtle);
-      padding: 3rem 2rem;
+      padding: 3.5rem 2rem;
       text-align: center;
       font-size: 0.78rem;
       color: var(--text-light);
-      letter-spacing: 0.12em;
+      letter-spacing: 0.14em;
     }
 
     footer p {
       margin-bottom: 0.4rem;
     }
 
-    @media (max-width: 992px) {
-      .collection-grid { grid-template-columns: repeat(2, 1fr); }
-      .atelier-grid { grid-template-columns: 1fr; gap: 3rem; }
+    /* Modal / Lightbox */
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(34, 32, 30, 0.92);
+      backdrop-filter: blur(10px);
+      z-index: 9999;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      cursor: pointer;
     }
 
-    @media (max-width: 600px) {
-      .nav-wrapper { grid-template-columns: 1fr; gap: 1rem; text-align: center; }
+    .lightbox.active {
+      display: flex;
+    }
+
+    .lightbox img {
+      max-width: 90vw;
+      max-height: 88vh;
+      border-radius: 2px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    @media (max-width: 1024px) {
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      .atelier-grid { grid-template-columns: 1fr; gap: 3.5rem; }
+    }
+
+    @media (max-width: 640px) {
+      .nav-wrapper { grid-template-columns: 1fr; text-align: center; gap: 1rem; }
       .nav-left, .nav-right { display: none; }
       .hero-heading { font-size: 2.3rem; }
-      .collection-grid { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: 1fr; }
+      .product-img-wrap { height: 360px; }
     }
   </style>
 </head>
@@ -461,16 +563,16 @@
 
   <!-- Top Note -->
   <div class="top-banner">
-    Lumi Song Atelier — Handcrafted Rag Dolls, Natural Dyes & Living Textiles
+    Lumi Song Atelier — Handcrafted Rag Dolls, Botanical Dyes & Living Textiles
   </div>
 
-  <!-- Editorial Header (Jess Brown Style) -->
+  <!-- Editorial Header -->
   <header>
     <div class="nav-wrapper">
       <ul class="nav-left">
         <li class="nav-item"><a href="#rag-dolls">rag dolls</a></li>
-        <li class="nav-item"><a href="#botanical">botanical dyes</a></li>
-        <li class="nav-item"><a href="#pieces">pieces & bags</a></li>
+        <li class="nav-item"><a href="#bags">studio bags</a></li>
+        <li class="nav-item"><a href="#accessories">pet & living</a></li>
       </ul>
 
       <a href="#" class="brand-logo">
@@ -485,7 +587,7 @@
     </div>
   </header>
 
-  <!-- Hero Editorial -->
+  <!-- Hero Section -->
   <section class="hero-editorial">
     <span class="hero-tag">artisan textiles & heirlooms</span>
     <h2 class="hero-heading">from an artisan’s tactile aesthetic to a timeless lifestyle brand.</h2>
@@ -493,7 +595,9 @@
       以手作温度为灵魂，以自然草木为色彩。<br>
       从标志性高定艺术布偶、天然植物染织物，到原创服饰、布包与生活方式美学。
     </p>
-    <a href="#pieces" class="hero-cta">explore the collection</a>
+    <div class="hero-cta-group">
+      <a href="#portfolio" class="btn-dark">view collection</a>
+    </div>
   </section>
 
   <!-- Statement Section -->
@@ -508,109 +612,423 @@
     </div>
   </section>
 
-  <!-- Collections (4 Category Editorial Grid) -->
-  <section class="collections-section" id="pieces">
-    <div class="section-header-wrap">
-      <span class="section-num">01 / collections</span>
-      <h3 class="section-main-title">signature pieces</h3>
+  <!-- Filter Buttons -->
+  <div class="gallery-filter-wrap" id="portfolio">
+    <button class="filter-btn active" onclick="filterGallery('all')">all works / 全部作品 (22)</button>
+    <button class="filter-btn" onclick="filterGallery('rag-dolls')">rag dolls / 艺术布偶 (8)</button>
+    <button class="filter-btn" onclick="filterGallery('bags')">studio bags / 原创布包 (7)</button>
+    <button class="filter-btn" onclick="filterGallery('accessories')">pet & living / 宠物与生活配饰 (7)</button>
+  </div>
+
+  <!-- Main Portfolio Showcase -->
+  <main class="portfolio-section">
+
+    <!-- 01 / Rag Dolls & Heirlooms -->
+    <div class="gallery-category" data-cat="rag-dolls">
+      <div class="gallery-category-title" id="rag-dolls">
+        <span>01 / heirloom rag dolls & art sculptures</span>
+        <span class="category-count">8 items</span>
+      </div>
+      <div class="gallery-grid">
+        
+        <!-- Doll 1: Victorian White Lace -->
+        <div class="product-card" onclick="openLightbox('images/doll-heirloom-white-lace.jpg')">
+          <div class="product-img-wrap">
+            <img src="images/doll-heirloom-white-lace.jpg" alt="Victorian Heirloom Rag Doll" loading="lazy">
+          </div>
+          <div class="product-info">
+            <div>
+              <span class="product-tag">heirloom rag doll</span>
+              <h4 class="product-title">Victorian Heirloom Lace Doll</h4>
+              <p class="product-desc">白纱微褶维多利亚复古布偶姑娘。精选纯棉白纱衬裙、手工复古蕾丝花边、卷曲莫海羊毛发丝与精致手绘面部表情。</p>
+            </div>
+            <div class="product-craft-note">纯手工缝制 · 活动关节 · 复古层叠微缩着装</div>
+          </div>
+        </div>
+
+        <!-- Doll 2: Indigo Patchwork -->
+        <div class="product-card" onclick="openLightbox('images/doll-indigo-patchwork.jpg')">
+          <div class="product-img-wrap">
+            <img src="images/doll-indigo-patchwork.jpg" alt="Studio Indigo Patchwork Doll" loading="lazy">
+          </div>
+          <div class="product-info">
+            <div>
+              <span class="product-tag">artisan doll</span>
+              <h4 class="product-title">Indigo Patchwork Studio Doll</h4>
+              <p class="product-desc">工坊蓝染破洞补丁艺术布偶。天然蓝染粗亚麻毛边罩衫、野性毛线发型、手作原木桶珠项饰与立体捏塑面孔。</p>
+            </div>
+            <div class="product-craft-note">Boro 拼布毛边 · 独立打样 · JUKI工坊精制</div>
+          </div>
+        </div>
+
+        <!-- Doll 3: Mohair Teddies -->
+        <div class="product-card" onclick="openLightbox('images/doll-mohair-teddies.jpg')">
+          <div class="product-img-wrap">
+            <img src="images/doll-mohair-teddies.jpg" alt="Artisan Mohair Jointed Bears" loading="lazy">
+          </div>
+          <div class="product-info">
+            <div>
+              <span class="product-tag">jointed teddy bear</span>
+              <h4 class="product-title">Vintage Mohair Jointed Bears</h4>
+              <p class="product-desc">复古莫海毛手作五关节泰迪熊双人组。苔藓绿与樱花粉高密莫海毛、天然草木染粉色毛边围巾与纽扣配饰。</p>
+            </div>
+            <div class="product-craft-note">经典五关节可动 · 草木染织物配饰 · 手工刺绣</div>
+          </div>
+        </div>
+
+        <!-- Doll 4: Yellow Bear -->
+        <div class="product-card" onclick="openLightbox('images/doll-yellow-bear.jpg')">
+          <div class="product-img-wrap">
+            <img src="images/doll-yellow-bear.jpg" alt="Golden Olive Mohair Bear" loading="lazy">
+          </div>
+          <div class="product-info">
+            <div>
+              <span class="product-tag">jointed bear</span>
+              <h4 class="product-title">Golden Olive Mohair Bear</h4>
+              <p class="product-desc">金榄绿复古莫海毛小熊。饱满弧度剪裁版型、黑亮玻璃眼珠与纯手工手缝封口细节。</p>
+            </div>
+            <div class="product-craft-note">天然莫海毛 · 立体手工打板 · 治愈系摆件</div>
+          </div>
+        </div>
+
+        <!-- Doll 5: Tweed Coat Creature -->
+        <div class="product-card" onclick="openLightbox('images/doll-tweed-coat-creature.jpg')">
+          <div class="product-img-wrap">
+            <img src="images/doll-tweed-coat-creature.jpg" alt="Primitive Linen Creature in Tweed" loading="lazy">
+          </div>
+          <div class="product-info">
+            <div>
+              <span class="product-tag">art sculpture</span>
+              <h4 class="product-title">Primitive Creature in Tweed Coat</h4>
+              <p class="product-desc">粗花呢大衣原始感手作艺术偶。身着格纹内衬羊毛粗花呢风衣、黄色木质大纽扣与微缩翻领。</p>
+            </div>
+            <div class="product-craft-note">复古微缩裁缝 · 亚麻软雕塑 · 手作毛线鬃毛</div>
+          </div>
+        </div>
+
+        <!-- Doll 6: Linen Elephants -->
+        <div class="product-card" onclick="openLightbox('images/doll-linen-elephants.jpg')">
+          <div class="product-img-wrap">
+            <img src="images/doll-linen-elephants.jpg" alt="Handcrafted Linen Elephant Pair" loading="lazy">
+          </div>
+          <div class="product-info">
+            <div>
+              <span class="product-tag">soft sculpture</span>
+              <h4 class="product-title">Handcrafted Linen Elephant Pair</h4>
+              <p class="product-desc">纯手工亚麻复古小象双人组。身着质感芥末黄与波点收腰复古连衣裙、毛边下摆与天然木质纽扣。</p>
+            </div>
+            <div class="product-craft-note">天然未漂白亚麻 · 复古褶皱收腰裙 · 灵感手作</div>
+          </div>
+        </div>
+
+        <!-- Doll 7: Expressive Figures -->
+        <div class="product-card" onclick="openLightbox('images/doll-expressive-figures.jpg')">
+          <div class="product-img-wrap">
+            <img src="images/doll-expressive-figures.jpg" alt="Character Sculpted Cloth Dolls" loading="lazy">
+          </div>
+          <div class="product-info">
+            <div>
+              <span class="product-tag">character doll</span>
+              <h4 class="product-title">Whimsical Expression Figures</h4>
+              <p class="product-desc">幽默治愈系搞怪手作布偶。立体大鼻子腮红晕染、毛线发型、手工刺绣诙谐表情与纽扣眼睛。</p>
+            </div>
+            <div class="product-craft-note">俄式手作灵感 · 趣味雕塑感 · 纯棉亲肤填充</div>
+          </div>
+        </div>
+
+        <!-- Doll 8: Tailored Horse Pair -->
+        <div class="product-card" onclick="openLightbox('images/doll-tailored-horse-pair.jpg')">
+          <div class="product-img-wrap">
+            <img src="images/doll-tailored-horse-pair.jpg" alt="Gentleman & Lady Horse Sculptures" loading="lazy">
+          </div>
+          <div class="product-info">
+            <div>
+              <span class="product-tag">heirloom figure</span>
+              <h4 class="product-title">Tailored Equine Art Sculptures</h4>
+              <p class="product-desc">大衣绅士与淑女马形软雕塑。身着人字纹精纺毛呢长风衣、红白格翻领与微缩刺绣手部细节。</p>
+            </div>
+            <div class="product-craft-note">高级定制微缩风衣 · 复古原木纽扣 · 收藏级艺术品</div>
+          </div>
+        </div>
+
+      </div>
     </div>
 
-    <div class="collection-grid">
-      <!-- 1. Rag Dolls -->
-      <div class="collection-card" id="rag-dolls">
-        <div>
-          <span class="card-badge">heirloom</span>
-          <div class="card-symbol">🧸</div>
-          <h4 class="card-name">rag dolls</h4>
-          <p class="card-detail">
-            标志性俄罗斯布偶与艺术玩偶。立体剪裁版型、可活动四肢关节结构、手工面部微绘与多层次手缝复古微缩着装，赋予每件玩偶独特的收藏灵魂。
-          </p>
-        </div>
-        <span class="card-explore">view details →</span>
+    <!-- 02 / Studio Bags & Textile Pouches -->
+    <div class="gallery-category" data-cat="bags">
+      <div class="gallery-category-title" id="bags">
+        <span>02 / studio bags & artisan pouches</span>
+        <span class="category-count">7 items</span>
       </div>
+      <div class="gallery-grid">
 
-      <!-- 2. Botanical Dyes -->
-      <div class="collection-card" id="botanical">
-        <div>
-          <span class="card-badge">plant-based</span>
-          <div class="card-symbol">🌿</div>
-          <h4 class="card-name">botanical dyes</h4>
-          <p class="card-detail">
-            纯天然植物草木染实验织物。萃取石榴皮（暖金茶）、核桃皮（质感木褐）、紫甘蓝与紫苏等天然材料，经多次媒染与扎染，呈现温润呼吸感。
-          </p>
+        <!-- Bag 1: Indigo Stripe Hobo -->
+        <div class="product-card" onclick="openLightbox('images/bag-indigo-stripe-hobo.jpg')">
+          <div class="product-img-wrap">
+            <img src="images/bag-indigo-stripe-hobo.jpg" alt="Indigo Stripe Linen Hobo Bag" loading="lazy">
+          </div>
+          <div class="product-info">
+            <div>
+              <span class="product-tag">everyday bag</span>
+              <h4 class="product-title">Indigo Stripe Linen Hobo Tote</h4>
+              <p class="product-desc">蓝染条纹亚麻极简单肩挎包。水洗天蓝条纹粗亚麻布面、拼接收口内衬、复古柿涩茶褐全里布与按扣闭合。</p>
+            </div>
+            <div class="product-craft-note">天然植物水洗色 · 宽肩带受力加固 · 双层内衬</div>
+          </div>
         </div>
-        <span class="card-explore">view details →</span>
-      </div>
 
-      <!-- 3. Bags & Accessories -->
-      <div class="collection-card">
-        <div>
-          <span class="card-badge">everyday living</span>
-          <div class="card-symbol">👜</div>
-          <h4 class="card-name">bags & accessories</h4>
-          <p class="card-detail">
-            原创天然棉麻托特包、复古口金包、抽绳水饺包、草木染褶皱发圈与印染多功能方巾/头巾，考究内衬包边与受力点精工加固。
-          </p>
+        <!-- Bag 2: Botanical Ruffle Tote -->
+        <div class="product-card" onclick="openLightbox('images/bag-botanical-ruffle-tote.jpg')">
+          <div class="product-img-wrap">
+            <img src="images/bag-botanical-ruffle-tote.jpg" alt="Botanical Floral Ruffle Tote & Scrunchie" loading="lazy">
+          </div>
+          <div class="product-info">
+            <div>
+              <span class="product-tag">botanical tote</span>
+              <h4 class="product-title">Botanical Floral Ruffle Tote Set</h4>
+              <p class="product-desc">草木植物印花荷叶边托特包与大肠发圈套组。法式复古木刻印花棉麻、双层微褶荷叶边领口与同系列发圈。</p>
+            </div>
+            <div class="product-craft-note">印花纯棉麻 · 荷叶边立体捏褶 · 配套发圈套组</div>
+          </div>
         </div>
-        <span class="card-explore">view details →</span>
-      </div>
 
-      <!-- 4. Pet & Living -->
-      <div class="collection-card">
-        <div>
-          <span class="card-badge">comfort & care</span>
-          <div class="card-symbol">🐾</div>
-          <h4 class="card-name">pet pieces & home</h4>
-          <p class="card-detail">
-            符合宠物人体工学的舒适棉麻服饰，以及精选 A 类母婴级无荧光纯棉面料的亲肤婴儿口水巾，柔软透气不束缚，兼顾美感与实用。
-          </p>
+        <!-- Bag 3: Doll Tote Pair -->
+        <div class="product-card" onclick="openLightbox('images/bag-linen-doll-tote-pair.jpg')">
+          <div class="product-img-wrap">
+            <img src="images/bag-linen-doll-tote-pair.jpg" alt="Playful Heirloom Linen Totes" loading="lazy">
+          </div>
+          <div class="product-info">
+            <div>
+              <span class="product-tag">playful linen bag</span>
+              <h4 class="product-title">Heirloom Doll-Leg Linen Totes</h4>
+              <p class="product-desc">趣味玩偶双腿白亚麻斜挎包。纯净未漂白天然亚麻、镂空花边领圈、手工刺绣表情与俏皮下垂偶腿。</p>
+            </div>
+            <div class="product-craft-note">原创玩偶结合构思 · 纯手作打样 · 蝴蝶结系带肩带</div>
+          </div>
         </div>
-        <span class="card-explore">view details →</span>
+
+        <!-- Bag 4: Coarse Knot Bento -->
+        <div class="product-card" onclick="openLightbox('images/bag-coarse-knot-bento.jpg')">
+          <div class="product-img-wrap">
+            <img src="images/bag-coarse-knot-bento.jpg" alt="Coarse Woven Knot Bags" loading="lazy">
+          </div>
+          <div class="product-info">
+            <div>
+              <span class="product-tag">knot bag</span>
+              <h4 class="product-title">Coarse Woven Knot Bento Bags</h4>
+              <p class="product-desc">粗织手感便当结扣手提包。苔藓深绿与枯紫粗粝肌理手织面料、撞色卡其亚麻结扣手柄与加厚内衬结构。</p>
+            </div>
+            <div class="product-craft-note">粗织厚重肌理 · 日式结扣穿孔提手 · 挺括立体</div>
+          </div>
+        </div>
+
+        <!-- Bag 5: Floral Lace Pouches -->
+        <div class="product-card" onclick="openLightbox('images/bag-floral-lace-pouches.jpg')">
+          <div class="product-img-wrap">
+            <img src="images/bag-floral-lace-pouches.jpg" alt="Botanical Block-Print Pouches" loading="lazy">
+          </div>
+          <div class="product-info">
+            <div>
+              <span class="product-tag">zipper pouch</span>
+              <h4 class="product-title">Botanical Floral Lace Pouches</h4>
+              <p class="product-desc">复古草木印花蕾丝化妆/收纳包。藏青与暖白底植物花卉印花、精致刺绣蕾丝花边贴布与复古金属拉链。</p>
+            </div>
+            <div class="product-craft-note">高密内衬包边 · 复古拉链拉头 · 随身美学收纳</div>
+          </div>
+        </div>
+
+        <!-- Bag 6: Kasuri Cases -->
+        <div class="product-card" onclick="openLightbox('images/bag-indigo-kasuri-cases.jpg')">
+          <div class="product-img-wrap">
+            <img src="images/bag-indigo-kasuri-cases.jpg" alt="Indigo Kasuri Envelope Sleeves" loading="lazy">
+          </div>
+          <div class="product-info">
+            <div>
+              <span class="product-tag">pocket sleeve</span>
+              <h4 class="product-title">Indigo Kasuri Envelope Sleeves</h4>
+              <p class="product-desc">日式蓝染织布信封式眼镜/卡片收纳包。细密包边条勾勒、复古做旧黄铜四合扣与多层柔软夹棉防震防护。</p>
+            </div>
+            <div class="product-craft-note">传统蓝染提花织布 · 精细滚边工艺 · 黄铜按扣</div>
+          </div>
+        </div>
+
+        <!-- Bag 7: Batik Tote -->
+        <div class="product-card" onclick="openLightbox('images/bag-spiral-batik-tote.jpg')">
+          <div class="product-img-wrap">
+            <img src="images/bag-spiral-batik-tote.jpg" alt="Geometric Batik Structured Tote" loading="lazy">
+          </div>
+          <div class="product-info">
+            <div>
+              <span class="product-tag">structured tote</span>
+              <h4 class="product-title">Spiral Batik Structured Tote</h4>
+              <p class="product-desc">几何漩涡图腾蜡染手提包。深蓝与浅蓝同心圆蜡染帆布面料、夹棉挺括手感与舒适加宽手提带。</p>
+            </div>
+            <div class="product-craft-note">几何蜡染图腾 · 夹棉绗缝加固 · 极佳承重</div>
+          </div>
+        </div>
+
       </div>
     </div>
-  </section>
 
-  <!-- Atelier & Story Section -->
+    <!-- 03 / Accessories, Pet Pieces & Living -->
+    <div class="gallery-category" data-cat="accessories">
+      <div class="gallery-category-title" id="accessories">
+        <span>03 / pet pieces, bandanas & living textiles</span>
+        <span class="category-count">7 items</span>
+      </div>
+      <div class="gallery-grid">
+
+        <!-- Acc 1: Splatter Bandana -->
+        <div class="product-card" onclick="openLightbox('images/acc-splatter-bandana-bib.jpg')">
+          <div class="product-img-wrap">
+            <img src="images/acc-splatter-bandana-bib.jpg" alt="Botanical Splatter Bandana & Scalloped Bib" loading="lazy">
+          </div>
+          <div class="product-info">
+            <div>
+              <span class="product-tag">bandana & bib</span>
+              <h4 class="product-title">Botanical Splatter Bandana & Bib</h4>
+              <p class="product-desc">核桃皮/植物墨彩泼墨肌理三角头巾与花边口水巾。天然棉麻原色底布、不规则自然水墨甩点与蕾丝滚边。</p>
+            </div>
+            <div class="product-craft-note">植物原汁染色 · 松紧褶皱绑带 · A类母婴亲肤</div>
+          </div>
+        </div>
+
+        <!-- Acc 2: Blue Stripe Pet Collar -->
+        <div class="product-card" onclick="openLightbox('images/acc-blue-stripe-pet-collar.jpg')">
+          <div class="product-img-wrap">
+            <img src="images/acc-blue-stripe-pet-collar.jpg" alt="Sky Blue Stripe Linen Pet Cape" loading="lazy">
+          </div>
+          <div class="product-info">
+            <div>
+              <span class="product-tag">pet cape</span>
+              <h4 class="product-title">Sky Stripe Linen Pet Cape</h4>
+              <p class="product-desc">浅天蓝条纹棉麻复古宠物领结披肩。鹅黄丝绒蝴蝶结丝带装饰、做旧黄铜按扣与宠物人体工学无压弧线。</p>
+            </div>
+            <div class="product-craft-note">轻盈透气棉麻 · 丝绒微缩蝴蝶结 · 防勒舒适合体</div>
+          </div>
+        </div>
+
+        <!-- Acc 3: Brown Heart Bandana -->
+        <div class="product-card" onclick="openLightbox('images/acc-brown-heart-bandana.jpg')">
+          <div class="product-img-wrap">
+            <img src="images/acc-brown-heart-bandana.jpg" alt="Warm Walnut Heart Bandana" loading="lazy">
+          </div>
+          <div class="product-info">
+            <div>
+              <span class="product-tag">headwear</span>
+              <h4 class="product-title">Walnut Heart Jacquard Bandana</h4>
+              <p class="product-desc">暖茶褐爱心暗提花三角发带头巾。焦糖暖褐草木色调、后置弹力松紧包边带与做旧黄铜扣点缀。</p>
+            </div>
+            <div class="product-craft-note">草木色谱提取 · 柔韧贴合头型 · 舒适松紧带</div>
+          </div>
+        </div>
+
+        <!-- Acc 4: Polka Petal Collar -->
+        <div class="product-card" onclick="openLightbox('images/acc-polka-petal-collar.jpg')">
+          <div class="product-img-wrap">
+            <img src="images/acc-polka-petal-collar.jpg" alt="Reversible Polka-Dot Petal Collar" loading="lazy">
+          </div>
+          <div class="product-info">
+            <div>
+              <span class="product-tag">reversible collar</span>
+              <h4 class="product-title">Polka-Dot Scalloped Petal Collar</h4>
+              <p class="product-desc">双层花瓣波点领结小围嘴。水蓝波点与米黄细点双层波浪花瓣边造型、立体绑带蝴蝶结与按扣闭合。</p>
+            </div>
+            <div class="product-craft-note">双面可戴设计 · 波浪花瓣造型 · 双层纯棉</div>
+          </div>
+        </div>
+
+        <!-- Acc 5: Plaid Collar & Tie -->
+        <div class="product-card" onclick="openLightbox('images/acc-miniature-plaid-collar-tie.jpg')">
+          <div class="product-img-wrap">
+            <img src="images/acc-miniature-plaid-collar-tie.jpg" alt="Micro-Tailored Gentleman Collar & Tie" loading="lazy">
+          </div>
+          <div class="product-info">
+            <div>
+              <span class="product-tag">miniature tailoring</span>
+              <h4 class="product-title">Gentleman Plaid Collar & Micro-Tie</h4>
+              <p class="product-desc">微缩复古绅士格纹衬衫领与领带套件。灰色细格纹衬衫立翻领、深棕千鸟格微缩手缝打结领带。</p>
+            </div>
+            <div class="product-craft-note">极高难度微缩裁缝 · 偶用与宠物两相宜</div>
+          </div>
+        </div>
+
+        <!-- Acc 6: Mushroom Living Basket -->
+        <div class="product-card" onclick="openLightbox('images/acc-mushroom-living-basket.jpg')">
+          <div class="product-img-wrap">
+            <img src="images/acc-mushroom-living-basket.jpg" alt="Mushroom Soft Sculpture & Woven Bin" loading="lazy">
+          </div>
+          <div class="product-info">
+            <div>
+              <span class="product-tag">living soft sculpture</span>
+              <h4 class="product-title">Forest Mushroom Sculpture & Woven Tub</h4>
+              <p class="product-desc">手作森林蘑菇软雕塑与粗织收纳布筒。枯粉紫粗纺羊毛收纳桶、薄荷绿包边与麂皮/亚麻拼接森林蘑菇摆件。</p>
+            </div>
+            <div class="product-craft-note">粗织羊毛面料 · 亚麻蘑菇褶皱捏褶 · 桌面美学</div>
+          </div>
+        </div>
+
+        <!-- Acc 7: Doll Tote Detail -->
+        <div class="product-card" onclick="openLightbox('images/bag-linen-doll-tote-detail.jpg')">
+          <div class="product-img-wrap">
+            <img src="images/bag-linen-doll-tote-detail.jpg" alt="Linen Doll Tote Detail View" loading="lazy">
+          </div>
+          <div class="product-info">
+            <div>
+              <span class="product-tag">craftsmanship detail</span>
+              <h4 class="product-title">Heirloom Linen Tote Macro Detail</h4>
+              <p class="product-desc">白亚麻布包细节微距。展示古董蕾丝滚边细节、手工刺绣红线腮红点与纯棉绳偶腿收口。</p>
+            </div>
+            <div class="product-craft-note">微距细节展示 · 纯天然亚麻织纹 · 精工锁边</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Atelier & Craft Philosophy Section -->
   <section class="atelier-section">
     <div class="atelier-grid">
       <div class="atelier-text">
-        <span class="card-badge">the studio</span>
-        <h3>the atelier & craft philosophy</h3>
+        <span>the studio & philosophy</span>
+        <h3>the atelier of timeless textiles</h3>
         <p>
           在专属家庭缝纫室与手工工坊中，坚持从灵感企划、立体剪裁制版、植物萃取染色、手工精细缝制到整烫定型的全链路独立制作。
         </p>
         <p>
-          保持深度的国际视野，深度沉浸于 VK（ВКонтакте）与 Instagram 顶级手作艺术圈，汲取独联体及欧美先锋艺术家的制式与剪裁灵感。正如 Jess Brown 将纯粹的手艺人美学升华为经典生活方式品牌，Lumi Song 致力于与合伙人携手，构建兼具东方温润与国际调性的手作独立品牌。
+          正如 Jess Brown 将纯粹的手艺人美学升华为经典生活方式品牌，Lumi Song 致力于与合伙人携手，将标志性 Rag Doll 布偶、天然草木染织物与生活方式作品带给热爱自然与时间的知音。
         </p>
       </div>
 
-      <!-- Color Palette -->
-      <div class="palette-strip">
-        <h4>botanical color story</h4>
-        <div class="botanical-swatches">
+      <!-- Color Palette Box -->
+      <div class="palette-box">
+        <h4>botanical color library</h4>
+        <div class="swatch-grid">
           <div class="swatch-item">
-            <div class="swatch-color c-pomegranate"></div>
+            <div class="swatch-circle c-pomegranate"></div>
             <div class="swatch-info">
               <strong>石榴皮</strong>
               <span>pomegranate / 暖金茶色</span>
             </div>
           </div>
           <div class="swatch-item">
-            <div class="swatch-color c-walnut"></div>
+            <div class="swatch-circle c-walnut"></div>
             <div class="swatch-info">
               <strong>核桃皮</strong>
               <span>walnut / 质感木褐</span>
             </div>
           </div>
           <div class="swatch-item">
-            <div class="swatch-color c-perilla"></div>
+            <div class="swatch-circle c-perilla"></div>
             <div class="swatch-info">
               <strong>紫苏</strong>
               <span>perilla / 雅致粉紫</span>
             </div>
           </div>
           <div class="swatch-item">
-            <div class="swatch-color c-cabbage"></div>
+            <div class="swatch-circle c-cabbage"></div>
             <div class="swatch-info">
               <strong>紫甘蓝</strong>
               <span>red cabbage / 冷灰淡蓝</span>
@@ -621,7 +1039,7 @@
     </div>
   </section>
 
-  <!-- Inquiries & Contact -->
+  <!-- Inquiries Section -->
   <section class="inquiry-section" id="contact">
     <span class="hero-tag">collaboration</span>
     <h3 class="inquiry-title">inquiries & partnership</h3>
@@ -647,6 +1065,46 @@
     <p>© 2026 LUMI SONG (宋婷婷). ALL RIGHTS RESERVED.</p>
     <p>INSPIRED BY ARTISAN RAG DOLLS, NATURAL BOTANICAL DYES & LIVING TEXTILES.</p>
   </footer>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="Zoomed view">
+  </div>
+
+  <script>
+    // Gallery Filter Logic
+    function filterGallery(category) {
+      // Update buttons
+      const buttons = document.querySelectorAll('.filter-btn');
+      buttons.forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+
+      // Filter sections
+      const sections = document.querySelectorAll('.gallery-category');
+      sections.forEach(sec => {
+        if (category === 'all' || sec.getAttribute('data-cat') === category) {
+          sec.style.display = 'block';
+        } else {
+          sec.style.display = 'none';
+        }
+      });
+    }
+
+    // Lightbox Logic
+    function openLightbox(src) {
+      const lb = document.getElementById('lightbox');
+      const img = document.getElementById('lightbox-img');
+      img.src = src;
+      lb.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      const lb = document.getElementById('lightbox');
+      lb.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+  </script>
 
 </body>
 </html>
