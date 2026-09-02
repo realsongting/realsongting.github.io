@@ -165,20 +165,29 @@
 
     .timeline-frame {
       width: 100%;
-      background: var(--bg-cream);
+      height: 540px;
+      background: var(--bg-warm-oat);
       border: 1px solid var(--line-subtle);
       border-radius: 2px;
       overflow: hidden;
       display: flex;
       justify-content: center;
       align-items: center;
-      box-shadow: 0 10px 30px rgba(34, 32, 30, 0.03);
+      box-shadow: 0 10px 30px rgba(34, 32, 30, 0.04);
+      cursor: pointer;
     }
 
-    .timeline-frame img, .timeline-frame svg {
+    .timeline-frame img {
       width: 100%;
-      height: auto;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 40%;
+      transition: transform 0.6s ease;
       display: block;
+    }
+
+    .timeline-frame:hover img {
+      transform: scale(1.02);
     }
 
     /* Filter Bar for Portfolio */
@@ -479,11 +488,11 @@
   </header>
 
   <!-- -------------------------------------------------------------
-       HORIZONTAL SEWING ORIGIN TIMELINE HERO (Pure Visual & Whitespace)
+       MUSEUM SEWING EXHIBITION HERO BANNER
        ------------------------------------------------------------- -->
   <section class="timeline-hero-section">
-    <div class="timeline-frame">
-      <img src="images/artistic-sewing-timeline.jpg" alt="The Origin & Evolution of Sewing - 缝纫的源起与变迁">
+    <div class="timeline-frame" onclick="openLightbox('images/mishin-2.jpg')">
+      <img src="images/mishin-2.jpg" alt="Historical Sewing Machine Exhibition" loading="eager">
     </div>
   </section>
 
