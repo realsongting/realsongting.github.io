@@ -43,6 +43,7 @@
       line-height: 1.8;
       letter-spacing: 0.02em;
       -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
     }
 
     /* Top Announcement Note */
@@ -78,7 +79,7 @@
 
     .nav-left, .nav-right {
       display: flex;
-      gap: 2rem;
+      gap: 2.2rem;
       list-style: none;
       align-items: center;
     }
@@ -90,7 +91,7 @@
     .nav-item a {
       text-decoration: none;
       color: var(--text-dark);
-      font-size: 0.82rem;
+      font-size: 0.84rem;
       letter-spacing: 0.12em;
       text-transform: lowercase;
       transition: color 0.25s ease;
@@ -153,70 +154,138 @@
       margin-top: 0.35rem;
     }
 
-    /* Visual Hero Triptych Banner (Immediate Photo Impact) */
-    .visual-hero-section {
+    /* -------------------------------------------------------------
+       EDITORIAL LIVE CAROUSEL / LOOKBOOK HERO (Dynamic Photo Flow)
+       ------------------------------------------------------------- */
+    .hero-lookbook-section {
+      width: 100%;
+      padding: 1.8rem 0 2.5rem;
+      background: var(--bg-cream);
+      position: relative;
+    }
+
+    .lookbook-header {
       max-width: 1360px;
-      margin: 2rem auto 3.5rem;
+      margin: 0 auto 1.2rem;
+      padding: 0 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .lookbook-title {
+      font-size: 0.75rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--accent-terracotta);
+    }
+
+    .lookbook-controls {
+      display: flex;
+      gap: 0.6rem;
+    }
+
+    .lookbook-arrow {
+      background: var(--bg-pure);
+      border: 1px solid var(--line-subtle);
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: var(--text-dark);
+      font-size: 0.9rem;
+      transition: all 0.25s ease;
+    }
+
+    .lookbook-arrow:hover {
+      background: var(--text-dark);
+      color: var(--bg-cream);
+      border-color: var(--text-dark);
+    }
+
+    /* Continuous Flow Marquee Container */
+    .lookbook-track-container {
+      width: 100%;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
       padding: 0 2rem;
     }
 
-    .hero-gallery-triptych {
-      display: grid;
-      grid-template-columns: 1.2fr 0.9fr 0.9fr;
-      gap: 1.5rem;
-      height: 520px;
+    .lookbook-track-container::-webkit-scrollbar {
+      display: none;
     }
 
-    .hero-triptych-card {
+    .lookbook-track {
+      display: flex;
+      gap: 1.4rem;
+      width: max-content;
+    }
+
+    .lookbook-card {
+      width: 320px;
+      height: 460px;
+      flex-shrink: 0;
       position: relative;
-      overflow: hidden;
       background: var(--bg-warm-oat);
+      overflow: hidden;
+      border: 1px solid var(--line-subtle);
       cursor: pointer;
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
     }
 
-    .hero-triptych-card img {
+    .lookbook-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(34, 32, 30, 0.08);
+    }
+
+    .lookbook-card img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+      transition: transform 0.7s cubic-bezier(0.2, 1, 0.3, 1);
     }
 
-    .hero-triptych-card:hover img {
-      transform: scale(1.04);
+    .lookbook-card:hover img {
+      transform: scale(1.05);
     }
 
-    .hero-overlay-tag {
+    .lookbook-card-overlay {
       position: absolute;
-      bottom: 1.8rem;
-      left: 1.8rem;
-      background: rgba(250, 248, 245, 0.92);
-      backdrop-filter: blur(6px);
-      padding: 0.6rem 1.4rem;
-      border: 1px solid var(--line-subtle);
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 2rem 1.4rem 1.2rem;
+      background: linear-gradient(to top, rgba(34, 32, 30, 0.85) 0%, rgba(34, 32, 30, 0.4) 65%, transparent 100%);
+      color: var(--bg-cream);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
     }
 
-    .hero-overlay-tag h3 {
+    .lookbook-card-tag {
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #E8B99A;
+      margin-bottom: 0.25rem;
+    }
+
+    .lookbook-card-title {
       font-family: var(--font-display);
       font-size: 1.15rem;
       font-weight: 400;
-      letter-spacing: 0.06em;
-      text-transform: lowercase;
-      color: var(--text-dark);
-    }
-
-    .hero-overlay-tag span {
-      display: block;
-      font-size: 0.7rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--accent-terracotta);
-      margin-top: 0.15rem;
+      line-height: 1.25;
     }
 
     /* Filter Bar for Portfolio */
     .gallery-filter-wrap {
       max-width: 1360px;
-      margin: 2rem auto 2.5rem;
+      margin: 1.5rem auto 2rem;
       padding: 0 2rem;
       display: flex;
       justify-content: center;
@@ -361,7 +430,7 @@
     }
 
     /* -------------------------------------------------------------
-       ABOUT ME / THE ARTISAN'S STORY SECTION (Jess Brown Style Narrative)
+       ABOUT ME / THE ARTISAN'S GENESIS STORY (Authentic Memory)
        ------------------------------------------------------------- */
     .about-story-section {
       background: var(--bg-warm-oat);
@@ -400,7 +469,6 @@
       text-transform: lowercase;
     }
 
-    /* Chapter Row: 2-column alternating layouts */
     .story-chapter {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -482,7 +550,7 @@
       line-height: 1.6;
     }
 
-    /* Atelier & Color Library Box */
+    /* Botanical Palette Box */
     .palette-box {
       background: var(--bg-pure);
       border: 1px solid var(--line-subtle);
@@ -630,8 +698,6 @@
     }
 
     @media (max-width: 1024px) {
-      .hero-gallery-triptych { grid-template-columns: 1fr; height: auto; }
-      .hero-triptych-card { height: 380px; }
       .gallery-grid { grid-template-columns: repeat(2, 1fr); }
       .story-chapter, .story-chapter.reverse { grid-template-columns: 1fr; gap: 2.5rem; }
       .story-chapter.reverse .story-image-wrap { order: 1; }
@@ -643,6 +709,7 @@
     @media (max-width: 640px) {
       .nav-wrapper { grid-template-columns: 1fr; text-align: center; gap: 1rem; }
       .nav-left, .nav-right { display: none; }
+      .lookbook-card { width: 260px; height: 380px; }
       .gallery-grid { grid-template-columns: 1fr; }
       .product-img-wrap { height: 360px; }
       .about-lead-title { font-size: 2.3rem; }
@@ -671,7 +738,7 @@
       </a>
 
       <ul class="nav-right">
-        <li class="nav-item"><a href="#story" data-i18n="nav_story">about me</a></li>
+        <li class="nav-item"><a href="#about-me" data-i18n="nav_about">about me</a></li>
         <li class="nav-item"><a href="#contact" data-i18n="nav_inquiries">inquiries</a></li>
         <li class="nav-item">
           <!-- Language Toggle Button -->
@@ -684,37 +751,103 @@
     </div>
   </header>
 
-  <!-- Visual Hero Banner (Immediate Photo Impact) -->
-  <section class="visual-hero-section">
-    <div class="hero-gallery-triptych">
-      
-      <!-- Big Hero: Heirloom Victorian Doll -->
-      <div class="hero-triptych-card" onclick="openLightbox('images/doll-heirloom-white-lace.jpg')">
-        <img src="images/doll-heirloom-white-lace.jpg" alt="Victorian Heirloom Rag Doll" loading="eager">
-        <div class="hero-overlay-tag">
-          <span data-i18n="hero_t1_sub">featured heirloom</span>
-          <h3 data-i18n="hero_t1_title">Victorian Heirloom Rag Doll</h3>
-        </div>
+  <!-- -------------------------------------------------------------
+       LOOKBOOK HERO: DYNAMIC SMOOTH ROLLING GALLERY OF ALL WORKS
+       ------------------------------------------------------------- -->
+  <section class="hero-lookbook-section">
+    <div class="lookbook-header">
+      <span class="lookbook-title" data-i18n="lookbook_tag">featured portfolio & lookbook / 动态作品流</span>
+      <div class="lookbook-controls">
+        <button class="lookbook-arrow" onclick="scrollLookbook(-340)" aria-label="Previous">←</button>
+        <button class="lookbook-arrow" onclick="scrollLookbook(340)" aria-label="Next">→</button>
       </div>
+    </div>
 
-      <!-- Hero 2: Indigo Stripe Hobo Tote -->
-      <div class="hero-triptych-card" onclick="openLightbox('images/bag-indigo-stripe-hobo.jpg')">
-        <img src="images/bag-indigo-stripe-hobo.jpg" alt="Indigo Stripe Linen Hobo Tote" loading="eager">
-        <div class="hero-overlay-tag">
-          <span data-i18n="hero_t2_sub">studio bag</span>
-          <h3 data-i18n="hero_t2_title">Indigo Stripe Linen Hobo</h3>
+    <!-- Scrollable Flow Track Containing All Representative Pieces -->
+    <div class="lookbook-track-container" id="lookbook-container">
+      <div class="lookbook-track">
+        
+        <div class="lookbook-card" onclick="openLightbox('images/doll-heirloom-white-lace.jpg')">
+          <img src="images/doll-heirloom-white-lace.jpg" alt="Victorian Heirloom Rag Doll" loading="eager">
+          <div class="lookbook-card-overlay">
+            <span class="lookbook-card-tag" data-i18n="tag_doll">heirloom rag doll</span>
+            <h4 class="lookbook-card-title" data-i18n="d1_title">Victorian Heirloom Lace Doll</h4>
+          </div>
         </div>
-      </div>
 
-      <!-- Hero 3: Botanical Dyed Bandana & Collar -->
-      <div class="hero-triptych-card" onclick="openLightbox('images/acc-splatter-bandana-bib.jpg')">
-        <img src="images/acc-splatter-bandana-bib.jpg" alt="Botanical Dye Splatter Bandana" loading="eager">
-        <div class="hero-overlay-tag">
-          <span data-i18n="hero_t3_sub">botanical dyes</span>
-          <h3 data-i18n="hero_t3_title">Botanical Splatter Bandana</h3>
+        <div class="lookbook-card" onclick="openLightbox('images/bag-indigo-stripe-hobo.jpg')">
+          <img src="images/bag-indigo-stripe-hobo.jpg" alt="Indigo Stripe Linen Hobo Tote" loading="eager">
+          <div class="lookbook-card-overlay">
+            <span class="lookbook-card-tag" data-i18n="tag_bag">studio bag</span>
+            <h4 class="lookbook-card-title" data-i18n="b1_title">Indigo Stripe Linen Hobo</h4>
+          </div>
         </div>
-      </div>
 
+        <div class="lookbook-card" onclick="openLightbox('images/doll-mohair-teddies.jpg')">
+          <img src="images/doll-mohair-teddies.jpg" alt="Vintage Mohair Jointed Bears" loading="eager">
+          <div class="lookbook-card-overlay">
+            <span class="lookbook-card-tag" data-i18n="tag_teddy">jointed bear</span>
+            <h4 class="lookbook-card-title" data-i18n="d3_title">Vintage Mohair Jointed Bears</h4>
+          </div>
+        </div>
+
+        <div class="lookbook-card" onclick="openLightbox('images/acc-splatter-bandana-bib.jpg')">
+          <img src="images/acc-splatter-bandana-bib.jpg" alt="Botanical Dye Splatter Bandana" loading="eager">
+          <div class="lookbook-card-overlay">
+            <span class="lookbook-card-tag" data-i18n="tag_acc">botanical dye</span>
+            <h4 class="lookbook-card-title" data-i18n="a1_title">Botanical Splatter Bandana</h4>
+          </div>
+        </div>
+
+        <div class="lookbook-card" onclick="openLightbox('images/doll-indigo-patchwork.jpg')">
+          <img src="images/doll-indigo-patchwork.jpg" alt="Studio Indigo Patchwork Doll" loading="lazy">
+          <div class="lookbook-card-overlay">
+            <span class="lookbook-card-tag" data-i18n="tag_doll">artisan doll</span>
+            <h4 class="lookbook-card-title" data-i18n="d2_title">Indigo Patchwork Studio Doll</h4>
+          </div>
+        </div>
+
+        <div class="lookbook-card" onclick="openLightbox('images/bag-botanical-ruffle-tote.jpg')">
+          <img src="images/bag-botanical-ruffle-tote.jpg" alt="Botanical Floral Ruffle Tote" loading="lazy">
+          <div class="lookbook-card-overlay">
+            <span class="lookbook-card-tag" data-i18n="tag_bag">botanical tote</span>
+            <h4 class="lookbook-card-title" data-i18n="b2_title">Botanical Ruffle Tote Set</h4>
+          </div>
+        </div>
+
+        <div class="lookbook-card" onclick="openLightbox('images/doll-linen-elephants.jpg')">
+          <img src="images/doll-linen-elephants.jpg" alt="Linen Elephant Pair" loading="lazy">
+          <div class="lookbook-card-overlay">
+            <span class="lookbook-card-tag" data-i18n="tag_sculpture">soft sculpture</span>
+            <h4 class="lookbook-card-title" data-i18n="d6_title">Handcrafted Linen Elephant Pair</h4>
+          </div>
+        </div>
+
+        <div class="lookbook-card" onclick="openLightbox('images/acc-blue-stripe-pet-collar.jpg')">
+          <img src="images/acc-blue-stripe-pet-collar.jpg" alt="Linen Pet Cape" loading="lazy">
+          <div class="lookbook-card-overlay">
+            <span class="lookbook-card-tag" data-i18n="tag_acc">pet cape</span>
+            <h4 class="lookbook-card-title" data-i18n="a2_title">Sky Stripe Linen Pet Cape</h4>
+          </div>
+        </div>
+
+        <div class="lookbook-card" onclick="openLightbox('images/bag-coarse-knot-bento.jpg')">
+          <img src="images/bag-coarse-knot-bento.jpg" alt="Coarse Woven Knot Bags" loading="lazy">
+          <div class="lookbook-card-overlay">
+            <span class="lookbook-card-tag" data-i18n="tag_bag">knot bag</span>
+            <h4 class="lookbook-card-title" data-i18n="b4_title">Coarse Woven Knot Bento</h4>
+          </div>
+        </div>
+
+        <div class="lookbook-card" onclick="openLightbox('images/doll-tailored-horse-pair.jpg')">
+          <img src="images/doll-tailored-horse-pair.jpg" alt="Equine Art Sculptures" loading="lazy">
+          <div class="lookbook-card-overlay">
+            <span class="lookbook-card-tag" data-i18n="tag_heirloom">heirloom figure</span>
+            <h4 class="lookbook-card-title" data-i18n="d8_title">Tailored Equine Sculptures</h4>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
 
@@ -729,7 +862,7 @@
   <!-- Main Portfolio Showcase -->
   <main class="portfolio-section">
 
-    <!-- Collection 1: Heirloom Rag Dolls (No 01 prefix) -->
+    <!-- Collection 1: Heirloom Rag Dolls -->
     <div class="gallery-category" data-cat="rag-dolls">
       <div class="gallery-category-title" id="rag-dolls">
         <span data-i18n="cat_title_1">heirloom rag dolls & art sculptures</span>
@@ -860,7 +993,7 @@
       </div>
     </div>
 
-    <!-- Collection 2: Studio Bags (No 02 prefix) -->
+    <!-- Collection 2: Studio Bags -->
     <div class="gallery-category" data-cat="bags">
       <div class="gallery-category-title" id="bags">
         <span data-i18n="cat_title_2">studio bags & artisan pouches</span>
@@ -976,7 +1109,7 @@
       </div>
     </div>
 
-    <!-- Collection 3: Pet & Living Textiles (No 03 prefix) -->
+    <!-- Collection 3: Pet & Living Textiles -->
     <div class="gallery-category" data-cat="accessories">
       <div class="gallery-category-title" id="accessories">
         <span data-i18n="cat_title_3">pet pieces, bandanas & living textiles</span>
@@ -1095,33 +1228,33 @@
   </main>
 
   <!-- -------------------------------------------------------------
-       ABOUT ME / THE ARTISAN'S STORY (Storytelling Inspired by Jess Brown)
+       ABOUT ME / 关于我 (True Personal Memory & Genesis Story)
        ------------------------------------------------------------- -->
-  <section class="about-story-section" id="story">
+  <section class="about-story-section" id="about-me">
     <div class="about-story-wrapper">
       
       <!-- Lead Header -->
       <div class="about-lead-header">
-        <span class="about-lead-tag" data-i18n="about_tag">the artisan’s journey</span>
-        <h2 class="about-lead-title" data-i18n="about_title">from the warmth of a sewing studio to an enduring aesthetic</h2>
+        <span class="about-lead-tag" data-i18n="about_tag">about me / 关于我</span>
+        <h2 class="about-lead-title" data-i18n="about_title">from the rhythm of a mother’s sewing machine to an artisan brand</h2>
       </div>
 
-      <!-- Chapter 1: The Hearth & The First Stitch -->
+      <!-- Chapter 1: The Dusty Loom & Childhood Memory (Origin Story) -->
       <div class="story-chapter">
         <div class="story-image-wrap" onclick="openLightbox('images/doll-indigo-patchwork.jpg')">
-          <img src="images/doll-indigo-patchwork.jpg" alt="The Studio & First Stitch">
+          <img src="images/doll-indigo-patchwork.jpg" alt="The Studio & Dusty Loom Genesis">
         </div>
         <div class="story-text-wrap">
           <span class="chapter-number" data-i18n="ch1_num">chapter I</span>
-          <h3 class="chapter-title" data-i18n="ch1_title">The Hearth, JUKI & The First Stitch</h3>
+          <h3 class="chapter-title" data-i18n="ch1_title">The Dusty Loom & The Memory of Foot Pedal</h3>
           <p class="chapter-p" data-i18n="ch1_p1">
-            在专属家庭缝纫室的一隅，安静的缝纫机转动声与剪刀裁切厚麻布的脆响，构成了 Lumi Song 每日创作的序曲。与快节奏工业化量产背道而驰，宋婷婷选择了一条倾注时间与手指触觉的慢手作之路。
+            我的手作起源，发生在一个看似寻常的搬家日子。那天我回家帮忙收拾旧物，在老屋幽暗的角落里，无意间看到了一台静静伫立、落满厚厚灰尘的老式木质织布机。
           </p>
           <p class="chapter-p" data-i18n="ch1_p2">
-            正如加州艺术家 Jess Brown 在 1998 年用一块老亚麻布为孩子缝制第一个布偶开启传奇，Lumi Song 的第一针也源自对天然织物温度的执念——从立体剪裁打板、关节结构设计，到用暗针将每一寸棉麻裙摆缝合，让织物获得生命。
+            轻轻拭去尘土的瞬间，尘封多年的童年记忆如潮水般轰然被唤醒——在自己还蹒跚学步、甚至还不会走路的时候，妈妈总是背对着我坐在窗前，脚下一踩一踏踩着老式缝纫机，机针飞快穿梭，咔哒咔哒的声音陪伴着我的整个童年。抚摸着老织机深沉木纹的那一刻，内心的火苗被彻底点燃。从此，便一发不可收拾地走上了独立布艺创作与手工布偶的道路。
           </p>
           <div class="chapter-quote" data-i18n="ch1_quote">
-            “每一道看似笨拙的手工走线，都是手艺人与时间的无声对谈。”
+            “抚摸落灰织机的那一瞬，我知道，手指触碰针线是我命中注定的归宿。”
           </div>
         </div>
       </div>
@@ -1135,13 +1268,13 @@
           <span class="chapter-number" data-i18n="ch2_num">chapter II</span>
           <h3 class="chapter-title" data-i18n="ch2_title">The Alchemy of Botanical Dyes</h3>
           <p class="chapter-p" data-i18n="ch2_p1">
-            工作室的染锅里，常年沸腾着大自然四季馈赠的色彩：秋日剥落的石榴皮煮出温暖的金茶，核桃硬壳淬炼出沉稳质朴的木褐，而紫苏与紫甘蓝则在不同酸碱度中幻化出如暮霭般的粉紫与灰蓝。
+            工坊的染锅里，四季流转着大自然最质朴的色彩：秋日剥落的石榴皮淬炼出温暖金茶，核桃硬壳煮出深沉木褐，而紫苏与紫甘蓝则在不同酸碱度中幻化出如暮霭般的粉紫与冷灰蓝。
           </p>
           <p class="chapter-p" data-i18n="ch2_p2">
-            拒绝任何化学染料与荧光剂，坚持以明矾、铁媒染等传统固色工艺让色素在天然棉麻纤维上缓缓扎根。经过反复水洗与日光晾晒的草木染织物，拥有机器调色永远无法企及的呼吸感与岁月色落。
+            拒绝任何工业化学染料，坚持以传统明矾与铁媒染让天然植物色素在棉麻纤维上缓缓扎根。经过反复水洗与日光晾晒的草木染面料，拥有化学工业永远无法赋予的温润呼吸感与岁月色泽。
           </p>
           <div class="chapter-quote" data-i18n="ch2_quote">
-            “草木有灵，借由水火与时间，在织物上留下大自然的印记。”
+            “草木有灵，借由水火与时间，在织物上留下大自然的记忆。”
           </div>
         </div>
       </div>
@@ -1155,10 +1288,10 @@
           <span class="chapter-number" data-i18n="ch3_num">chapter III</span>
           <h3 class="chapter-title" data-i18n="ch3_title">Heirlooms & A Complete Living Universe</h3>
           <p class="chapter-p" data-i18n="ch3_p1">
-            从可以代代相传的高定传家宝布偶（Heirloom Rag Dolls），到带着荷叶边褶皱与木刻印花的日常托特包；从微缩考究的宠物绅士领结披肩，到触感亲肤的母婴级口水巾——Lumi Song 的手作美学正从一个人的工作台，自然延伸为一个完整而温润的独立生活方式品牌。
+            正如加州艺术家 Jess Brown 将一个手艺人的纯粹审美升华为完整品牌，Lumi Song 的创作也从高定传家宝艺术布偶，自然生长至日常荷叶边托特包、微缩考究的宠物绅士领结披肩，以及触感亲肤的生活织物。
           </p>
           <p class="chapter-p" data-i18n="ch3_p2">
-            长期深度汲取俄罗斯 VK 社区与 Instagram 全球先锋独立艺术家的前沿制式，融合当代 AI 灵感企划工具，她期待与志同道合的品牌合伙人携手，共同开辟兼具艺术高度与商业生命力的小众独立店铺。
+            长期深度沉浸于俄罗斯 VK 社区与 Instagram 独立手作艺术生态，融合当代 AI 色卡企划工具，她期待与志同道合的合伙人携手，共同开辟兼具艺术高度与商业生命力的小众独立店铺。
           </p>
           <div class="chapter-quote" data-i18n="ch3_quote">
             “把一个手艺人的纯粹审美，变成一个温暖人心的品牌世界。”
@@ -1245,15 +1378,9 @@
         nav_bags: "原创布包",
         nav_living: "宠物与生活",
         brand_sub: "手作设计与工坊",
-        nav_story: "手作手记",
+        nav_about: "关于我",
         nav_inquiries: "合作洽谈",
-        
-        hero_t1_sub: "标志性传家宝系列",
-        hero_t1_title: "维多利亚白纱复古布偶",
-        hero_t2_sub: "工坊原创布包",
-        hero_t2_title: "蓝染条纹亚麻单肩包",
-        hero_t3_sub: "天然草木染",
-        hero_t3_title: "草木泼墨头巾与围嘴",
+        lookbook_tag: "作品画廊 · PORTFOLIO LOOKBOOK",
         
         filter_all: "全部作品 (22)",
         filter_dolls: "艺术布偶 (8)",
@@ -1363,25 +1490,25 @@
         a7_desc: "白亚麻布包细节微距。展示古董蕾丝滚边细节、手工刺绣红线腮红点与纯棉绳偶腿收口。",
         a7_note: "微距细节展示 · 纯天然亚麻织纹 · 精工锁边",
         
-        about_tag: "手作手记 · ABOUT LUMI SONG",
-        about_title: "从家庭缝纫室的温润触感，生长为一个手艺人的独立品牌",
+        about_tag: "关于我 · ABOUT ME",
+        about_title: "从老织布机与妈妈踩缝纫机的背影，到一发不可收拾的手作之路",
         
-        ch1_num: "第一章 · 工坊与第一道针脚",
-        ch1_title: "家庭工坊、JUKI与指尖的触觉",
-        ch1_p1: "在专属家庭缝纫室的一隅，安静的缝纫机转动声与剪刀裁切厚麻布的脆响，构成了 Lumi Song 每日创作的序曲。与快节奏工业化量产背道而驰，宋婷婷选择了一条倾注时间与手指触觉的慢手作之路。",
-        ch1_p2: "正如加州艺术家 Jess Brown 在 1998 年用一块老亚麻布为孩子缝制第一个布偶开启传奇，Lumi Song 的第一针也源自对天然织物温度的执念——从立体剪裁打板、关节结构设计，到用暗针将每一寸棉麻裙摆缝合，赋予织物独特不可替代的生命力。",
-        ch1_quote: "“每一道看似笨拙的手工走线，都是手艺人与时间的无声对谈。”",
+        ch1_num: "第一章 · 尘封的织布机与儿时记忆",
+        ch1_title: "一台落灰的老织布机，与妈妈踩缝纫机的背影",
+        ch1_p1: "我的手作起源，发生在一个看似寻常的搬家日子。那天我回家帮忙收拾旧物，在老屋幽暗的角落里，无意间看到了一台静静伫立、落满厚厚灰尘的老式木质织布机。",
+        ch1_p2: "轻轻拭去尘土的瞬间，尘封多年的童年记忆如潮水般轰然被唤醒——在自己还蹒跚学步、甚至还不会走路的时候，妈妈总是背对着我坐在窗前，脚下一踩一踏踩着老式缝纫机，机针飞快穿梭，咔哒咔哒的声音陪伴着我的整个童年。抚摸着老织机深沉木纹的那一刻，内心的火苗被彻底点燃。从此，便一发不可收拾地走上了独立布艺创作与手工布偶的道路。",
+        ch1_quote: "“抚摸落灰织机的那一瞬，我知道，手指触碰针线是我命中注定的归宿。”",
         
         ch2_num: "第二章 · 草木的炼金术",
         ch2_title: "四季草木色谱的天然呼吸",
-        ch2_p1: "工作室的染锅里，常年沸腾着大自然四季馈赠的色彩：秋日剥落的石榴皮煮出温暖的金茶，核桃硬壳淬炼出沉稳质朴的木褐，而紫苏与紫甘蓝则在不同酸碱度中幻化出如暮霭般的粉紫与灰蓝。",
-        ch2_p2: "拒绝任何化学染料与荧光剂，坚持以明矾、铁媒染等传统固色工艺让色素在天然棉麻纤维上缓缓扎根。经过反复水洗与日光晾晒的草木染织物，拥有机器调色永远无法企及的呼吸感与岁月色落。",
-        ch2_quote: "“草木有灵，借由水火与时间，在织物上留下大自然的印记。”",
+        ch2_p1: "工坊的染锅里，四季流转着大自然最质朴的色彩：秋日剥落的石榴皮淬炼出温暖金茶，核桃硬壳煮出深沉木褐，而紫苏与紫甘蓝则在不同酸碱度中幻化出如暮霭般的粉紫与冷灰蓝。",
+        ch2_p2: "拒绝任何工业化学染料，坚持以传统明矾与铁媒染让天然植物色素在棉麻纤维上缓缓扎根。经过反复水洗与日光晾晒的草木染面料，拥有化学工业永远无法赋予的温润呼吸感与岁月色泽。",
+        ch2_quote: "“草木有灵，借由水火与时间，在织物上留下大自然的记忆。”",
         
         ch3_num: "第三章 · 传家宝与生活宇宙",
         ch3_title: "从一只布偶，生长为完整生活方式",
-        ch3_p1: "从可以代代相传的高定传家宝布偶（Heirloom Rag Dolls），到带着荷叶边褶皱与木刻印花的日常托特包；从微缩考究的宠物绅士领结披肩，到触感亲肤的母婴级口水巾——Lumi Song 的手作美学正从一个人的工作台，自然延伸为一个完整而温润的独立生活方式品牌。",
-        ch3_p2: "长期深度汲取俄罗斯 VK 社区与 Instagram 全球先锋独立艺术家的前沿制式，融合当代 AI 灵感企划工具，她期待与志同道合的品牌合伙人携手，共同开辟兼具艺术高度与商业生命力的小众独立店铺。",
+        ch3_p1: "正如加州艺术家 Jess Brown 将一个手艺人的纯粹审美升华为完整品牌，Lumi Song 的创作也从高定传家宝艺术布偶，自然生长至日常荷叶边托特包、微缩考究的宠物绅士领结披肩，以及触感亲肤的生活织物。",
+        ch3_p2: "长期深度沉浸于俄罗斯 VK 社区与 Instagram 独立手作艺术生态，融合当代 AI 色卡企划工具，她期待与志同道合的合伙人携手，共同开辟兼具艺术高度与商业生命力的小众独立店铺。",
         ch3_quote: "“把一个手艺人的纯粹审美，变成一个温暖人心的品牌世界。”",
         
         palette_title: "天然草木特色色谱 / THE BOTANICAL PALETTE",
@@ -1408,15 +1535,9 @@
         nav_bags: "studio bags",
         nav_living: "pet & living",
         brand_sub: "design & atelier",
-        nav_story: "about me",
+        nav_about: "about me",
         nav_inquiries: "inquiries",
-        
-        hero_t1_sub: "featured heirloom",
-        hero_t1_title: "Victorian Heirloom Rag Doll",
-        hero_t2_sub: "studio bag",
-        hero_t2_title: "Indigo Stripe Linen Hobo",
-        hero_t3_sub: "botanical dyes",
-        hero_t3_title: "Botanical Splatter Bandana",
+        lookbook_tag: "PORTFOLIO LOOKBOOK",
         
         filter_all: "ALL WORKS (22)",
         filter_dolls: "RAG DOLLS (8)",
@@ -1526,14 +1647,14 @@
         a7_desc: "Macro close-up view of the heirloom linen tote bag. Highlighting antique lace trims, hand-embroidered red blush stitches, and natural unbleached linen weave.",
         a7_note: "Macro Detail View · Pure Unbleached Linen Weave · Clean Overlock Finish",
         
-        about_tag: "the artisan’s journey · ABOUT LUMI SONG",
-        about_title: "from the warmth of a sewing studio to an enduring aesthetic",
+        about_tag: "ABOUT ME · ABOUT LUMI SONG",
+        about_title: "from the rhythm of a mother’s sewing machine to an artisan brand",
         
-        ch1_num: "chapter I · The Hearth & The First Stitch",
-        ch1_title: "The Home Atelier, JUKI & Tactile Devotion",
-        ch1_p1: "Inside her dedicated home sewing studio, the rhythmic hum of the JUKI machine and the crisp snip of shears through heavy linen compose the morning prelude. Intentionally turning away from fast industrial mass-production, Song Tingting chose a slow, tactile path rooted in time and human touch.",
-        ch1_p2: "Much like California artist Jess Brown, who in 1998 stitched a simple rag doll for her children out of vintage linen and sparked an iconic brand, Tingting’s first stitch began from a devotion to the warmth of natural textiles—from 3D pattern cutting to hand-sewn invisible ladder stitches, breathing unique soul into cloth.",
-        ch1_quote: "“Every hand-stitched seam is a silent, intimate dialogue between artisan and time.”",
+        ch1_num: "chapter I · The Dusty Loom & Childhood Memory",
+        ch1_title: "A Dusty Wooden Loom & The Memory of My Mother’s Sewing Machine",
+        ch1_p1: "The genesis of my craft began on an ordinary moving day. I was back home helping sort through old belongings when, in a quiet, shadowy corner, I discovered an antique wooden loom standing silently, covered in years of deep dust.",
+        ch1_p2: "Gently brushing away the dust, a long-buried childhood memory rushed back in full vividness: before I could even walk, my mother was always sitting with her back to me by the window, her feet rhythmically pressing the treadle of her vintage sewing machine, needle flying through cloth to stitch warmth for our family. In the moment my fingers traced the grain of that old loom, an unquenchable spark ignited within my soul. From that day forward, my devotion to slow textiles, natural dyes, and heirloom rag dolls began, unstoppable and destined.",
+        ch1_quote: "“The moment my fingers touched that dusty loom, I knew this was where my hands and heart truly belong.”",
         
         ch2_num: "chapter II · The Alchemy of Botanical Dyes",
         ch2_title: "The Living Breath of Seasonal Plant Dyes",
@@ -1543,7 +1664,7 @@
         
         ch3_num: "chapter III · Heirlooms & A Complete Universe",
         ch3_title: "From a Single Doll to an Enduring Lifestyle Universe",
-        ch3_p1: "From heirloom rag dolls crafted to be cherished across generations, to everyday block-printed ruffle totes; from micro-tailored pet collar capes to baby-safe organic bibs—Lumi Song’s tactile aesthetic has grown naturally from a personal workbench into an expansive, comforting lifestyle universe.",
+        ch3_p1: "Just as California artist Jess Brown elevated an artisan's tactile aesthetic into a complete brand, Lumi Song’s creations have grown from collectible heirloom rag dolls into everyday block-printed ruffle totes, micro-tailored pet collar capes, and gentle living textiles.",
         ch3_p2: "Drawing continuous inspiration from the Russian VK handmade community and avant-garde global artisans on Instagram, while harnessing modern AI design workflows, she seeks like-minded brand partners to co-found an enduring boutique lifestyle brand.",
         ch3_quote: "“To elevate one artisan’s pure aesthetic into an enduring brand that touches hearts.”",
         
@@ -1618,6 +1739,36 @@
       const lb = document.getElementById('lightbox');
       lb.classList.remove('active');
       document.body.style.overflow = 'auto';
+    }
+
+    function scrollLookbook(offset) {
+      const container = document.getElementById('lookbook-container');
+      container.scrollBy({ left: offset, behavior: 'smooth' });
+    }
+
+    // Auto-scroll loop for the lookbook
+    let autoScrollTimer = null;
+    let scrollDirection = 1;
+    function startAutoScroll() {
+      autoScrollTimer = setInterval(() => {
+        const container = document.getElementById('lookbook-container');
+        if (!container) return;
+        if (container.scrollLeft + container.clientWidth >= container.scrollWidth - 10) {
+          scrollDirection = -1;
+        } else if (container.scrollLeft <= 10) {
+          scrollDirection = 1;
+        }
+        container.scrollBy({ left: scrollDirection * 1.5, behavior: 'auto' });
+      }, 30);
+    }
+
+    const container = document.getElementById('lookbook-container');
+    if (container) {
+      startAutoScroll();
+      container.addEventListener('mouseenter', () => clearInterval(autoScrollTimer));
+      container.addEventListener('mouseleave', () => startAutoScroll());
+      container.addEventListener('touchstart', () => clearInterval(autoScrollTimer));
+      container.addEventListener('touchend', () => startAutoScroll());
     }
   </script>
 
