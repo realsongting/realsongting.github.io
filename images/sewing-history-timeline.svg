@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 360" width="100%" height="100%">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Italiana&amp;family=Noto+Serif+SC:wght@300;400;500;600&amp;family=Jost:wght@300;400;500&amp;display=swap');
+      .bg { fill: #FAF8F5; }
+      .stitch-line { stroke: #9B634E; stroke-width: 2; stroke-dasharray: 6, 6; }
+      .year-text { font-family: 'Italiana', serif; font-size: 28px; fill: #22201E; letter-spacing: 2px; }
+      .title-text { font-family: 'Noto Serif SC', serif; font-weight: 500; font-size: 15px; fill: #22201E; letter-spacing: 1px; }
+      .desc-text { font-family: 'Noto Serif SC', serif; font-weight: 300; font-size: 12.5px; fill: #686560; line-height: 1.6; }
+      .node-circle { fill: #FAF8F5; stroke: #9B634E; stroke-width: 2.5; }
+      .node-inner { fill: #9B634E; }
+      .header-tag { font-family: 'Jost', sans-serif; font-size: 11px; letter-spacing: 4px; fill: #9B634E; text-transform: uppercase; }
+      .header-title { font-family: 'Italiana', 'Noto Serif SC', serif; font-size: 22px; fill: #22201E; letter-spacing: 2px; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1400" height="360" class="bg"/>
+
+  <!-- Top Header Title -->
+  <text x="700" y="45" text-anchor="middle" class="header-tag">THE ORIGIN &amp; EVOLUTION OF SEWING</text>
+  <text x="700" y="75" text-anchor="middle" class="header-title">缝 纫 的 源 起 与 变 迁</text>
+
+  <!-- Main Horizontal Stitch Line -->
+  <line x1="80" y1="180" x2="1320" y2="180" class="stitch-line" />
+
+  <!-- Node 1: 1790 -->
+  <g transform="translate(140, 0)">
+    <!-- Top Content -->
+    <text x="0" y="130" text-anchor="middle" class="year-text">1790</text>
+    <text x="0" y="152" text-anchor="middle" class="title-text">托马斯·圣特 · 英国</text>
+    
+    <!-- Center Node -->
+    <circle cx="0" cy="180" r="7" class="node-circle"/>
+    <circle cx="0" cy="180" r="3" class="node-inner"/>
+
+    <!-- Bottom Description -->
+    <text x="0" y="215" text-anchor="middle" class="desc-text">构想并绘制出世界首台</text>
+    <text x="0" y="235" text-anchor="middle" class="desc-text">皮具手摇缝纫机雏形图纸</text>
+  </g>
+
+  <!-- Node 2: 1830 -->
+  <g transform="translate(480, 0)">
+    <!-- Bottom Content (Staggered) -->
+    <!-- Center Node -->
+    <circle cx="0" cy="180" r="7" class="node-circle"/>
+    <circle cx="0" cy="180" r="3" class="node-inner"/>
+
+    <!-- Top Info -->
+    <text x="0" y="130" text-anchor="middle" class="year-text">1830</text>
+    <text x="0" y="152" text-anchor="middle" class="title-text">巴泰勒米·蒂莫尼耶 · 法国</text>
+
+    <!-- Bottom Description -->
+    <text x="0" y="215" text-anchor="middle" class="desc-text">裁缝发明木质单线链缝机</text>
+    <text x="0" y="235" text-anchor="middle" class="desc-text">人类历史上首台实用型缝纫机</text>
+  </g>
+
+  <!-- Node 3: 1845 -->
+  <g transform="translate(840, 0)">
+    <!-- Center Node -->
+    <circle cx="0" cy="180" r="7" class="node-circle"/>
+    <circle cx="0" cy="180" r="3" class="node-inner"/>
+
+    <!-- Top Info -->
+    <text x="0" y="130" text-anchor="middle" class="year-text">1845</text>
+    <text x="0" y="152" text-anchor="middle" class="title-text">艾利亚斯·豪 · 美国</text>
+
+    <!-- Bottom Description -->
+    <text x="0" y="215" text-anchor="middle" class="desc-text">发明上下双线交织锁缝法</text>
+    <text x="0" y="235" text-anchor="middle" class="desc-text">奠定现代机缝工艺（本缝）源流</text>
+  </g>
+
+  <!-- Node 4: 1851 -->
+  <g transform="translate(1200, 0)">
+    <!-- Center Node -->
+    <circle cx="0" cy="180" r="7" class="node-circle"/>
+    <circle cx="0" cy="180" r="3" class="node-inner"/>
+
+    <!-- Top Info -->
+    <text x="0" y="130" text-anchor="middle" class="year-text">1851</text>
+    <text x="0" y="152" text-anchor="middle" class="title-text">艾萨克·胜家 · 美国</text>
+
+    <!-- Bottom Description -->
+    <text x="0" y="215" text-anchor="middle" class="desc-text">发明脚踏踏板胜家缝纫机</text>
+    <text x="0" y="235" text-anchor="middle" class="desc-text">让针线与温度走进千家万户</text>
+  </g>
+
+  <!-- Subtle bottom caption -->
+  <text x="700" y="325" text-anchor="middle" font-family="'Noto Serif SC', serif" font-size="12px" fill="#9E9A92" letter-spacing="1.5px">“从机械发明的理性秩序，到手艺人指尖的温度延续。”</text>
+</svg>

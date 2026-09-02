@@ -155,64 +155,36 @@
     }
 
     /* -------------------------------------------------------------
-       STATIC FULL-BLEED VINTAGE SEWING MACHINE HERO (Where It All Began)
+       HORIZONTAL SEWING ORIGIN TIMELINE HERO (Pure Visual, Breathable Whitespace)
        ------------------------------------------------------------- */
-    .static-hero-section {
+    .timeline-hero-section {
       max-width: 1360px;
       margin: 2rem auto 2.5rem;
       padding: 0 2rem;
     }
 
-    .hero-image-frame {
-      position: relative;
+    .timeline-frame {
       width: 100%;
-      height: 600px;
-      background: var(--bg-warm-oat);
+      background: var(--bg-cream);
+      border: 1px solid var(--line-subtle);
+      border-radius: 2px;
       overflow: hidden;
-      border: 1px solid var(--line-subtle);
-      box-shadow: 0 16px 40px rgba(34, 32, 30, 0.05);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 10px 30px rgba(34, 32, 30, 0.03);
     }
 
-    .hero-image-frame img {
+    .timeline-frame img, .timeline-frame svg {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center 45%;
-    }
-
-    .hero-poetic-badge {
-      position: absolute;
-      bottom: 2.5rem;
-      left: 2.5rem;
-      background: rgba(250, 248, 245, 0.94);
-      backdrop-filter: blur(10px);
-      padding: 1.4rem 2rem;
-      border: 1px solid var(--line-subtle);
-      max-width: 520px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-    }
-
-    .hero-poetic-tag {
-      font-size: 0.72rem;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: var(--accent-terracotta);
-      margin-bottom: 0.4rem;
+      height: auto;
       display: block;
-    }
-
-    .hero-poetic-quote {
-      font-family: var(--font-display);
-      font-size: 1.65rem;
-      font-weight: 400;
-      line-height: 1.35;
-      color: var(--text-dark);
     }
 
     /* Filter Bar for Portfolio */
     .gallery-filter-wrap {
       max-width: 1360px;
-      margin: 3rem auto 2.5rem;
+      margin: 3.5rem auto 2.5rem;
       padding: 0 2rem;
       display: flex;
       justify-content: center;
@@ -356,186 +328,21 @@
       margin-top: auto;
     }
 
-    /* -------------------------------------------------------------
-       ABOUT ME / 关于我 (True Personal Memory & Genesis Story)
-       ------------------------------------------------------------- */
-    .about-story-section {
-      background: var(--bg-warm-oat);
-      border-top: 1px solid var(--line-subtle);
-      border-bottom: 1px solid var(--line-subtle);
-      padding: 6.5rem 2rem;
-    }
-
-    .about-story-wrapper {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .about-lead-header {
-      text-align: center;
-      margin-bottom: 4.5rem;
-    }
-
-    .about-lead-tag {
-      font-size: 0.8rem;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: var(--accent-terracotta);
-      display: block;
-      margin-bottom: 0.8rem;
-    }
-
-    .about-lead-title {
-      font-family: var(--font-display);
-      font-size: 3.2rem;
-      font-weight: 400;
-      line-height: 1.25;
-      color: var(--text-dark);
-      max-width: 880px;
-      margin: 0 auto;
-      text-transform: lowercase;
-    }
-
-    .story-chapter {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 5rem;
-      align-items: center;
-      margin-bottom: 6rem;
-    }
-
-    .story-chapter.reverse {
-      grid-template-columns: 1fr 1fr;
-    }
-
-    .story-chapter.reverse .story-image-wrap {
-      order: 2;
-    }
-
-    .story-chapter.reverse .story-text-wrap {
-      order: 1;
-    }
-
-    .story-image-wrap {
-      position: relative;
-      height: 520px;
-      background: var(--bg-pure);
-      border: 1px solid var(--line-subtle);
-      overflow: hidden;
-    }
-
-    .story-image-wrap img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.6s ease;
-    }
-
-    .story-image-wrap:hover img {
-      transform: scale(1.03);
-    }
-
-    .story-text-wrap {
-      padding: 1rem 0;
-    }
-
-    .chapter-number {
-      font-family: var(--font-display);
-      font-size: 1.1rem;
-      letter-spacing: 0.2em;
-      color: var(--accent-terracotta);
-      text-transform: uppercase;
-      display: block;
-      margin-bottom: 0.6rem;
-    }
-
-    .chapter-title {
-      font-family: var(--font-display);
-      font-size: 2.2rem;
-      font-weight: 400;
-      line-height: 1.3;
-      margin-bottom: 1.6rem;
-      color: var(--text-dark);
-    }
-
-    .chapter-p {
-      font-family: var(--font-serif);
-      font-size: 0.95rem;
-      color: var(--text-muted);
-      line-height: 2;
-      margin-bottom: 1.4rem;
-    }
-
-    .chapter-quote {
-      font-family: var(--font-display);
-      font-size: 1.35rem;
-      font-style: italic;
-      color: var(--accent-terracotta);
-      border-left: 2px solid var(--accent-terracotta);
-      padding-left: 1.4rem;
-      margin: 2rem 0 1rem;
-      line-height: 1.6;
-    }
-
-    /* Botanical Palette Box */
-    .palette-box {
-      background: var(--bg-pure);
-      border: 1px solid var(--line-subtle);
-      padding: 2.8rem 2.4rem;
-      margin-top: 3.5rem;
-    }
-
-    .palette-box h4 {
-      font-family: var(--font-display);
-      font-size: 1.4rem;
-      font-weight: 400;
-      margin-bottom: 1.6rem;
-      text-transform: lowercase;
-    }
-
-    .swatch-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1.5rem;
-    }
-
-    .swatch-item {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-
-    .swatch-circle {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      flex-shrink: 0;
-      border: 1px solid var(--line-subtle);
-      box-shadow: inset 0 0 0 1px rgba(0,0,0,0.05);
-    }
-
-    .c-pomegranate { background: #D9A85B; }
-    .c-walnut { background: #7A533E; }
-    .c-perilla { background: #8E4B62; }
-    .c-cabbage { background: #6F5E76; }
-
-    .swatch-info strong {
-      font-size: 0.85rem;
-      color: var(--text-dark);
-      display: block;
-    }
-
-    .swatch-info span {
-      font-size: 0.72rem;
-      color: var(--text-muted);
-    }
-
     /* Inquiry Section */
     .inquiry-section {
       max-width: 900px;
       margin: 0 auto;
       padding: 6.5rem 2rem;
       text-align: center;
+    }
+
+    .inquiry-tag {
+      font-size: 0.75rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--accent-terracotta);
+      display: block;
+      margin-bottom: 0.8rem;
     }
 
     .inquiry-title {
@@ -625,24 +432,14 @@
     }
 
     @media (max-width: 1024px) {
-      .hero-image-frame { height: 460px; }
-      .hero-poetic-badge { bottom: 1.5rem; left: 1.5rem; right: 1.5rem; }
       .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-      .story-chapter, .story-chapter.reverse { grid-template-columns: 1fr; gap: 2.5rem; }
-      .story-chapter.reverse .story-image-wrap { order: 1; }
-      .story-chapter.reverse .story-text-wrap { order: 2; }
-      .story-image-wrap { height: 380px; }
-      .swatch-grid { grid-template-columns: repeat(2, 1fr); }
     }
 
     @media (max-width: 640px) {
       .nav-wrapper { grid-template-columns: 1fr; text-align: center; gap: 1rem; }
       .nav-left, .nav-right { display: none; }
-      .hero-image-frame { height: 360px; }
-      .hero-poetic-quote { font-size: 1.25rem; }
       .gallery-grid { grid-template-columns: 1fr; }
       .product-img-wrap { height: 360px; }
-      .about-lead-title { font-size: 2.3rem; }
     }
   </style>
 </head>
@@ -662,13 +459,13 @@
         <li class="nav-item"><a href="#accessories" data-i18n="nav_living">pet & living</a></li>
       </ul>
 
-      <a href="#" class="brand-logo">
+      <a href="index.html" class="brand-logo">
         <h1>lumi song</h1>
         <span data-i18n="brand_sub">design & atelier</span>
       </a>
 
       <ul class="nav-right">
-        <li class="nav-item"><a href="#about-me" data-i18n="nav_about">about me</a></li>
+        <li class="nav-item"><a href="about.html" data-i18n="nav_about">about me</a></li>
         <li class="nav-item"><a href="#contact" data-i18n="nav_inquiries">inquiries</a></li>
         <li class="nav-item">
           <!-- Language Toggle Button -->
@@ -682,15 +479,11 @@
   </header>
 
   <!-- -------------------------------------------------------------
-       STATIC HERO: THE VINTAGE SEWING MACHINE (一切，都源于此)
+       HORIZONTAL SEWING ORIGIN TIMELINE HERO (Pure Visual & Whitespace)
        ------------------------------------------------------------- -->
-  <section class="static-hero-section">
-    <div class="hero-image-frame" onclick="openLightbox('images/vintage-sewing-machine-hero.jpg')">
-      <img src="images/vintage-sewing-machine-hero.jpg" alt="The Vintage Sewing Machine - Where it all began" loading="eager">
-      <div class="hero-poetic-badge">
-        <span class="hero-poetic-tag" data-i18n="hero_badge_tag">where it all began · 手作源起</span>
-        <h2 class="hero-poetic-quote" data-i18n="hero_badge_title">一切，都源于一台落灰的老缝纫机与儿时的记忆。</h2>
-      </div>
+  <section class="timeline-hero-section">
+    <div class="timeline-frame">
+      <img src="images/sewing-history-timeline.svg" alt="The Origin & Evolution of Sewing - 缝纫的源起与变迁">
     </div>
   </section>
 
@@ -1070,119 +863,9 @@
 
   </main>
 
-  <!-- -------------------------------------------------------------
-       ABOUT ME / 关于我 (True Personal Memory & Genesis Story)
-       ------------------------------------------------------------- -->
-  <section class="about-story-section" id="about-me">
-    <div class="about-story-wrapper">
-      
-      <!-- Lead Header -->
-      <div class="about-lead-header">
-        <span class="about-lead-tag" data-i18n="about_tag">about me / 关于我</span>
-        <h2 class="about-lead-title" data-i18n="about_title">from the rhythm of a mother’s sewing machine to an artisan brand</h2>
-      </div>
-
-      <!-- Chapter 1: The Dusty Loom & Childhood Memory (Origin Story) -->
-      <div class="story-chapter">
-        <div class="story-image-wrap" onclick="openLightbox('images/doll-indigo-patchwork.jpg')">
-          <img src="images/doll-indigo-patchwork.jpg" alt="The Studio & Dusty Loom Genesis">
-        </div>
-        <div class="story-text-wrap">
-          <span class="chapter-number" data-i18n="ch1_num">chapter I</span>
-          <h3 class="chapter-title" data-i18n="ch1_title">The Dusty Loom & The Memory of Foot Pedal</h3>
-          <p class="chapter-p" data-i18n="ch1_p1">
-            我的手作起源，发生在一个看似寻常的搬家日子。那天我回家帮忙收拾旧物，在老屋幽暗的角落里，无意间看到了一台静静伫立、落满厚厚灰尘的老式木质织布机。
-          </p>
-          <p class="chapter-p" data-i18n="ch1_p2">
-            轻轻拭去尘土的瞬间，尘封多年的童年记忆如潮水般轰然被唤醒——在自己还蹒跚学步、甚至还不会走路的时候，妈妈总是背对着我坐在窗前，脚下一踩一踏踩着老式缝纫机，机针飞快穿梭，咔哒咔哒的声音陪伴着我的整个童年。抚摸着老织机深沉木纹的那一刻，内心的火苗被彻底点燃。从此，便一发不可收拾地走上了独立布艺创作与手工布偶的道路。
-          </p>
-          <div class="chapter-quote" data-i18n="ch1_quote">
-            “抚摸落灰织机的那一瞬，我知道，手指触碰针线是我命中注定的归宿。”
-          </div>
-        </div>
-      </div>
-
-      <!-- Chapter 2: The Alchemy of Botanical Dyes -->
-      <div class="story-chapter reverse">
-        <div class="story-image-wrap" onclick="openLightbox('images/acc-brown-heart-bandana.jpg')">
-          <img src="images/acc-brown-heart-bandana.jpg" alt="Botanical Dyeing Alchemy">
-        </div>
-        <div class="story-text-wrap">
-          <span class="chapter-number" data-i18n="ch2_num">chapter II</span>
-          <h3 class="chapter-title" data-i18n="ch2_title">The Alchemy of Botanical Dyes</h3>
-          <p class="chapter-p" data-i18n="ch2_p1">
-            工坊的染锅里，四季流转着大自然最质朴的色彩：秋日剥落的石榴皮淬炼出温暖金茶，核桃硬壳煮出深沉木褐，而紫苏与紫甘蓝则在不同酸碱度中幻化出如暮霭般的粉紫与冷灰蓝。
-          </p>
-          <p class="chapter-p" data-i18n="ch2_p2">
-            拒绝任何工业化学染料，坚持以传统明矾与铁媒染让天然植物色素在棉麻纤维上缓缓扎根。经过反复水洗与日光晾晒的草木染面料，拥有化学工业永远无法赋予的温润呼吸感与岁月色泽。
-          </p>
-          <div class="chapter-quote" data-i18n="ch2_quote">
-            “草木有灵，借由水火与时间，在织物上留下大自然的记忆。”
-          </div>
-        </div>
-      </div>
-
-      <!-- Chapter 3: An Aesthetic Universe Beyond Dolls -->
-      <div class="story-chapter">
-        <div class="story-image-wrap" onclick="openLightbox('images/bag-botanical-ruffle-tote.jpg')">
-          <img src="images/bag-botanical-ruffle-tote.jpg" alt="Everyday Living Aesthetics">
-        </div>
-        <div class="story-text-wrap">
-          <span class="chapter-number" data-i18n="ch3_num">chapter III</span>
-          <h3 class="chapter-title" data-i18n="ch3_title">Heirlooms & A Complete Living Universe</h3>
-          <p class="chapter-p" data-i18n="ch3_p1">
-            正如加州艺术家 Jess Brown 将一个手艺人的纯粹审美升华为完整品牌，Lumi Song 的创作也从高定传家宝艺术布偶，自然生长至日常荷叶边托特包、微缩考究的宠物绅士领结披肩，以及触感亲肤的生活织物。
-          </p>
-          <p class="chapter-p" data-i18n="ch3_p2">
-            长期深度沉浸于俄罗斯 VK 社区与 Instagram 独立手作艺术生态，融合当代 AI 色卡企划工具，她期待与志同道合的合伙人携手，共同开辟兼具艺术高度与商业生命力的小众独立店铺。
-          </p>
-          <div class="chapter-quote" data-i18n="ch3_quote">
-            “把一个手艺人的纯粹审美，变成一个温暖人心的品牌世界。”
-          </div>
-        </div>
-      </div>
-
-      <!-- Botanical Palette Swatches in Story -->
-      <div class="palette-box">
-        <h4 data-i18n="palette_title">the botanical dye library / 草木特色色谱</h4>
-        <div class="swatch-grid">
-          <div class="swatch-item">
-            <div class="swatch-circle c-pomegranate"></div>
-            <div class="swatch-info">
-              <strong data-i18n="sw1_name">石榴皮染</strong>
-              <span data-i18n="sw1_desc">pomegranate / 暖金茶色</span>
-            </div>
-          </div>
-          <div class="swatch-item">
-            <div class="swatch-circle c-walnut"></div>
-            <div class="swatch-info">
-              <strong data-i18n="sw2_name">核桃皮染</strong>
-              <span data-i18n="sw2_desc">walnut / 质感木褐</span>
-            </div>
-          </div>
-          <div class="swatch-item">
-            <div class="swatch-circle c-perilla"></div>
-            <div class="swatch-info">
-              <strong data-i18n="sw3_name">紫苏染</strong>
-              <span data-i18n="sw3_desc">perilla / 雅致粉紫</span>
-            </div>
-          </div>
-          <div class="swatch-item">
-            <div class="swatch-circle c-cabbage"></div>
-            <div class="swatch-info">
-              <strong data-i18n="sw4_name">紫甘蓝染</strong>
-              <span data-i18n="sw4_desc">red cabbage / 暮霭冷灰蓝</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
   <!-- Inquiries Section -->
   <section class="inquiry-section" id="contact">
-    <span class="about-lead-tag" data-i18n="inquiry_tag">collaboration & partnership</span>
+    <span class="inquiry-tag" data-i18n="inquiry_tag">collaboration & partnership</span>
     <h3 class="inquiry-title" data-i18n="inquiry_title">inquiries & partnership</h3>
     <p class="inquiry-desc" data-i18n="inquiry_desc">
       诚挚探讨独立手作店铺联合主理、布艺与草木染产品线研发定制、小众美学品牌共创。
@@ -1223,9 +906,6 @@
         brand_sub: "手作设计与工坊",
         nav_about: "关于我",
         nav_inquiries: "合作洽谈",
-        
-        hero_badge_tag: "手作源起 · WHERE IT ALL BEGAN",
-        hero_badge_title: "一切，都源于一台落灰的老缝纫机与儿时的记忆。",
         
         filter_all: "全部作品 (22)",
         filter_dolls: "艺术布偶 (8)",
@@ -1335,37 +1015,6 @@
         a7_desc: "白亚麻布包细节微距。展示古董蕾丝滚边细节、手工刺绣红线腮红点与纯棉绳偶腿收口。",
         a7_note: "微距细节展示 · 纯天然亚麻织纹 · 精工锁边",
         
-        about_tag: "关于我 · ABOUT ME",
-        about_title: "从老织布机与妈妈踩缝纫机的背影，到一发不可收拾的手作之路",
-        
-        ch1_num: "第一章 · 尘封的织布机与儿时记忆",
-        ch1_title: "一台落灰的老织布机，与妈妈踩缝纫机的背影",
-        ch1_p1: "我的手作起源，发生在一个看似寻常的搬家日子。那天我回家帮忙收拾旧物，在老屋幽暗的角落里，无意间看到了一台静静伫立、落满厚厚灰尘的老式木质织布机。",
-        ch1_p2: "轻轻拭去尘土的瞬间，尘封多年的童年记忆如潮水般轰然被唤醒——在自己还蹒跚学步、甚至还不会走路的时候，妈妈总是背对着我坐在窗前，脚下一踩一踏踩着老式缝纫机，机针飞快穿梭，咔哒咔哒的声音陪伴着我的整个童年。抚摸着老织机深沉木纹的那一刻，内心的火苗被彻底点燃。从此，便一发不可收拾地走上了独立布艺创作与手工布偶的道路。",
-        ch1_quote: "“抚摸落灰织机的那一瞬，我知道，手指触碰针线是我命中注定的归宿。”",
-        
-        ch2_num: "第二章 · 草木的炼金术",
-        ch2_title: "四季草木色谱的天然呼吸",
-        ch2_p1: "工坊的染锅里，四季流转着大自然最质朴的色彩：秋日剥落的石榴皮淬炼出温暖金茶，核桃硬壳煮出深沉木褐，而紫苏与紫甘蓝则在不同酸碱度中幻化出如暮霭般的粉紫与冷灰蓝。",
-        ch2_p2: "拒绝任何工业化学染料，坚持以传统明矾与铁媒染让天然植物色素在棉麻纤维上缓缓扎根。经过反复水洗与日光晾晒的草木染面料，拥有化学工业永远无法赋予的温润呼吸感与岁月色泽。",
-        ch2_quote: "“草木有灵，借由水火与时间，在织物上留下大自然的记忆。”",
-        
-        ch3_num: "第三章 · 传家宝与生活宇宙",
-        ch3_title: "从一只布偶，生长为完整生活方式",
-        ch3_p1: "正如加州艺术家 Jess Brown 将一个手艺人的纯粹审美升华为完整品牌，Lumi Song 的创作也从高定传家宝艺术布偶，自然生长至日常荷叶边托特包、微缩考究的宠物绅士领结披肩，以及触感亲肤的生活织物。",
-        ch3_p2: "长期深度沉浸于俄罗斯 VK 社区与 Instagram 独立手作艺术生态，融合当代 AI 色卡企划工具，她期待与志同道合的合伙人携手，共同开辟兼具艺术高度与商业生命力的小众独立店铺。",
-        ch3_quote: "“把一个手艺人的纯粹审美，变成一个温暖人心的品牌世界。”",
-        
-        palette_title: "天然草木特色色谱 / THE BOTANICAL PALETTE",
-        sw1_name: "石榴皮染",
-        sw1_desc: "pomegranate / 暖金茶色",
-        sw2_name: "核桃皮染",
-        sw2_desc: "walnut / 质感木褐",
-        sw3_name: "紫苏染",
-        sw3_desc: "perilla / 雅致粉紫",
-        sw4_name: "紫甘蓝染",
-        sw4_desc: "red cabbage / 暮霭冷灰蓝",
-        
         inquiry_tag: "合作共创 · COLLABORATION",
         inquiry_title: "合作与主理洽谈",
         inquiry_desc: "诚挚探讨独立手作店铺联合主理、布艺与草木染产品线研发定制、小众美学品牌共创。",
@@ -1382,9 +1031,6 @@
         brand_sub: "design & atelier",
         nav_about: "about me",
         nav_inquiries: "inquiries",
-        
-        hero_badge_tag: "WHERE IT ALL BEGAN",
-        hero_badge_title: "Everything began with a dusty antique machine and a timeless childhood memory.",
         
         filter_all: "ALL WORKS (22)",
         filter_dolls: "RAG DOLLS (8)",
@@ -1493,37 +1139,6 @@
         a7_title: "Heirloom Linen Tote Macro Detail",
         a7_desc: "Macro close-up view of the heirloom linen tote bag. Highlighting antique lace trims, hand-embroidered red blush stitches, and natural unbleached linen weave.",
         a7_note: "Macro Detail View · Pure Unbleached Linen Weave · Clean Overlock Finish",
-        
-        about_tag: "ABOUT ME · ABOUT LUMI SONG",
-        about_title: "from the rhythm of a mother’s sewing machine to an artisan brand",
-        
-        ch1_num: "chapter I · The Dusty Loom & Childhood Memory",
-        ch1_title: "A Dusty Wooden Loom & The Memory of My Mother’s Sewing Machine",
-        ch1_p1: "The genesis of my craft began on an ordinary moving day. I was back home helping sort through old belongings when, in a quiet, shadowy corner, I discovered an antique wooden loom standing silently, covered in years of deep dust.",
-        ch1_p2: "Gently brushing away the dust, a long-buried childhood memory rushed back in full vividness: before I could even walk, my mother was always sitting with her back to me by the window, her feet rhythmically pressing the treadle of her vintage sewing machine, needle flying through cloth to stitch warmth for our family. In the moment my fingers traced the grain of that old loom, an unquenchable spark ignited within my soul. From that day forward, my devotion to slow textiles, natural dyes, and heirloom rag dolls began, unstoppable and destined.",
-        ch1_quote: "“The moment my fingers touched that dusty loom, I knew this was where my hands and heart truly belong.”",
-        
-        ch2_num: "chapter II · The Alchemy of Botanical Dyes",
-        ch2_title: "The Living Breath of Seasonal Plant Dyes",
-        ch2_p1: "In her studio dye pots, seasonal colors simmer continuously: autumn pomegranate rinds yield a rich golden tea, walnut hulls brew a grounded timber brown, while perilla and red cabbage transform into dreamy dusty mauve and twilight slate blue across varying pH baths.",
-        ch2_p2: "Rejecting synthetic chemicals and optical brighteners, she employs traditional mineral mordants like alum and iron to gently anchor the natural plant pigments into raw cotton and linen fibers. Sun-dried and rinsed repeatedly, these textiles carry an unrepeatable breath and gentle patina over time.",
-        ch2_quote: "“Plants have spirit. Through water, fire, and patience, they impart nature’s memory into the weave.”",
-        
-        ch3_num: "chapter III · Heirlooms & A Complete Universe",
-        ch3_title: "From a Single Doll to an Enduring Lifestyle Universe",
-        ch3_p1: "Just as California artist Jess Brown elevated an artisan's tactile aesthetic into a complete brand, Lumi Song’s creations have grown from collectible heirloom rag dolls into everyday block-printed ruffle totes, micro-tailored pet collar capes, and gentle living textiles.",
-        ch3_p2: "Drawing continuous inspiration from the Russian VK handmade community and avant-garde global artisans on Instagram, while harnessing modern AI design workflows, she seeks like-minded brand partners to co-found an enduring boutique lifestyle brand.",
-        ch3_quote: "“To elevate one artisan’s pure aesthetic into an enduring brand that touches hearts.”",
-        
-        palette_title: "the botanical dye library / BOTANICAL COLOR LIBRARY",
-        sw1_name: "Pomegranate Dye",
-        sw1_desc: "pomegranate / warm golden tea",
-        sw2_name: "Walnut Hull Dye",
-        sw2_desc: "walnut / rich timber brown",
-        sw3_name: "Perilla Leaf Dye",
-        sw3_desc: "perilla / dusty mauve pink",
-        sw4_name: "Red Cabbage Dye",
-        sw4_desc: "red cabbage / twilight slate blue",
         
         inquiry_tag: "collaboration & partnership",
         inquiry_title: "inquiries & partnership",
