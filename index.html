@@ -155,137 +155,64 @@
     }
 
     /* -------------------------------------------------------------
-       EDITORIAL LIVE CAROUSEL / LOOKBOOK HERO (Dynamic Photo Flow)
+       STATIC FULL-BLEED VINTAGE SEWING MACHINE HERO (Where It All Began)
        ------------------------------------------------------------- */
-    .hero-lookbook-section {
-      width: 100%;
-      padding: 1.8rem 0 2.5rem;
-      background: var(--bg-cream);
-      position: relative;
-    }
-
-    .lookbook-header {
+    .static-hero-section {
       max-width: 1360px;
-      margin: 0 auto 1.2rem;
-      padding: 0 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .lookbook-title {
-      font-size: 0.75rem;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: var(--accent-terracotta);
-    }
-
-    .lookbook-controls {
-      display: flex;
-      gap: 0.6rem;
-    }
-
-    .lookbook-arrow {
-      background: var(--bg-pure);
-      border: 1px solid var(--line-subtle);
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      color: var(--text-dark);
-      font-size: 0.9rem;
-      transition: all 0.25s ease;
-    }
-
-    .lookbook-arrow:hover {
-      background: var(--text-dark);
-      color: var(--bg-cream);
-      border-color: var(--text-dark);
-    }
-
-    /* Continuous Flow Marquee Container */
-    .lookbook-track-container {
-      width: 100%;
-      overflow-x: auto;
-      scroll-behavior: smooth;
-      -webkit-overflow-scrolling: touch;
-      scrollbar-width: none;
+      margin: 2rem auto 2.5rem;
       padding: 0 2rem;
     }
 
-    .lookbook-track-container::-webkit-scrollbar {
-      display: none;
-    }
-
-    .lookbook-track {
-      display: flex;
-      gap: 1.4rem;
-      width: max-content;
-    }
-
-    .lookbook-card {
-      width: 320px;
-      height: 460px;
-      flex-shrink: 0;
+    .hero-image-frame {
       position: relative;
+      width: 100%;
+      height: 600px;
       background: var(--bg-warm-oat);
       overflow: hidden;
       border: 1px solid var(--line-subtle);
-      cursor: pointer;
-      transition: transform 0.35s ease, box-shadow 0.35s ease;
+      box-shadow: 0 16px 40px rgba(34, 32, 30, 0.05);
     }
 
-    .lookbook-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 30px rgba(34, 32, 30, 0.08);
-    }
-
-    .lookbook-card img {
+    .hero-image-frame img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.7s cubic-bezier(0.2, 1, 0.3, 1);
+      object-position: center 45%;
     }
 
-    .lookbook-card:hover img {
-      transform: scale(1.05);
-    }
-
-    .lookbook-card-overlay {
+    .hero-poetic-badge {
       position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      padding: 2rem 1.4rem 1.2rem;
-      background: linear-gradient(to top, rgba(34, 32, 30, 0.85) 0%, rgba(34, 32, 30, 0.4) 65%, transparent 100%);
-      color: var(--bg-cream);
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
+      bottom: 2.5rem;
+      left: 2.5rem;
+      background: rgba(250, 248, 245, 0.94);
+      backdrop-filter: blur(10px);
+      padding: 1.4rem 2rem;
+      border: 1px solid var(--line-subtle);
+      max-width: 520px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
     }
 
-    .lookbook-card-tag {
-      font-size: 0.65rem;
-      letter-spacing: 0.2em;
+    .hero-poetic-tag {
+      font-size: 0.72rem;
+      letter-spacing: 0.25em;
       text-transform: uppercase;
-      color: #E8B99A;
-      margin-bottom: 0.25rem;
+      color: var(--accent-terracotta);
+      margin-bottom: 0.4rem;
+      display: block;
     }
 
-    .lookbook-card-title {
+    .hero-poetic-quote {
       font-family: var(--font-display);
-      font-size: 1.15rem;
+      font-size: 1.65rem;
       font-weight: 400;
-      line-height: 1.25;
+      line-height: 1.35;
+      color: var(--text-dark);
     }
 
     /* Filter Bar for Portfolio */
     .gallery-filter-wrap {
       max-width: 1360px;
-      margin: 1.5rem auto 2rem;
+      margin: 3rem auto 2.5rem;
       padding: 0 2rem;
       display: flex;
       justify-content: center;
@@ -430,7 +357,7 @@
     }
 
     /* -------------------------------------------------------------
-       ABOUT ME / THE ARTISAN'S GENESIS STORY (Authentic Memory)
+       ABOUT ME / 关于我 (True Personal Memory & Genesis Story)
        ------------------------------------------------------------- */
     .about-story-section {
       background: var(--bg-warm-oat);
@@ -698,6 +625,8 @@
     }
 
     @media (max-width: 1024px) {
+      .hero-image-frame { height: 460px; }
+      .hero-poetic-badge { bottom: 1.5rem; left: 1.5rem; right: 1.5rem; }
       .gallery-grid { grid-template-columns: repeat(2, 1fr); }
       .story-chapter, .story-chapter.reverse { grid-template-columns: 1fr; gap: 2.5rem; }
       .story-chapter.reverse .story-image-wrap { order: 1; }
@@ -709,7 +638,8 @@
     @media (max-width: 640px) {
       .nav-wrapper { grid-template-columns: 1fr; text-align: center; gap: 1rem; }
       .nav-left, .nav-right { display: none; }
-      .lookbook-card { width: 260px; height: 380px; }
+      .hero-image-frame { height: 360px; }
+      .hero-poetic-quote { font-size: 1.25rem; }
       .gallery-grid { grid-template-columns: 1fr; }
       .product-img-wrap { height: 360px; }
       .about-lead-title { font-size: 2.3rem; }
@@ -752,101 +682,14 @@
   </header>
 
   <!-- -------------------------------------------------------------
-       LOOKBOOK HERO: DYNAMIC SMOOTH ROLLING GALLERY OF ALL WORKS
+       STATIC HERO: THE VINTAGE SEWING MACHINE (一切，都源于此)
        ------------------------------------------------------------- -->
-  <section class="hero-lookbook-section">
-    <div class="lookbook-header">
-      <span class="lookbook-title" data-i18n="lookbook_tag">featured portfolio & lookbook / 动态作品流</span>
-      <div class="lookbook-controls">
-        <button class="lookbook-arrow" onclick="scrollLookbook(-340)" aria-label="Previous">←</button>
-        <button class="lookbook-arrow" onclick="scrollLookbook(340)" aria-label="Next">→</button>
-      </div>
-    </div>
-
-    <!-- Scrollable Flow Track Containing All Representative Pieces -->
-    <div class="lookbook-track-container" id="lookbook-container">
-      <div class="lookbook-track">
-        
-        <div class="lookbook-card" onclick="openLightbox('images/doll-heirloom-white-lace.jpg')">
-          <img src="images/doll-heirloom-white-lace.jpg" alt="Victorian Heirloom Rag Doll" loading="eager">
-          <div class="lookbook-card-overlay">
-            <span class="lookbook-card-tag" data-i18n="tag_doll">heirloom rag doll</span>
-            <h4 class="lookbook-card-title" data-i18n="d1_title">Victorian Heirloom Lace Doll</h4>
-          </div>
-        </div>
-
-        <div class="lookbook-card" onclick="openLightbox('images/bag-indigo-stripe-hobo.jpg')">
-          <img src="images/bag-indigo-stripe-hobo.jpg" alt="Indigo Stripe Linen Hobo Tote" loading="eager">
-          <div class="lookbook-card-overlay">
-            <span class="lookbook-card-tag" data-i18n="tag_bag">studio bag</span>
-            <h4 class="lookbook-card-title" data-i18n="b1_title">Indigo Stripe Linen Hobo</h4>
-          </div>
-        </div>
-
-        <div class="lookbook-card" onclick="openLightbox('images/doll-mohair-teddies.jpg')">
-          <img src="images/doll-mohair-teddies.jpg" alt="Vintage Mohair Jointed Bears" loading="eager">
-          <div class="lookbook-card-overlay">
-            <span class="lookbook-card-tag" data-i18n="tag_teddy">jointed bear</span>
-            <h4 class="lookbook-card-title" data-i18n="d3_title">Vintage Mohair Jointed Bears</h4>
-          </div>
-        </div>
-
-        <div class="lookbook-card" onclick="openLightbox('images/acc-splatter-bandana-bib.jpg')">
-          <img src="images/acc-splatter-bandana-bib.jpg" alt="Botanical Dye Splatter Bandana" loading="eager">
-          <div class="lookbook-card-overlay">
-            <span class="lookbook-card-tag" data-i18n="tag_acc">botanical dye</span>
-            <h4 class="lookbook-card-title" data-i18n="a1_title">Botanical Splatter Bandana</h4>
-          </div>
-        </div>
-
-        <div class="lookbook-card" onclick="openLightbox('images/doll-indigo-patchwork.jpg')">
-          <img src="images/doll-indigo-patchwork.jpg" alt="Studio Indigo Patchwork Doll" loading="lazy">
-          <div class="lookbook-card-overlay">
-            <span class="lookbook-card-tag" data-i18n="tag_doll">artisan doll</span>
-            <h4 class="lookbook-card-title" data-i18n="d2_title">Indigo Patchwork Studio Doll</h4>
-          </div>
-        </div>
-
-        <div class="lookbook-card" onclick="openLightbox('images/bag-botanical-ruffle-tote.jpg')">
-          <img src="images/bag-botanical-ruffle-tote.jpg" alt="Botanical Floral Ruffle Tote" loading="lazy">
-          <div class="lookbook-card-overlay">
-            <span class="lookbook-card-tag" data-i18n="tag_bag">botanical tote</span>
-            <h4 class="lookbook-card-title" data-i18n="b2_title">Botanical Ruffle Tote Set</h4>
-          </div>
-        </div>
-
-        <div class="lookbook-card" onclick="openLightbox('images/doll-linen-elephants.jpg')">
-          <img src="images/doll-linen-elephants.jpg" alt="Linen Elephant Pair" loading="lazy">
-          <div class="lookbook-card-overlay">
-            <span class="lookbook-card-tag" data-i18n="tag_sculpture">soft sculpture</span>
-            <h4 class="lookbook-card-title" data-i18n="d6_title">Handcrafted Linen Elephant Pair</h4>
-          </div>
-        </div>
-
-        <div class="lookbook-card" onclick="openLightbox('images/acc-blue-stripe-pet-collar.jpg')">
-          <img src="images/acc-blue-stripe-pet-collar.jpg" alt="Linen Pet Cape" loading="lazy">
-          <div class="lookbook-card-overlay">
-            <span class="lookbook-card-tag" data-i18n="tag_acc">pet cape</span>
-            <h4 class="lookbook-card-title" data-i18n="a2_title">Sky Stripe Linen Pet Cape</h4>
-          </div>
-        </div>
-
-        <div class="lookbook-card" onclick="openLightbox('images/bag-coarse-knot-bento.jpg')">
-          <img src="images/bag-coarse-knot-bento.jpg" alt="Coarse Woven Knot Bags" loading="lazy">
-          <div class="lookbook-card-overlay">
-            <span class="lookbook-card-tag" data-i18n="tag_bag">knot bag</span>
-            <h4 class="lookbook-card-title" data-i18n="b4_title">Coarse Woven Knot Bento</h4>
-          </div>
-        </div>
-
-        <div class="lookbook-card" onclick="openLightbox('images/doll-tailored-horse-pair.jpg')">
-          <img src="images/doll-tailored-horse-pair.jpg" alt="Equine Art Sculptures" loading="lazy">
-          <div class="lookbook-card-overlay">
-            <span class="lookbook-card-tag" data-i18n="tag_heirloom">heirloom figure</span>
-            <h4 class="lookbook-card-title" data-i18n="d8_title">Tailored Equine Sculptures</h4>
-          </div>
-        </div>
-
+  <section class="static-hero-section">
+    <div class="hero-image-frame" onclick="openLightbox('images/vintage-sewing-machine-hero.jpg')">
+      <img src="images/vintage-sewing-machine-hero.jpg" alt="The Vintage Sewing Machine - Where it all began" loading="eager">
+      <div class="hero-poetic-badge">
+        <span class="hero-poetic-tag" data-i18n="hero_badge_tag">where it all began · 手作源起</span>
+        <h2 class="hero-poetic-quote" data-i18n="hero_badge_title">一切，都源于一台落灰的老缝纫机与儿时的记忆。</h2>
       </div>
     </div>
   </section>
@@ -1380,7 +1223,9 @@
         brand_sub: "手作设计与工坊",
         nav_about: "关于我",
         nav_inquiries: "合作洽谈",
-        lookbook_tag: "作品画廊 · PORTFOLIO LOOKBOOK",
+        
+        hero_badge_tag: "手作源起 · WHERE IT ALL BEGAN",
+        hero_badge_title: "一切，都源于一台落灰的老缝纫机与儿时的记忆。",
         
         filter_all: "全部作品 (22)",
         filter_dolls: "艺术布偶 (8)",
@@ -1537,7 +1382,9 @@
         brand_sub: "design & atelier",
         nav_about: "about me",
         nav_inquiries: "inquiries",
-        lookbook_tag: "PORTFOLIO LOOKBOOK",
+        
+        hero_badge_tag: "WHERE IT ALL BEGAN",
+        hero_badge_title: "Everything began with a dusty antique machine and a timeless childhood memory.",
         
         filter_all: "ALL WORKS (22)",
         filter_dolls: "RAG DOLLS (8)",
@@ -1739,36 +1586,6 @@
       const lb = document.getElementById('lightbox');
       lb.classList.remove('active');
       document.body.style.overflow = 'auto';
-    }
-
-    function scrollLookbook(offset) {
-      const container = document.getElementById('lookbook-container');
-      container.scrollBy({ left: offset, behavior: 'smooth' });
-    }
-
-    // Auto-scroll loop for the lookbook
-    let autoScrollTimer = null;
-    let scrollDirection = 1;
-    function startAutoScroll() {
-      autoScrollTimer = setInterval(() => {
-        const container = document.getElementById('lookbook-container');
-        if (!container) return;
-        if (container.scrollLeft + container.clientWidth >= container.scrollWidth - 10) {
-          scrollDirection = -1;
-        } else if (container.scrollLeft <= 10) {
-          scrollDirection = 1;
-        }
-        container.scrollBy({ left: scrollDirection * 1.5, behavior: 'auto' });
-      }, 30);
-    }
-
-    const container = document.getElementById('lookbook-container');
-    if (container) {
-      startAutoScroll();
-      container.addEventListener('mouseenter', () => clearInterval(autoScrollTimer));
-      container.addEventListener('mouseleave', () => startAutoScroll());
-      container.addEventListener('touchstart', () => clearInterval(autoScrollTimer));
-      container.addEventListener('touchend', () => startAutoScroll());
     }
   </script>
 
