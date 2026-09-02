@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ABOUT LUMI SONG | 关于我</title>
-  <meta name="description" content="关于宋婷婷 (Lumi Song) — 独立手作艺术家与设计师的手作手记与起源故事。">
+  <meta name="description" content="About Lumi Song (Tingting Song) — Independent Textile Artist & Designer: Artisan Monograph & Creative Genesis Story.">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -83,7 +83,6 @@
       border-radius: 20px;
       padding: 2px;
       background: var(--bg-pure);
-      margin-left: 0.5rem;
     }
 
     .lang-btn {
@@ -129,14 +128,21 @@
       margin-top: 0.35rem;
     }
 
+    /* Mobile Header Right Actions */
+    .mobile-header-actions {
+      display: none;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
     /* Mobile Menu Toggle Button (Hamburger) */
     .mobile-menu-btn {
       display: none;
       background: none;
       border: 1px solid var(--line-subtle);
       border-radius: 4px;
-      width: 42px;
-      height: 42px;
+      width: 40px;
+      height: 40px;
       padding: 8px;
       flex-direction: column;
       justify-content: space-around;
@@ -147,7 +153,7 @@
 
     .mobile-menu-btn span {
       display: block;
-      width: 22px;
+      width: 20px;
       height: 1.5px;
       background: var(--text-dark);
       transition: all 0.3s ease;
@@ -314,14 +320,17 @@
       .nav-wrapper {
         display: flex;
         justify-content: space-between;
-        padding: 1rem 1.4rem;
+        align-items: center;
+        padding: 0.9rem 1.2rem;
       }
       .nav-left, .nav-right { display: none; }
+      
+      .mobile-header-actions { display: flex; }
       .mobile-menu-btn { display: flex; }
       .mobile-drawer { display: flex; }
       
-      .brand-logo h1 { font-size: 1.8rem; }
-      .brand-logo span { font-size: 0.6rem; }
+      .brand-logo h1 { font-size: 1.65rem; }
+      .brand-logo span { font-size: 0.58rem; }
       
       .article-title { font-size: 2rem; margin-bottom: 2rem; }
       .article-container { margin: 3rem auto 5rem; padding: 0 1.4rem; }
@@ -348,94 +357,101 @@
         <li class="nav-item"><a href="about.html" style="color:var(--accent-terracotta);" data-i18n="nav_about">about me</a></li>
         <li class="nav-item"><a href="index.html#contact" data-i18n="nav_inquiries">inquiries</a></li>
         <li class="nav-item">
+          <!-- Desktop Language Switcher Button -->
           <div class="lang-switcher">
-            <button class="lang-btn active" id="btn-zh" onclick="setLanguage('zh')">中文</button>
-            <button class="lang-btn" id="btn-en" onclick="setLanguage('en')">EN</button>
+            <button class="lang-btn" id="btn-zh" onclick="setLanguage('zh')">中文</button>
+            <button class="lang-btn active" id="btn-en" onclick="setLanguage('en')">EN</button>
           </div>
         </li>
       </ul>
 
-      <!-- Mobile Hamburger Button -->
-      <button class="mobile-menu-btn" id="mobile-toggle-btn" onclick="toggleMobileMenu()" aria-label="Toggle Menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+      <!-- Mobile Top Actions (Direct Lang Switcher + Hamburger) -->
+      <div class="mobile-header-actions">
+        <div class="lang-switcher">
+          <button class="lang-btn" id="btn-zh-top-m" onclick="setLanguage('zh')">中</button>
+          <button class="lang-btn active" id="btn-en-top-m" onclick="setLanguage('en')">EN</button>
+        </div>
+        <button class="mobile-menu-btn" id="mobile-toggle-btn" onclick="toggleMobileMenu()" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </div>
   </header>
 
   <!-- Mobile Fullscreen Drawer Navigation -->
   <div class="mobile-drawer" id="mobile-drawer">
     <ul class="mobile-nav-list">
-      <li class="mobile-nav-item"><a href="index.html#rag-dolls" onclick="toggleMobileMenu()" data-i18n="nav_rag_dolls">艺术布偶</a></li>
-      <li class="mobile-nav-item"><a href="index.html#bags" onclick="toggleMobileMenu()" data-i18n="nav_bags">原创布包</a></li>
-      <li class="mobile-nav-item"><a href="index.html#accessories" onclick="toggleMobileMenu()" data-i18n="nav_living">宠物与生活</a></li>
-      <li class="mobile-nav-item"><a href="about.html" onclick="toggleMobileMenu()" style="color:var(--accent-terracotta);" data-i18n="nav_about">关于我</a></li>
-      <li class="mobile-nav-item"><a href="index.html#contact" onclick="toggleMobileMenu()" data-i18n="nav_inquiries">合作洽谈</a></li>
+      <li class="mobile-nav-item"><a href="index.html#rag-dolls" onclick="toggleMobileMenu()" data-i18n="nav_rag_dolls">rag dolls</a></li>
+      <li class="mobile-nav-item"><a href="index.html#bags" onclick="toggleMobileMenu()" data-i18n="nav_bags">studio bags</a></li>
+      <li class="mobile-nav-item"><a href="index.html#accessories" onclick="toggleMobileMenu()" data-i18n="nav_living">pet & living</a></li>
+      <li class="mobile-nav-item"><a href="about.html" onclick="toggleMobileMenu()" style="color:var(--accent-terracotta);" data-i18n="nav_about">about me</a></li>
+      <li class="mobile-nav-item"><a href="index.html#contact" onclick="toggleMobileMenu()" data-i18n="nav_inquiries">inquiries</a></li>
     </ul>
 
-    <!-- Mobile Language Toggle -->
+    <!-- Mobile Drawer Language Toggle -->
     <div class="lang-switcher" style="margin-top: 1rem;">
-      <button class="lang-btn active" id="btn-zh-m" onclick="setLanguage('zh')">中文</button>
-      <button class="lang-btn" id="btn-en-m" onclick="setLanguage('en')">EN</button>
+      <button class="lang-btn" id="btn-zh-m" onclick="setLanguage('zh')">中文</button>
+      <button class="lang-btn active" id="btn-en-m" onclick="setLanguage('en')">EN</button>
     </div>
   </div>
 
   <!-- Pure Text Monograph Container -->
   <main class="article-container">
-    <span class="article-tag" data-i18n="art_tag">ABOUT ME · 手作手记</span>
-    <h1 class="article-title" data-i18n="art_title">一台老缝纫机，与指尖重逢的温度</h1>
+    <span class="article-tag" data-i18n="art_tag">ABOUT ME · ARTISAN MONOGRAPH</span>
+    <h1 class="article-title" data-i18n="art_title">A Vintage Sewing Machine, and the Touch of Time</h1>
     <div class="article-divider"></div>
 
     <!-- Chapter 1: The Origin -->
     <article class="article-section">
       <span class="section-num" data-i18n="ch1_num">chapter I</span>
-      <h2 class="section-title" data-i18n="ch1_title">老屋角落里的旧缝纫机</h2>
+      <h2 class="section-title" data-i18n="ch1_title">The Dusty Sewing Machine in the Corner</h2>
       <p class="article-p" data-i18n="ch1_p1">
-        我的手作源起，始于一次回老家搬家时的偶然驻足。那天在老屋幽暗的角落里，我看到了一台静静伫立、落满厚厚灰尘的老式缝纫机。
+        The genesis of my craft began on an ordinary moving day back home. Standing in a quiet, shadowed corner of the old family house, I stumbled upon an antique sewing machine resting quietly under years of dust.
       </p>
       <p class="article-p" data-i18n="ch1_p2">
-        轻轻拂去尘埃的瞬间，脑海中那些关于童年的模糊闪回被瞬间唤醒——那是小时候在老家，奶奶和邻居阿姨们午后踩着缝纫机踏板的身影。机针飞快穿梭，脚踏板一踩一踏，咔哒咔哒的声音伴随着阳光下的飞尘，构成了对温暖织物最初的感知。
+        The moment I gently wiped away the dust, long-buried childhood flashbacks flooded back: memories of my grandmother and neighborhood aunts pressing the treadles on lazy afternoons. The rhythmic clack of the needle flying through fabric amidst sunlit dust motes formed my earliest perception of tactile warmth.
       </p>
       <p class="article-p" data-i18n="ch1_p3">
-        抚摸着落灰机器深沉的铸铁与木纹，指尖传来的触感彻底点燃了内心的火苗。那一刻我知道，手指触碰针线与布料是我命中注定的归宿。从此，便一发不可收拾地走上了独立布艺创作、草木染与手工布偶的道路。
+        Tracing the aged cast-iron wheel and deep wooden grain, an unquenchable spark ignited in my fingertips. I knew then that cloth and thread were my true calling. From that day onward, my journey into slow textiles, botanical dyes, and heirloom rag dolls began—unceasing and unstoppable.
       </p>
       <div class="article-quote" data-i18n="ch1_quote">
-        “抚摸落灰缝纫机的那一刻，指尖与时间的记忆重逢，从此一发不可收拾。”
+        “The moment my fingers touched that dusty machine, memory and destiny met, unstoppable and destined.”
       </div>
     </article>
 
     <!-- Chapter 2: The Alchemy of Nature -->
     <article class="article-section">
       <span class="section-num" data-i18n="ch2_num">chapter II</span>
-      <h2 class="section-title" data-i18n="ch2_title">天然草木染与面料的呼吸</h2>
+      <h2 class="section-title" data-i18n="ch2_title">Natural Botanical Dyes & Living Patina</h2>
       <p class="article-p" data-i18n="ch2_p1">
-        在专属手工工坊中，我坚持以四季天然植物为原料提取纯正色彩：秋日剥落的石榴皮淬炼出温暖金茶，核桃硬壳煮出深沉木褐，而紫苏与紫甘蓝则在不同酸碱度中幻化出如暮霭般的粉紫与冷灰蓝。
+        In my studio atelier, I extract natural pigments directly from seasonal plants: autumn pomegranate rinds yield rich golden tea, walnut hulls brew grounded timber brown, while perilla and red cabbage transform into dreamy dusty mauve and twilight slate blue across varying pH baths.
       </p>
       <p class="article-p" data-i18n="ch2_p2">
-        拒绝任何工业化学染料与荧光剂，坚持以传统明矾与铁媒染让天然色素在纯棉、亚麻纤维上缓缓扎根。经过反复水洗与日光晾晒的面料，拥有化学工业永远无法赋予的温润呼吸感与岁月色泽。
+        Rejecting synthetic chemicals, I use traditional mineral mordants so plant pigments anchor gently into raw cotton and linen fibers, creating a breathable, living patina over time.
       </p>
     </article>
 
     <!-- Chapter 3: An Heirloom Universe -->
     <article class="article-section">
       <span class="section-num" data-i18n="ch3_num">chapter III</span>
-      <h2 class="section-title" data-i18n="ch3_title">从一只布偶到完整生活美学</h2>
+      <h2 class="section-title" data-i18n="ch3_title">From a Single Rag Doll to a Timeless Brand</h2>
       <p class="article-p" data-i18n="ch3_p1">
-        从高定传家宝艺术布偶（Heirloom Rag Dolls）、微缩考究的宠物绅士领结披肩，到带着荷叶边褶皱与木刻印花的日常布包——手作美学正从一个人的工作台，自然生长为一个完整而温润的独立生活方式品牌。
+        From heirloom rag dolls crafted to be cherished across generations, to micro-tailored pet collars and block-printed ruffle bags—this tactile aesthetic is expanding naturally into an enduring lifestyle brand.
       </p>
       <p class="article-p" data-i18n="ch3_p2">
-        长期深度沉浸于俄罗斯 VK 社区与 Instagram 独立艺术生态，融合当代 AI 灵感企划工具，我期待与志同道合的合伙人携手，共同把一个手艺人的纯粹审美，变成一个温暖人心的品牌世界。
+        Drawing deep inspiration from the Russian VK handmade community and avant-garde global artisans on Instagram, I look forward to partnering with kindred spirits to build an authentic, heartfelt brand.
       </p>
     </article>
 
     <div class="back-home-wrap">
-      <a href="index.html" class="btn-back" data-i18n="btn_back">← BACK TO PORTFOLIO / 返回作品集</a>
+      <a href="index.html" class="btn-back" data-i18n="btn_back">← BACK TO PORTFOLIO</a>
     </div>
   </main>
 
   <footer>
-    <p data-i18n="footer_copy">© 2026 LUMI SONG (宋婷婷). ALL RIGHTS RESERVED.</p>
+    <p data-i18n="footer_copy">© 2026 LUMI SONG (TINGTING SONG). ALL RIGHTS RESERVED.</p>
     <p data-i18n="footer_sub">INSPIRED BY ARTISAN RAG DOLLS, NATURAL BOTANICAL DYES & LIVING TEXTILES.</p>
   </footer>
 
@@ -507,16 +523,28 @@
       }
     };
 
-    let currentLang = localStorage.getItem('lumi_lang') || 'zh';
+    // Default language is English ('en')
+    let currentLang = localStorage.getItem('lumi_lang') || 'en';
 
     function setLanguage(lang) {
       currentLang = lang;
       localStorage.setItem('lumi_lang', lang);
       
       const isZh = lang === 'zh';
+      
+      // Desktop nav
       document.getElementById('btn-zh').classList.toggle('active', isZh);
       document.getElementById('btn-en').classList.toggle('active', !isZh);
       
+      // Mobile top nav
+      const btnZhTopM = document.getElementById('btn-zh-top-m');
+      const btnEnTopM = document.getElementById('btn-en-top-m');
+      if (btnZhTopM && btnEnTopM) {
+        btnZhTopM.classList.toggle('active', isZh);
+        btnEnTopM.classList.toggle('active', !isZh);
+      }
+      
+      // Mobile drawer nav
       const btnZhM = document.getElementById('btn-zh-m');
       const btnEnM = document.getElementById('btn-en-m');
       if (btnZhM && btnEnM) {
@@ -547,7 +575,7 @@
       document.body.style.overflow = isOpen ? 'hidden' : 'auto';
       
       if (isOpen) {
-        btn.innerHTML = '<span style=\"transform:rotate(45deg) translate(4px, 4px);\"></span><span style=\"opacity:0;\"></span><span style=\"transform:rotate(-45deg) translate(4px, -4px);\"></span>';
+        btn.innerHTML = '<span style="transform:rotate(45deg) translate(4px, 4px);"></span><span style="opacity:0;"></span><span style="transform:rotate(-45deg) translate(4px, -4px);"></span>';
       } else {
         btn.innerHTML = '<span></span><span></span><span></span>';
       }

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LUMI SONG | Artisan Rag Dolls & Living Textiles</title>
-  <meta name="description" content="Lumi Song (宋婷婷) — 独立手作艺术家与设计师作品集：高定艺术布偶、纯天然草木染织物、原创棉麻布包、宠物服饰与生活方式美学。">
+  <meta name="description" content="Lumi Song (Tingting Song) — Independent Textile Artist & Designer: Heirloom Rag Dolls, Botanical Dyes, Studio Bags, Pet & Living Aesthetics.">
   
   <!-- Google Fonts: Editorial Serif & Clean Modern Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -96,7 +96,6 @@
       border-radius: 20px;
       padding: 2px;
       background: var(--bg-pure);
-      margin-left: 0.5rem;
     }
 
     .lang-btn {
@@ -142,14 +141,21 @@
       margin-top: 0.35rem;
     }
 
+    /* Mobile Header Right Actions */
+    .mobile-header-actions {
+      display: none;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
     /* Mobile Menu Toggle Button (Hamburger) */
     .mobile-menu-btn {
       display: none;
       background: none;
       border: 1px solid var(--line-subtle);
       border-radius: 4px;
-      width: 42px;
-      height: 42px;
+      width: 40px;
+      height: 40px;
       padding: 8px;
       flex-direction: column;
       justify-content: space-around;
@@ -160,7 +166,7 @@
 
     .mobile-menu-btn span {
       display: block;
-      width: 22px;
+      width: 20px;
       height: 1.5px;
       background: var(--text-dark);
       transition: all 0.3s ease;
@@ -508,14 +514,23 @@
       .nav-wrapper {
         display: flex;
         justify-content: space-between;
-        padding: 1rem 1.4rem;
+        align-items: center;
+        padding: 0.9rem 1.2rem;
       }
       .nav-left, .nav-right { display: none; }
-      .mobile-menu-btn { display: flex; }
+      
+      .mobile-header-actions {
+        display: flex;
+      }
+      
+      .mobile-menu-btn {
+        display: flex;
+      }
+      
       .mobile-drawer { display: flex; }
       
-      .brand-logo h1 { font-size: 1.8rem; }
-      .brand-logo span { font-size: 0.6rem; }
+      .brand-logo h1 { font-size: 1.65rem; }
+      .brand-logo span { font-size: 0.58rem; }
       
       .timeline-hero-section { padding: 0 1rem; margin: 1.2rem auto 1.5rem; }
       .timeline-frame { height: 320px; }
@@ -549,37 +564,43 @@
         <li class="nav-item"><a href="about.html" data-i18n="nav_about">about me</a></li>
         <li class="nav-item"><a href="#contact" data-i18n="nav_inquiries">inquiries</a></li>
         <li class="nav-item">
-          <!-- Language Toggle Button -->
+          <!-- Desktop Language Switcher Button -->
           <div class="lang-switcher">
-            <button class="lang-btn active" id="btn-zh" onclick="setLanguage('zh')">中文</button>
-            <button class="lang-btn" id="btn-en" onclick="setLanguage('en')">EN</button>
+            <button class="lang-btn" id="btn-zh" onclick="setLanguage('zh')">中文</button>
+            <button class="lang-btn active" id="btn-en" onclick="setLanguage('en')">EN</button>
           </div>
         </li>
       </ul>
 
-      <!-- Mobile Hamburger Button -->
-      <button class="mobile-menu-btn" id="mobile-toggle-btn" onclick="toggleMobileMenu()" aria-label="Toggle Menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+      <!-- Mobile Top Actions (Direct Lang Switcher + Hamburger) -->
+      <div class="mobile-header-actions">
+        <div class="lang-switcher">
+          <button class="lang-btn" id="btn-zh-top-m" onclick="setLanguage('zh')">中</button>
+          <button class="lang-btn active" id="btn-en-top-m" onclick="setLanguage('en')">EN</button>
+        </div>
+        <button class="mobile-menu-btn" id="mobile-toggle-btn" onclick="toggleMobileMenu()" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </div>
   </header>
 
   <!-- Mobile Fullscreen Drawer Navigation -->
   <div class="mobile-drawer" id="mobile-drawer">
     <ul class="mobile-nav-list">
-      <li class="mobile-nav-item"><a href="#rag-dolls" onclick="toggleMobileMenu()" data-i18n="nav_rag_dolls">艺术布偶</a></li>
-      <li class="mobile-nav-item"><a href="#bags" onclick="toggleMobileMenu()" data-i18n="nav_bags">原创布包</a></li>
-      <li class="mobile-nav-item"><a href="#accessories" onclick="toggleMobileMenu()" data-i18n="nav_living">宠物与生活</a></li>
-      <li class="mobile-nav-item"><a href="about.html" onclick="toggleMobileMenu()" data-i18n="nav_about">关于我</a></li>
-      <li class="mobile-nav-item"><a href="#contact" onclick="toggleMobileMenu()" data-i18n="nav_inquiries">合作洽谈</a></li>
+      <li class="mobile-nav-item"><a href="#rag-dolls" onclick="toggleMobileMenu()" data-i18n="nav_rag_dolls">rag dolls</a></li>
+      <li class="mobile-nav-item"><a href="#bags" onclick="toggleMobileMenu()" data-i18n="nav_bags">studio bags</a></li>
+      <li class="mobile-nav-item"><a href="#accessories" onclick="toggleMobileMenu()" data-i18n="nav_living">pet & living</a></li>
+      <li class="mobile-nav-item"><a href="about.html" onclick="toggleMobileMenu()" data-i18n="nav_about">about me</a></li>
+      <li class="mobile-nav-item"><a href="#contact" onclick="toggleMobileMenu()" data-i18n="nav_inquiries">inquiries</a></li>
     </ul>
 
-    <!-- Mobile Language Toggle -->
+    <!-- Mobile Drawer Language Toggle -->
     <div class="lang-switcher" style="margin-top: 1rem;">
-      <button class="lang-btn active" id="btn-zh-m" onclick="setLanguage('zh')">中文</button>
-      <button class="lang-btn" id="btn-en-m" onclick="setLanguage('en')">EN</button>
+      <button class="lang-btn" id="btn-zh-m" onclick="setLanguage('zh')">中文</button>
+      <button class="lang-btn active" id="btn-en-m" onclick="setLanguage('en')">EN</button>
     </div>
   </div>
 
@@ -594,7 +615,7 @@
 
   <!-- Notice: Selected Works Showcase Only -->
   <div style="text-align:center; margin: 2rem auto 0.8rem; color: var(--accent-terracotta); font-size: 0.76rem; letter-spacing: 0.18em; text-transform: uppercase; padding: 0 1.5rem;">
-    <span data-i18n="selected_notice">* 仅展示部分代表性手作作品 · 更多定制欢迎洽谈</span>
+    <span data-i18n="selected_notice">* SELECTED WORKS SHOWCASE ONLY · BESPOKE COMMISSIONS WELCOME</span>
   </div>
 
   <!-- Filter Bar for Portfolio -->
@@ -625,9 +646,9 @@
             <div>
               <span class="product-tag" data-i18n="tag_doll">heirloom rag doll</span>
               <h4 class="product-title" data-i18n="d1_title">Victorian Heirloom Lace Doll</h4>
-              <p class="product-desc" data-i18n="d1_desc">白纱微褶维多利亚复古布偶姑娘。精选纯棉白纱衬裙、手工复古蕾丝花边、卷曲莫海羊毛发丝与精致手绘面部表情。</p>
+              <p class="product-desc" data-i18n="d1_desc">Victorian pintuck white linen rag doll girl. Layered pure cotton slip, antique embroidered lace, curly mohair locks, and delicate hand-painted facial features.</p>
             </div>
-            <div class="product-craft-note" data-i18n="d1_note">纯手工缝制 · 活动关节 · 复古层叠微缩着装</div>
+            <div class="product-craft-note" data-i18n="d1_note">100% Hand-stitched · Jointed Limbs · Heirloom Micro-tailoring</div>
           </div>
         </div>
 
@@ -640,9 +661,9 @@
             <div>
               <span class="product-tag" data-i18n="tag_doll">artisan doll</span>
               <h4 class="product-title" data-i18n="d2_title">Indigo Patchwork Studio Doll</h4>
-              <p class="product-desc" data-i18n="d2_desc">工坊蓝染破洞补丁艺术布偶。天然蓝染粗亚麻毛边罩衫、野性毛线发型、手作原木桶珠项饰与立体捏塑面孔。</p>
+              <p class="product-desc" data-i18n="d2_desc">Studio Boro patchwork artisan cloth doll. Botanical indigo-dyed raw-edge linen tunic, unruly yarn hair, sculpted wooden amulet, and needle-sculpted face.</p>
             </div>
-            <div class="product-craft-note" data-i18n="d2_note">Boro 拼布毛边 · 独立打样 · JUKI工坊精制</div>
+            <div class="product-craft-note" data-i18n="d2_note">Boro Raw Fringe · Studio Original Pattern · JUKI Crafted</div>
           </div>
         </div>
 
@@ -655,9 +676,9 @@
             <div>
               <span class="product-tag" data-i18n="tag_teddy">jointed teddy bear</span>
               <h4 class="product-title" data-i18n="d3_title">Vintage Mohair Jointed Bears</h4>
-              <p class="product-desc" data-i18n="d3_desc">复古莫海毛手作五关节泰迪熊双人组。苔藓绿与樱花粉高密莫海毛、天然草木染粉色毛边围巾与纽扣配饰。</p>
+              <p class="product-desc" data-i18n="d3_desc">Artisan 5-way jointed mohair teddy bear pair. Moss green and blush pink high-density mohair, paired with natural botanical pink gauze raw-edge scarves.</p>
             </div>
-            <div class="product-craft-note" data-i18n="d3_note">经典五关节可动 · 草木染织物配饰 · 手工刺绣</div>
+            <div class="product-craft-note" data-i18n="d3_note">Classic 5-way Movable Joints · Botanical Dyed Scarf · Hand Embroidered</div>
           </div>
         </div>
 
@@ -670,9 +691,9 @@
             <div>
               <span class="product-tag" data-i18n="tag_teddy">jointed bear</span>
               <h4 class="product-title" data-i18n="d4_title">Golden Olive Mohair Bear</h4>
-              <p class="product-desc" data-i18n="d4_desc">金榄绿复古莫海毛小熊。饱满弧度剪裁版型、黑亮玻璃眼珠与纯手工手缝封口细节。</p>
+              <p class="product-desc" data-i18n="d4_desc">Golden olive vintage mohair bear. Sculpted curve pattern, jet-black glass eyes, and meticulously hand-finished invisible ladder stitching.</p>
             </div>
-            <div class="product-craft-note" data-i18n="d4_note">天然莫海毛 · 立体手工打板 · 治愈系摆件</div>
+            <div class="product-craft-note" data-i18n="d4_note">Pure Mohair · 3D Hand Patterning · Soothing Art Piece</div>
           </div>
         </div>
 
@@ -685,9 +706,9 @@
             <div>
               <span class="product-tag" data-i18n="tag_sculpture">textile figure</span>
               <h4 class="product-title" data-i18n="d5_title">Primitive Creature in Tweed Coat</h4>
-              <p class="product-desc" data-i18n="d5_desc">粗花呢大衣原始感手作艺术偶。身着格纹内衬羊毛粗花呢风衣、黄色木质大纽扣与微缩翻领。</p>
+              <p class="product-desc" data-i18n="d5_desc">Primitive antique linen art creature. Styled in a tailored wool tweed overcoat with check lining, oversized wooden buttons, and micro lapels.</p>
             </div>
-            <div class="product-craft-note" data-i18n="d5_note">复古微缩裁缝 · 亚麻软雕塑 · 手作毛线鬃毛</div>
+            <div class="product-craft-note" data-i18n="d5_note">Micro Tailoring · Linen Soft Sculpture · Handcrafted Yarn Mane</div>
           </div>
         </div>
 
@@ -700,9 +721,9 @@
             <div>
               <span class="product-tag" data-i18n="tag_sculpture">soft sculpture</span>
               <h4 class="product-title" data-i18n="d6_title">Handcrafted Linen Elephant Pair</h4>
-              <p class="product-desc" data-i18n="d6_desc">纯手工亚麻复古小象双人组。身着质感芥末黄与波点收腰复古连衣裙、毛边下摆与天然木质纽扣。</p>
+              <p class="product-desc" data-i18n="d6_desc">Hand-stitched vintage linen elephant duo. Wearing gathered retro dresses in warm mustard and polka dots with raw-edge hemlines and wooden buttons.</p>
             </div>
-            <div class="product-craft-note" data-i18n="d6_note">天然未漂白亚麻 · 复古褶皱收腰裙 · 灵感手作</div>
+            <div class="product-craft-note" data-i18n="d6_note">Unbleached Natural Linen · Gathered Smock Dress · Studio Original</div>
           </div>
         </div>
 
@@ -715,9 +736,9 @@
             <div>
               <span class="product-tag" data-i18n="tag_character">character doll</span>
               <h4 class="product-title" data-i18n="d7_title">Whimsical Expression Figures</h4>
-              <p class="product-desc" data-i18n="d7_desc">幽默治愈系搞怪手作布偶。立体大鼻子腮红晕染、毛线发型、手工刺绣诙谐表情与纽扣眼睛。</p>
+              <p class="product-desc" data-i18n="d7_desc">Humorous character cloth dolls. Features 3D blushed noses, wild wool yarn hair, hand-embroidered witty expressions, and mismatched button eyes.</p>
             </div>
-            <div class="product-craft-note" data-i18n="d7_note">俄式手作灵感 · 趣味雕塑感 · 纯棉亲肤填充</div>
+            <div class="product-craft-note" data-i18n="d7_note">CIS / Russian Artisan Inspired · Playful Sculptures · Pure Cotton</div>
           </div>
         </div>
 
@@ -730,9 +751,9 @@
             <div>
               <span class="product-tag" data-i18n="tag_heirloom">heirloom figure</span>
               <h4 class="product-title" data-i18n="d8_title">Tailored Equine Art Sculptures</h4>
-              <p class="product-desc" data-i18n="d8_desc">大衣绅士与淑女马形软雕塑。身着人字纹精纺毛呢长风衣、红白格翻领与微缩刺绣手部细节。</p>
+              <p class="product-desc" data-i18n="d8_desc">Gentleman and Lady sculpted linen horses. Dressed in full-length herringbone wool overcoats with red check lapels and micro-tailored sleeves.</p>
             </div>
-            <div class="product-craft-note" data-i18n="d8_note">高级定制微缩风衣 · 复古原木纽扣 · 收藏级艺术品</div>
+            <div class="product-craft-note" data-i18n="d8_note">Couture Tailored Overcoats · Vintage Wooden Buttons · Collectible Art</div>
           </div>
         </div>
 
@@ -756,9 +777,9 @@
             <div>
               <span class="product-tag" data-i18n="tag_bag">everyday bag</span>
               <h4 class="product-title" data-i18n="b1_title">Indigo Stripe Linen Hobo Tote</h4>
-              <p class="product-desc" data-i18n="b1_desc">蓝染条纹亚麻极简单肩挎包。水洗天蓝条纹粗亚麻布面、拼接收口内衬、复古柿涩茶褐全里布与按扣闭合。</p>
+              <p class="product-desc" data-i18n="b1_desc">Minimalist washed sky blue stripe linen hobo bag. Soft washed natural linen, folded top enclosure, warm terracotta persimmon lining, and snap button closure.</p>
             </div>
-            <div class="product-craft-note" data-i18n="b1_note">天然植物水洗色 · 宽肩带受力加固 · 双层内衬</div>
+            <div class="product-craft-note" data-i18n="b1_note">Natural Plant-washed Palette · Reinforced Strap · Full Linen Lining</div>
           </div>
         </div>
 
@@ -771,9 +792,9 @@
             <div>
               <span class="product-tag" data-i18n="tag_bag">botanical tote</span>
               <h4 class="product-title" data-i18n="b2_title">Botanical Floral Ruffle Tote Set</h4>
-              <p class="product-desc" data-i18n="b2_desc">草木植物印花荷叶边托特包与大肠发圈套组。法式复古木刻印花棉麻、双层微褶荷叶边领口与同系列发圈。</p>
+              <p class="product-desc" data-i18n="b2_desc">Indian block-print organic cotton ruffle tote bag with matching scrunchie. Double-layered gathered ruffle neckline and generous storage capacity.</p>
             </div>
-            <div class="product-craft-note" data-i18n="b2_note">印花纯棉麻 · 荷叶边立体捏褶 · 配套发圈套组</div>
+            <div class="product-craft-note" data-i18n="b2_note">Printed Pure Linen/Cotton · 3D Gathered Ruffles · Matching Scrunchie</div>
           </div>
         </div>
 
@@ -786,9 +807,9 @@
             <div>
               <span class="product-tag" data-i18n="tag_bag">playful linen bag</span>
               <h4 class="product-title" data-i18n="b3_title">Heirloom Doll-Leg Linen Totes</h4>
-              <p class="product-desc" data-i18n="b3_desc">趣味玩偶双腿白亚麻斜挎包。纯净未漂白天然亚麻、镂空花边领圈、手工刺绣表情与俏皮下垂偶腿。</p>
+              <p class="product-desc" data-i18n="b3_desc">Playful unbleached white linen tote bag with doll legs. Eyelet lace neckline, embroidered minimalist face, and charming dangling doll feet.</p>
             </div>
-            <div class="product-craft-note" data-i18n="b3_note">原创玩偶结合构思 · 纯手作打样 · 蝴蝶结系带肩带</div>
+            <div class="product-craft-note" data-i18n="b3_note">Doll Fusion Concept · 100% Hand-patterned · Tie-shoulder Strap</div>
           </div>
         </div>
 
@@ -801,9 +822,9 @@
             <div>
               <span class="product-tag" data-i18n="tag_bag">knot bag</span>
               <h4 class="product-title" data-i18n="b4_title">Coarse Woven Knot Bento Bags</h4>
-              <p class="product-desc" data-i18n="b4_desc">粗织手感便当结扣手提包。苔藓深绿与枯紫粗粝肌理手织面料、撞色卡其亚麻结扣手柄与加厚内衬结构。</p>
+              <p class="product-desc" data-i18n="b4_desc">Textured coarse woven knot tote bag pair. Deep forest moss green and dusty plum heavy textured fabric with contrast khaki linen knot handles.</p>
             </div>
-            <div class="product-craft-note" data-i18n="b4_note">粗织厚重肌理 · 日式结扣穿孔提手 · 挺括立体</div>
+            <div class="product-craft-note" data-i18n="b4_note">Heavy Rustic Texture · Japanese Knot Handle · Structured Form</div>
           </div>
         </div>
 
@@ -816,9 +837,9 @@
             <div>
               <span class="product-tag" data-i18n="tag_bag">zipper pouch</span>
               <h4 class="product-title" data-i18n="b5_title">Botanical Floral Lace Pouches</h4>
-              <p class="product-desc" data-i18n="b5_desc">复古草木印花蕾丝化妆/收纳包。藏青与暖白底植物花卉印花、精致刺绣蕾丝花边贴布与复古金属拉链。</p>
+              <p class="product-desc" data-i18n="b5_desc">Vintage botanical floral cosmetic pouches. Navy and warm oat botanical prints, delicate floral lace overlay, and antique metal zipper pullers.</p>
             </div>
-            <div class="product-craft-note" data-i18n="b5_note">高密内衬包边 · 复古拉链拉头 · 随身美学收纳</div>
+            <div class="product-craft-note" data-i18n="b5_note">Bound Interior Seams · Antique Metal Hardware · Everyday Aesthetic</div>
           </div>
         </div>
 
@@ -831,9 +852,9 @@
             <div>
               <span class="product-tag" data-i18n="tag_bag">pocket sleeve</span>
               <h4 class="product-title" data-i18n="b6_title">Indigo Kasuri Envelope Sleeves</h4>
-              <p class="product-desc" data-i18n="b6_desc">日式蓝染织布信封式眼镜/卡片收纳包。细密包边条勾勒、复古做旧黄铜四合扣与多层柔软夹棉防震防护。</p>
+              <p class="product-desc" data-i18n="b6_desc">Japanese indigo kasuri woven fabric envelope sleeves. Micro-piped border edge, antique brass snap fasteners, and soft padded quilted protection.</p>
             </div>
-            <div class="product-craft-note" data-i18n="b6_note">传统蓝染提花织布 · 精细滚边工艺 · 黄铜按扣</div>
+            <div class="product-craft-note" data-i18n="b6_note">Traditional Indigo Jacquard · Delicate Piping · Antique Brass Snap</div>
           </div>
         </div>
 
@@ -846,9 +867,9 @@
             <div>
               <span class="product-tag" data-i18n="tag_bag">structured tote</span>
               <h4 class="product-title" data-i18n="b7_title">Spiral Batik Structured Tote</h4>
-              <p class="product-desc" data-i18n="b7_desc">几何漩涡图腾蜡染手提包。深蓝与浅蓝同心圆蜡染帆布面料、夹棉挺括手感与舒适加宽手提带。</p>
+              <p class="product-desc" data-i18n="b7_desc">Hand-quilted geometric spiral batik canvas handbag. Navy and cerulean blue circular motif with sturdy padded handles and spacious interior.</p>
             </div>
-            <div class="product-craft-note" data-i18n="b7_note">几何蜡染图腾 · 夹棉绗缝加固 · 极佳承重</div>
+            <div class="product-craft-note" data-i18n="b7_note">Geometric Batik Motif · Quilted Reinforcement · Durable Daily Bag</div>
           </div>
         </div>
 
@@ -872,9 +893,9 @@
             <div>
               <span class="product-tag" data-i18n="tag_acc">bandana & bib</span>
               <h4 class="product-title" data-i18n="a1_title">Botanical Splatter Bandana & Bib</h4>
-              <p class="product-desc" data-i18n="a1_desc">核桃皮/植物墨彩泼墨肌理三角头巾与花边口水巾。天然棉麻原色底布、不规则自然水墨甩点与蕾丝滚边。</p>
+              <p class="product-desc" data-i18n="a1_desc">Walnut dye ink splatter bandana and lace-trimmed scalloped bib. Natural raw cotton base, organic irregular splash pattern, and delicate lace trim.</p>
             </div>
-            <div class="product-craft-note" data-i18n="a1_note">植物原汁染色 · 松紧褶皱绑带 · A类母婴亲肤</div>
+            <div class="product-craft-note" data-i18n="a1_note">Raw Botanical Extract Dye · Elastic Shirred Band · Grade A Baby Safe</div>
           </div>
         </div>
 
@@ -887,9 +908,9 @@
             <div>
               <span class="product-tag" data-i18n="tag_acc">pet cape</span>
               <h4 class="product-title" data-i18n="a2_title">Sky Stripe Linen Pet Cape</h4>
-              <p class="product-desc" data-i18n="a2_desc">浅天蓝条纹棉麻复古宠物领结披肩。鹅黄丝绒蝴蝶结丝带装饰、做旧黄铜按扣与宠物人体工学无压弧线。</p>
+              <p class="product-desc" data-i18n="a2_desc">Vintage sky-blue striped linen pet collar cape. Accented with butter-yellow velvet ribbon bows, antique bronze snap button, and pressure-free neckline.</p>
             </div>
-            <div class="product-craft-note" data-i18n="a2_note">轻盈透气棉麻 · 丝绒微缩蝴蝶结 · 防勒舒适合体</div>
+            <div class="product-craft-note" data-i18n="a2_note">Breathable Linen · Velvet Micro Bows · Ergonomic Pet Tailoring</div>
           </div>
         </div>
 
@@ -902,9 +923,9 @@
             <div>
               <span class="product-tag" data-i18n="tag_acc">headwear</span>
               <h4 class="product-title" data-i18n="a3_title">Walnut Heart Jacquard Bandana</h4>
-              <p class="product-desc" data-i18n="a3_desc">暖茶褐爱心暗提花三角发带头巾。焦糖暖褐草木色调、后置弹力松紧包边带与做旧黄铜扣点缀。</p>
+              <p class="product-desc" data-i18n="a3_desc">Caramel earth-tone heart jacquard triangle headband bandana. Warm botanical color palette with elasticized comfort scrunch band and brass rivets.</p>
             </div>
-            <div class="product-craft-note" data-i18n="a3_note">草木色谱提取 · 柔韧贴合头型 · 舒适松紧带</div>
+            <div class="product-craft-note" data-i18n="a3_note">Botanical Earth Palette · Gentle Elastic Fit · Antique Brass Detail</div>
           </div>
         </div>
 
@@ -917,9 +938,9 @@
             <div>
               <span class="product-tag" data-i18n="tag_acc">reversible collar</span>
               <h4 class="product-title" data-i18n="a4_title">Polka-Dot Scalloped Petal Collar</h4>
-              <p class="product-desc" data-i18n="a4_desc">双层花瓣波点领结小围嘴。水蓝波点与米黄细点双层波浪花瓣边造型、立体绑带蝴蝶结与按扣闭合。</p>
+              <p class="product-desc" data-i18n="a4_desc">Reversible double-layered scalloped baby & pet bib collar. Sky blue polka dots paired with cream mini-dots, delicate bow tie, and snap closure.</p>
             </div>
-            <div class="product-craft-note" data-i18n="a4_note">双面可戴设计 · 波浪花瓣造型 · 双层纯棉</div>
+            <div class="product-craft-note" data-i18n="a4_note">Reversible Design · Scalloped Petal Edges · 100% Soft Cotton</div>
           </div>
         </div>
 
@@ -932,9 +953,9 @@
             <div>
               <span class="product-tag" data-i18n="tag_acc">miniature tailoring</span>
               <h4 class="product-title" data-i18n="a5_title">Gentleman Plaid Collar & Micro-Tie</h4>
-              <p class="product-desc" data-i18n="a5_desc">微缩复古绅士格纹衬衫领与领带套件。灰色细格纹衬衫立翻领、深棕千鸟格微缩手缝打结领带。</p>
+              <p class="product-desc" data-i18n="a5_desc">Micro-tailored vintage plaid shirt collar with brown houndstooth miniature knotted necktie for dolls or pets.</p>
             </div>
-            <div class="product-craft-note" data-i18n="a5_note">极高难度微缩裁缝 · 偶用与宠物两相宜</div>
+            <div class="product-craft-note" data-i18n="a5_note">High Precision Micro-tailoring · Dual Use for Dolls & Pets</div>
           </div>
         </div>
 
@@ -947,9 +968,9 @@
             <div>
               <span class="product-tag" data-i18n="tag_acc">living soft sculpture</span>
               <h4 class="product-title" data-i18n="a6_title">Forest Mushroom Sculpture & Woven Tub</h4>
-              <p class="product-desc" data-i18n="a6_desc">手作森林蘑菇软雕塑与粗织收纳布筒。枯粉紫粗纺羊毛收纳桶、薄荷绿包边与麂皮/亚麻拼接森林蘑菇摆件。</p>
+              <p class="product-desc" data-i18n="a6_desc">Coarse weave dusty mauve storage tub with botanical dyed linen forest mushroom art piece. Mint bound rim and suede/linen patchwork.</p>
             </div>
-            <div class="product-craft-note" data-i18n="a6_note">粗织羊毛面料 · 亚麻蘑菇褶皱捏褶 · 桌面美学</div>
+            <div class="product-craft-note" data-i18n="a6_note">Coarse Wool Weave · Hand-pleated Linen Mushroom · Desktop Sculpture</div>
           </div>
         </div>
 
@@ -962,9 +983,9 @@
             <div>
               <span class="product-tag" data-i18n="tag_acc">craftsmanship detail</span>
               <h4 class="product-title" data-i18n="a7_title">Heirloom Linen Tote Macro Detail</h4>
-              <p class="product-desc" data-i18n="a7_desc">白亚麻布包细节微距。展示古董蕾丝滚边细节、手工刺绣红线腮红点与纯棉绳偶腿收口。</p>
+              <p class="product-desc" data-i18n="a7_desc">Macro close-up view of the heirloom linen tote bag. Highlighting antique lace trims, hand-embroidered red blush stitches, and natural unbleached linen weave.</p>
             </div>
-            <div class="product-craft-note" data-i18n="a7_note">微距细节展示 · 纯天然亚麻织纹 · 精工锁边</div>
+            <div class="product-craft-note" data-i18n="a7_note">Macro Detail View · Pure Unbleached Linen Weave · Clean Overlock Finish</div>
           </div>
         </div>
 
@@ -978,7 +999,7 @@
     <span class="inquiry-tag" data-i18n="inquiry_tag">collaboration & partnership</span>
     <h3 class="inquiry-title" data-i18n="inquiry_title">inquiries & partnership</h3>
     <p class="inquiry-desc" data-i18n="inquiry_desc">
-      诚挚探讨独立手作店铺联合主理、布艺与草木染产品线研发定制、小众美学品牌共创。
+      Warmly open to co-founding independent artisan brands, custom botanical dye product line development, and lifestyle boutique partnerships.
     </p>
 
     <div class="inquiry-pills">
@@ -989,14 +1010,14 @@
         📞 18339931747
       </a>
       <span class="inquiry-pill" data-i18n="inquiry_loc">
-        📍 杭州 · 专属家庭手作工坊
+        📍 Hangzhou · Home Studio Atelier
       </span>
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p data-i18n="footer_copy">© 2026 LUMI SONG (宋婷婷). ALL RIGHTS RESERVED.</p>
+    <p data-i18n="footer_copy">© 2026 LUMI SONG (TINGTING SONG). ALL RIGHTS RESERVED.</p>
     <p data-i18n="footer_sub">INSPIRED BY ARTISAN RAG DOLLS, NATURAL BOTANICAL DYES & LIVING TEXTILES.</p>
   </footer>
 
@@ -1260,16 +1281,28 @@
       }
     };
 
-    let currentLang = localStorage.getItem('lumi_lang') || 'zh';
+    // Default language is English ('en')
+    let currentLang = localStorage.getItem('lumi_lang') || 'en';
 
     function setLanguage(lang) {
       currentLang = lang;
       localStorage.setItem('lumi_lang', lang);
       
       const isZh = lang === 'zh';
+      
+      // Desktop nav
       document.getElementById('btn-zh').classList.toggle('active', isZh);
       document.getElementById('btn-en').classList.toggle('active', !isZh);
       
+      // Mobile top nav
+      const btnZhTopM = document.getElementById('btn-zh-top-m');
+      const btnEnTopM = document.getElementById('btn-en-top-m');
+      if (btnZhTopM && btnEnTopM) {
+        btnZhTopM.classList.toggle('active', isZh);
+        btnEnTopM.classList.toggle('active', !isZh);
+      }
+      
+      // Mobile drawer nav
       const btnZhM = document.getElementById('btn-zh-m');
       const btnEnM = document.getElementById('btn-en-m');
       if (btnZhM && btnEnM) {
@@ -1329,7 +1362,7 @@
       document.body.style.overflow = isOpen ? 'hidden' : 'auto';
       
       if (isOpen) {
-        btn.innerHTML = '<span style=\"transform:rotate(45deg) translate(4px, 4px);\"></span><span style=\"opacity:0;\"></span><span style=\"transform:rotate(-45deg) translate(4px, -4px);\"></span>';
+        btn.innerHTML = '<span style="transform:rotate(45deg) translate(4px, 4px);"></span><span style="opacity:0;"></span><span style="transform:rotate(-45deg) translate(4px, -4px);"></span>';
       } else {
         btn.innerHTML = '<span></span><span></span><span></span>';
       }
