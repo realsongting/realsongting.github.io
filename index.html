@@ -9,7 +9,7 @@
   <!-- Google Fonts: Editorial Serif & Clean Modern Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Jost:wght@300;400;500;600&family=Noto+Serif+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Jost:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Noto+Serif+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -68,9 +68,9 @@
     }
 
     .nav-wrapper {
-      max-width: 1280px;
+      max-width: 1360px;
       margin: 0 auto;
-      padding: 1.4rem 2rem;
+      padding: 1.3rem 2rem;
       display: grid;
       grid-template-columns: 1fr auto 1fr;
       align-items: center;
@@ -153,99 +153,70 @@
       margin-top: 0.35rem;
     }
 
-    /* Hero Section */
-    .hero-editorial {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 5.5rem 2rem 4rem;
-      text-align: center;
+    /* Visual Hero Triptych Banner (Immediate Photo Impact) */
+    .visual-hero-section {
+      max-width: 1360px;
+      margin: 2rem auto 3.5rem;
+      padding: 0 2rem;
     }
 
-    .hero-tag {
-      font-size: 0.8rem;
-      letter-spacing: 0.25em;
+    .hero-gallery-triptych {
+      display: grid;
+      grid-template-columns: 1.2fr 0.9fr 0.9fr;
+      gap: 1.5rem;
+      height: 520px;
+    }
+
+    .hero-triptych-card {
+      position: relative;
+      overflow: hidden;
+      background: var(--bg-warm-oat);
+      cursor: pointer;
+    }
+
+    .hero-triptych-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+    }
+
+    .hero-triptych-card:hover img {
+      transform: scale(1.04);
+    }
+
+    .hero-overlay-tag {
+      position: absolute;
+      bottom: 1.8rem;
+      left: 1.8rem;
+      background: rgba(250, 248, 245, 0.92);
+      backdrop-filter: blur(6px);
+      padding: 0.6rem 1.4rem;
+      border: 1px solid var(--line-subtle);
+    }
+
+    .hero-overlay-tag h3 {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      text-transform: lowercase;
+      color: var(--text-dark);
+    }
+
+    .hero-overlay-tag span {
+      display: block;
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
       text-transform: uppercase;
       color: var(--accent-terracotta);
-      margin-bottom: 1.2rem;
-      display: inline-block;
-    }
-
-    .hero-heading {
-      font-family: var(--font-display);
-      font-size: 3.2rem;
-      font-weight: 400;
-      line-height: 1.25;
-      letter-spacing: 0.04em;
-      color: var(--text-dark);
-      max-width: 900px;
-      margin: 0 auto 1.8rem;
-    }
-
-    .hero-lead {
-      font-family: var(--font-serif);
-      font-size: 1.05rem;
-      color: var(--text-muted);
-      max-width: 720px;
-      margin: 0 auto 2.5rem;
-      line-height: 2;
-    }
-
-    .hero-cta-group {
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-    }
-
-    .btn-dark {
-      display: inline-block;
-      padding: 0.85rem 2.6rem;
-      background: var(--text-dark);
-      color: var(--bg-cream);
-      text-decoration: none;
-      font-size: 0.8rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      transition: all 0.3s ease;
-    }
-
-    .btn-dark:hover {
-      background: var(--accent-terracotta);
-    }
-
-    /* Statement Section */
-    .statement-section {
-      background: var(--bg-warm-oat);
-      padding: 4.5rem 2rem;
-      border-top: 1px solid var(--line-subtle);
-      border-bottom: 1px solid var(--line-subtle);
-      text-align: center;
-    }
-
-    .statement-content {
-      max-width: 860px;
-      margin: 0 auto;
-    }
-
-    .statement-quote {
-      font-family: var(--font-display);
-      font-size: 1.75rem;
-      font-style: italic;
-      color: var(--text-dark);
-      line-height: 1.6;
-      margin-bottom: 1.2rem;
-    }
-
-    .statement-author {
-      font-size: 0.82rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--text-muted);
+      margin-top: 0.15rem;
     }
 
     /* Filter Bar for Portfolio */
     .gallery-filter-wrap {
-      max-width: 1280px;
-      margin: 4.5rem auto 2.5rem;
+      max-width: 1360px;
+      margin: 2rem auto 2.5rem;
       padding: 0 2rem;
       display: flex;
       justify-content: center;
@@ -256,7 +227,7 @@
     .filter-btn {
       border: 1px solid var(--line-subtle);
       background: var(--bg-pure);
-      padding: 0.6rem 1.6rem;
+      padding: 0.65rem 1.8rem;
       font-family: var(--font-body);
       font-size: 0.78rem;
       letter-spacing: 0.12em;
@@ -273,20 +244,20 @@
       color: var(--bg-cream);
     }
 
-    /* Portfolio Section */
+    /* Portfolio Showcase Grid */
     .portfolio-section {
-      max-width: 1280px;
+      max-width: 1360px;
       margin: 0 auto;
-      padding: 0 2rem 6rem;
+      padding: 0 2rem 5rem;
     }
 
     .gallery-category-title {
       font-family: var(--font-display);
-      font-size: 1.9rem;
+      font-size: 2.1rem;
       font-weight: 400;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.05em;
       text-transform: lowercase;
-      margin: 4rem 0 2rem;
+      margin: 3.5rem 0 2rem;
       padding-bottom: 0.8rem;
       border-bottom: 1px solid var(--line-subtle);
       display: flex;
@@ -326,7 +297,7 @@
 
     .product-img-wrap {
       width: 100%;
-      height: 420px;
+      height: 440px;
       background: var(--bg-warm-oat);
       overflow: hidden;
       display: flex;
@@ -389,50 +360,134 @@
       margin-top: auto;
     }
 
-    /* Atelier Section */
-    .atelier-section {
+    /* -------------------------------------------------------------
+       ABOUT ME / THE ARTISAN'S STORY SECTION (Jess Brown Style Narrative)
+       ------------------------------------------------------------- */
+    .about-story-section {
       background: var(--bg-warm-oat);
-      padding: 6.5rem 2rem;
       border-top: 1px solid var(--line-subtle);
+      border-bottom: 1px solid var(--line-subtle);
+      padding: 6.5rem 2rem;
     }
 
-    .atelier-grid {
-      max-width: 1280px;
+    .about-story-wrapper {
+      max-width: 1200px;
       margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 5rem;
-      align-items: center;
     }
 
-    .atelier-text span {
-      font-size: 0.75rem;
+    .about-lead-header {
+      text-align: center;
+      margin-bottom: 4.5rem;
+    }
+
+    .about-lead-tag {
+      font-size: 0.8rem;
       letter-spacing: 0.25em;
       text-transform: uppercase;
       color: var(--accent-terracotta);
-      margin-bottom: 0.8rem;
       display: block;
+      margin-bottom: 0.8rem;
     }
 
-    .atelier-text h3 {
+    .about-lead-title {
       font-family: var(--font-display);
-      font-size: 2.8rem;
+      font-size: 3.2rem;
       font-weight: 400;
       line-height: 1.25;
-      margin-bottom: 1.8rem;
+      color: var(--text-dark);
+      max-width: 880px;
+      margin: 0 auto;
+      text-transform: lowercase;
     }
 
-    .atelier-text p {
+    /* Chapter Row: 2-column alternating layouts */
+    .story-chapter {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+      margin-bottom: 6rem;
+    }
+
+    .story-chapter.reverse {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .story-chapter.reverse .story-image-wrap {
+      order: 2;
+    }
+
+    .story-chapter.reverse .story-text-wrap {
+      order: 1;
+    }
+
+    .story-image-wrap {
+      position: relative;
+      height: 520px;
+      background: var(--bg-pure);
+      border: 1px solid var(--line-subtle);
+      overflow: hidden;
+    }
+
+    .story-image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .story-image-wrap:hover img {
+      transform: scale(1.03);
+    }
+
+    .story-text-wrap {
+      padding: 1rem 0;
+    }
+
+    .chapter-number {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      letter-spacing: 0.2em;
+      color: var(--accent-terracotta);
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 0.6rem;
+    }
+
+    .chapter-title {
+      font-family: var(--font-display);
+      font-size: 2.2rem;
+      font-weight: 400;
+      line-height: 1.3;
+      margin-bottom: 1.6rem;
+      color: var(--text-dark);
+    }
+
+    .chapter-p {
+      font-family: var(--font-serif);
       font-size: 0.95rem;
       color: var(--text-muted);
+      line-height: 2;
       margin-bottom: 1.4rem;
-      line-height: 1.9;
     }
 
+    .chapter-quote {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-style: italic;
+      color: var(--accent-terracotta);
+      border-left: 2px solid var(--accent-terracotta);
+      padding-left: 1.4rem;
+      margin: 2rem 0 1rem;
+      line-height: 1.6;
+    }
+
+    /* Atelier & Color Library Box */
     .palette-box {
       background: var(--bg-pure);
       border: 1px solid var(--line-subtle);
       padding: 2.8rem 2.4rem;
+      margin-top: 3.5rem;
     }
 
     .palette-box h4 {
@@ -445,19 +500,19 @@
 
     .swatch-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.8rem;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
     }
 
     .swatch-item {
       display: flex;
       align-items: center;
-      gap: 1.2rem;
+      gap: 1rem;
     }
 
     .swatch-circle {
-      width: 46px;
-      height: 46px;
+      width: 44px;
+      height: 44px;
       border-radius: 50%;
       flex-shrink: 0;
       border: 1px solid var(--line-subtle);
@@ -470,13 +525,13 @@
     .c-cabbage { background: #6F5E76; }
 
     .swatch-info strong {
-      font-size: 0.88rem;
+      font-size: 0.85rem;
       color: var(--text-dark);
       display: block;
     }
 
     .swatch-info span {
-      font-size: 0.75rem;
+      font-size: 0.72rem;
       color: var(--text-muted);
     }
 
@@ -575,27 +630,33 @@
     }
 
     @media (max-width: 1024px) {
+      .hero-gallery-triptych { grid-template-columns: 1fr; height: auto; }
+      .hero-triptych-card { height: 380px; }
       .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-      .atelier-grid { grid-template-columns: 1fr; gap: 3.5rem; }
+      .story-chapter, .story-chapter.reverse { grid-template-columns: 1fr; gap: 2.5rem; }
+      .story-chapter.reverse .story-image-wrap { order: 1; }
+      .story-chapter.reverse .story-text-wrap { order: 2; }
+      .story-image-wrap { height: 380px; }
+      .swatch-grid { grid-template-columns: repeat(2, 1fr); }
     }
 
     @media (max-width: 640px) {
       .nav-wrapper { grid-template-columns: 1fr; text-align: center; gap: 1rem; }
       .nav-left, .nav-right { display: none; }
-      .hero-heading { font-size: 2.3rem; }
       .gallery-grid { grid-template-columns: 1fr; }
       .product-img-wrap { height: 360px; }
+      .about-lead-title { font-size: 2.3rem; }
     }
   </style>
 </head>
 <body>
 
   <!-- Top Announcement Note -->
-  <div class="top-banner" id="top-banner">
+  <div class="top-banner" data-i18n="top_banner">
     Lumi Song Atelier — Handcrafted Rag Dolls, Botanical Dyes & Living Textiles
   </div>
 
-  <!-- Editorial Header -->
+  <!-- Editorial Navigation Header -->
   <header>
     <div class="nav-wrapper">
       <ul class="nav-left">
@@ -610,7 +671,7 @@
       </a>
 
       <ul class="nav-right">
-        <li class="nav-item"><a href="#story" data-i18n="nav_story">the story</a></li>
+        <li class="nav-item"><a href="#story" data-i18n="nav_story">about me</a></li>
         <li class="nav-item"><a href="#contact" data-i18n="nav_inquiries">inquiries</a></li>
         <li class="nav-item">
           <!-- Language Toggle Button -->
@@ -623,46 +684,55 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero-editorial">
-    <span class="hero-tag" data-i18n="hero_tag">artisan textiles & heirlooms</span>
-    <h2 class="hero-heading" data-i18n="hero_heading">from an artisan’s tactile aesthetic to a timeless lifestyle brand.</h2>
-    <p class="hero-lead" data-i18n="hero_lead">
-      以手作温度为灵魂，以自然草木为色彩。<br>
-      从标志性高定艺术布偶、天然植物染织物，到原创服饰、布包与生活方式美学。
-    </p>
-    <div class="hero-cta-group">
-      <a href="#portfolio" class="btn-dark" data-i18n="hero_btn">view collection</a>
+  <!-- Visual Hero Banner (Immediate Photo Impact) -->
+  <section class="visual-hero-section">
+    <div class="hero-gallery-triptych">
+      
+      <!-- Big Hero: Heirloom Victorian Doll -->
+      <div class="hero-triptych-card" onclick="openLightbox('images/doll-heirloom-white-lace.jpg')">
+        <img src="images/doll-heirloom-white-lace.jpg" alt="Victorian Heirloom Rag Doll" loading="eager">
+        <div class="hero-overlay-tag">
+          <span data-i18n="hero_t1_sub">featured heirloom</span>
+          <h3 data-i18n="hero_t1_title">Victorian Heirloom Rag Doll</h3>
+        </div>
+      </div>
+
+      <!-- Hero 2: Indigo Stripe Hobo Tote -->
+      <div class="hero-triptych-card" onclick="openLightbox('images/bag-indigo-stripe-hobo.jpg')">
+        <img src="images/bag-indigo-stripe-hobo.jpg" alt="Indigo Stripe Linen Hobo Tote" loading="eager">
+        <div class="hero-overlay-tag">
+          <span data-i18n="hero_t2_sub">studio bag</span>
+          <h3 data-i18n="hero_t2_title">Indigo Stripe Linen Hobo</h3>
+        </div>
+      </div>
+
+      <!-- Hero 3: Botanical Dyed Bandana & Collar -->
+      <div class="hero-triptych-card" onclick="openLightbox('images/acc-splatter-bandana-bib.jpg')">
+        <img src="images/acc-splatter-bandana-bib.jpg" alt="Botanical Dye Splatter Bandana" loading="eager">
+        <div class="hero-overlay-tag">
+          <span data-i18n="hero_t3_sub">botanical dyes</span>
+          <h3 data-i18n="hero_t3_title">Botanical Splatter Bandana</h3>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <!-- Statement Section -->
-  <section class="statement-section" id="story">
-    <div class="statement-content">
-      <p class="statement-quote" data-i18n="statement_quote">
-        “We believe in the beauty of time, natural textures, and the unique soul imbued into every hand-stitched piece.”
-      </p>
-      <p class="statement-author" data-i18n="statement_author">
-        宋婷婷 Tingting Song — Founder & Artisan Designer
-      </p>
-    </div>
-  </section>
-
-  <!-- Filter Buttons -->
+  <!-- Filter Bar for Portfolio -->
   <div class="gallery-filter-wrap" id="portfolio">
-    <button class="filter-btn active" onclick="filterGallery('all')" data-i18n="filter_all">全部作品 / ALL (22)</button>
-    <button class="filter-btn" onclick="filterGallery('rag-dolls')" data-i18n="filter_dolls">艺术布偶 / RAG DOLLS (8)</button>
-    <button class="filter-btn" onclick="filterGallery('bags')" data-i18n="filter_bags">原创布包 / STUDIO BAGS (7)</button>
-    <button class="filter-btn" onclick="filterGallery('accessories')" data-i18n="filter_acc">宠物与生活 / PET & LIVING (7)</button>
+    <button class="filter-btn active" onclick="filterGallery('all')" data-i18n="filter_all">ALL WORKS (22)</button>
+    <button class="filter-btn" onclick="filterGallery('rag-dolls')" data-i18n="filter_dolls">RAG DOLLS (8)</button>
+    <button class="filter-btn" onclick="filterGallery('bags')" data-i18n="filter_bags">STUDIO BAGS (7)</button>
+    <button class="filter-btn" onclick="filterGallery('accessories')" data-i18n="filter_acc">PET & LIVING (7)</button>
   </div>
 
   <!-- Main Portfolio Showcase -->
   <main class="portfolio-section">
 
-    <!-- 01 / Rag Dolls & Heirlooms -->
+    <!-- Collection 1: Heirloom Rag Dolls (No 01 prefix) -->
     <div class="gallery-category" data-cat="rag-dolls">
       <div class="gallery-category-title" id="rag-dolls">
-        <span data-i18n="cat_title_1">01 / heirloom rag dolls & art sculptures</span>
+        <span data-i18n="cat_title_1">heirloom rag dolls & art sculptures</span>
         <span class="category-count" data-i18n="cat_count_1">8 items</span>
       </div>
       <div class="gallery-grid">
@@ -790,10 +860,10 @@
       </div>
     </div>
 
-    <!-- 02 / Studio Bags & Textile Pouches -->
+    <!-- Collection 2: Studio Bags (No 02 prefix) -->
     <div class="gallery-category" data-cat="bags">
       <div class="gallery-category-title" id="bags">
-        <span data-i18n="cat_title_2">02 / studio bags & artisan pouches</span>
+        <span data-i18n="cat_title_2">studio bags & artisan pouches</span>
         <span class="category-count" data-i18n="cat_count_2">7 items</span>
       </div>
       <div class="gallery-grid">
@@ -906,10 +976,10 @@
       </div>
     </div>
 
-    <!-- 03 / Accessories, Pet Pieces & Living -->
+    <!-- Collection 3: Pet & Living Textiles (No 03 prefix) -->
     <div class="gallery-category" data-cat="accessories">
       <div class="gallery-category-title" id="accessories">
-        <span data-i18n="cat_title_3">03 / pet pieces, bandanas & living textiles</span>
+        <span data-i18n="cat_title_3">pet pieces, bandanas & living textiles</span>
         <span class="category-count" data-i18n="cat_count_3">7 items</span>
       </div>
       <div class="gallery-grid">
@@ -1024,60 +1094,119 @@
 
   </main>
 
-  <!-- Atelier & Craft Philosophy Section -->
-  <section class="atelier-section">
-    <div class="atelier-grid">
-      <div class="atelier-text">
-        <span data-i18n="atelier_sub">the studio & philosophy</span>
-        <h3 data-i18n="atelier_title">the atelier of timeless textiles</h3>
-        <p data-i18n="atelier_p1">
-          在专属家庭缝纫室与手工工坊中，坚持从灵感企划、立体剪裁制版、植物萃取染色、手工精细缝制到整烫定型的全链路独立制作。
-        </p>
-        <p data-i18n="atelier_p2">
-          正如 Jess Brown 将纯粹的手艺人美学升华为经典生活方式品牌，Lumi Song 致力于将标志性 Rag Doll 布偶、天然草木染织物与生活方式作品带给热爱自然与时间的知音。
-        </p>
+  <!-- -------------------------------------------------------------
+       ABOUT ME / THE ARTISAN'S STORY (Storytelling Inspired by Jess Brown)
+       ------------------------------------------------------------- -->
+  <section class="about-story-section" id="story">
+    <div class="about-story-wrapper">
+      
+      <!-- Lead Header -->
+      <div class="about-lead-header">
+        <span class="about-lead-tag" data-i18n="about_tag">the artisan’s journey</span>
+        <h2 class="about-lead-title" data-i18n="about_title">from the warmth of a sewing studio to an enduring aesthetic</h2>
       </div>
 
-      <!-- Color Palette Box -->
+      <!-- Chapter 1: The Hearth & The First Stitch -->
+      <div class="story-chapter">
+        <div class="story-image-wrap" onclick="openLightbox('images/doll-indigo-patchwork.jpg')">
+          <img src="images/doll-indigo-patchwork.jpg" alt="The Studio & First Stitch">
+        </div>
+        <div class="story-text-wrap">
+          <span class="chapter-number" data-i18n="ch1_num">chapter I</span>
+          <h3 class="chapter-title" data-i18n="ch1_title">The Hearth, JUKI & The First Stitch</h3>
+          <p class="chapter-p" data-i18n="ch1_p1">
+            在专属家庭缝纫室的一隅，安静的缝纫机转动声与剪刀裁切厚麻布的脆响，构成了 Lumi Song 每日创作的序曲。与快节奏工业化量产背道而驰，宋婷婷选择了一条倾注时间与手指触觉的慢手作之路。
+          </p>
+          <p class="chapter-p" data-i18n="ch1_p2">
+            正如加州艺术家 Jess Brown 在 1998 年用一块老亚麻布为孩子缝制第一个布偶开启传奇，Lumi Song 的第一针也源自对天然织物温度的执念——从立体剪裁打板、关节结构设计，到用暗针将每一寸棉麻裙摆缝合，让织物获得生命。
+          </p>
+          <div class="chapter-quote" data-i18n="ch1_quote">
+            “每一道看似笨拙的手工走线，都是手艺人与时间的无声对谈。”
+          </div>
+        </div>
+      </div>
+
+      <!-- Chapter 2: The Alchemy of Botanical Dyes -->
+      <div class="story-chapter reverse">
+        <div class="story-image-wrap" onclick="openLightbox('images/acc-brown-heart-bandana.jpg')">
+          <img src="images/acc-brown-heart-bandana.jpg" alt="Botanical Dyeing Alchemy">
+        </div>
+        <div class="story-text-wrap">
+          <span class="chapter-number" data-i18n="ch2_num">chapter II</span>
+          <h3 class="chapter-title" data-i18n="ch2_title">The Alchemy of Botanical Dyes</h3>
+          <p class="chapter-p" data-i18n="ch2_p1">
+            工作室的染锅里，常年沸腾着大自然四季馈赠的色彩：秋日剥落的石榴皮煮出温暖的金茶，核桃硬壳淬炼出沉稳质朴的木褐，而紫苏与紫甘蓝则在不同酸碱度中幻化出如暮霭般的粉紫与灰蓝。
+          </p>
+          <p class="chapter-p" data-i18n="ch2_p2">
+            拒绝任何化学染料与荧光剂，坚持以明矾、铁媒染等传统固色工艺让色素在天然棉麻纤维上缓缓扎根。经过反复水洗与日光晾晒的草木染织物，拥有机器调色永远无法企及的呼吸感与岁月色落。
+          </p>
+          <div class="chapter-quote" data-i18n="ch2_quote">
+            “草木有灵，借由水火与时间，在织物上留下大自然的印记。”
+          </div>
+        </div>
+      </div>
+
+      <!-- Chapter 3: An Aesthetic Universe Beyond Dolls -->
+      <div class="story-chapter">
+        <div class="story-image-wrap" onclick="openLightbox('images/bag-botanical-ruffle-tote.jpg')">
+          <img src="images/bag-botanical-ruffle-tote.jpg" alt="Everyday Living Aesthetics">
+        </div>
+        <div class="story-text-wrap">
+          <span class="chapter-number" data-i18n="ch3_num">chapter III</span>
+          <h3 class="chapter-title" data-i18n="ch3_title">Heirlooms & A Complete Living Universe</h3>
+          <p class="chapter-p" data-i18n="ch3_p1">
+            从可以代代相传的高定传家宝布偶（Heirloom Rag Dolls），到带着荷叶边褶皱与木刻印花的日常托特包；从微缩考究的宠物绅士领结披肩，到触感亲肤的母婴级口水巾——Lumi Song 的手作美学正从一个人的工作台，自然延伸为一个完整而温润的独立生活方式品牌。
+          </p>
+          <p class="chapter-p" data-i18n="ch3_p2">
+            长期深度汲取俄罗斯 VK 社区与 Instagram 全球先锋独立艺术家的前沿制式，融合当代 AI 灵感企划工具，她期待与志同道合的品牌合伙人携手，共同开辟兼具艺术高度与商业生命力的小众独立店铺。
+          </p>
+          <div class="chapter-quote" data-i18n="ch3_quote">
+            “把一个手艺人的纯粹审美，变成一个温暖人心的品牌世界。”
+          </div>
+        </div>
+      </div>
+
+      <!-- Botanical Palette Swatches in Story -->
       <div class="palette-box">
-        <h4 data-i18n="palette_title">botanical color library</h4>
+        <h4 data-i18n="palette_title">the botanical dye library / 草木特色色谱</h4>
         <div class="swatch-grid">
           <div class="swatch-item">
             <div class="swatch-circle c-pomegranate"></div>
             <div class="swatch-info">
-              <strong data-i18n="sw1_name">石榴皮</strong>
+              <strong data-i18n="sw1_name">石榴皮染</strong>
               <span data-i18n="sw1_desc">pomegranate / 暖金茶色</span>
             </div>
           </div>
           <div class="swatch-item">
             <div class="swatch-circle c-walnut"></div>
             <div class="swatch-info">
-              <strong data-i18n="sw2_name">核桃皮</strong>
+              <strong data-i18n="sw2_name">核桃皮染</strong>
               <span data-i18n="sw2_desc">walnut / 质感木褐</span>
             </div>
           </div>
           <div class="swatch-item">
             <div class="swatch-circle c-perilla"></div>
             <div class="swatch-info">
-              <strong data-i18n="sw3_name">紫苏</strong>
+              <strong data-i18n="sw3_name">紫苏染</strong>
               <span data-i18n="sw3_desc">perilla / 雅致粉紫</span>
             </div>
           </div>
           <div class="swatch-item">
             <div class="swatch-circle c-cabbage"></div>
             <div class="swatch-info">
-              <strong data-i18n="sw4_name">紫甘蓝</strong>
-              <span data-i18n="sw4_desc">red cabbage / 冷灰淡蓝</span>
+              <strong data-i18n="sw4_name">紫甘蓝染</strong>
+              <span data-i18n="sw4_desc">red cabbage / 暮霭冷灰蓝</span>
             </div>
           </div>
         </div>
       </div>
+
     </div>
   </section>
 
   <!-- Inquiries Section -->
   <section class="inquiry-section" id="contact">
-    <span class="hero-tag" data-i18n="inquiry_tag">collaboration</span>
+    <span class="about-lead-tag" data-i18n="inquiry_tag">collaboration & partnership</span>
     <h3 class="inquiry-title" data-i18n="inquiry_title">inquiries & partnership</h3>
     <p class="inquiry-desc" data-i18n="inquiry_desc">
       诚挚探讨独立手作店铺联合主理、布艺与草木染产品线研发定制、小众美学品牌共创。
@@ -1111,32 +1240,31 @@
   <script>
     const translations = {
       zh: {
-        top_banner: "Lumi Song 手作工坊 — 高定艺术布偶 · 天然草木染 · 生活方式美学",
+        top_banner: "Lumi Song 手作工坊 — 高定艺术布偶 · 天然草木染 · 独立生活美学",
         nav_rag_dolls: "艺术布偶",
         nav_bags: "原创布包",
         nav_living: "宠物与生活",
         brand_sub: "手作设计与工坊",
-        nav_story: "品牌手记",
+        nav_story: "手作手记",
         nav_inquiries: "合作洽谈",
         
-        hero_tag: "艺术织物与传家宝系列",
-        hero_heading: "从手艺人的温润触感，生长为历久弥新的生活方式品牌。",
-        hero_lead: "以手作温度为灵魂，以自然草木为色彩。<br>从标志性高定艺术布偶、天然植物染织物，到原创服饰、布包与生活方式美学。",
-        hero_btn: "浏览全部作品",
-        
-        statement_quote: "“我们珍视时间打磨的痕迹、天然织物的呼吸感，以及倾注在每一道手工针脚里的独特灵魂。”",
-        statement_author: "宋婷婷 Tingting Song — 独立手作艺术家与主理人",
+        hero_t1_sub: "标志性传家宝系列",
+        hero_t1_title: "维多利亚白纱复古布偶",
+        hero_t2_sub: "工坊原创布包",
+        hero_t2_title: "蓝染条纹亚麻单肩包",
+        hero_t3_sub: "天然草木染",
+        hero_t3_title: "草木泼墨头巾与围嘴",
         
         filter_all: "全部作品 (22)",
         filter_dolls: "艺术布偶 (8)",
         filter_bags: "原创布包 (7)",
         filter_acc: "宠物与生活 (7)",
         
-        cat_title_1: "01 / 艺术布偶与软雕塑系列",
+        cat_title_1: "艺术布偶与软雕塑系列",
         cat_count_1: "8 件作品",
-        cat_title_2: "02 / 原创布包与随身收纳",
+        cat_title_2: "工坊原创布包与随身收纳",
         cat_count_2: "7 件作品",
-        cat_title_3: "03 / 宠物服饰、头巾与生活织物",
+        cat_title_3: "宠物服饰、头巾与生活织物",
         cat_count_3: "7 件作品",
         
         tag_doll: "艺术布偶",
@@ -1235,22 +1363,38 @@
         a7_desc: "白亚麻布包细节微距。展示古董蕾丝滚边细节、手工刺绣红线腮红点与纯棉绳偶腿收口。",
         a7_note: "微距细节展示 · 纯天然亚麻织纹 · 精工锁边",
         
-        atelier_sub: "工坊与手作哲学",
-        atelier_title: "时间与天然织物的工坊",
-        atelier_p1: "在专属家庭缝纫室与手工工坊中，坚持从灵感企划、立体剪裁制版、植物萃取染色、手工精细缝制到整烫定型的全链路独立制作。",
-        atelier_p2: "正如 Jess Brown 将纯粹的手艺人美学升华为经典生活方式品牌，Lumi Song 致力于将标志性 Rag Doll 布偶、天然草木染织物与生活方式作品带给热爱自然与时间的知音。",
+        about_tag: "手作手记 · ABOUT LUMI SONG",
+        about_title: "从家庭缝纫室的温润触感，生长为一个手艺人的独立品牌",
         
-        palette_title: "天然草木特色色谱",
-        sw1_name: "石榴皮",
+        ch1_num: "第一章 · 工坊与第一道针脚",
+        ch1_title: "家庭工坊、JUKI与指尖的触觉",
+        ch1_p1: "在专属家庭缝纫室的一隅，安静的缝纫机转动声与剪刀裁切厚麻布的脆响，构成了 Lumi Song 每日创作的序曲。与快节奏工业化量产背道而驰，宋婷婷选择了一条倾注时间与手指触觉的慢手作之路。",
+        ch1_p2: "正如加州艺术家 Jess Brown 在 1998 年用一块老亚麻布为孩子缝制第一个布偶开启传奇，Lumi Song 的第一针也源自对天然织物温度的执念——从立体剪裁打板、关节结构设计，到用暗针将每一寸棉麻裙摆缝合，赋予织物独特不可替代的生命力。",
+        ch1_quote: "“每一道看似笨拙的手工走线，都是手艺人与时间的无声对谈。”",
+        
+        ch2_num: "第二章 · 草木的炼金术",
+        ch2_title: "四季草木色谱的天然呼吸",
+        ch2_p1: "工作室的染锅里，常年沸腾着大自然四季馈赠的色彩：秋日剥落的石榴皮煮出温暖的金茶，核桃硬壳淬炼出沉稳质朴的木褐，而紫苏与紫甘蓝则在不同酸碱度中幻化出如暮霭般的粉紫与灰蓝。",
+        ch2_p2: "拒绝任何化学染料与荧光剂，坚持以明矾、铁媒染等传统固色工艺让色素在天然棉麻纤维上缓缓扎根。经过反复水洗与日光晾晒的草木染织物，拥有机器调色永远无法企及的呼吸感与岁月色落。",
+        ch2_quote: "“草木有灵，借由水火与时间，在织物上留下大自然的印记。”",
+        
+        ch3_num: "第三章 · 传家宝与生活宇宙",
+        ch3_title: "从一只布偶，生长为完整生活方式",
+        ch3_p1: "从可以代代相传的高定传家宝布偶（Heirloom Rag Dolls），到带着荷叶边褶皱与木刻印花的日常托特包；从微缩考究的宠物绅士领结披肩，到触感亲肤的母婴级口水巾——Lumi Song 的手作美学正从一个人的工作台，自然延伸为一个完整而温润的独立生活方式品牌。",
+        ch3_p2: "长期深度汲取俄罗斯 VK 社区与 Instagram 全球先锋独立艺术家的前沿制式，融合当代 AI 灵感企划工具，她期待与志同道合的品牌合伙人携手，共同开辟兼具艺术高度与商业生命力的小众独立店铺。",
+        ch3_quote: "“把一个手艺人的纯粹审美，变成一个温暖人心的品牌世界。”",
+        
+        palette_title: "天然草木特色色谱 / THE BOTANICAL PALETTE",
+        sw1_name: "石榴皮染",
         sw1_desc: "pomegranate / 暖金茶色",
-        sw2_name: "核桃皮",
+        sw2_name: "核桃皮染",
         sw2_desc: "walnut / 质感木褐",
-        sw3_name: "紫苏",
+        sw3_name: "紫苏染",
         sw3_desc: "perilla / 雅致粉紫",
-        sw4_name: "紫甘蓝",
-        sw4_desc: "red cabbage / 冷灰淡蓝",
+        sw4_name: "紫甘蓝染",
+        sw4_desc: "red cabbage / 暮霭冷灰蓝",
         
-        inquiry_tag: "合作共创",
+        inquiry_tag: "合作共创 · COLLABORATION",
         inquiry_title: "合作与主理洽谈",
         inquiry_desc: "诚挚探讨独立手作店铺联合主理、布艺与草木染产品线研发定制、小众美学品牌共创。",
         inquiry_loc: "📍 杭州 · 专属家庭手作工坊",
@@ -1264,27 +1408,26 @@
         nav_bags: "studio bags",
         nav_living: "pet & living",
         brand_sub: "design & atelier",
-        nav_story: "the story",
+        nav_story: "about me",
         nav_inquiries: "inquiries",
         
-        hero_tag: "artisan textiles & heirlooms",
-        hero_heading: "from an artisan’s tactile aesthetic to a timeless lifestyle brand.",
-        hero_lead: "Rooted in the warmth of handcraft and natural botanical colors.<br>From iconic couture rag dolls and plant-dyed fabrics to original apparel, bags, and living textiles.",
-        hero_btn: "view collection",
+        hero_t1_sub: "featured heirloom",
+        hero_t1_title: "Victorian Heirloom Rag Doll",
+        hero_t2_sub: "studio bag",
+        hero_t2_title: "Indigo Stripe Linen Hobo",
+        hero_t3_sub: "botanical dyes",
+        hero_t3_title: "Botanical Splatter Bandana",
         
-        statement_quote: "“We believe in the beauty of time, natural textures, and the unique soul imbued into every hand-stitched piece.”",
-        statement_author: "Tingting Song (Lumi Song) — Founder & Artisan Designer",
+        filter_all: "ALL WORKS (22)",
+        filter_dolls: "RAG DOLLS (8)",
+        filter_bags: "STUDIO BAGS (7)",
+        filter_acc: "PET & LIVING (7)",
         
-        filter_all: "all works (22)",
-        filter_dolls: "rag dolls (8)",
-        filter_bags: "studio bags (7)",
-        filter_acc: "pet & living (7)",
-        
-        cat_title_1: "01 / heirloom rag dolls & art sculptures",
+        cat_title_1: "heirloom rag dolls & art sculptures",
         cat_count_1: "8 items",
-        cat_title_2: "02 / studio bags & artisan pouches",
+        cat_title_2: "studio bags & artisan pouches",
         cat_count_2: "7 items",
-        cat_title_3: "03 / pet pieces, bandanas & living textiles",
+        cat_title_3: "pet pieces, bandanas & living textiles",
         cat_count_3: "7 items",
         
         tag_doll: "heirloom rag doll",
@@ -1383,22 +1526,38 @@
         a7_desc: "Macro close-up view of the heirloom linen tote bag. Highlighting antique lace trims, hand-embroidered red blush stitches, and natural unbleached linen weave.",
         a7_note: "Macro Detail View · Pure Unbleached Linen Weave · Clean Overlock Finish",
         
-        atelier_sub: "the studio & philosophy",
-        atelier_title: "the atelier of timeless textiles",
-        atelier_p1: "Inside the dedicated studio atelier, every single piece is independently created from creative drafting, 3D pattern cutting, botanical plant extraction, to meticulous sewing and steaming.",
-        atelier_p2: "Inspired by how Jess Brown elevated an artisan's tactile aesthetic into an enduring lifestyle brand, Lumi Song brings signature rag dolls, botanical dyes, and living textiles to kindred spirits who appreciate the beauty of time.",
+        about_tag: "the artisan’s journey · ABOUT LUMI SONG",
+        about_title: "from the warmth of a sewing studio to an enduring aesthetic",
         
-        palette_title: "botanical color library",
-        sw1_name: "Pomegranate Peel",
+        ch1_num: "chapter I · The Hearth & The First Stitch",
+        ch1_title: "The Home Atelier, JUKI & Tactile Devotion",
+        ch1_p1: "Inside her dedicated home sewing studio, the rhythmic hum of the JUKI machine and the crisp snip of shears through heavy linen compose the morning prelude. Intentionally turning away from fast industrial mass-production, Song Tingting chose a slow, tactile path rooted in time and human touch.",
+        ch1_p2: "Much like California artist Jess Brown, who in 1998 stitched a simple rag doll for her children out of vintage linen and sparked an iconic brand, Tingting’s first stitch began from a devotion to the warmth of natural textiles—from 3D pattern cutting to hand-sewn invisible ladder stitches, breathing unique soul into cloth.",
+        ch1_quote: "“Every hand-stitched seam is a silent, intimate dialogue between artisan and time.”",
+        
+        ch2_num: "chapter II · The Alchemy of Botanical Dyes",
+        ch2_title: "The Living Breath of Seasonal Plant Dyes",
+        ch2_p1: "In her studio dye pots, seasonal colors simmer continuously: autumn pomegranate rinds yield a rich golden tea, walnut hulls brew a grounded timber brown, while perilla and red cabbage transform into dreamy dusty mauve and twilight slate blue across varying pH baths.",
+        ch2_p2: "Rejecting synthetic chemicals and optical brighteners, she employs traditional mineral mordants like alum and iron to gently anchor the natural plant pigments into raw cotton and linen fibers. Sun-dried and rinsed repeatedly, these textiles carry an unrepeatable breath and gentle patina over time.",
+        ch2_quote: "“Plants have spirit. Through water, fire, and patience, they impart nature’s memory into the weave.”",
+        
+        ch3_num: "chapter III · Heirlooms & A Complete Universe",
+        ch3_title: "From a Single Doll to an Enduring Lifestyle Universe",
+        ch3_p1: "From heirloom rag dolls crafted to be cherished across generations, to everyday block-printed ruffle totes; from micro-tailored pet collar capes to baby-safe organic bibs—Lumi Song’s tactile aesthetic has grown naturally from a personal workbench into an expansive, comforting lifestyle universe.",
+        ch3_p2: "Drawing continuous inspiration from the Russian VK handmade community and avant-garde global artisans on Instagram, while harnessing modern AI design workflows, she seeks like-minded brand partners to co-found an enduring boutique lifestyle brand.",
+        ch3_quote: "“To elevate one artisan’s pure aesthetic into an enduring brand that touches hearts.”",
+        
+        palette_title: "the botanical dye library / BOTANICAL COLOR LIBRARY",
+        sw1_name: "Pomegranate Dye",
         sw1_desc: "pomegranate / warm golden tea",
-        sw2_name: "Walnut Shell",
+        sw2_name: "Walnut Hull Dye",
         sw2_desc: "walnut / rich timber brown",
-        sw3_name: "Perilla Leaf",
+        sw3_name: "Perilla Leaf Dye",
         sw3_desc: "perilla / dusty mauve pink",
-        sw4_name: "Red Cabbage",
-        sw4_desc: "red cabbage / subtle slate blue",
+        sw4_name: "Red Cabbage Dye",
+        sw4_desc: "red cabbage / twilight slate blue",
         
-        inquiry_tag: "collaboration",
+        inquiry_tag: "collaboration & partnership",
         inquiry_title: "inquiries & partnership",
         inquiry_desc: "Warmly open to co-founding independent artisan brands, custom botanical dye product line development, and lifestyle boutique partnerships.",
         inquiry_loc: "📍 Hangzhou · Home Studio Atelier",
@@ -1414,7 +1573,6 @@
       currentLang = lang;
       localStorage.setItem('lumi_lang', lang);
       
-      // Update toggle buttons
       document.getElementById('btn-zh').classList.toggle('active', lang === 'zh');
       document.getElementById('btn-en').classList.toggle('active', lang === 'en');
       
@@ -1429,12 +1587,10 @@
       document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
     }
 
-    // Initialize Language on load
     document.addEventListener('DOMContentLoaded', () => {
       setLanguage(currentLang);
     });
 
-    // Gallery Filter Logic
     function filterGallery(category) {
       const buttons = document.querySelectorAll('.filter-btn');
       buttons.forEach(btn => btn.classList.remove('active'));
@@ -1450,7 +1606,6 @@
       });
     }
 
-    // Lightbox Logic
     function openLightbox(src) {
       const lb = document.getElementById('lightbox');
       const img = document.getElementById('lightbox-img');
