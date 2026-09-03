@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -550,24 +550,24 @@
   <header>
     <div class="nav-wrapper">
       <ul class="nav-left">
-        <li class="nav-item"><a href="#rag-dolls" data-i18n="nav_rag_dolls">rag dolls</a></li>
-        <li class="nav-item"><a href="#bags" data-i18n="nav_bags">studio bags</a></li>
-        <li class="nav-item"><a href="#accessories" data-i18n="nav_living">pet & living</a></li>
+        <li class="nav-item"><a href="#rag-dolls" data-i18n="nav_rag_dolls">艺术布偶</a></li>
+        <li class="nav-item"><a href="#bags" data-i18n="nav_bags">原创布包</a></li>
+        <li class="nav-item"><a href="#accessories" data-i18n="nav_living">宠物与生活</a></li>
       </ul>
 
       <a href="index.html" class="brand-logo">
         <h1>lumi song</h1>
-        <span data-i18n="brand_sub">design & atelier</span>
+        <span data-i18n="brand_sub">手作设计与工坊</span>
       </a>
 
       <ul class="nav-right">
-        <li class="nav-item"><a href="about.html" data-i18n="nav_about">about me</a></li>
-        <li class="nav-item"><a href="#contact" data-i18n="nav_inquiries">inquiries</a></li>
+        <li class="nav-item"><a href="about.html" data-i18n="nav_about">关于我</a></li>
+        <li class="nav-item"><a href="#contact" data-i18n="nav_inquiries">合作洽谈</a></li>
         <li class="nav-item">
           <!-- Desktop Language Switcher Button -->
           <div class="lang-switcher">
-            <button class="lang-btn" id="btn-zh" onclick="setLanguage('zh')">中文</button>
-            <button class="lang-btn active" id="btn-en" onclick="setLanguage('en')">EN</button>
+            <button class="lang-btn active" id="btn-zh" onclick="setLanguage('zh')">中文</button>
+            <button class="lang-btn" id="btn-en" onclick="setLanguage('en')">EN</button>
           </div>
         </li>
       </ul>
@@ -575,8 +575,8 @@
       <!-- Mobile Top Actions (Direct Lang Switcher + Hamburger) -->
       <div class="mobile-header-actions">
         <div class="lang-switcher">
-          <button class="lang-btn" id="btn-zh-top-m" onclick="setLanguage('zh')">中</button>
-          <button class="lang-btn active" id="btn-en-top-m" onclick="setLanguage('en')">EN</button>
+          <button class="lang-btn active" id="btn-zh-top-m" onclick="setLanguage('zh')">中</button>
+          <button class="lang-btn" id="btn-en-top-m" onclick="setLanguage('en')">EN</button>
         </div>
         <button class="mobile-menu-btn" id="mobile-toggle-btn" onclick="toggleMobileMenu()" aria-label="Toggle Menu">
           <span></span>
@@ -590,17 +590,17 @@
   <!-- Mobile Fullscreen Drawer Navigation -->
   <div class="mobile-drawer" id="mobile-drawer">
     <ul class="mobile-nav-list">
-      <li class="mobile-nav-item"><a href="#rag-dolls" onclick="toggleMobileMenu()" data-i18n="nav_rag_dolls">rag dolls</a></li>
-      <li class="mobile-nav-item"><a href="#bags" onclick="toggleMobileMenu()" data-i18n="nav_bags">studio bags</a></li>
-      <li class="mobile-nav-item"><a href="#accessories" onclick="toggleMobileMenu()" data-i18n="nav_living">pet & living</a></li>
-      <li class="mobile-nav-item"><a href="about.html" onclick="toggleMobileMenu()" data-i18n="nav_about">about me</a></li>
-      <li class="mobile-nav-item"><a href="#contact" onclick="toggleMobileMenu()" data-i18n="nav_inquiries">inquiries</a></li>
+      <li class="mobile-nav-item"><a href="#rag-dolls" onclick="toggleMobileMenu()" data-i18n="nav_rag_dolls">艺术布偶</a></li>
+      <li class="mobile-nav-item"><a href="#bags" onclick="toggleMobileMenu()" data-i18n="nav_bags">原创布包</a></li>
+      <li class="mobile-nav-item"><a href="#accessories" onclick="toggleMobileMenu()" data-i18n="nav_living">宠物与生活</a></li>
+      <li class="mobile-nav-item"><a href="about.html" onclick="toggleMobileMenu()" data-i18n="nav_about">关于我</a></li>
+      <li class="mobile-nav-item"><a href="#contact" onclick="toggleMobileMenu()" data-i18n="nav_inquiries">合作洽谈</a></li>
     </ul>
 
     <!-- Mobile Drawer Language Toggle -->
     <div class="lang-switcher" style="margin-top: 1rem;">
-      <button class="lang-btn" id="btn-zh-m" onclick="setLanguage('zh')">中文</button>
-      <button class="lang-btn active" id="btn-en-m" onclick="setLanguage('en')">EN</button>
+      <button class="lang-btn active" id="btn-zh-m" onclick="setLanguage('zh')">中文</button>
+      <button class="lang-btn" id="btn-en-m" onclick="setLanguage('en')">EN</button>
     </div>
   </div>
 
@@ -615,7 +615,7 @@
 
   <!-- Notice: Selected Works Showcase Only -->
   <div style="text-align:center; margin: 2.5rem auto 1.5rem; color: var(--accent-terracotta); font-size: 0.76rem; letter-spacing: 0.18em; text-transform: uppercase; padding: 0 1.5rem;">
-    <span data-i18n="selected_notice">* SELECTED WORKS SHOWCASE ONLY · BESPOKE COMMISSIONS WELCOME</span>
+    <span data-i18n="selected_notice">* 仅展示部分代表性手作作品 · 更多定制欢迎洽谈</span>
   </div>
 
 
@@ -1275,8 +1275,8 @@
       }
     };
 
-    // Default language is English ('en')
-    let currentLang = localStorage.getItem('lumi_lang') || 'en';
+    // Default language is Chinese ('zh')
+    let currentLang = localStorage.getItem('lumi_lang') || 'zh';
 
     function setLanguage(lang) {
       currentLang = lang;
