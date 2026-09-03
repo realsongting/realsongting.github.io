@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>诞生地 · 他们诞生的地方 | LUMI SONG</title>
-  <meta name="description" content="Lumi Song 手作作品诞生地 — 他们诞生的地方。简单的家，不简单的手作。">
+  <meta name="description" content="Lumi Song 手作作品诞生地 — 他们诞生的地方。简单的家里，出来了这些不简单的作品。">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,10 +16,12 @@
       --bg-warm-oat: #F3EFEA;
       --bg-pure: #FFFFFF;
       --text-dark: #22201E;
-      --text-muted: #686560;
+      --text-muted: #585550;
       --text-light: #9E9A92;
       --line-subtle: #E6E0D6;
       --accent-terracotta: #9B634E;
+      --accent-sage: #4E6359;
+      --accent-ochre: #B88B4A;
       
       --font-display: 'Italiana', 'Noto Serif SC', serif;
       --font-body: 'Jost', 'Noto Serif SC', -apple-system, sans-serif;
@@ -201,17 +203,17 @@
 
     .mobile-nav-item a:hover { color: var(--accent-terracotta); }
 
-    /* Pure Minimalist Header Text */
-    .birthplace-header-section {
+    /* Birthplace Header */
+    .birthplace-hero-section {
       text-align: center;
-      padding: 4rem 2rem 2.5rem;
-      max-width: 900px;
+      padding: 4.5rem 2rem 2.8rem;
+      max-width: 860px;
       margin: 0 auto;
     }
 
-    .birthplace-title {
+    .birthplace-hero-title {
       font-family: var(--font-display);
-      font-size: 3.4rem;
+      font-size: 3.5rem;
       font-weight: 400;
       letter-spacing: 0.08em;
       color: var(--text-dark);
@@ -219,13 +221,21 @@
       line-height: 1.2;
     }
 
-    .birthplace-sub {
+    .birthplace-hero-sub {
       font-family: var(--font-serif);
-      font-size: 1.2rem;
+      font-size: 1.25rem;
       color: var(--accent-terracotta);
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      margin-bottom: 2rem;
+      letter-spacing: 0.18em;
+      margin-bottom: 1.5rem;
+    }
+
+    .birthplace-hero-desc {
+      font-family: var(--font-serif);
+      font-size: 0.96rem;
+      line-height: 2;
+      color: var(--text-muted);
+      max-width: 680px;
+      margin: 0 auto 2.5rem;
     }
 
     .birthplace-divider {
@@ -235,33 +245,122 @@
       margin: 0 auto;
     }
 
-    /* Full-Screen Composite Image Frame */
-    .birthplace-fullscreen-wrap {
-      width: 100%;
-      max-width: 1440px;
-      margin: 1.5rem auto 4.5rem;
-      padding: 0 1.5rem;
+    /* Cards Gallery Section */
+    .birthplace-gallery-section {
+      max-width: 1360px;
+      margin: 2rem auto 5.5rem;
+      padding: 0 2rem;
     }
 
-    .birthplace-img-frame {
-      width: 100%;
-      background: var(--bg-warm-oat);
+    .birthplace-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem 2rem;
+    }
+
+    .photo-card {
+      background: var(--bg-pure);
       border: 1px solid var(--line-subtle);
-      box-shadow: 0 16px 40px rgba(34, 32, 30, 0.05);
-      border-radius: 2px;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.35s ease;
       overflow: hidden;
-      cursor: zoom-in;
+      cursor: pointer;
     }
 
-    .birthplace-img-frame img {
+    .photo-card:hover {
+      border-color: var(--text-dark);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(34, 32, 30, 0.06);
+    }
+
+    .photo-img-wrap {
       width: 100%;
-      height: auto;
-      display: block;
-      transition: transform 0.6s ease;
+      height: 420px;
+      background: var(--bg-warm-oat);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
     }
 
-    .birthplace-img-frame:hover img {
-      transform: scale(1.015);
+    .photo-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s cubic-bezier(0.2, 1, 0.3, 1);
+    }
+
+    .photo-card:hover .photo-img-wrap img {
+      transform: scale(1.04);
+    }
+
+    .photo-info {
+      padding: 1.8rem 1.6rem 1.6rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: space-between;
+      background: var(--bg-pure);
+    }
+
+    .photo-tag {
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent-terracotta);
+      margin-bottom: 0.4rem;
+      display: block;
+    }
+
+    .photo-title {
+      font-family: var(--font-display);
+      font-size: 1.32rem;
+      font-weight: 400;
+      line-height: 1.35;
+      margin-bottom: 0.65rem;
+      color: var(--text-dark);
+    }
+
+    .photo-desc {
+      font-family: var(--font-serif);
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+      margin-bottom: 1.2rem;
+    }
+
+    .photo-craft-note {
+      font-size: 0.74rem;
+      color: var(--accent-sage);
+      letter-spacing: 0.05em;
+      border-top: 1px dashed var(--line-subtle);
+      padding-top: 0.8rem;
+      margin-top: auto;
+    }
+
+    /* Back Home Button */
+    .back-home-wrap {
+      text-align: center;
+      margin: 4.5rem auto 2rem;
+    }
+
+    .btn-back {
+      display: inline-block;
+      padding: 0.85rem 2.4rem;
+      border: 1px solid var(--text-dark);
+      color: var(--text-dark);
+      text-decoration: none;
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+    }
+
+    .btn-back:hover {
+      background: var(--text-dark);
+      color: var(--bg-cream);
     }
 
     /* Lightbox */
@@ -301,6 +400,11 @@
       letter-spacing: 0.14em;
     }
 
+    @media (max-width: 1024px) {
+      .birthplace-grid { grid-template-columns: repeat(2, 1fr); }
+      .photo-img-wrap { height: 380px; }
+    }
+
     @media (max-width: 768px) {
       .nav-wrapper {
         display: flex;
@@ -316,10 +420,14 @@
       .brand-logo h1 { font-size: 1.65rem; }
       .brand-logo span { font-size: 0.58rem; }
       
-      .birthplace-header-section { padding: 3rem 1.2rem 1.8rem; }
-      .birthplace-title { font-size: 2.4rem; }
-      .birthplace-sub { font-size: 1rem; letter-spacing: 0.12em; }
-      .birthplace-fullscreen-wrap { padding: 0 0.8rem; margin-bottom: 3.5rem; }
+      .birthplace-hero-section { padding: 3rem 1.2rem 2rem; }
+      .birthplace-hero-title { font-size: 2.4rem; }
+      .birthplace-hero-sub { font-size: 1.05rem; }
+      .birthplace-hero-desc { font-size: 0.88rem; }
+      
+      .birthplace-gallery-section { padding: 0 1.2rem 3.5rem; }
+      .birthplace-grid { grid-template-columns: 1fr; gap: 1.8rem; }
+      .photo-img-wrap { height: 340px; }
     }
   </style>
 </head>
@@ -383,18 +491,145 @@
     </div>
   </div>
 
-  <!-- Pure Single Copy Header -->
+  <!-- Pure Minimalist Header -->
   <main>
-    <section class="birthplace-header-section">
-      <h1 class="birthplace-title" data-i18n="birthplace_title">诞生地</h1>
-      <p class="birthplace-sub" data-i18n="birthplace_sub">他们诞生的地方</p>
+    <section class="birthplace-hero-section">
+      <h1 class="birthplace-hero-title" data-i18n="birthplace_title">诞生地</h1>
+      <p class="birthplace-hero-sub" data-i18n="birthplace_sub">他们诞生的地方</p>
+      <p class="birthplace-hero-desc" data-i18n="birthplace_desc">
+        没有工业流水线的喧嚣，只有在家里角落里日复一日的专注与安静打磨。简单的家里，走出了这些不简单的手作作品。
+      </p>
       <div class="birthplace-divider"></div>
     </section>
 
-    <!-- Fullscreen Master Composite Image -->
-    <section class="birthplace-fullscreen-wrap">
-      <div class="birthplace-img-frame" onclick="openLightbox('images/studio/birthplace-full-mosaic.jpg')" title="点击放大查看全景细节">
-        <img src="images/studio/birthplace-full-mosaic.jpg" alt="诞生地 · 他们诞生的地方 - Lumi Song" loading="eager">
+    <!-- Cards Gallery: 8 Corner Stories -->
+    <section class="birthplace-gallery-section">
+      <div class="birthplace-grid">
+
+        <!-- 1. Textile Library -->
+        <div class="photo-card" onclick="openLightbox('images/studio/studio-textile-library.jpg')">
+          <div class="photo-img-wrap">
+            <img src="images/studio/studio-textile-library.jpg" alt="时间的织卷" loading="lazy">
+          </div>
+          <div class="photo-info">
+            <div>
+              <span class="photo-tag" data-i18n="p1_tag">textile archive · 织卷档案</span>
+              <h3 class="photo-title" data-i18n="p1_title">时间的织卷</h3>
+              <p class="photo-desc" data-i18n="p1_desc">各地搜罗的古董棉纱、未漂白粗麻与四季草木染料。每一卷布料都有它专属的经纬与呼吸，在静静等待与针线的相逢。</p>
+            </div>
+            <div class="photo-craft-note" data-i18n="p1_note">天然纤维 · 独立搜罗 · 触感记忆</div>
+          </div>
+        </div>
+
+        <!-- 2. Cutting Table & Victorian Lace Doll -->
+        <div class="photo-card" onclick="openLightbox('images/studio/studio-doll-cutting-table.jpg')">
+          <div class="photo-img-wrap">
+            <img src="images/studio/studio-doll-cutting-table.jpg" alt="纸样与微缩制衣台" loading="lazy">
+          </div>
+          <div class="photo-info">
+            <div>
+              <span class="photo-tag" data-i18n="p2_tag">patterns & cut · 制版台</span>
+              <h3 class="photo-title" data-i18n="p2_title">纸样与微缩制衣台</h3>
+              <p class="photo-desc" data-i18n="p2_desc">一张白纸上画出的优雅弧度，剪裁出属于娃娃的微缩礼服。针线与纸样的反复推敲，让扁平的面料逐渐长成立体的灵魂。</p>
+            </div>
+            <div class="photo-craft-note" data-i18n="p2_note">原创纸样 · 立体剪裁 · 比例推敲</div>
+          </div>
+        </div>
+
+        <!-- 3. Japanese Indigo Rack -->
+        <div class="photo-card" onclick="openLightbox('images/studio/studio-indigo-fabric-rack.jpg')">
+          <div class="photo-img-wrap">
+            <img src="images/studio/studio-indigo-fabric-rack.jpg" alt="蓝染与粗织肌理" loading="lazy">
+          </div>
+          <div class="photo-info">
+            <div>
+              <span class="photo-tag" data-i18n="p3_tag">indigo & linen · 蓝染棉麻</span>
+              <h3 class="photo-title" data-i18n="p3_title">蓝染与粗织肌理</h3>
+              <p class="photo-desc" data-i18n="p3_desc">沉静深邃的传统草木蓝染、微凸的提花与水洗波点棉麻。无需繁复的装饰，面料本身的朴素肌理便是最动人的语言。</p>
+            </div>
+            <div class="photo-craft-note" data-i18n="p3_note">传统蓝染 · 粗织手感 · 经久耐看</div>
+          </div>
+        </div>
+
+        <!-- 4. Wicker Baskets & Lace -->
+        <div class="photo-card" onclick="openLightbox('images/studio/studio-woven-lace-baskets.jpg')">
+          <div class="photo-img-wrap">
+            <img src="images/studio/studio-woven-lace-baskets.jpg" alt="藤篓里的复古碎光" loading="lazy">
+          </div>
+          <div class="photo-info">
+            <div>
+              <span class="photo-tag" data-i18n="p4_tag">vintage lace · 细节手作</span>
+              <h3 class="photo-title" data-i18n="p4_title">藤篓里的复古碎光</h3>
+              <p class="photo-desc" data-i18n="p4_desc">手编藤篮里收纳着细微而珍贵的部件：法式古董刺绣花边、细密捏褶的袖口与天然未漂白棉纱。那些让人心动的微小细节，都在这里安放。</p>
+            </div>
+            <div class="photo-craft-note" data-i18n="p4_note">古董蕾丝 · 微缩细节 · 纯手工捏褶</div>
+          </div>
+        </div>
+
+        <!-- 5. Thread Spools & Accessories -->
+        <div class="photo-card" onclick="openLightbox('images/studio/studio-thread-spools-supplies.jpg')">
+          <div class="photo-img-wrap">
+            <img src="images/studio/studio-thread-spools-supplies.jpg" alt="彩色线轴与匠心工具" loading="lazy">
+          </div>
+          <div class="photo-info">
+            <div>
+              <span class="photo-tag" data-i18n="p5_tag">threads & tools · 线与工具</span>
+              <h3 class="photo-title" data-i18n="p5_title">彩色线轴与匠心工具</h3>
+              <p class="photo-desc" data-i18n="p5_desc">整齐排列的马卡龙色系高强车线、原木打孔锥与五金辅料。看似零散琐碎的日常工具，却是支撑每一道结实走线的基石。</p>
+            </div>
+            <div class="photo-craft-note" data-i18n="p5_note">专业车线 · 原木工具 · 扎实走线</div>
+          </div>
+        </div>
+
+        <!-- 6. JUKI Sewing Machine Station -->
+        <div class="photo-card" onclick="openLightbox('images/studio/studio-juki-sewing-workstation.jpg')">
+          <div class="photo-img-wrap">
+            <img src="images/studio/studio-juki-sewing-workstation.jpg" alt="缝纫专机与裁缝剪" loading="lazy">
+          </div>
+          <div class="photo-info">
+            <div>
+              <span class="photo-tag" data-i18n="p6_tag">sewing machine · 专机台</span>
+              <h3 class="photo-title" data-i18n="p6_title">缝纫专机与裁缝剪</h3>
+              <p class="photo-desc" data-i18n="p6_desc">机针每一次精准落下的咔哒声，伴随着剪刀划过布匹的沙沙清响。这是家里最专注的声音，也是一件件手作真正被赋予形体的时刻。</p>
+            </div>
+            <div class="photo-craft-note" data-i18n="p6_note">JUKI专机 · 专业钢剪 · 独立打样</div>
+          </div>
+        </div>
+
+        <!-- 7. Leather Boots Holder & Fine Threads -->
+        <div class="photo-card" onclick="openLightbox('images/studio/studio-leather-pen-boots-threads.jpg')">
+          <div class="photo-img-wrap">
+            <img src="images/studio/studio-leather-pen-boots-threads.jpg" alt="手作皮靴笔插与特种细线" loading="lazy">
+          </div>
+          <div class="photo-info">
+            <div>
+              <span class="photo-tag" data-i18n="p7_tag">artisan boots · 巧思日常</span>
+              <h3 class="photo-title" data-i18n="p7_title">手作皮靴笔插与特种细线</h3>
+              <p class="photo-desc" data-i18n="p7_desc">自己缝制的牛皮小靴充当笔插，插着描绘面部表情的细彩笔，旁边放着日本 Fujix 绗缝高密细线。创作的过程，本身就是充满童心与巧思的日常。</p>
+            </div>
+            <div class="photo-craft-note" data-i18n="p7_note">手作皮具 · 进口特种线 · 五官微绘</div>
+          </div>
+        </div>
+
+        <!-- 8. Botanical Floss & Bobbins -->
+        <div class="photo-card" onclick="openLightbox('images/studio/studio-botanical-embroidery-floss.jpg')">
+          <div class="photo-img-wrap">
+            <img src="images/studio/studio-botanical-embroidery-floss.jpg" alt="植物色谱绣线与原木线轴" loading="lazy">
+          </div>
+          <div class="photo-info">
+            <div>
+              <span class="photo-tag" data-i18n="p8_tag">embroidery floss · 植物色阶</span>
+              <h3 class="photo-title" data-i18n="p8_title">植物色谱绣线与原木线轴</h3>
+              <p class="photo-desc" data-i18n="p8_desc">从暖茶褐、苔藓绿到柔润粉紫，这些缠绕在原木线轴上的绣线，萃取了四季草木的自然温存。一针一刺，在娃娃的面容与衣角上留下温柔的印记。</p>
+            </div>
+            <div class="photo-craft-note" data-i18n="p8_note">植物色谱 · 手工原木轴 · 刺绣细节</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="back-home-wrap">
+        <a href="index.html" class="btn-back" data-i18n="btn_back">← BACK TO PORTFOLIO / 返回作品集</a>
       </div>
     </section>
   </main>
@@ -424,7 +659,49 @@
         
         birthplace_title: "诞生地",
         birthplace_sub: "他们诞生的地方",
+        birthplace_desc: "没有工业流水线的喧嚣，只有在家里角落里日复一日的专注与安静打磨。简单的家里，走出了这些不简单的手作作品。",
         
+        p1_tag: "textile archive · 织卷档案",
+        p1_title: "时间的织卷",
+        p1_desc: "各地搜罗的古董棉纱、未漂白粗麻与四季草木染料。每一卷布料都有它专属的经纬与呼吸，在静静等待与针线的相逢。",
+        p1_note: "天然纤维 · 独立搜罗 · 触感记忆",
+        
+        p2_tag: "patterns & cut · 制版台",
+        p2_title: "纸样与微缩制衣台",
+        p2_desc: "一张白纸上画出的优雅弧度，剪裁出属于娃娃的微缩礼服。针线与纸样的反复推敲，让扁平的面料逐渐长成立体的灵魂。",
+        p2_note: "原创纸样 · 立体剪裁 · 比例推敲",
+        
+        p3_tag: "indigo & linen · 蓝染棉麻",
+        p3_title: "蓝染与粗织肌理",
+        p3_desc: "沉静深邃的传统草木蓝染、微凸的提花与水洗波点棉麻。无需繁复的装饰，面料本身的朴素肌理便是最动人的语言。",
+        p3_note: "传统蓝染 · 粗织手感 · 经久耐看",
+        
+        p4_tag: "vintage lace · 细节手作",
+        p4_title: "藤篓里的复古碎光",
+        p4_desc: "手编藤篮里收纳着细微而珍贵的部件：法式古董刺绣花边、细密捏褶的袖口与天然未漂白棉纱。那些让人心动的微小细节，都在这里安放。",
+        p4_note: "古董蕾丝 · 微缩细节 · 纯手工捏褶",
+        
+        p5_tag: "threads & tools · 线与工具",
+        p5_title: "彩色线轴与匠心工具",
+        p5_desc: "整齐排列的马卡龙色系高强车线、原木打孔锥与五金辅料。看似零散琐碎的日常工具，却是支撑每一道结实走线的基石。",
+        p5_note: "专业车线 · 原木工具 · 扎实走线",
+        
+        p6_tag: "sewing machine · 专机台",
+        p6_title: "缝纫专机与裁缝剪",
+        p6_desc: "机针每一次精准落下的咔哒声，伴随着剪刀划过布匹的沙沙清响。这是家里最专注的声音，也是一件件手作真正被赋予形体的时刻。",
+        p6_note: "JUKI专机 · 专业钢剪 · 独立打样",
+        
+        p7_tag: "artisan boots · 巧思日常",
+        p7_title: "手作皮靴笔插与特种细线",
+        p7_desc: "自己缝制的牛皮小靴充当笔插，插着描绘面部表情的细彩笔，旁边放着日本 Fujix 绗缝高密细线。创作的过程，本身就是充满童心与巧思的日常。",
+        p7_note: "手作皮具 · 进口特种线 · 五官微绘",
+        
+        p8_tag: "embroidery floss · 植物色阶",
+        p8_title: "植物色谱绣线与原木线轴",
+        p8_desc: "从暖茶褐、苔藓绿到柔润粉紫，这些缠绕在原木线轴上的绣线，萃取了四季草木的自然温存。一针一刺，在娃娃的面容与衣角上留下温柔的印记。",
+        p8_note: "植物色谱 · 手工原木轴 · 刺绣细节",
+        
+        btn_back: "← 返回作品集",
         footer_copy: "© 2026 LUMI SONG (宋婷婷). 保留所有权利.",
         footer_sub: "标志性高定艺术布偶 · 天然草木染织物 · 独立生活方式美学."
       },
@@ -439,7 +716,49 @@
         
         birthplace_title: "birthplace",
         birthplace_sub: "where they were born",
+        birthplace_desc: "Away from industrial assembly lines, patient dedication unfolds in this quiet corner of home. From this humble space, extraordinary handcrafted pieces emerge.",
         
+        p1_tag: "textile archive · fabric rolls",
+        p1_title: "The Archive of Textiles",
+        p1_desc: "Antique pintuck cotton, unbleached rustic linen, and seasonal botanical dyed textiles gathered from near and far. Each fabric carries its own grain and breath, quietly awaiting the needle.",
+        p1_note: "Pure Fibers · Curated Textures · Tactile Memory",
+        
+        p2_tag: "patterns & cut · drafting table",
+        p2_title: "Patterns & Micro Tailoring Table",
+        p2_desc: "Graceful curves drawn across blank paper, shaping micro couture for the heirloom rag doll. Through constant drafting and draping, flat linen awakens into a sculpted soul.",
+        p2_note: "Original Drafting · 3D Draping · Delicate Proportions",
+        
+        p3_tag: "indigo & linen · woven textures",
+        p3_title: "Japanese Indigo & Rustic Linens",
+        p3_desc: "Deep, quiet indigo vat dyes, textured jacquards, and washed polka dot weaves. Free from artificial pretension, raw textile textures speak the purest aesthetic language.",
+        p3_note: "Traditional Indigo · Textured Touch · Enduring Patina",
+        
+        p4_tag: "vintage lace · detail studio",
+        p4_title: "Vintage Lace in Woven Baskets",
+        p4_desc: "Woven wicker bins holding precious miniature treasures: French antique lace trims, delicately pleated smocked cuffs, and raw linen rolls. Every detail finds its peaceful home here.",
+        p4_note: "Antique Lace · Micro Finishes · Hand-stitched Pleats",
+        
+        p5_tag: "threads & tools · studio essentials",
+        p5_title: "Thread Spools & Crafting Tools",
+        p5_desc: "Pastel high-tenacity thread spools, wooden awls, and hardware fasteners. What seem like simple everyday supplies form the solid foundation of every enduring seam.",
+        p5_note: "High-grade Threads · Hardwood Awls · Enduring Seams",
+        
+        p6_tag: "sewing machine · stitch table",
+        p6_title: "JUKI Workstation & Tailor Shears",
+        p6_desc: "The rhythmic clack of the needle and the crisp whisper of steel shears gliding through fabric. This is the heartbeat of the home, where ideas take tangible, timeless form.",
+        p6_note: "JUKI Precision · Steel Shears · Independent Prototyping",
+        
+        p7_tag: "artisan boots · playful corner",
+        p7_title: "Handmade Leather Boot Pot & Fine Threads",
+        p7_desc: "A hand-stitched leather miniature boot serves as a pen pot for fine facial detailing markers, paired with Japanese Fujix Quilter threads. Crafting itself is a playful, joyful daily ritual.",
+        p7_note: "Handmade Leather · Japanese Fine Threads · Fine Features",
+        
+        p8_tag: "embroidery floss · botanical spectrum",
+        p8_title: "Botanical Floss & Wooden Bobbins",
+        p8_desc: "From warm tea ochre to moss green and soft plum, embroidery floss wound onto wooden bobbins distill the subtle tones of nature. Stitched gently onto each doll's face and hemline.",
+        p8_note: "Botanical Palette · Wooden Bobbins · Subtle Embroidery",
+        
+        btn_back: "← BACK TO PORTFOLIO",
         footer_copy: "© 2026 LUMI SONG (TINGTING SONG). ALL RIGHTS RESERVED.",
         footer_sub: "INSPIRED BY ARTISAN RAG DOLLS, NATURAL BOTANICAL DYES & LIVING TEXTILES."
       }
