@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VISIT THE ATELIER | 走进工坊 - LUMI SONG</title>
-  <meta name="description" content="走进 Lumi Song (宋婷婷) 位于杭州临安八百里的专属家庭手作工坊。高定艺术布偶、天然草木染织物库、JUKI专机缝纫与微缩剪裁手艺空间。">
+  <title>诞生地 · 他们诞生的地方 | LUMI SONG</title>
+  <meta name="description" content="Lumi Song 手作作品诞生地 — 他们诞生的地方。简单的家，不简单的手作。">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,12 +16,10 @@
       --bg-warm-oat: #F3EFEA;
       --bg-pure: #FFFFFF;
       --text-dark: #22201E;
-      --text-muted: #585550;
+      --text-muted: #686560;
       --text-light: #9E9A92;
       --line-subtle: #E6E0D6;
       --accent-terracotta: #9B634E;
-      --accent-sage: #4E6359;
-      --accent-ochre: #B88B4A;
       
       --font-display: 'Italiana', 'Noto Serif SC', serif;
       --font-body: 'Jost', 'Noto Serif SC', -apple-system, sans-serif;
@@ -35,7 +33,7 @@
       color: var(--text-dark);
       font-family: var(--font-body);
       font-weight: 300;
-      line-height: 1.9;
+      line-height: 1.8;
       letter-spacing: 0.02em;
       -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
@@ -130,7 +128,6 @@
       margin-top: 0.35rem;
     }
 
-    /* Mobile Header Right Actions */
     .mobile-header-actions {
       display: none;
       align-items: center;
@@ -204,293 +201,67 @@
 
     .mobile-nav-item a:hover { color: var(--accent-terracotta); }
 
-    /* Studio Hero */
-    .studio-hero {
-      max-width: 1100px;
-      margin: 4.5rem auto 3.5rem;
-      padding: 0 2rem;
+    /* Pure Minimalist Header Text */
+    .birthplace-header-section {
       text-align: center;
+      padding: 4rem 2rem 2.5rem;
+      max-width: 900px;
+      margin: 0 auto;
     }
 
-    .studio-hero-tag {
-      font-size: 0.76rem;
-      letter-spacing: 0.28em;
-      text-transform: uppercase;
-      color: var(--accent-terracotta);
-      margin-bottom: 1rem;
-      display: block;
-    }
-
-    .studio-hero-title {
+    .birthplace-title {
       font-family: var(--font-display);
-      font-size: 3.2rem;
+      font-size: 3.4rem;
       font-weight: 400;
-      line-height: 1.25;
-      text-transform: lowercase;
-      margin-bottom: 1.5rem;
+      letter-spacing: 0.08em;
       color: var(--text-dark);
+      margin-bottom: 0.6rem;
+      line-height: 1.2;
     }
 
-    .studio-hero-desc {
+    .birthplace-sub {
       font-family: var(--font-serif);
-      font-size: 1.05rem;
-      color: var(--text-muted);
-      max-width: 760px;
-      margin: 0 auto 2.5rem;
-      line-height: 2.1;
+      font-size: 1.2rem;
+      color: var(--accent-terracotta);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
     }
 
-    .studio-divider {
-      width: 60px;
+    .birthplace-divider {
+      width: 50px;
       height: 1px;
       background: var(--accent-terracotta);
       margin: 0 auto;
     }
 
-    /* Featured Hero Full-width Image */
-    .studio-feature-img-wrap {
-      max-width: 1280px;
-      margin: 3.5rem auto;
-      padding: 0 2rem;
+    /* Full-Screen Composite Image Frame */
+    .birthplace-fullscreen-wrap {
+      width: 100%;
+      max-width: 1440px;
+      margin: 1.5rem auto 4.5rem;
+      padding: 0 1.5rem;
     }
 
-    .studio-feature-frame {
+    .birthplace-img-frame {
       width: 100%;
-      height: 600px;
+      background: var(--bg-warm-oat);
+      border: 1px solid var(--line-subtle);
+      box-shadow: 0 16px 40px rgba(34, 32, 30, 0.05);
       border-radius: 2px;
       overflow: hidden;
-      border: 1px solid var(--line-subtle);
-      box-shadow: 0 16px 36px rgba(34,32,30,0.05);
-      cursor: pointer;
-      position: relative;
+      cursor: zoom-in;
     }
 
-    .studio-feature-frame img {
+    .birthplace-img-frame img {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center 30%;
+      height: auto;
+      display: block;
       transition: transform 0.6s ease;
-      display: block;
     }
 
-    .studio-feature-frame:hover img {
-      transform: scale(1.02);
-    }
-
-    .feature-caption {
-      margin-top: 0.8rem;
-      text-align: right;
-      font-size: 0.76rem;
-      color: var(--text-light);
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-    }
-
-    /* Atelier Story & Philosophy Grid */
-    .studio-narrative {
-      max-width: 900px;
-      margin: 4.5rem auto;
-      padding: 0 2rem;
-    }
-
-    .narrative-p {
-      font-family: var(--font-serif);
-      font-size: 1.05rem;
-      line-height: 2.2;
-      color: var(--text-muted);
-      margin-bottom: 2rem;
-      text-align: justify;
-    }
-
-    .narrative-quote {
-      font-family: var(--font-display);
-      font-size: 1.45rem;
-      font-style: italic;
-      color: var(--accent-terracotta);
-      border-left: 2px solid var(--accent-terracotta);
-      padding-left: 2rem;
-      margin: 3rem 0;
-      line-height: 1.7;
-    }
-
-    /* Studio Gallery Grid */
-    .studio-gallery-section {
-      max-width: 1280px;
-      margin: 2rem auto 5rem;
-      padding: 0 2rem;
-    }
-
-    .gallery-grid-title {
-      font-family: var(--font-display);
-      font-size: 2rem;
-      font-weight: 400;
-      text-transform: lowercase;
-      margin-bottom: 2rem;
-      padding-bottom: 0.8rem;
-      border-bottom: 1px solid var(--line-subtle);
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-    }
-
-    .studio-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-    }
-
-    .studio-card {
-      background: var(--bg-pure);
-      border: 1px solid var(--line-subtle);
-      display: flex;
-      flex-direction: column;
-      transition: all 0.3s ease;
-      cursor: pointer;
-      overflow: hidden;
-    }
-
-    .studio-card:hover {
-      border-color: var(--text-dark);
-      transform: translateY(-4px);
-      box-shadow: 0 12px 28px rgba(34, 32, 30, 0.06);
-    }
-
-    .studio-img-wrap {
-      width: 100%;
-      height: 380px;
-      background: var(--bg-warm-oat);
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .studio-img-wrap img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.5s ease;
-    }
-
-    .studio-card:hover .studio-img-wrap img {
-      transform: scale(1.03);
-    }
-
-    .studio-card-info {
-      padding: 1.4rem 1.2rem;
-      background: var(--bg-pure);
-    }
-
-    .studio-card-tag {
-      font-size: 0.68rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--accent-terracotta);
-      margin-bottom: 0.35rem;
-      display: block;
-    }
-
-    .studio-card-title {
-      font-family: var(--font-display);
-      font-size: 1.25rem;
-      font-weight: 400;
-      color: var(--text-dark);
-      margin-bottom: 0.5rem;
-    }
-
-    .studio-card-desc {
-      font-family: var(--font-serif);
-      font-size: 0.84rem;
-      color: var(--text-muted);
-      line-height: 1.7;
-    }
-
-    /* Location & Map Section */
-    .location-section {
-      background: var(--bg-warm-oat);
-      border-top: 1px solid var(--line-subtle);
-      border-bottom: 1px solid var(--line-subtle);
-      padding: 5.5rem 2rem;
-    }
-
-    .location-container {
-      max-width: 960px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .location-tag {
-      font-size: 0.75rem;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: var(--accent-terracotta);
-      display: block;
-      margin-bottom: 0.8rem;
-    }
-
-    .location-title {
-      font-family: var(--font-display);
-      font-size: 2.6rem;
-      font-weight: 400;
-      margin-bottom: 1.2rem;
-      text-transform: lowercase;
-    }
-
-    .location-address {
-      font-family: var(--font-serif);
-      font-size: 1.12rem;
-      color: var(--text-dark);
-      margin-bottom: 1.2rem;
-      letter-spacing: 0.05em;
-    }
-
-    .location-note {
-      font-size: 0.92rem;
-      color: var(--text-muted);
-      max-width: 680px;
-      margin: 0 auto 2.5rem;
-      line-height: 1.9;
-    }
-
-    .map-action-btns {
-      display: flex;
-      justify-content: center;
-      gap: 1.2rem;
-      flex-wrap: wrap;
-      margin-bottom: 2rem;
-    }
-
-    .btn-map {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.6rem;
-      padding: 0.9rem 2.2rem;
-      border: 1px solid var(--text-dark);
-      background: var(--bg-pure);
-      color: var(--text-dark);
-      text-decoration: none;
-      font-size: 0.82rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      transition: all 0.3s ease;
-      border-radius: 2px;
-    }
-
-    .btn-map:hover {
-      background: var(--text-dark);
-      color: var(--bg-cream);
-    }
-
-    .btn-map-primary {
-      background: var(--text-dark);
-      color: var(--bg-cream);
-    }
-
-    .btn-map-primary:hover {
-      background: var(--accent-terracotta);
-      border-color: var(--accent-terracotta);
-      color: #fff;
+    .birthplace-img-frame:hover img {
+      transform: scale(1.015);
     }
 
     /* Lightbox */
@@ -501,23 +272,23 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(34, 32, 30, 0.92);
+      background: rgba(34, 32, 30, 0.94);
       backdrop-filter: blur(10px);
       z-index: 9999;
       justify-content: center;
       align-items: center;
       padding: 2rem;
-      cursor: pointer;
+      cursor: zoom-out;
     }
 
     .lightbox.active { display: flex; }
 
     .lightbox img {
-      max-width: 90vw;
-      max-height: 88vh;
+      max-width: 94vw;
+      max-height: 92vh;
       border-radius: 2px;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
-      border: 1px solid rgba(255,255,255,0.1);
+      box-shadow: 0 12px 48px rgba(0,0,0,0.6);
+      border: 1px solid rgba(255,255,255,0.12);
     }
 
     footer {
@@ -528,11 +299,6 @@
       font-size: 0.78rem;
       color: var(--text-light);
       letter-spacing: 0.14em;
-    }
-
-    @media (max-width: 1024px) {
-      .studio-grid { grid-template-columns: repeat(2, 1fr); }
-      .studio-feature-frame { height: 480px; }
     }
 
     @media (max-width: 768px) {
@@ -550,18 +316,10 @@
       .brand-logo h1 { font-size: 1.65rem; }
       .brand-logo span { font-size: 0.58rem; }
       
-      .studio-hero { margin: 3rem auto 2rem; padding: 0 1.2rem; }
-      .studio-hero-title { font-size: 2.2rem; }
-      .studio-hero-desc { font-size: 0.95rem; }
-      
-      .studio-feature-img-wrap { padding: 0 1.2rem; margin: 2rem auto; }
-      .studio-feature-frame { height: 320px; }
-      
-      .studio-grid { grid-template-columns: 1fr; gap: 1.6rem; }
-      .studio-img-wrap { height: 320px; }
-      
-      .location-section { padding: 4rem 1.2rem; }
-      .location-title { font-size: 2rem; }
+      .birthplace-header-section { padding: 3rem 1.2rem 1.8rem; }
+      .birthplace-title { font-size: 2.4rem; }
+      .birthplace-sub { font-size: 1rem; letter-spacing: 0.12em; }
+      .birthplace-fullscreen-wrap { padding: 0 0.8rem; margin-bottom: 3.5rem; }
     }
   </style>
 </head>
@@ -583,7 +341,7 @@
 
       <ul class="nav-right">
         <li class="nav-item"><a href="about.html" data-i18n="nav_about">关于我</a></li>
-        <li class="nav-item"><a href="visit.html" style="color:var(--accent-terracotta);" data-i18n="nav_visit">走进工坊</a></li>
+        <li class="nav-item"><a href="visit.html" style="color:var(--accent-terracotta);" data-i18n="nav_birthplace">诞生地</a></li>
         <li class="nav-item"><a href="index.html#contact" data-i18n="nav_inquiries">合作洽谈</a></li>
         <li class="nav-item">
           <div class="lang-switcher">
@@ -615,7 +373,7 @@
       <li class="mobile-nav-item"><a href="index.html#bags" onclick="toggleMobileMenu()" data-i18n="nav_bags">原创布包</a></li>
       <li class="mobile-nav-item"><a href="index.html#accessories" onclick="toggleMobileMenu()" data-i18n="nav_living">宠物与生活</a></li>
       <li class="mobile-nav-item"><a href="about.html" onclick="toggleMobileMenu()" data-i18n="nav_about">关于我</a></li>
-      <li class="mobile-nav-item"><a href="visit.html" onclick="toggleMobileMenu()" style="color:var(--accent-terracotta);" data-i18n="nav_visit">走进工坊</a></li>
+      <li class="mobile-nav-item"><a href="visit.html" onclick="toggleMobileMenu()" style="color:var(--accent-terracotta);" data-i18n="nav_birthplace">诞生地</a></li>
       <li class="mobile-nav-item"><a href="index.html#contact" onclick="toggleMobileMenu()" data-i18n="nav_inquiries">合作洽谈</a></li>
     </ul>
 
@@ -625,160 +383,21 @@
     </div>
   </div>
 
-  <!-- Studio Hero Section -->
-  <section class="studio-hero">
-    <span class="studio-hero-tag" data-i18n="hero_tag">LUMI SONG ATELIER · 杭州临安专属家庭手作工坊</span>
-    <h1 class="studio-hero-title" data-i18n="hero_title">the making of heirloom craft</h1>
-    <p class="studio-hero-desc" data-i18n="hero_desc">
-      坐落于杭州市临安区青山湖畔（八百里）。在纯净阳光与织物草木香气中，一针一线，记录手艺人指尖与时间重逢的故事。
-    </p>
-    <div class="studio-divider"></div>
-  </section>
+  <!-- Pure Single Copy Header -->
+  <main>
+    <section class="birthplace-header-section">
+      <h1 class="birthplace-title" data-i18n="birthplace_title">诞生地</h1>
+      <p class="birthplace-sub" data-i18n="birthplace_sub">他们诞生的地方</p>
+      <div class="birthplace-divider"></div>
+    </section>
 
-  <!-- Featured Full Width Banner: The Textile Library -->
-  <section class="studio-feature-img-wrap">
-    <div class="studio-feature-frame" onclick="openLightbox('images/studio/studio-textile-library.jpg')">
-      <img src="images/studio/studio-textile-library.jpg" alt="Lumi Song Textile & Fabric Library" loading="eager">
-    </div>
-    <div class="feature-caption" data-i18n="feat_cap">THE TEXTILE & DYE LIBRARY · 织物与草木染面料架</div>
-  </section>
-
-  <!-- Narrative Section -->
-  <section class="studio-narrative">
-    <p class="narrative-p" data-i18n="narr_p1">
-      真正的温度，从不来自流水线的轰鸣，而源于工坊角落里日复一日的安静打磨。走进 Lumi Song 的专属家庭手作工坊，映入眼帘的是从世界各地淘选的古董纯棉白纱、未漂白粗亚麻、天然蓝染织布，以及四季采集提取的草木染料。
-    </p>
-    <div class="narrative-quote" data-i18n="narr_quote">
-      “每一块织物都有呼吸，每一处缝线都有归途。这是属于手艺人最安心的私享世界。”
-    </div>
-    <p class="narrative-p" data-i18n="narr_p2">
-      从一张白纸上的比例草图、精密立体打样，到操作 JUKI 工业专机的精细走线，再到最后的微缩刺绣与手工盘结——工坊记录了每一只传家宝布偶和每一件布艺作品诞生的全部痕迹。
-    </p>
-  </section>
-
-  <!-- Studio Craft Gallery Grid -->
-  <section class="studio-gallery-section">
-    <div class="gallery-grid-title">
-      <span data-i18n="grid_title">craftsmanship & atelier corners</span>
-      <span style="font-size:0.75rem; letter-spacing:0.2em; color:var(--accent-terracotta);" data-i18n="grid_count">7 corners</span>
-    </div>
-
-    <div class="studio-grid">
-      
-      <!-- Card 1: Cutting Table & Victorian Lace Doll -->
-      <div class="studio-card" onclick="openLightbox('images/studio/studio-doll-cutting-table.jpg')">
-        <div class="studio-img-wrap">
-          <img src="images/studio/studio-doll-cutting-table.jpg" alt="Doll Pattern & Micro Tailoring Table" loading="lazy">
-        </div>
-        <div class="studio-card-info">
-          <span class="studio-card-tag" data-i18n="c1_tag">pattern & cutting</span>
-          <h3 class="studio-card-title" data-i18n="c1_title">制版与微缩剪裁工作台</h3>
-          <p class="studio-card-desc" data-i18n="c1_desc">维多利亚白纱布偶、弧度纸样与剪裁面料。每一个微缩领口与褶皱皆经精密手工打版计算。</p>
-        </div>
+    <!-- Fullscreen Master Composite Image -->
+    <section class="birthplace-fullscreen-wrap">
+      <div class="birthplace-img-frame" onclick="openLightbox('images/studio/birthplace-full-mosaic.jpg')" title="点击放大查看全景细节">
+        <img src="images/studio/birthplace-full-mosaic.jpg" alt="诞生地 · 他们诞生的地方 - Lumi Song" loading="eager">
       </div>
-
-      <!-- Card 2: Fabric Rack & Indigo Boro -->
-      <div class="studio-card" onclick="openLightbox('images/studio/studio-indigo-fabric-rack.jpg')">
-        <div class="studio-img-wrap">
-          <img src="images/studio/studio-indigo-fabric-rack.jpg" alt="Japanese Indigo & Textured Linens" loading="lazy">
-        </div>
-        <div class="studio-card-info">
-          <span class="studio-card-tag" data-i18n="c2_tag">textile archive</span>
-          <h3 class="studio-card-title" data-i18n="c2_title">粗织棉麻与日式蓝染架</h3>
-          <p class="studio-card-desc" data-i18n="c2_desc">整齐收纳的传统蓝染提花布、水洗波点棉麻与纯手工毛边织物，为创作提供丰盈的触感源泉。</p>
-        </div>
-      </div>
-
-      <!-- Card 3: Wicker Baskets & Lace Cuffs -->
-      <div class="studio-card" onclick="openLightbox('images/studio/studio-woven-lace-baskets.jpg')">
-        <div class="studio-img-wrap">
-          <img src="images/studio/studio-woven-lace-baskets.jpg" alt="Vintage Lace & Wicker Storage" loading="lazy">
-        </div>
-        <div class="studio-card-info">
-          <span class="studio-card-tag" data-i18n="c3_tag">materials & details</span>
-          <h3 class="studio-card-title" data-i18n="c3_title">天然纤维与古董蕾丝篓</h3>
-          <p class="studio-card-desc" data-i18n="c3_desc">手编藤篓盛放着复古蕾丝花边、微缩褶皱袖口、打样红白格面料与草木染亚麻卷。</p>
-        </div>
-      </div>
-
-      <!-- Card 4: Thread Spools & Accessories -->
-      <div class="studio-card" onclick="openLightbox('images/studio/studio-thread-spools-supplies.jpg')">
-        <div class="studio-img-wrap">
-          <img src="images/studio/studio-thread-spools-supplies.jpg" alt="Artisan Thread Spools & Hardware" loading="lazy">
-        </div>
-        <div class="studio-card-info">
-          <span class="studio-card-tag" data-i18n="c4_tag">threads & hardware</span>
-          <h3 class="studio-card-title" data-i18n="c4_title">工坊专业缝线与五金配件</h3>
-          <p class="studio-card-desc" data-i18n="c4_desc">马卡龙色系高强力车缝线、复古做旧黄铜按扣、压脚配件与原木钻孔锥。</p>
-        </div>
-      </div>
-
-      <!-- Card 5: JUKI Sewing Machine Station -->
-      <div class="studio-card" onclick="openLightbox('images/studio/studio-juki-sewing-workstation.jpg')">
-        <div class="studio-img-wrap">
-          <img src="images/studio/studio-juki-sewing-workstation.jpg" alt="JUKI Sewing Machine Station" loading="lazy">
-        </div>
-        <div class="studio-card-info">
-          <span class="studio-card-tag" data-i18n="c5_tag">stitching station</span>
-          <h3 class="studio-card-title" data-i18n="c5_title">JUKI 电脑数控缝纫专机</h3>
-          <p class="studio-card-desc" data-i18n="c5_desc">高精度多功能车缝、多把专业裁缝剪刀、打样铅笔与印花碎花熨烫台。</p>
-        </div>
-      </div>
-
-      <!-- Card 6: Leather Boots Pencil Holder & Fine Threads -->
-      <div class="studio-card" onclick="openLightbox('images/studio/studio-leather-pen-boots-threads.jpg')">
-        <div class="studio-img-wrap">
-          <img src="images/studio/studio-leather-pen-boots-threads.jpg" alt="Leather Tool Boots & Fine Threads" loading="lazy">
-        </div>
-        <div class="studio-card-info">
-          <span class="studio-card-tag" data-i18n="c6_tag">artisan details</span>
-          <h3 class="studio-card-title" data-i18n="c6_title">复古皮靴笔插与特种细线</h3>
-          <p class="studio-card-desc" data-i18n="c6_desc">纯手作牛皮靴笔筒、日本 Fujix 绗缝高密细线、微缩手绘彩笔与特种细针组合。</p>
-        </div>
-      </div>
-
-      <!-- Card 7: Botanical Floss & Bobbins -->
-      <div class="studio-card" onclick="openLightbox('images/studio/studio-botanical-embroidery-floss.jpg')">
-        <div class="studio-img-wrap">
-          <img src="images/studio/studio-botanical-embroidery-floss.jpg" alt="Embroidery Floss & Wooden Bobbins" loading="lazy">
-        </div>
-        <div class="studio-card-info">
-          <span class="studio-card-tag" data-i18n="c7_tag">palette & bobbins</span>
-          <h3 class="studio-card-title" data-i18n="c7_title">植物色谱绣线与原木线轴</h3>
-          <p class="studio-card-desc" data-i18n="c7_desc">自然草木系分装 DMC 刺绣线卡、手工原木细线轴与粗粝剑麻收纳篓。</p>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Location & Map Section -->
-  <section class="location-section" id="location">
-    <div class="location-container">
-      <span class="location-tag" data-i18n="loc_tag">STUDIO LOCATION & APPOINTMENT</span>
-      <h2 class="location-title" data-i18n="loc_title">杭州 · 临安八百里</h2>
-      <p class="location-address" data-i18n="loc_addr">
-        📍 浙江省杭州市临安区青山湖街道八百里
-      </p>
-      <p class="location-note" data-i18n="loc_note">
-        工坊为私享手作与打样空间。坐拥青山湖青山秀水，交通便捷。诚挚欢迎买手店主理人、艺术策展人及定制藏家提前预约造访，在静谧山水间感受织物手作的温度。
-      </p>
-
-      <div class="map-action-btns">
-        <a href="https://www.amap.com/search?query=%E6%9D%AD%E5%B7%9E%E5%B8%82%E4%B8%B4%E5%AE%89%E5%8C%BA%E5%85%AB%E7%99%BE%E9%87%8C" target="_blank" rel="noopener noreferrer" class="btn-map btn-map-primary" data-i18n="btn_amap">
-          🗺️ 高德地图直接导航 (Amap)
-        </a>
-        <a href="https://maps.apple.com/?q=%E6%9D%AD%E5%B7%9E%E5%B8%82%E4%B8%B4%E5%AE%89%E5%8C%BA%E5%85%AB%E7%99%BE%E9%87%8C" target="_blank" rel="noopener noreferrer" class="btn-map" data-i18n="btn_apple">
-          🍏 Apple Maps 导航
-        </a>
-      </div>
-
-      <div style="font-size:0.8rem; color:var(--text-muted); letter-spacing:0.1em; margin-top:1.5rem;">
-        <span data-i18n="contact_phone_label">联系电话 / Wechat：</span> <strong>+86 183xxxx</strong> &nbsp;|&nbsp; 
-        <span>邮箱：</span> <a href="mailto:lumi.t.song@gmail.com" style="color:var(--text-dark); text-decoration:underline;">lumi.t.song@gmail.com</a>
-      </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <!-- Footer -->
   <footer>
@@ -788,7 +407,7 @@
 
   <!-- Lightbox -->
   <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-    <img id="lightbox-img" src="" alt="Zoomed atelier corner">
+    <img id="lightbox-img" src="" alt="Zoomed view">
   </div>
 
   <!-- Multilingual Dictionary -->
@@ -800,56 +419,11 @@
         nav_living: "宠物与生活",
         brand_sub: "手作设计与工坊",
         nav_about: "关于我",
-        nav_visit: "走进工坊",
+        nav_birthplace: "诞生地",
         nav_inquiries: "合作洽谈",
         
-        hero_tag: "LUMI SONG ATELIER · 杭州临安专属家庭手作工坊",
-        hero_title: "走进手作工坊",
-        hero_desc: "坐落于杭州市临安区青山湖畔（八百里）。在纯净阳光与织物草木香气中，一针一线，记录手艺人指尖与时间重逢的故事。",
-        feat_cap: "THE TEXTILE & DYE LIBRARY · 织物与草木染面料架",
-        
-        narr_p1: "真正的温度，从不来自流水线的轰鸣，而源于工坊角落里日复一日的安静打磨。走进 Lumi Song 的专属家庭手作工坊，映入眼帘的是从世界各地淘选的古董纯棉白纱、未漂白粗亚麻、天然蓝染织布，以及四季采集提取的草木染料。",
-        narr_quote: "“每一块织物都有呼吸，每一处缝线都有归途。这是属于手艺人最安心的私享世界。”",
-        narr_p2: "从一张白纸上的比例草图、精密立体打样，到操作 JUKI 工业专机的精细走线，再到最后的微缩刺绣与手工盘结——工坊记录了每一只传家宝布偶和每一件布艺作品诞生的全部痕迹。",
-        
-        grid_title: "工坊角落与精湛工艺",
-        grid_count: "7 处工坊场景",
-        
-        c1_tag: "打版与剪裁",
-        c1_title: "制版与微缩剪裁工作台",
-        c1_desc: "维多利亚白纱布偶、弧度纸样与剪裁面料。每一个微缩领口与褶皱皆经精密手工打版计算。",
-        
-        c2_tag: "面料档案",
-        c2_title: "粗织棉麻与日式蓝染架",
-        c2_desc: "整齐收纳的传统蓝染提花布、水洗波点棉麻与纯手工毛边织物，为创作提供丰盈的触感源泉。",
-        
-        c3_tag: "辅料与细节",
-        c3_title: "天然纤维与古董蕾丝篓",
-        c3_desc: "手编藤篓盛放着复古蕾丝花边、微缩褶皱袖口、打样红白格面料与草木染亚麻卷。",
-        
-        c4_tag: "缝线与五金",
-        c4_title: "工坊专业缝线与五金配件",
-        c4_desc: "马卡龙色系高强力车缝线、复古做旧黄铜按扣、压脚配件与原木钻孔锥。",
-        
-        c5_tag: "专机缝纫台",
-        c5_title: "JUKI 电脑数控缝纫专机",
-        c5_desc: "高精度多功能车缝、多把专业裁缝剪刀、打样铅笔与印花碎花熨烫台。",
-        
-        c6_tag: "手作细节",
-        c6_title: "复古皮靴笔插与特种细线",
-        c6_desc: "纯手作牛皮靴笔筒、日本 Fujix 绗缝高密细线、微缩手绘彩笔与特种细针组合。",
-        
-        c7_tag: "色谱与线轴",
-        c7_title: "植物色谱绣线与原木线轴",
-        c7_desc: "自然草木系分装 DMC 刺绣线卡、手工原木细线轴与粗粝剑麻收纳篓。",
-        
-        loc_tag: "工坊定位与预约交流",
-        loc_title: "杭州 · 临安八百里",
-        loc_addr: "📍 浙江省杭州市临安区青山湖街道八百里",
-        loc_note: "工坊为私享手作与打样空间。坐拥青山湖青山秀水，交通便捷。诚挚欢迎买手店主理人、艺术策展人及定制藏家提前预约造访，在静谧山水间感受织物手作的温度。",
-        btn_amap: "🗺️ 高德地图直接导航 (Amap)",
-        btn_apple: "🍏 Apple Maps 导航",
-        contact_phone_label: "联系电话 / 微信：",
+        birthplace_title: "诞生地",
+        birthplace_sub: "他们诞生的地方",
         
         footer_copy: "© 2026 LUMI SONG (宋婷婷). 保留所有权利.",
         footer_sub: "标志性高定艺术布偶 · 天然草木染织物 · 独立生活方式美学."
@@ -860,56 +434,11 @@
         nav_living: "pet & living",
         brand_sub: "design & atelier",
         nav_about: "about me",
-        nav_visit: "visit atelier",
+        nav_birthplace: "birthplace",
         nav_inquiries: "inquiries",
         
-        hero_tag: "LUMI SONG ATELIER · HANGZHOU HOME STUDIO",
-        hero_title: "the making of heirloom craft",
-        hero_desc: "Nestled along the shores of Qingshan Lake in Babaili, Lin'an, Hangzhou. In gentle sunlight and botanical aromas, thread and needle intertwine to create timeless heirloom pieces.",
-        feat_cap: "THE TEXTILE & DYE LIBRARY · FABRIC STACKS",
-        
-        narr_p1: "Authentic warmth never emerges from industrial assembly lines, but from patient, quiet dedication in the studio atelier. Entering Lumi Song's home workshop, one discovers antique pintuck linens, unbleached rustic hemp, Japanese indigo weaves, and seasonal botanical dye vats.",
-        narr_quote: "“Every textile breathes; every stitch finds its destined home. This is the artisan's sanctuary.”",
-        narr_p2: "From preliminary paper silhouettes and 3D miniature patterns, to precision stitching on the JUKI industrial sewing machine, to subtle hand-embroidered features—the atelier captures the entire genesis of each collectible art piece.",
-        
-        grid_title: "atelier corners & craftsmanship",
-        grid_count: "7 corners",
-        
-        c1_tag: "pattern & cutting",
-        c1_title: "Doll Pattern & Micro Tailoring Table",
-        c1_desc: "Victorian lace doll in progress, custom curved paper templates, and folded fabrics. Every micro collar and gather is drafted by hand.",
-        
-        c2_tag: "textile archive",
-        c2_title: "Japanese Indigo & Textured Linens",
-        c2_desc: "Carefully organized stacks of traditional indigo jacquard, washed polka dot cottons, and raw-edge linen trims.",
-        
-        c3_tag: "materials & details",
-        c3_title: "Vintage Lace & Wicker Storage",
-        c3_desc: "Hand-woven wicker bins housing antique lace trimmings, miniature smocked cuffs, and botanical-dyed linen rolls.",
-        
-        c4_tag: "threads & hardware",
-        c4_title: "Artisan Thread Spools & Hardware",
-        c4_desc: "Pastel high-tenacity thread spools, vintage distressed brass snap fasteners, presser feet, and wooden awls.",
-        
-        c5_tag: "stitching station",
-        c5_title: "JUKI Sewing Machine Station",
-        c5_desc: "Electronic computerized JUKI workstation, tailor shears, fine thread snips, and drafting pencils.",
-        
-        c6_tag: "artisan details",
-        c6_title: "Leather Tool Boots & Fine Threads",
-        c6_desc: "Handmade leather boot pencil pot, Japanese Fujix Quilter threads, micro drawing markers, and specialty needle sets.",
-        
-        c7_tag: "palette & bobbins",
-        c7_title: "Embroidery Floss & Wooden Bobbins",
-        c7_desc: "Botanical palette DMC embroidery floss in organizer boxes, handcrafted wooden bobbins, and burlap baskets.",
-        
-        loc_tag: "STUDIO LOCATION & APPOINTMENT",
-        loc_title: "Babaili, Lin'an, Hangzhou",
-        loc_addr: "📍 Babaili, Qingshanhu, Lin'an District, Hangzhou, Zhejiang",
-        loc_note: "The atelier is a private artisan studio. Situated amidst the tranquil scenery of Qingshan Lake, visits are warmly welcomed by appointment for brand partners, boutique founders, and collectors.",
-        btn_amap: "🗺️ Open in Amap Navigation",
-        btn_apple: "🍏 Open in Apple Maps",
-        contact_phone_label: "Phone / WeChat: ",
+        birthplace_title: "birthplace",
+        birthplace_sub: "where they were born",
         
         footer_copy: "© 2026 LUMI SONG (TINGTING SONG). ALL RIGHTS RESERVED.",
         footer_sub: "INSPIRED BY ARTISAN RAG DOLLS, NATURAL BOTANICAL DYES & LIVING TEXTILES."
