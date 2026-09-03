@@ -542,6 +542,88 @@
       .product-img-wrap { height: 360px; }
       .portfolio-section { padding: 0 1.2rem 3.5rem; }
     }
+
+    /* Atelier Teaser on Homepage */
+    .atelier-teaser-wrap {
+      max-width: 1360px;
+      margin: 3.5rem auto 4.5rem;
+      padding: 0 2rem;
+    }
+    .atelier-teaser-grid {
+      background: var(--bg-pure);
+      border: 1px solid var(--line-subtle);
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      overflow: hidden;
+      align-items: center;
+    }
+    .atelier-teaser-text {
+      padding: 4rem 3.5rem;
+    }
+    .teaser-tag {
+      font-size: 0.72rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--accent-terracotta);
+      display: block;
+      margin-bottom: 0.8rem;
+    }
+    .teaser-title {
+      font-family: var(--font-display);
+      font-size: 2.3rem;
+      font-weight: 400;
+      line-height: 1.3;
+      margin-bottom: 1.2rem;
+      color: var(--text-dark);
+    }
+    .teaser-desc {
+      font-family: var(--font-serif);
+      font-size: 0.95rem;
+      line-height: 2.1;
+      color: var(--text-muted);
+      margin-bottom: 2.2rem;
+    }
+    .teaser-btn {
+      display: inline-block;
+      padding: 0.85rem 2.4rem;
+      border: 1px solid var(--text-dark);
+      color: var(--text-dark);
+      text-decoration: none;
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+    }
+    .teaser-btn:hover {
+      background: var(--text-dark);
+      color: var(--bg-cream);
+    }
+    .atelier-teaser-media {
+      height: 100%;
+      min-height: 440px;
+      background: var(--bg-warm-oat);
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .atelier-teaser-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 25%;
+      transition: transform 0.6s ease;
+      display: block;
+    }
+    .atelier-teaser-media:hover img {
+      transform: scale(1.03);
+    }
+    @media (max-width: 768px) {
+      .atelier-teaser-grid { grid-template-columns: 1fr; }
+      .atelier-teaser-text { padding: 2.5rem 1.6rem; }
+      .teaser-title { font-size: 1.8rem; }
+      .atelier-teaser-media { min-height: 280px; height: 280px; }
+      .atelier-teaser-wrap { padding: 0 1.2rem; margin: 2.5rem auto; }
+    }
+
   </style>
 </head>
 <body>
@@ -562,6 +644,7 @@
 
       <ul class="nav-right">
         <li class="nav-item"><a href="about.html" data-i18n="nav_about">关于我</a></li>
+        <li class="nav-item"><a href="visit.html" data-i18n="nav_visit">走进工坊</a></li>
         <li class="nav-item"><a href="#contact" data-i18n="nav_inquiries">合作洽谈</a></li>
         <li class="nav-item">
           <!-- Desktop Language Switcher Button -->
@@ -594,6 +677,7 @@
       <li class="mobile-nav-item"><a href="#bags" onclick="toggleMobileMenu()" data-i18n="nav_bags">原创布包</a></li>
       <li class="mobile-nav-item"><a href="#accessories" onclick="toggleMobileMenu()" data-i18n="nav_living">宠物与生活</a></li>
       <li class="mobile-nav-item"><a href="about.html" onclick="toggleMobileMenu()" data-i18n="nav_about">关于我</a></li>
+      <li class="mobile-nav-item"><a href="visit.html" onclick="toggleMobileMenu()" data-i18n="nav_visit">走进工坊</a></li>
       <li class="mobile-nav-item"><a href="#contact" onclick="toggleMobileMenu()" data-i18n="nav_inquiries">合作洽谈</a></li>
     </ul>
 
@@ -988,6 +1072,25 @@
 
   </main>
 
+  <!-- Atelier Studio Teaser Section -->
+  <section class="atelier-teaser-wrap">
+    <div class="atelier-teaser-grid">
+      <div class="atelier-teaser-text">
+        <span class="teaser-tag" data-i18n="atelier_teaser_tag">atelier & craftsmanship</span>
+        <h3 class="teaser-title" data-i18n="atelier_teaser_title">走进杭州临安八百里家庭手作工坊</h3>
+        <p class="teaser-desc" data-i18n="atelier_teaser_desc">
+          真正的温度源于工坊角落里的安静打磨。在这里，从古董织物、纸样制版台到 JUKI 专机走线，记录每件传家宝手作诞生的全部印记。
+        </p>
+        <a href="visit.html" class="teaser-btn" data-i18n="atelier_teaser_btn">
+          探索工坊空间 · VISIT ATELIER →
+        </a>
+      </div>
+      <div class="atelier-teaser-media" onclick="location.href='visit.html'">
+        <img src="images/studio/studio-doll-cutting-table.jpg" alt="Lumi Song Atelier Workstation" loading="lazy">
+      </div>
+    </div>
+  </section>
+
   <!-- Inquiries Section -->
   <section class="inquiry-section" id="contact">
     <span class="inquiry-tag" data-i18n="inquiry_tag">collaboration & partnership</span>
@@ -1000,12 +1103,12 @@
       <a href="mailto:lumi.t.song@gmail.com" class="inquiry-pill">
         ✉️ lumi.t.song@gmail.com
       </a>
-      <a href="tel:18339931747" class="inquiry-pill">
-        📞 18339931747
+      <a href="tel:+86183" class="inquiry-pill">
+        📞 +86 183xxxx
       </a>
-      <span class="inquiry-pill" data-i18n="inquiry_loc">
-        📍 Hangzhou · Home Studio Atelier
-      </span>
+      <a href="https://www.amap.com/search?query=%E6%9D%AD%E5%B7%9E%E5%B8%82%E4%B8%B4%E5%AE%89%E5%8C%BA%E5%85%AB%E7%99%BE%E9%87%8C" target="_blank" rel="noopener noreferrer" class="inquiry-pill" data-i18n="inquiry_loc">
+        📍 杭州市临安区八百里 · 专属家庭手作工坊 (点击导航)
+      </a>
     </div>
   </section>
 
@@ -1029,6 +1132,11 @@
         nav_living: "宠物与生活",
         brand_sub: "手作设计与工坊",
         nav_about: "关于我",
+        nav_visit: "走进工坊",
+        atelier_teaser_tag: "工坊空间与手工技艺",
+        atelier_teaser_title: "走进杭州临安八百里家庭手作工坊",
+        atelier_teaser_desc: "真正的温度源于工坊角落里的安静打磨。在这里，从古董织物、纸样制版台到 JUKI 专机走线，记录每件传家宝手作诞生的全部印记。",
+        atelier_teaser_btn: "探索工坊空间 · VISIT ATELIER →",
         nav_inquiries: "合作洽谈",
         selected_notice: "* 仅展示部分代表性手作作品 · 更多定制欢迎洽谈",
         
@@ -1143,7 +1251,7 @@
         inquiry_tag: "合作共创 · COLLABORATION",
         inquiry_title: "合作与主理洽谈",
         inquiry_desc: "诚挚探讨独立手作店铺联合主理、布艺与草木染产品线研发定制、小众美学品牌共创。",
-        inquiry_loc: "📍 杭州 · 专属家庭手作工坊",
+        inquiry_loc: "📍 杭州市临安区八百里 · 专属家庭手作工坊 (点击导航)",
         
         footer_copy: "© 2026 LUMI SONG (宋婷婷). 保留所有权利.",
         footer_sub: "标志性高定艺术布偶 · 天然草木染织物 · 独立生活方式美学."
@@ -1154,6 +1262,11 @@
         nav_living: "pet & living",
         brand_sub: "design & atelier",
         nav_about: "about me",
+        nav_visit: "visit atelier",
+        atelier_teaser_tag: "atelier & craftsmanship",
+        atelier_teaser_title: "visit our home studio in hangzhou",
+        atelier_teaser_desc: "Authentic warmth begins in the quiet dedication of the studio corner. From antique textiles and pattern cutting tables to precision JUKI stitching, discover where heirloom craft is born.",
+        atelier_teaser_btn: "explore the atelier space →",
         nav_inquiries: "inquiries",
         selected_notice: "* SELECTED WORKS SHOWCASE ONLY · BESPOKE COMMISSIONS WELCOME",
         
@@ -1268,7 +1381,7 @@
         inquiry_tag: "collaboration & partnership",
         inquiry_title: "inquiries & partnership",
         inquiry_desc: "Warmly open to co-founding independent artisan brands, custom botanical dye product line development, and lifestyle boutique partnerships.",
-        inquiry_loc: "📍 Hangzhou · Home Studio Atelier",
+        inquiry_loc: "📍 Babaili, Lin'an, Hangzhou · Atelier Studio (View Map)",
         
         footer_copy: "© 2026 LUMI SONG (TINGTING SONG). ALL RIGHTS RESERVED.",
         footer_sub: "INSPIRED BY ARTISAN RAG DOLLS, NATURAL BOTANICAL DYES & LIVING TEXTILES."
