@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>世界缝纫机械进化史与工学文献文库 | LUMI SONG</title>
-  <meta name="description" content="系统梳理自18世纪工业革命、Elias Howe 双线锁式线迹发明、Singer 胜家平缝机普及，到德国 Groz-Beckert 精密机针学与现代 JUKI 工业专机的完整进化史。收录缝制机理、机针工学研报文献，支持在线查阅与下载。">
+  <title>世界缝纫机械进化史 | LUMI SONG</title>
+  <meta name="description" content="系统梳理自18世纪工业革命、Elias Howe 双线锁式线迹发明、Singer 胜家平缝机普及，到德国 Groz-Beckert 精密机针学与现代 JUKI 工业专机的完整进化史。深入解析缝制机械发明与服装工艺演进。">
   <meta name="keywords" content="缝纫机发展史, 缝纫机工作原理, 双线锁式线迹, Elias Howe, 胜家缝纫机, Groz-Beckert, 机针型号区别, 刀嘴针, 圆嘴针, JUKI工业缝纫机, 缝制工学, 服装制作文献">
 
   <!-- Open Graph / SEO -->
-  <meta property="og:title" content="世界缝纫机械进化史与工学文献文库 | LUMI SONG">
+  <meta property="og:title" content="世界缝纫机械进化史 | LUMI SONG">
   <meta property="og:description" content="从18世纪工业革命到现代独立手作：深度解析世界缝纫机发明演进、双线锁式线迹力学与精密机针体系。">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://realsongting.github.io/history.html">
@@ -452,273 +452,60 @@
       text-align: right;
     }
 
-    /* Section 2: Research & Media Hub (公众号风格文库) */
-    .research-hub-section {
+    /* Section 2: Editorial Crosslink to Craft Reference Archive */
+    .archive-crosslink-section {
       background: var(--bg-warm-oat);
       border-top: 1px solid var(--line-subtle);
-      padding: 6rem 2rem;
+      padding: 5.5rem 2rem;
     }
 
-    .hub-container {
-      max-width: 1360px;
+    .archive-crosslink-card {
+      max-width: 960px;
       margin: 0 auto;
-    }
-
-    .hub-header {
       text-align: center;
-      max-width: 840px;
-      margin: 0 auto 3.5rem;
+      background: var(--bg-pure);
+      border: 1px solid var(--line-subtle);
+      padding: 3.5rem 3rem;
+      border-radius: 2px;
+      box-shadow: 0 8px 30px rgba(34,32,30,0.03);
     }
 
-    .hub-tag {
-      font-size: 0.76rem;
-      letter-spacing: 0.28em;
-      text-transform: uppercase;
-      color: var(--accent-terracotta);
-      margin-bottom: 0.8rem;
-      display: block;
-    }
-
-    .hub-title {
+    .crosslink-card-title {
       font-family: var(--font-display);
-      font-size: 2.8rem;
+      font-size: 2.3rem;
       font-weight: 400;
       color: var(--text-dark);
-      margin-bottom: 1.2rem;
-      line-height: 1.25;
+      margin: 0.8rem 0 1rem;
+      line-height: 1.3;
     }
 
-    .hub-desc {
+    .crosslink-card-desc {
       font-family: var(--font-serif);
       font-size: 0.98rem;
       line-height: 2;
       color: var(--text-muted);
+      max-width: 720px;
+      margin: 0 auto 2.2rem;
     }
 
-    /* Category Filter Tabs */
-    .hub-filter-tabs {
-      display: flex;
-      justify-content: center;
-      gap: 0.8rem;
-      margin-bottom: 3.5rem;
-      flex-wrap: wrap;
-    }
-
-    .filter-tab-btn {
-      padding: 0.5rem 1.4rem;
-      border: 1px solid var(--line-subtle);
-      background: var(--bg-pure);
-      border-radius: 20px;
-      font-size: 0.8rem;
-      letter-spacing: 0.08em;
-      color: var(--text-dark);
-      cursor: pointer;
-      transition: all 0.25s ease;
-    }
-
-    .filter-tab-btn.active, .filter-tab-btn:hover {
-      background: var(--text-dark);
-      color: var(--bg-cream);
-      border-color: var(--text-dark);
-    }
-
-    /* Document Cards Grid */
-    .documents-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2.5rem;
-    }
-
-    .doc-card {
-      background: var(--bg-pure);
-      border: 1px solid var(--line-subtle);
-      border-radius: 2px;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      box-shadow: 0 6px 20px rgba(34,32,30,0.03);
-      transition: all 0.3s ease;
-    }
-
-    .doc-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 14px 36px rgba(34,32,30,0.08);
-      border-color: var(--text-dark);
-    }
-
-    .doc-cover-wrap {
-      width: 100%;
-      height: 280px;
-      background: #EFECE6;
-      overflow: hidden;
-      position: relative;
-      border-bottom: 1px solid var(--line-subtle);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .doc-cover-wrap img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      padding: 1rem;
-      transition: transform 0.5s ease;
-    }
-
-    .doc-card:hover .doc-cover-wrap img {
-      transform: scale(1.03);
-    }
-
-    .doc-type-badge {
-      position: absolute;
-      top: 12px;
-      left: 12px;
-      background: var(--text-dark);
-      color: var(--bg-cream);
-      font-size: 0.68rem;
-      padding: 0.2rem 0.6rem;
-      letter-spacing: 0.1em;
-      border-radius: 2px;
-      text-transform: uppercase;
-    }
-
-    .doc-content {
-      padding: 1.8rem 1.6rem;
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
-      justify-content: space-between;
-    }
-
-    .doc-meta {
-      font-size: 0.74rem;
-      color: var(--accent-terracotta);
-      letter-spacing: 0.1em;
-      margin-bottom: 0.6rem;
-      display: block;
-      text-transform: uppercase;
-    }
-
-    .doc-title {
-      font-family: var(--font-display);
-      font-size: 1.35rem;
-      font-weight: 400;
-      color: var(--text-dark);
-      line-height: 1.35;
-      margin-bottom: 0.8rem;
-    }
-
-    .doc-summary {
-      font-family: var(--font-serif);
-      font-size: 0.86rem;
-      color: var(--text-muted);
-      line-height: 1.8;
-      margin-bottom: 1.5rem;
-      text-align: justify;
-    }
-
-    .doc-actions {
-      display: flex;
-      gap: 0.8rem;
-      margin-top: auto;
-      border-top: 1px dashed var(--line-subtle);
-      padding-top: 1.2rem;
-    }
-
-    .btn-doc {
-      flex: 1;
-      text-align: center;
-      padding: 0.6rem 0.8rem;
-      font-size: 0.76rem;
-      letter-spacing: 0.1em;
+    .btn-crosslink {
+      display: inline-block;
+      padding: 0.85rem 2.5rem;
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
       text-decoration: none;
+      background: var(--text-dark);
+      color: var(--bg-cream);
       border: 1px solid var(--text-dark);
       border-radius: 2px;
       transition: all 0.25s ease;
-      cursor: pointer;
     }
 
-    .btn-doc-preview {
-      background: var(--bg-pure);
-      color: var(--text-dark);
-    }
-
-    .btn-doc-preview:hover {
-      background: var(--text-dark);
-      color: var(--bg-cream);
-    }
-
-    .btn-doc-download {
-      background: var(--text-dark);
-      color: var(--bg-cream);
-    }
-
-    .btn-doc-download:hover {
+    .btn-crosslink:hover {
       background: var(--accent-terracotta);
       border-color: var(--accent-terracotta);
-    }
-
-    /* PDF In-browser Modal Previewer */
-    .pdf-modal {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(34,32,30,0.85);
-      backdrop-filter: blur(8px);
-      z-index: 9999;
-      justify-content: center;
-      align-items: center;
-      padding: 2rem;
-    }
-
-    .pdf-modal.active { display: flex; }
-
-    .pdf-modal-content {
-      background: #fff;
-      width: 100%;
-      max-width: 1100px;
-      height: 88vh;
-      border-radius: 4px;
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-      box-shadow: 0 16px 50px rgba(0,0,0,0.4);
-    }
-
-    .pdf-modal-header {
-      padding: 1rem 1.5rem;
-      background: var(--bg-warm-oat);
-      border-bottom: 1px solid var(--line-subtle);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .pdf-modal-title {
-      font-family: var(--font-display);
-      font-size: 1.2rem;
-      color: var(--text-dark);
-    }
-
-    .pdf-modal-close {
-      background: none;
-      border: none;
-      font-size: 1.5rem;
-      line-height: 1;
-      cursor: pointer;
-      color: var(--text-dark);
-      padding: 0 0.5rem;
-    }
-
-    .pdf-modal-iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
+      color: #fff;
     }
 
     /* Lightbox for History Images */
@@ -759,7 +546,6 @@
     }
 
     @media (max-width: 1024px) {
-      .documents-grid { grid-template-columns: repeat(2, 1fr); }
       .timeline-node { gap: 2.5rem; }
     }
 
@@ -788,9 +574,9 @@
       .timeline-node:nth-child(even) { direction: ltr; padding-left: 40px; }
       .timeline-node::after { left: 18px; top: 30px; }
       
-      .documents-grid { grid-template-columns: 1fr; gap: 1.8rem; }
-      .research-hub-section { padding: 4rem 1.2rem; }
-      .hub-title { font-size: 2.2rem; }
+      .archive-crosslink-section { padding: 3.5rem 1.2rem; }
+      .archive-crosslink-card { padding: 2.2rem 1.5rem; }
+      .crosslink-card-title { font-size: 1.8rem; }
     }
   </style>
 
@@ -799,7 +585,7 @@
   {
     "@context": "https://schema.org",
     "@type": "TechArticle",
-    "headline": "世界缝纫机械进化史与工学文献文库",
+    "headline": "世界缝纫机械进化史 | LUMI SONG",
     "description": "系统梳理自18世纪工业革命、Elias Howe 双线锁式线迹发明、Singer 胜家缝纫机到德国 Groz-Beckert 精密机针工学的完整演进史与技术文献。",
     "author": {
       "@type": "Person",
@@ -836,6 +622,7 @@
         <li class="nav-item"><a href="about.html" data-i18n="nav_about">关于我</a></li>
         <li class="nav-item"><a href="visit.html" data-i18n="nav_birthplace">诞生地</a></li>
         <li class="nav-item"><a href="history.html" style="color:var(--accent-terracotta);" data-i18n="nav_history">缝纫发展史</a></li>
+        <li class="nav-item"><a href="archive.html" data-i18n="nav_archive">工艺资料</a></li>
         <li class="nav-item"><a href="index.html#contact" data-i18n="nav_inquiries">合作洽谈</a></li>
         <li class="nav-item">
           <div class="lang-switcher">
@@ -869,6 +656,7 @@
       <li class="mobile-nav-item"><a href="about.html" onclick="toggleMobileMenu()" data-i18n="nav_about">关于我</a></li>
       <li class="mobile-nav-item"><a href="visit.html" onclick="toggleMobileMenu()" data-i18n="nav_birthplace">诞生地</a></li>
       <li class="mobile-nav-item"><a href="history.html" onclick="toggleMobileMenu()" style="color:var(--accent-terracotta);" data-i18n="nav_history">缝纫发展史</a></li>
+      <li class="mobile-nav-item"><a href="archive.html" onclick="toggleMobileMenu()" data-i18n="nav_archive">工艺资料</a></li>
       <li class="mobile-nav-item"><a href="index.html#contact" onclick="toggleMobileMenu()" data-i18n="nav_inquiries">合作洽谈</a></li>
     </ul>
 
@@ -899,7 +687,7 @@
         <a href="#era-1854" class="time-nav-pill"><strong>1854</strong> <span data-i18n="t_1854">黑船来航与东亚</span></a>
         <a href="#era-1938" class="time-nav-pill"><strong>1938</strong> <span data-i18n="t_1938">现代工业专机崛起</span></a>
         <a href="#era-contemporary" class="time-nav-pill"><strong>当代</strong> <span data-i18n="t_cont">微缩高定手作</span></a>
-        <a href="#research-hub" class="time-nav-pill" style="border-color:var(--accent-terracotta); color:var(--accent-terracotta);"><strong>📚</strong> <span data-i18n="t_hub">工学文献库</span></a>
+        <a href="archive.html" class="time-nav-pill" style="border-color:var(--accent-terracotta); color:var(--accent-terracotta);"><strong>📚</strong> <span data-i18n="t_hub">工艺资料库</span> →</a>
       </div>
     </nav>
 
@@ -1077,132 +865,23 @@
 
     </section>
 
-    <!-- Part 2: Research & Documentation Hub (持续更新的公众号风格文献库) -->
-    <section class="research-hub-section" id="research-hub">
-      <div class="hub-container">
-        
-        <div class="hub-header">
-          <span class="hub-tag" data-i18n="hub_tag">MONOGRAPHS & PUBLICATIONS · 宣传物料与缝制工学研报</span>
-          <h2 class="hub-title" data-i18n="hub_title">缝纫技术研报与学术文献库</h2>
-          <p class="hub-desc" data-i18n="hub_desc">
-            收录由工坊整理编撰的专业缝制机理、机针穿刺动力学、纺织材料特性及世界缝纫机工业技术档案。支持线上查阅与全文下载。本知识库将持续更新，形成独立手工艺术家的开放工艺智库。
-          </p>
-        </div>
-
-        <!-- Filter Tabs -->
-        <div class="hub-filter-tabs">
-          <button class="filter-tab-btn active" onclick="filterDocs('all')" data-i18n="tab_all">全部文献 (4)</button>
-          <button class="filter-tab-btn" onclick="filterDocs('needles')" data-i18n="tab_needles">机针工学 (2)</button>
-          <button class="filter-tab-btn" onclick="filterDocs('industry')" data-i18n="tab_ind">产业与服务 (1)</button>
-          <button class="filter-tab-btn" onclick="filterDocs('atelier')" data-i18n="tab_atelier">工坊手作专论 (1)</button>
-        </div>
-
-        <!-- Document Cards Grid -->
-        <div class="documents-grid" id="docs-grid">
-
-          <!-- Doc 1: Apparel Industry Needles -->
-          <div class="doc-card" data-category="needles">
-            <div class="doc-cover-wrap">
-              <span class="doc-type-badge">PDF 研报 · 16页</span>
-              <img src="documents/sewing-archive/cover-apparel-needles.jpg" alt="服装业用的缝纫机针专业研报封面" loading="lazy">
-            </div>
-            <div class="doc-content">
-              <div>
-                <span class="doc-meta" data-i18n="d1_meta">服装制造 · 面料防破洞机理</span>
-                <h3 class="doc-title" data-i18n="d1_title">服装业用的缝纫机针与微观穿刺机理研报</h3>
-                <p class="doc-summary" data-i18n="d1_desc">
-                  深度解析标准圆嘴针（R、RG、FFG、FG、TR）针对针织物、超细真丝与高密纯棉的穿刺动力学；详述如何轻柔拨开经纬纱线防止断丝抽丝，以及微缩服装制作中机针发热与张力控制解决方案。
-                </p>
-              </div>
-              <div class="doc-actions">
-                <button class="btn-doc btn-doc-preview" onclick="openPdfModal('documents/sewing-archive/Sewing_machine_needles_for_the_apparel_industry.pdf', '服装业缝纫机针研报 (16页)')" data-i18n="btn_preview">📖 在线查阅</button>
-                <a href="documents/sewing-archive/Sewing_machine_needles_for_the_apparel_industry.pdf" download class="btn-doc btn-doc-download" data-i18n="btn_download">📥 下载 PDF</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Doc 2: Leather & Technical Needles -->
-          <div class="doc-card" data-category="needles">
-            <div class="doc-cover-wrap">
-              <span class="doc-type-badge">PDF 研报 · 16页</span>
-              <img src="documents/sewing-archive/cover-leather-textiles.jpg" alt="用于皮革和产业用纺织品的缝纫机针研报封面" loading="lazy">
-            </div>
-            <div class="doc-content">
-              <div>
-                <span class="doc-meta" data-i18n="d2_meta">皮革与产业纺织 · 刀嘴针尖学</span>
-                <h3 class="doc-title" data-i18n="d2_title">用于皮革与产业用纺织品的缝纫机针工学研报</h3>
-                <p class="doc-summary" data-i18n="d2_desc">
-                  详述各类刀嘴针尖（LR、LL、S、P、D）对厚重植物鞣牛皮与致密织物的微观切削力学；如何控制切口方向避免皮革接缝撕裂，形成美观倾斜的高定手缝感线迹，并解析粗粝帆布的高穿透力构型。
-                </p>
-              </div>
-              <div class="doc-actions">
-                <button class="btn-doc btn-doc-preview" onclick="openPdfModal('documents/sewing-archive/Sewing_machine_needles_for_leather_and_technical_textiles.pdf', '皮革与产业纺织机针工学研报 (16页)')" data-i18n="btn_preview">📖 在线查阅</button>
-                <a href="documents/sewing-archive/Sewing_machine_needles_for_leather_and_technical_textiles.pdf" download class="btn-doc btn-doc-download" data-i18n="btn_download">📥 下载 PDF</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Doc 3: Products & Services for Sewing Industry -->
-          <div class="doc-card" data-category="industry">
-            <div class="doc-cover-wrap">
-              <span class="doc-type-badge">PDF 研报 · 24页</span>
-              <img src="documents/sewing-archive/cover-sewing-industry.jpg" alt="面向缝纫业的产品与服务研报封面" loading="lazy">
-            </div>
-            <div class="doc-content">
-              <div>
-                <span class="doc-meta" data-i18n="d3_meta">工业体系 · 线环控制与服务全览</span>
-                <h3 class="doc-title" data-i18n="d3_title">面向缝纫业的产品体系、线环控制与工艺全览</h3>
-                <p class="doc-summary" data-i18n="d3_desc">
-                  涵盖现代缝制工业核心技术 Loop Control™ 专利线环稳定系统、特殊用途针 SAN® 系列（防跳针、防过热熔线）、特种耐磨涂层 GEBEDUR® 及微米级公差制造标准的技术解读。
-                </p>
-              </div>
-              <div class="doc-actions">
-                <button class="btn-doc btn-doc-preview" onclick="openPdfModal('documents/sewing-archive/Products_and_services_for_the_sewing_industry.pdf', '缝纫业产品体系与线环控制全览 (24页)')" data-i18n="btn_preview">📖 在线查阅</button>
-                <a href="documents/sewing-archive/Products_and_services_for_the_sewing_industry.pdf" download class="btn-doc btn-doc-download" data-i18n="btn_download">📥 下载 PDF</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Doc 4: Atelier Monograph -->
-          <div class="doc-card" data-category="atelier">
-            <div class="doc-cover-wrap">
-              <span class="doc-type-badge" style="background:var(--accent-terracotta);">工坊专论 · 持续更新</span>
-              <img src="images/studio/studio-doll-cutting-table.jpg" alt="Lumi Song 工坊打样手记与微缩制衣工程学" loading="lazy">
-            </div>
-            <div class="doc-content">
-              <div>
-                <span class="doc-meta" style="color:var(--accent-sage);" data-i18n="d4_meta">LUMI SONG ATELIER · 创作者手记</span>
-                <h3 class="doc-title" data-i18n="d4_title">从工业标准到家庭手工：布偶纸样与微缩制衣工程学</h3>
-                <p class="doc-summary" data-i18n="d4_desc">
-                  宋婷婷多年一线手作的实战沉淀手记：家用打印机拼裁 A3 大纸样技巧、维多利亚立领微缩褶皱放量计算、日本进口绗缝细线暗缝走线心得，以及天然草木染面料与 JUKI 专机的走线张力适配。
-                </p>
-              </div>
-              <div class="doc-actions">
-                <a href="visit.html" class="btn-doc btn-doc-preview" style="flex:1;" data-i18n="btn_view_atelier">🏡 走进诞生地阅读现场</a>
-                <a href="about.html" class="btn-doc btn-doc-download" style="flex:1;" data-i18n="btn_author">📖 阅览主理人手记</a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
+    <!-- Part 2: Editorial Crosslink to Craft Reference & Materials Library -->
+    <section class="archive-crosslink-section">
+      <div class="archive-crosslink-card">
+        <span class="hub-tag" data-i18n="arch_tag">TECHNICAL DOCUMENTS & MATERIALS · 工艺资料与参考物料</span>
+        <h2 class="crosslink-card-title" data-i18n="arch_title">探索缝纫机针工学与工艺参考物料库</h2>
+        <p class="crosslink-card-desc" data-i18n="arch_desc">
+          汇集工坊收集与编撰的专业缝制技术手册、服装机针穿刺机理、皮革刀嘴针选配及实操手记。支持在线查阅与全文下载。
+        </p>
+        <a href="archive.html" class="btn-crosslink" data-i18n="arch_btn">
+          进入工艺资料与参考物料库 →
+        </a>
       </div>
     </section>
 
   </main>
 
-  <!-- PDF Modal Viewer -->
-  <div class="pdf-modal" id="pdf-modal">
-    <div class="pdf-modal-content">
-      <div class="pdf-modal-header">
-        <h4 class="pdf-modal-title" id="pdf-modal-title">文档查阅</h4>
-        <button class="pdf-modal-close" onclick="closePdfModal()" aria-label="Close">×</button>
-      </div>
-      <iframe class="pdf-modal-iframe" id="pdf-modal-iframe" src=""></iframe>
-    </div>
-  </div>
-
-  <!-- Lightbox -->
+  <!-- Lightbox for Historical Images -->
   <div class="lightbox" id="lightbox" onclick="closeLightbox()">
     <img id="lightbox-img" src="" alt="Zoomed view">
   </div>
@@ -1299,39 +978,17 @@
         e8_note_c: "深研历史方知针线之贵。以最敬畏的工业标准打磨每一道微缩线迹，以最纯粹的家庭手作赋予玩偶灵性生命。",
         e8_cap: "Contemporary Heirloom Atelier · 当代独立手作与纸样微雕",
 
-        hub_tag: "MONOGRAPHS & PUBLICATIONS · 宣传物料与缝制工学研报",
-        hub_title: "缝纫技术研报与学术文献库",
-        hub_desc: "收录由工坊整理编撰的专业缝制机理、机针穿刺动力学、纺织材料特性及世界缝纫机工业技术档案。支持线上查阅与全文下载。本知识库将持续更新，形成独立手工艺术家的开放工艺智库。",
+        nav_archive: "工艺资料",
+        t_hub: "工艺资料库",
 
-        tab_all: "全部文献 (4)",
-        tab_needles: "机针工学 (2)",
-        tab_ind: "产业与服务 (1)",
-        tab_atelier: "工坊手作专论 (1)",
-
-        d1_meta: "服装制造 · 面料防破洞机理",
-        d1_title: "服装业用的缝纫机针与微观穿刺机理研报",
-        d1_desc: "深度解析标准圆嘴针（R、RG、FFG、FG、TR）针对针织物、超细真丝与高密纯棉的穿刺动力学；详述如何轻柔拨开经纬纱线防止断丝抽丝，以及微缩服装制作中机针发热与张力控制解决方案。",
-
-        d2_meta: "皮革与产业纺织 · 刀嘴针尖学",
-        d2_title: "用于皮革与产业用纺织品的缝纫机针工学研报",
-        d2_desc: "详述各类刀嘴针尖（LR、LL、S、P、D）对厚重植物鞣牛皮与致密织物的微观切削力学；如何控制切口方向避免皮革接缝撕裂，形成美观倾斜的高定手缝感线迹，并解析粗粝帆布的高穿透力构型。",
-
-        d3_meta: "工业体系 · 线环控制与服务全览",
-        d3_title: "面向缝纫业的产品体系、线环控制与工艺全览",
-        d3_desc: "涵盖现代缝制工业核心技术 Loop Control™ 专利线环稳定系统、特殊用途针 SAN® 系列（防跳针、防过热熔线）、特种耐磨涂层 GEBEDUR® 及微米级公差制造标准的技术解读。",
-
-        d4_meta: "LUMI SONG ATELIER · 创作者手记",
-        d4_title: "从工业标准到家庭手工：布偶纸样与微缩制衣工程学",
-        d4_desc: "宋婷婷多年一线手作的实战沉淀手记：家用打印机拼裁 A3 大纸样技巧、维多利亚立领微缩褶皱放量计算、日本进口绗缝细线暗缝走线心得，以及天然草木染面料与 JUKI 专机的走线张力适配。",
-
-        btn_preview: "📖 在线查阅",
-        btn_download: "📥 下载 PDF",
-        btn_view_atelier: "🏡 走进诞生地阅读现场",
-        btn_author: "📖 阅览主理人手记",
+        arch_tag: "TECHNICAL DOCUMENTS & MATERIALS · 工艺资料与参考物料",
+        arch_title: "探索缝纫机针工学与工艺参考物料库",
+        arch_desc: "汇集工坊收集与编撰的专业缝制技术手册、服装机针穿刺机理、皮革刀嘴针选配及实操手记。支持在线查阅与全文下载。",
+        arch_btn: "进入工艺资料与参考物料库 →",
 
         footer_copy: "© 2026 LUMI SONG (宋婷婷). 保留所有权利.",
-        footer_sub: "世界缝纫机械进化史研究 · 缝制工学文献文库 · 高定手作艺术.",
-        footer_cite: "* 本专栏文献与历史资料梳理参考自公共历史档案、兄弟缝纫机博物馆、维基百科及 Groz-Beckert® 公开技术手册。文献版权归原著作者所有。"
+        footer_sub: "世界缝纫机械进化史研究 · 独立手作艺术.",
+        footer_cite: "* 本专栏历史资料梳理参考自公共历史档案、兄弟缝纫机博物馆、维基百科及公开文献资料。所有引用版权归原作者及品牌所有。"
       },
       en: {
         nav_rag_dolls: "rag dolls",
@@ -1341,6 +998,7 @@
         nav_about: "about me",
         nav_birthplace: "birthplace",
         nav_history: "sewing history",
+        nav_archive: "craft library",
         nav_inquiries: "inquiries",
 
         hero_badge: "ACADEMIC & SEWING RESEARCH · ENGINEERING PERSPECTIVE",
@@ -1355,7 +1013,7 @@
         t_1854: "1854 Perry Expedition",
         t_1938: "1938 Industrial JUKI",
         t_cont: "Artisan Haute Couture",
-        t_hub: "Research Hub",
+        t_hub: "Craft Library",
 
         e1_era: "Industrial Dawn · United Kingdom",
         e1_title: "Thomas Saint & The First Sewing Machine Patent",
@@ -1413,39 +1071,14 @@
         e8_note_c: "Understanding two centuries of history deepens the reverence for every stitch. Industrial precision meets artisan warmth.",
         e8_cap: "Contemporary Heirloom Atelier · Miniature Tailoring & Pattern Sculpting",
 
-        hub_tag: "MONOGRAPHS & PUBLICATIONS · SEWING ENGINEERING ARCHIVE",
-        hub_title: "Sewing Engineering Research & Document Archive",
-        hub_desc: "A curated repository of technical monographs, needle penetration dynamics, textile behavior whitepapers, and historical engineering literature. Available for reading and PDF download, updated continuously.",
-
-        tab_all: "All Documents (4)",
-        tab_needles: "Needle Engineering (2)",
-        tab_ind: "Industry & Service (1)",
-        tab_atelier: "Atelier Monographs (1)",
-
-        d1_meta: "Apparel Manufacturing · Fiber Protection",
-        d1_title: "Sewing Machine Needles for the Apparel Industry",
-        d1_desc: "Deep analysis of round point geometries (R, RG, FFG, FG, TR) across knitwear, ultra-fine silks, and high-density cottons. Explores loop formation physics, needle friction mitigation, and seam puckering remedies in fine tailoring.",
-
-        d2_meta: "Leather & Technical Textiles · Chisel Point Mechanics",
-        d2_title: "Needles for Leather & Technical Textiles Engineering Monograph",
-        d2_desc: "Detailed metallurgical breakdown of cutting point profiles (LR, LL, S, P, D) for vegetable-tanned leathers and technical fabrics. Guidance on incision orientation to prevent tearing while forming slanted, aesthetic heirloom seams.",
-
-        d3_meta: "Industrial Systems · Loop Control™ Dynamics",
-        d3_title: "Products & Services for the Global Sewing Industry",
-        d3_desc: "Comprehensive overview of modern industrial sewing mechanics, patented Loop Control™ loop stabilization, SAN® specialty needle architectures against skipped stitches and thread melting, and precision manufacturing tolerances.",
-
-        d4_meta: "LUMI SONG ATELIER · Maker Monograph",
-        d4_title: "From Industrial Standards to Home Couture: Miniature Pattern Engineering",
-        d4_desc: "Practical studio insights by Lumi Song: assembling large A3 master patterns with a home A4 printer, miniature gathered collar ease calculations, Japanese quilter thread blind stitching, and balancing JUKI tensions for botanical dyes.",
-
-        btn_preview: "📖 View Document",
-        btn_download: "📥 Download PDF",
-        btn_view_atelier: "🏡 Visit Birthplace",
-        btn_author: "📖 Read Artist Note",
+        arch_tag: "TECHNICAL DOCUMENTS & MATERIALS · CRAFT ARCHIVE",
+        arch_title: "Explore Sewing Needle Engineering & Reference Library",
+        arch_desc: "A collection of technical handbooks, needle penetration mechanics, leather chisel point selections, and atelier crafting notes. Available for online preview and PDF download.",
+        arch_btn: "Enter Craft Reference Library →",
 
         footer_copy: "© 2026 LUMI SONG (TINGTING SONG). ALL RIGHTS RESERVED.",
-        footer_sub: "HISTORY OF SEWING MACHINERY RESEARCH · ENGINEERING ARCHIVE · HAUTE ARTISAN CRAFT.",
-        footer_cite: "* Reference citations from public historical archives, Brother Sewing Museum, Wikipedia, and Groz-Beckert® public technical publications. All copyrights remain with their respective owners."
+        footer_sub: "HISTORY OF SEWING MACHINERY RESEARCH · HAUTE ARTISAN CRAFT.",
+        footer_cite: "* Reference citations from public historical archives, Brother Sewing Museum, Wikipedia, and technical publications. All copyrights remain with their respective owners."
       }
     };
 
@@ -1487,41 +1120,6 @@
     document.addEventListener('DOMContentLoaded', () => {
       setLanguage(currentLang);
     });
-
-    function filterDocs(category) {
-      const cards = document.querySelectorAll('.doc-card');
-      const btns = document.querySelectorAll('.filter-tab-btn');
-      
-      btns.forEach(btn => btn.classList.remove('active'));
-      event.target.classList.add('active');
-
-      cards.forEach(card => {
-        if (category === 'all' || card.getAttribute('data-category') === category) {
-          card.style.display = 'flex';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    }
-
-    function openPdfModal(pdfUrl, title) {
-      const modal = document.getElementById('pdf-modal');
-      const iframe = document.getElementById('pdf-modal-iframe');
-      const titleEl = document.getElementById('pdf-modal-title');
-      
-      titleEl.innerText = title;
-      iframe.src = pdfUrl;
-      modal.classList.add('active');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closePdfModal() {
-      const modal = document.getElementById('pdf-modal');
-      const iframe = document.getElementById('pdf-modal-iframe');
-      iframe.src = '';
-      modal.classList.remove('active');
-      document.body.style.overflow = 'auto';
-    }
 
     function openLightbox(src) {
       const lb = document.getElementById('lightbox');

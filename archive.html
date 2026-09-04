@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>工艺资料与参考物料库 | LUMI SONG</title>
+  <meta name="description" content="Lumi Song 工艺资料与参考物料库：收录机针穿刺机理、皮革刀嘴针、服装面料缝制技术手册与工坊手记，支持在线查阅与下载。仅供学习交流，侵权联系即下架。">
+  <meta name="keywords" content="缝纫工艺资料, 缝纫机针技术手册, Groz-Beckert手册, 皮革缝纫机针, 服装业机针型号, 缝纫参考物料, 缝纫学习资料, 手工布艺打样">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Jost:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Noto+Serif+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-cream: #FAF8F5;
+      --bg-warm-oat: #F3EFEA;
+      --bg-pure: #FFFFFF;
+      --text-dark: #22201E;
+      --text-muted: #55524D;
+      --text-light: #9E9A92;
+      --line-subtle: #E6E0D6;
+      --accent-terracotta: #9B634E;
+      --accent-sage: #4E6359;
+      --accent-ochre: #B88B4A;
+      --alert-bg: #FFF8F2;
+      --alert-border: #ECCDBF;
+      
+      --font-display: 'Italiana', 'Noto Serif SC', serif;
+      --font-body: 'Jost', 'Noto Serif SC', -apple-system, sans-serif;
+      --font-serif: 'Noto Serif SC', serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg-cream);
+      color: var(--text-dark);
+      font-family: var(--font-body);
+      font-weight: 300;
+      line-height: 1.85;
+      letter-spacing: 0.02em;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: var(--bg-cream);
+      border-bottom: 1px solid var(--line-subtle);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(8px);
+    }
+
+    .nav-wrapper {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 1.3rem 2rem;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+    }
+
+    .nav-left, .nav-right {
+      display: flex;
+      gap: 1.8rem;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-right { justify-content: flex-end; }
+
+    .nav-item a {
+      text-decoration: none;
+      color: var(--text-dark);
+      font-size: 0.84rem;
+      letter-spacing: 0.12em;
+      text-transform: lowercase;
+      transition: color 0.25s ease;
+    }
+
+    .nav-item a:hover { color: var(--accent-terracotta); }
+
+    .lang-switcher {
+      display: inline-flex;
+      border: 1px solid var(--line-subtle);
+      border-radius: 20px;
+      padding: 2px;
+      background: var(--bg-pure);
+    }
+
+    .lang-btn {
+      background: none;
+      border: none;
+      padding: 0.25rem 0.75rem;
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      cursor: pointer;
+      border-radius: 16px;
+      color: var(--text-muted);
+      transition: all 0.25s ease;
+    }
+
+    .lang-btn.active {
+      background: var(--text-dark);
+      color: var(--bg-cream);
+      font-weight: 500;
+    }
+
+    .brand-logo {
+      text-align: center;
+      text-decoration: none;
+      color: var(--text-dark);
+    }
+
+    .brand-logo h1 {
+      font-family: var(--font-display);
+      font-size: 2.2rem;
+      font-weight: 400;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      line-height: 1;
+    }
+
+    .brand-logo span {
+      display: block;
+      font-size: 0.65rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-top: 0.35rem;
+    }
+
+    .mobile-header-actions {
+      display: none;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: 1px solid var(--line-subtle);
+      border-radius: 4px;
+      width: 40px;
+      height: 40px;
+      padding: 8px;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      cursor: pointer;
+      z-index: 1001;
+    }
+
+    .mobile-menu-btn span {
+      display: block;
+      width: 20px;
+      height: 1.5px;
+      background: var(--text-dark);
+      transition: all 0.3s ease;
+    }
+
+    .mobile-drawer {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: var(--bg-cream);
+      z-index: 999;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 3rem 2rem;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    .mobile-drawer.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .mobile-nav-list {
+      list-style: none;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 1.8rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .mobile-nav-item a {
+      text-decoration: none;
+      font-family: var(--font-display);
+      font-size: 1.65rem;
+      color: var(--text-dark);
+      letter-spacing: 0.1em;
+      text-transform: lowercase;
+    }
+
+    /* Library Hero */
+    .library-hero {
+      max-width: 1100px;
+      margin: 4.5rem auto 2.5rem;
+      padding: 0 2rem;
+      text-align: center;
+    }
+
+    .library-badge {
+      display: inline-block;
+      font-size: 0.76rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--accent-terracotta);
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+
+    .library-title {
+      font-family: var(--font-display);
+      font-size: 3.2rem;
+      font-weight: 400;
+      line-height: 1.25;
+      color: var(--text-dark);
+      margin-bottom: 1.2rem;
+    }
+
+    .library-desc {
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      line-height: 2.1;
+      color: var(--text-muted);
+      max-width: 780px;
+      margin: 0 auto 2rem;
+    }
+
+    /* Strict Takedown Disclaimer Box */
+    .takedown-disclaimer {
+      max-width: 920px;
+      margin: 0 auto 3rem;
+      background: var(--alert-bg);
+      border: 1px solid var(--alert-border);
+      border-radius: 4px;
+      padding: 1.2rem 1.6rem;
+      text-align: left;
+      font-size: 0.85rem;
+      color: #7A4230;
+      line-height: 1.8;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+    .takedown-icon {
+      font-size: 1.3rem;
+      line-height: 1.2;
+      flex-shrink: 0;
+    }
+
+    /* Category Filter Tabs */
+    .filter-bar-wrap {
+      max-width: 1360px;
+      margin: 0 auto 3.5rem;
+      padding: 0 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+    }
+
+    .filter-tab-btn {
+      padding: 0.5rem 1.4rem;
+      border: 1px solid var(--line-subtle);
+      background: var(--bg-pure);
+      border-radius: 20px;
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      color: var(--text-dark);
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    .filter-tab-btn.active, .filter-tab-btn:hover {
+      background: var(--text-dark);
+      color: var(--bg-cream);
+      border-color: var(--text-dark);
+    }
+
+    /* Document Cards Grid */
+    .docs-section {
+      max-width: 1360px;
+      margin: 0 auto 6rem;
+      padding: 0 2rem;
+    }
+
+    .docs-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem;
+    }
+
+    .doc-card {
+      background: var(--bg-pure);
+      border: 1px solid var(--line-subtle);
+      border-radius: 2px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 6px 20px rgba(34,32,30,0.03);
+      transition: all 0.3s ease;
+    }
+
+    .doc-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 14px 36px rgba(34,32,30,0.08);
+      border-color: var(--text-dark);
+    }
+
+    .doc-cover-wrap {
+      width: 100%;
+      height: 280px;
+      background: #EFECE6;
+      overflow: hidden;
+      position: relative;
+      border-bottom: 1px solid var(--line-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .doc-cover-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 1rem;
+      transition: transform 0.5s ease;
+    }
+
+    .doc-card:hover .doc-cover-wrap img {
+      transform: scale(1.03);
+    }
+
+    .doc-type-badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: var(--text-dark);
+      color: var(--bg-cream);
+      font-size: 0.68rem;
+      padding: 0.2rem 0.6rem;
+      letter-spacing: 0.1em;
+      border-radius: 2px;
+      text-transform: uppercase;
+    }
+
+    .doc-content {
+      padding: 1.8rem 1.6rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: space-between;
+    }
+
+    .doc-meta {
+      font-size: 0.74rem;
+      color: var(--accent-terracotta);
+      letter-spacing: 0.1em;
+      margin-bottom: 0.6rem;
+      display: block;
+      text-transform: uppercase;
+    }
+
+    .doc-title {
+      font-family: var(--font-display);
+      font-size: 1.32rem;
+      font-weight: 400;
+      color: var(--text-dark);
+      line-height: 1.35;
+      margin-bottom: 0.8rem;
+    }
+
+    .doc-summary {
+      font-family: var(--font-serif);
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+      text-align: justify;
+    }
+
+    .doc-actions {
+      display: flex;
+      gap: 0.8rem;
+      margin-top: auto;
+      border-top: 1px dashed var(--line-subtle);
+      padding-top: 1.2rem;
+    }
+
+    .btn-doc {
+      flex: 1;
+      text-align: center;
+      padding: 0.6rem 0.8rem;
+      font-size: 0.76rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: 1px solid var(--text-dark);
+      border-radius: 2px;
+      transition: all 0.25s ease;
+      cursor: pointer;
+    }
+
+    .btn-doc-preview {
+      background: var(--bg-pure);
+      color: var(--text-dark);
+    }
+
+    .btn-doc-preview:hover {
+      background: var(--text-dark);
+      color: var(--bg-cream);
+    }
+
+    .btn-doc-download {
+      background: var(--text-dark);
+      color: var(--bg-cream);
+    }
+
+    .btn-doc-download:hover {
+      background: var(--accent-terracotta);
+      border-color: var(--accent-terracotta);
+    }
+
+    /* PDF In-browser Modal Previewer */
+    .pdf-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(34,32,30,0.85);
+      backdrop-filter: blur(8px);
+      z-index: 9999;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    .pdf-modal.active { display: flex; }
+
+    .pdf-modal-content {
+      background: #fff;
+      width: 100%;
+      max-width: 1100px;
+      height: 88vh;
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 16px 50px rgba(0,0,0,0.4);
+    }
+
+    .pdf-modal-header {
+      padding: 1rem 1.5rem;
+      background: var(--bg-warm-oat);
+      border-bottom: 1px solid var(--line-subtle);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .pdf-modal-title {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      color: var(--text-dark);
+    }
+
+    .pdf-modal-close {
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      line-height: 1;
+      cursor: pointer;
+      color: var(--text-dark);
+      padding: 0 0.5rem;
+    }
+
+    .pdf-modal-iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* History Cross-link Banner */
+    .history-crosslink-wrap {
+      max-width: 1360px;
+      margin: 4rem auto 2rem;
+      padding: 0 2rem;
+    }
+
+    .history-crosslink-card {
+      background: var(--bg-warm-oat);
+      border: 1px solid var(--line-subtle);
+      padding: 3rem 2.5rem;
+      text-align: center;
+      border-radius: 2px;
+    }
+
+    .history-crosslink-card h3 {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .history-crosslink-card p {
+      font-family: var(--font-serif);
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      max-width: 680px;
+      margin: 0 auto 1.8rem;
+    }
+
+    footer {
+      background: var(--bg-cream);
+      border-top: 1px solid var(--line-subtle);
+      padding: 4rem 2rem;
+      text-align: center;
+      font-size: 0.78rem;
+      color: var(--text-light);
+      letter-spacing: 0.14em;
+    }
+
+    @media (max-width: 1024px) {
+      .docs-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      .nav-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.9rem 1.2rem;
+      }
+      .nav-left, .nav-right { display: none; }
+      .mobile-header-actions { display: flex; }
+      .mobile-menu-btn { display: flex; }
+      .mobile-drawer { display: flex; }
+      
+      .brand-logo h1 { font-size: 1.65rem; }
+      .brand-logo span { font-size: 0.58rem; }
+
+      .library-hero { margin: 3rem auto 2rem; padding: 0 1.2rem; }
+      .library-title { font-size: 2.2rem; }
+      .library-desc { font-size: 0.92rem; }
+
+      .docs-section { padding: 0 1.2rem; margin-bottom: 4rem; }
+      .docs-grid { grid-template-columns: 1fr; gap: 1.8rem; }
+    }
+  </style>
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "headline": "工艺资料与参考物料库 | LUMI SONG",
+    "description": "精选专业缝纫机针技术手册、皮革切削针力学与服装缝制工业参考资料，供手工艺人及爱好者交流学习，侵权联系即删。",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Lumi Song Atelier",
+      "url": "https://realsongting.github.io"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Editorial Header -->
+  <header>
+    <div class="nav-wrapper">
+      <ul class="nav-left">
+        <li class="nav-item"><a href="index.html#rag-dolls" data-i18n="nav_rag_dolls">艺术布偶</a></li>
+        <li class="nav-item"><a href="index.html#bags" data-i18n="nav_bags">原创布包</a></li>
+        <li class="nav-item"><a href="index.html#accessories" data-i18n="nav_living">宠物与生活</a></li>
+      </ul>
+
+      <a href="index.html" class="brand-logo">
+        <h1>lumi song</h1>
+        <span data-i18n="brand_sub">手作设计与工坊</span>
+      </a>
+
+      <ul class="nav-right">
+        <li class="nav-item"><a href="about.html" data-i18n="nav_about">关于我</a></li>
+        <li class="nav-item"><a href="visit.html" data-i18n="nav_birthplace">诞生地</a></li>
+        <li class="nav-item"><a href="history.html" data-i18n="nav_history">缝纫发展史</a></li>
+        <li class="nav-item"><a href="archive.html" style="color:var(--accent-terracotta);" data-i18n="nav_archive">工艺资料</a></li>
+        <li class="nav-item"><a href="index.html#contact" data-i18n="nav_inquiries">合作洽谈</a></li>
+        <li class="nav-item">
+          <div class="lang-switcher">
+            <button class="lang-btn active" id="btn-zh" onclick="setLanguage('zh')">中文</button>
+            <button class="lang-btn" id="btn-en" onclick="setLanguage('en')">EN</button>
+          </div>
+        </li>
+      </ul>
+
+      <!-- Mobile Top Actions -->
+      <div class="mobile-header-actions">
+        <div class="lang-switcher">
+          <button class="lang-btn active" id="btn-zh-top-m" onclick="setLanguage('zh')">中</button>
+          <button class="lang-btn" id="btn-en-top-m" onclick="setLanguage('en')">EN</button>
+        </div>
+        <button class="mobile-menu-btn" id="mobile-toggle-btn" onclick="toggleMobileMenu()" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <ul class="mobile-nav-list">
+      <li class="mobile-nav-item"><a href="index.html#rag-dolls" onclick="toggleMobileMenu()" data-i18n="nav_rag_dolls">艺术布偶</a></li>
+      <li class="mobile-nav-item"><a href="index.html#bags" onclick="toggleMobileMenu()" data-i18n="nav_bags">原创布包</a></li>
+      <li class="mobile-nav-item"><a href="index.html#accessories" onclick="toggleMobileMenu()" data-i18n="nav_living">宠物与生活</a></li>
+      <li class="mobile-nav-item"><a href="about.html" onclick="toggleMobileMenu()" data-i18n="nav_about">关于我</a></li>
+      <li class="mobile-nav-item"><a href="visit.html" onclick="toggleMobileMenu()" data-i18n="nav_birthplace">诞生地</a></li>
+      <li class="mobile-nav-item"><a href="history.html" onclick="toggleMobileMenu()" data-i18n="nav_history">缝纫发展史</a></li>
+      <li class="mobile-nav-item"><a href="archive.html" onclick="toggleMobileMenu()" style="color:var(--accent-terracotta);" data-i18n="nav_archive">工艺资料</a></li>
+      <li class="mobile-nav-item"><a href="index.html#contact" onclick="toggleMobileMenu()" data-i18n="nav_inquiries">合作洽谈</a></li>
+    </ul>
+
+    <div class="lang-switcher" style="margin-top: 1rem;">
+      <button class="lang-btn active" id="btn-zh-m" onclick="setLanguage('zh')">中文</button>
+      <button class="lang-btn" id="btn-en-m" onclick="setLanguage('en')">EN</button>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <main>
+    <section class="library-hero">
+      <span class="library-badge" data-i18n="lib_badge">REFERENCE & LEARNING MATERIALS · 学习与参考物料库</span>
+      <h1 class="library-title" data-i18n="lib_title">工艺资料与参考物料库</h1>
+      <p class="library-desc" data-i18n="lib_desc">
+        这里收录了工坊在手作实践与工艺学习中收集整理的专业缝制技术手册、机针选用指南及相关学习资料。希望为喜爱缝纫、布艺与手工的伙伴提供踏实实用的参考。本资料库将持续增补更新。
+      </p>
+
+      <!-- Clear Copyright & Takedown Notice -->
+      <div class="takedown-disclaimer">
+        <span class="takedown-icon">⚖️</span>
+        <div>
+          <strong data-i18n="disclaimer_t">学习交流与版权声明（侵权联系即下架）：</strong>
+          <span data-i18n="disclaimer_c">
+            本栏目所分享之技术资料与参考手册，均源自公开渠道，仅供手工艺爱好者个人学习、技艺研究与非商业交流使用。相关出版物与技术图样版权归原作者及品牌机构（如 Groz-Beckert® 等）所有。如权利人认为涉及侵权，请通过邮箱（lumi.t.song@gmail.com）或电话（+86 18339931747）与我们联系，我们将在核实后第一时间下架相关内容。
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filter Tabs -->
+    <div class="filter-bar-wrap">
+      <button class="filter-tab-btn active" onclick="filterDocs('all')" data-i18n="tab_all">全部资料 (4)</button>
+      <button class="filter-tab-btn" onclick="filterDocs('needles')" data-i18n="tab_needles">机针与面料 (2)</button>
+      <button class="filter-tab-btn" onclick="filterDocs('industry')" data-i18n="tab_industry">缝制体系与服务 (1)</button>
+      <button class="filter-tab-btn" onclick="filterDocs('atelier')" data-i18n="tab_atelier">工坊实操笔记 (1)</button>
+    </div>
+
+    <!-- Document Cards Grid -->
+    <section class="docs-section">
+      <div class="docs-grid" id="docs-grid">
+
+        <!-- Doc 1: Apparel Industry Needles -->
+        <div class="doc-card" data-category="needles">
+          <div class="doc-cover-wrap">
+            <span class="doc-type-badge">PDF 参考手册 · 16页</span>
+            <img src="documents/sewing-archive/cover-apparel-needles.jpg" alt="服装业用的缝纫机针参考手册封面" loading="lazy">
+          </div>
+          <div class="doc-content">
+            <div>
+              <span class="doc-meta" data-i18n="d1_meta">服装制作 · 面料防破洞与抽丝</span>
+              <h3 class="doc-title" data-i18n="d1_title">服装业用的缝纫机针参考手册</h3>
+              <p class="doc-summary" data-i18n="d1_desc">
+                详细介绍了圆嘴针（R、RG、FFG、FG、TR）针对针织、超细真丝与棉麻面料的机理；如何轻柔拨开纱线避免断丝和破洞，以及微缩服装制作中缝纫机针选用与张力控制常识。
+              </p>
+            </div>
+            <div class="doc-actions">
+              <button class="btn-doc btn-doc-preview" onclick="openPdfModal('documents/sewing-archive/Sewing_machine_needles_for_the_apparel_industry.pdf', '服装业缝纫机针参考手册 (16页)')" data-i18n="btn_preview">📖 在线查阅</button>
+              <a href="documents/sewing-archive/Sewing_machine_needles_for_the_apparel_industry.pdf" download class="btn-doc btn-doc-download" data-i18n="btn_download">📥 下载 PDF</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Doc 2: Leather & Technical Needles -->
+        <div class="doc-card" data-category="needles">
+          <div class="doc-cover-wrap">
+            <span class="doc-type-badge">PDF 参考手册 · 16页</span>
+            <img src="documents/sewing-archive/cover-leather-textiles.jpg" alt="用于皮革和产业用纺织品的缝纫机针参考手册封面" loading="lazy">
+          </div>
+          <div class="doc-content">
+            <div>
+              <span class="doc-meta" data-i18n="d2_meta">皮革与厚料 · 刀嘴针选配</span>
+              <h3 class="doc-title" data-i18n="d2_title">用于皮革与产业用纺织品的缝纫机针参考手册</h3>
+              <p class="doc-summary" data-i18n="d2_desc">
+                讲解了刀嘴针尖（LR、LL、S、P、D）对牛皮、粗帆布与厚重织物的切削穿透特点；如何根据走线方向挑选针型以防皮革撕裂，呈现饱满优雅的斜向缝线效果。
+              </p>
+            </div>
+            <div class="doc-actions">
+              <button class="btn-doc btn-doc-preview" onclick="openPdfModal('documents/sewing-archive/Sewing_machine_needles_for_leather_and_technical_textiles.pdf', '皮革与厚料缝纫机针参考手册 (16页)')" data-i18n="btn_preview">📖 在线查阅</button>
+              <a href="documents/sewing-archive/Sewing_machine_needles_for_leather_and_technical_textiles.pdf" download class="btn-doc btn-doc-download" data-i18n="btn_download">📥 下载 PDF</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Doc 3: Products & Services for Sewing Industry -->
+        <div class="doc-card" data-category="industry">
+          <div class="doc-cover-wrap">
+            <span class="doc-type-badge">PDF 参考手册 · 24页</span>
+            <img src="documents/sewing-archive/cover-sewing-industry.jpg" alt="面向缝纫业的产品与服务手册封面" loading="lazy">
+          </div>
+          <div class="doc-content">
+            <div>
+              <span class="doc-meta" data-i18n="d3_meta">行业技术 · 线环形成与质量保障</span>
+              <h3 class="doc-title" data-i18n="d3_title">面向缝纫业的产品与服务手册</h3>
+              <p class="doc-summary" data-i18n="d3_desc">
+                系统介绍缝纫机针规格体系、线环稳定结构、防跳针特殊用途针以及耐磨涂层技术，是一份帮助全面了解现代工业缝制配件标准与常识的权威工具资料。
+              </p>
+            </div>
+            <div class="doc-actions">
+              <button class="btn-doc btn-doc-preview" onclick="openPdfModal('documents/sewing-archive/Products_and_services_for_the_sewing_industry.pdf', '面向缝纫业的产品与服务手册 (24页)')" data-i18n="btn_preview">📖 在线查阅</button>
+              <a href="documents/sewing-archive/Products_and_services_for_the_sewing_industry.pdf" download class="btn-doc btn-doc-download" data-i18n="btn_download">📥 下载 PDF</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Doc 4: Atelier Monograph -->
+        <div class="doc-card" data-category="atelier">
+          <div class="doc-cover-wrap">
+            <span class="doc-type-badge" style="background:var(--accent-terracotta);">工坊实操笔记 · 持续更新</span>
+            <img src="images/studio/studio-doll-cutting-table.jpg" alt="Lumi Song 工坊打样实操笔记" loading="lazy">
+          </div>
+          <div class="doc-content">
+            <div>
+              <span class="doc-meta" style="color:var(--accent-sage);" data-i18n="d4_meta">LUMI SONG ATELIER · 创作者手记</span>
+              <h3 class="doc-title" data-i18n="d4_title">从工业标准到家庭手工：布偶纸样与微缩制衣实操手记</h3>
+              <p class="doc-summary" data-i18n="d4_desc">
+                宋婷婷多年一线手作的实战沉淀手记：家用普通打印机拼接 A3 图纸技巧、微缩褶皱放量剪裁、日本进口绗缝细线暗缝走线心得，以及草木染粗麻与 JUKI 缝纫机的走线张力适配。
+              </p>
+            </div>
+            <div class="doc-actions">
+              <a href="visit.html" class="btn-doc btn-doc-preview" style="flex:1;" data-i18n="btn_visit">🏡 走进诞生地阅读现场</a>
+              <a href="about.html" class="btn-doc btn-doc-download" style="flex:1;" data-i18n="btn_about">📖 阅览主理人手记</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Crosslink Banner to History -->
+    <section class="history-crosslink-wrap">
+      <div class="history-crosslink-card">
+        <h3 data-i18n="cross_title">想要追溯两百年缝纫机械的发明演进？</h3>
+        <p data-i18n="cross_desc">
+          从18世纪工业革命、Elias Howe 革命性的双线锁式线迹发明，到德国格罗茨精密制针与 JUKI 工业专机。欢迎走进互动历史长卷。
+        </p>
+        <a href="history.html" class="btn-doc btn-doc-download" style="display:inline-block; padding:0.8rem 2.2rem;" data-i18n="btn_history">
+          探寻世界缝纫机械进化史 →
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- PDF Modal Viewer -->
+  <div class="pdf-modal" id="pdf-modal">
+    <div class="pdf-modal-content">
+      <div class="pdf-modal-header">
+        <h4 class="pdf-modal-title" id="pdf-modal-title">资料查阅</h4>
+        <button class="pdf-modal-close" onclick="closePdfModal()" aria-label="Close">×</button>
+      </div>
+      <iframe class="pdf-modal-iframe" id="pdf-modal-iframe" src=""></iframe>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p data-i18n="footer_copy">© 2026 LUMI SONG (宋婷婷). 保留所有权利.</p>
+    <p data-i18n="footer_sub">缝制工艺资料与参考物料库 · 独立手作艺术.</p>
+    <p style="font-size:0.72rem; color:var(--text-light); margin-top:0.8rem;" data-i18n="footer_cite">
+      * 资料仅供手工艺个人学习交流使用，相关技术文献版权归原作者及品牌所有。如有侵权，联系即下架。
+    </p>
+  </footer>
+
+  <!-- Multilingual Dictionary -->
+  <script>
+    const translations = {
+      zh: {
+        nav_rag_dolls: "艺术布偶",
+        nav_bags: "原创布包",
+        nav_living: "宠物与生活",
+        brand_sub: "手作设计与工坊",
+        nav_about: "关于我",
+        nav_birthplace: "诞生地",
+        nav_history: "缝纫发展史",
+        nav_archive: "工艺资料",
+        nav_inquiries: "合作洽谈",
+
+        lib_badge: "REFERENCE & LEARNING MATERIALS · 学习与参考物料库",
+        lib_title: "工艺资料与参考物料库",
+        lib_desc: "这里收录了工坊在手作实践与工艺学习中收集整理的专业缝制技术手册、机针选用指南及相关学习资料。希望为喜爱缝纫、布艺与手工的伙伴提供踏实实用的参考。本资料库将持续增补更新。",
+
+        disclaimer_t: "学习交流与版权声明（侵权联系即下架）：",
+        disclaimer_c: "本栏目所分享之技术资料与参考手册，均源自公开渠道，仅供手工艺爱好者个人学习、技艺研究与非商业交流使用。相关出版物与技术图样版权归原作者及品牌机构（如 Groz-Beckert® 等）所有。如权利人认为涉及侵权，请通过邮箱（lumi.t.song@gmail.com）或电话（+86 18339931747）与我们联系，我们将在核实后第一时间下架相关内容。",
+
+        tab_all: "全部资料 (4)",
+        tab_needles: "机针与面料 (2)",
+        tab_industry: "缝制体系与服务 (1)",
+        tab_atelier: "工坊实操笔记 (1)",
+
+        d1_meta: "服装制作 · 面料防破洞与抽丝",
+        d1_title: "服装业用的缝纫机针参考手册",
+        d1_desc: "详细介绍了圆嘴针（R、RG、FFG、FG、TR）针对针织、超细真丝与棉麻面料的机理；如何轻柔拨开纱线避免断丝和破洞，以及微缩服装制作中缝纫机针选用与张力控制常识。",
+
+        d2_meta: "皮革与厚料 · 刀嘴针选配",
+        d2_title: "用于皮革与产业用纺织品的缝纫机针参考手册",
+        d2_desc: "讲解了刀嘴针尖（LR、LL、S、P、D）对牛皮、粗帆布与厚重织物的切削穿透特点；如何根据走线方向挑选针型以防皮革撕裂，呈现饱满优雅的斜向缝线效果。",
+
+        d3_meta: "行业技术 · 线环形成与质量保障",
+        d3_title: "面向缝纫业的产品与服务手册",
+        d3_desc: "系统介绍缝纫机针规格体系、线环稳定结构、防跳针特殊用途针以及耐磨涂层技术，是一份帮助全面了解现代工业缝制配件标准与常识的权威工具资料。",
+
+        d4_meta: "LUMI SONG ATELIER · 创作者手记",
+        d4_title: "从工业标准到家庭手工：布偶纸样与微缩制衣实操手记",
+        d4_desc: "宋婷婷多年一线手作的实战沉淀手记：家用普通打印机拼接 A3 图纸技巧、微缩褶皱放量剪裁、日本进口绗缝细线暗缝走线心得，以及草木染粗麻与 JUKI 缝纫机的走线张力适配。",
+
+        btn_preview: "📖 在线查阅",
+        btn_download: "📥 下载 PDF",
+        btn_visit: "🏡 走进诞生地阅读现场",
+        btn_about: "📖 阅览主理人手记",
+
+        cross_title: "想要追溯两百年缝纫机械的发明演进？",
+        cross_desc: "从18世纪工业革命、Elias Howe 革命性的双线锁式线迹发明，到德国格罗茨精密制针与 JUKI 工业专机。欢迎走进互动历史长卷。",
+        btn_history: "探寻世界缝纫机械进化史 →",
+
+        footer_copy: "© 2026 LUMI SONG (宋婷婷). 保留所有权利.",
+        footer_sub: "缝制工艺资料与参考物料库 · 独立手作艺术.",
+        footer_cite: "* 资料仅供手工艺个人学习交流使用，相关技术文献版权归原作者及品牌所有。如有侵权，联系即下架。"
+      },
+      en: {
+        nav_rag_dolls: "rag dolls",
+        nav_bags: "studio bags",
+        nav_living: "pet & living",
+        brand_sub: "design & atelier",
+        nav_about: "about me",
+        nav_birthplace: "birthplace",
+        nav_history: "sewing history",
+        nav_archive: "craft library",
+        nav_inquiries: "inquiries",
+
+        lib_badge: "REFERENCE & LEARNING MATERIALS · CRAFT ARCHIVE",
+        lib_title: "Sewing Reference & Material Library",
+        lib_desc: "A curated collection of technical handbooks, needle selection guides, and studio notes gathered during our crafting journey. Offered as a practical resource for artisans and sewing enthusiasts, updated continuously.",
+
+        disclaimer_t: "Educational Fair-Use & Takedown Notice:",
+        disclaimer_c: "Materials shared here are sourced from public channels solely for personal study, craft research, and non-commercial exchange. All copyrights and trademarks belong to their respective publishers (such as Groz-Beckert®). If any copyright owner requests removal, please contact lumi.t.song@gmail.com or +86 18339931747; we will verify and take down the content immediately.",
+
+        tab_all: "All Materials (4)",
+        tab_needles: "Needles & Fabrics (2)",
+        tab_industry: "Systems & Services (1)",
+        tab_atelier: "Studio Notes (1)",
+
+        d1_meta: "Apparel · Fiber Protection & Seams",
+        d1_title: "Sewing Machine Needles for Apparel Reference Handbook",
+        d1_desc: "Explains round point geometries (R, RG, FFG, FG, TR) for knits, fine silks, and cotton linens; methods to separate yarns without puncture damage; and tension calibration for delicate micro-tailoring.",
+
+        d2_meta: "Leather & Heavy Fabrics · Chisel Points",
+        d2_title: "Needles for Leather & Technical Textiles Technical Handbook",
+        d2_desc: "Details cutting point profiles (LR, LL, S, P, D) across leathers and heavy canvas; incision angle selection to prevent tearing; and producing slanted, aesthetic heirloom stitches.",
+
+        d3_meta: "Industrial Systems · Loop Control",
+        d3_title: "Products & Services for the Global Sewing Industry Handbook",
+        d3_desc: "A reference guide to sewing needle specification standards, loop stabilization, SAN® specialty designs against skipped stitches, and precision metallurgical standards.",
+
+        d4_meta: "LUMI SONG ATELIER · Studio Monograph",
+        d4_title: "From Industrial Standards to Home Couture: Miniature Pattern Craft Notes",
+        d4_desc: "Firsthand studio insights by Lumi Song: taping A3 master patterns from standard A4 home prints, miniature gathered collar ease calculations, blind stitching, and tuning JUKI tensions for botanical dyes.",
+
+        btn_preview: "📖 View Document",
+        btn_download: "📥 Download PDF",
+        btn_visit: "🏡 Visit Birthplace",
+        btn_about: "📖 Read Artist Note",
+
+        cross_title: "Explore the Two-Century History of Sewing Machines?",
+        cross_desc: "From the 18th-century industrial revolution and Elias Howe's lockstitch breakthrough to German precision metallurgy and modern JUKI workstations.",
+        btn_history: "Explore the History of Sewing Machinery →",
+
+        footer_copy: "© 2026 LUMI SONG (TINGTING SONG). ALL RIGHTS RESERVED.",
+        footer_sub: "SEWING CRAFT REFERENCE ARCHIVE · INDEPENDENT ARTISAN ATELIER.",
+        footer_cite: "* Materials shared for educational study. All copyrights belong to original publishers. Takedown upon notice."
+      }
+    };
+
+    let currentLang = localStorage.getItem('lumi_lang') || 'zh';
+
+    function setLanguage(lang) {
+      currentLang = lang;
+      localStorage.setItem('lumi_lang', lang);
+      
+      const isZh = lang === 'zh';
+      document.getElementById('btn-zh').classList.toggle('active', isZh);
+      document.getElementById('btn-en').classList.toggle('active', !isZh);
+      
+      const btnZhTopM = document.getElementById('btn-zh-top-m');
+      const btnEnTopM = document.getElementById('btn-en-top-m');
+      if (btnZhTopM && btnEnTopM) {
+        btnZhTopM.classList.toggle('active', isZh);
+        btnEnTopM.classList.toggle('active', !isZh);
+      }
+      
+      const btnZhM = document.getElementById('btn-zh-m');
+      const btnEnM = document.getElementById('btn-en-m');
+      if (btnZhM && btnEnM) {
+        btnZhM.classList.toggle('active', isZh);
+        btnEnM.classList.toggle('active', !isZh);
+      }
+      
+      const t = translations[lang];
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (t[key]) {
+          el.innerHTML = t[key];
+        }
+      });
+      
+      document.documentElement.lang = isZh ? 'zh-CN' : 'en';
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      setLanguage(currentLang);
+    });
+
+    function filterDocs(category) {
+      const cards = document.querySelectorAll('.doc-card');
+      const btns = document.querySelectorAll('.filter-tab-btn');
+      
+      btns.forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+
+      cards.forEach(card => {
+        if (category === 'all' || card.getAttribute('data-category') === category) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    function openPdfModal(pdfUrl, title) {
+      const modal = document.getElementById('pdf-modal');
+      const iframe = document.getElementById('pdf-modal-iframe');
+      const titleEl = document.getElementById('pdf-modal-title');
+      
+      titleEl.innerText = title;
+      iframe.src = pdfUrl;
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closePdfModal() {
+      const modal = document.getElementById('pdf-modal');
+      const iframe = document.getElementById('pdf-modal-iframe');
+      iframe.src = '';
+      modal.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+
+    function toggleMobileMenu() {
+      const drawer = document.getElementById('mobile-drawer');
+      const btn = document.getElementById('mobile-toggle-btn');
+      drawer.classList.toggle('active');
+      const isOpen = drawer.classList.contains('active');
+      document.body.style.overflow = isOpen ? 'hidden' : 'auto';
+      
+      if (isOpen) {
+        btn.innerHTML = '<span style="transform:rotate(45deg) translate(4px, 4px);"></span><span style="opacity:0;"></span><span style="transform:rotate(-45deg) translate(4px, -4px);"></span>';
+      } else {
+        btn.innerHTML = '<span></span><span></span><span></span>';
+      }
+    }
+  </script>
+
+</body>
+</html>
