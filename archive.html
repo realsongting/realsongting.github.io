@@ -243,108 +243,40 @@
       margin: 0 auto;
     }
 
-    /* Submenu Navigation Bar (可扩展菜单栏) */
-    .archive-subnav-wrapper {
-      position: sticky;
-      top: 68px;
-      z-index: 900;
-      background: rgba(250, 248, 245, 0.95);
-      backdrop-filter: blur(12px);
-      border-top: 1px solid var(--line-subtle);
-      border-bottom: 1px solid var(--line-subtle);
-      padding: 0.7rem 1.5rem;
-      margin-bottom: 3.5rem;
-    }
-
-    .archive-subnav-container {
-      max-width: 1040px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.2rem;
-    }
-
-    .subnav-tab-btn {
+    /* Typographic Section Switcher (如 Jess Brown / India Flint 般克制无框纯文字排版) */
+    .archive-text-nav {
       display: flex;
+      justify-content: center;
       align-items: center;
-      gap: 0.85rem;
-      padding: 0.85rem 1.25rem;
-      background: var(--bg-pure);
-      border: 1px solid var(--line-subtle);
-      border-radius: 4px;
-      cursor: pointer;
-      transition: all 0.25s ease;
-      text-align: left;
+      gap: 3.5rem;
+      margin: 3rem auto 0;
+      padding: 0;
+      background: none;
+      border: none;
     }
 
-    .subnav-tab-btn:hover:not(:disabled) {
-      border-color: var(--accent-terracotta);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(34,32,30,0.04);
-    }
-
-    .subnav-tab-btn:hover:not(:disabled) .tab-main,
-    .subnav-tab-btn:hover:not(:disabled) .tab-index {
-      color: var(--accent-terracotta);
-    }
-
-    .subnav-tab-btn.active {
-      background: var(--bg-pure);
-      border-color: var(--accent-terracotta);
-      box-shadow: 0 4px 14px rgba(155, 99, 78, 0.08);
-    }
-
-    .subnav-tab-btn .tab-index {
+    .text-tab-link {
+      background: none;
+      border: none;
+      padding: 0.4rem 0.6rem;
       font-family: var(--font-display);
       font-size: 1.35rem;
+      letter-spacing: 0.22em;
       color: var(--text-light);
-      font-weight: 500;
-      line-height: 1;
-      transition: color 0.25s ease;
-    }
-
-    .subnav-tab-btn.active .tab-index {
-      color: var(--accent-terracotta);
-      font-weight: 600;
-    }
-
-    .subnav-tab-btn .tab-text-wrap {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .subnav-tab-btn .tab-main {
-      font-size: 0.92rem;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      color: var(--text-dark);
+      cursor: pointer;
+      transition: color 0.3s ease;
+      text-decoration: none;
       line-height: 1.2;
-      transition: color 0.25s ease;
+      text-transform: uppercase;
     }
 
-    .subnav-tab-btn.active .tab-main {
+    .text-tab-link:hover {
+      color: var(--accent-terracotta);
+    }
+
+    .text-tab-link.active {
       color: var(--accent-terracotta);
       font-weight: 500;
-    }
-
-    .subnav-tab-btn .tab-sub {
-      font-size: 0.68rem;
-      letter-spacing: 0.04em;
-      color: var(--text-light);
-      margin-top: 0.2rem;
-      transition: color 0.25s ease;
-    }
-
-    .subnav-tab-btn.active .tab-sub {
-      color: var(--accent-terracotta);
-      opacity: 0.85;
-    }
-
-    .subnav-tab-btn.tab-future {
-      opacity: 0.55;
-      cursor: not-allowed;
-      border-style: dashed;
-      background: rgba(243, 239, 234, 0.5);
     }
 
     /* Tab Panes */
@@ -395,16 +327,15 @@
       color: var(--text-muted);
     }
 
-    /* Fast Year Jump Navigator (Groz-Beckert inspired) */
+    /* Fast Year Jump Navigator (Groz-Beckert inspired, restrained & borderless) */
     .timeline-nav-wrapper {
       position: sticky;
-      top: 140px;
+      top: 68px;
       background: rgba(250, 248, 245, 0.94);
       backdrop-filter: blur(10px);
-      border-top: 1px solid var(--line-subtle);
-      border-bottom: 1px solid var(--line-subtle);
+      border-bottom: 1px solid rgba(230, 224, 214, 0.5);
       z-index: 850;
-      padding: 0.6rem 1rem;
+      padding: 0.75rem 1rem;
       margin-bottom: 3.5rem;
     }
 
@@ -412,7 +343,8 @@
       max-width: 1280px;
       margin: 0 auto;
       display: flex;
-      gap: 0.8rem;
+      justify-content: center;
+      gap: 1.2rem;
       overflow-x: auto;
       white-space: nowrap;
       scrollbar-width: none;
@@ -425,28 +357,27 @@
     .time-nav-pill {
       display: inline-flex;
       align-items: center;
-      padding: 0.35rem 0.9rem;
-      border: 1px solid var(--line-subtle);
-      background: var(--bg-pure);
-      border-radius: 20px;
-      font-size: 0.76rem;
-      letter-spacing: 0.06em;
-      color: var(--text-dark);
+      padding: 0.25rem 0.4rem;
+      border: none;
+      background: none;
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      color: var(--text-light);
       text-decoration: none;
-      transition: all 0.25s ease;
+      transition: color 0.25s ease;
       cursor: pointer;
     }
 
     .time-nav-pill:hover, .time-nav-pill.active {
-      background: var(--bg-pure);
+      background: none;
       color: var(--accent-terracotta);
-      border-color: var(--accent-terracotta);
+      border: none;
     }
 
     .time-nav-pill strong {
       font-family: var(--font-display);
-      margin-right: 0.35rem;
-      font-size: 0.85rem;
+      margin-right: 0.3rem;
+      font-size: 0.92rem;
     }
 
     /* Groz-Beckert Style Interactive Timeline */
@@ -866,14 +797,11 @@
       .archive-title { font-size: 2.2rem; }
       .archive-desc { font-size: 0.92rem; }
 
-      .archive-subnav-wrapper { top: 60px; padding: 0.5rem 0.8rem; margin-bottom: 2.5rem; }
-      .archive-subnav-container { grid-template-columns: repeat(3, 1fr); gap: 0.5rem; }
-      .subnav-tab-btn { padding: 0.6rem 0.6rem; gap: 0.5rem; }
-      .subnav-tab-btn .tab-index { font-size: 1.1rem; }
-      .subnav-tab-btn .tab-main { font-size: 0.82rem; }
-      .subnav-tab-btn .tab-sub { font-size: 0.58rem; }
+      .archive-text-nav { gap: 2rem; margin-top: 2rem; }
+      .text-tab-link { font-size: 1.15rem; letter-spacing: 0.16em; }
 
-      .timeline-nav-wrapper { top: 120px; }
+      .timeline-nav-wrapper { top: 60px; }
+      .timeline-nav-scroll { justify-content: flex-start; gap: 0.8rem; }
       .timeline-section { padding: 0 1.2rem; margin-bottom: 4rem; }
       .timeline-spine { left: 18px; }
       .timeline-node { grid-template-columns: 1fr; gap: 1.5rem; padding-left: 40px; margin-bottom: 4rem; }
@@ -882,11 +810,6 @@
 
       .docs-section { padding: 0 1.2rem; margin-bottom: 4rem; }
       .docs-grid { grid-template-columns: 1fr; gap: 1.8rem; }
-    }
-
-    @media (max-width: 540px) {
-      .archive-subnav-container { grid-template-columns: 1fr; gap: 0.6rem; }
-      .subnav-tab-btn { padding: 0.75rem 1rem; }
     }
   </style>
 
@@ -970,41 +893,22 @@
   <!-- Main Hero Section -->
   <main>
     <section class="archive-hero">
-      <span class="archive-badge" data-i18n="arch_hero_badge">KNOWLEDGE & CRAFT ARCHIVE · 缝纫工学与手作资料</span>
+      <span class="archive-badge" data-i18n="arch_hero_badge">KNOWLEDGE & CRAFT ARCHIVE · 缝纫工学与专业资料</span>
       <h1 class="archive-title" data-i18n="arch_hero_title">工艺资料</h1>
       <p class="archive-desc" data-i18n="arch_hero_desc">
         记录两百年世界缝纫机械发展历程，整理专业缝制技术手册与机针选用指南。供手工艺爱好者与从业伙伴学习交流。
       </p>
+
+      <!-- Typographic Section Switcher (如 Jess Brown / India Flint 般克制无框纯文字排版) -->
+      <nav class="archive-text-nav" id="archive-subnav" aria-label="Archive sections">
+        <button class="text-tab-link active" onclick="switchArchiveTab('history')" id="tab-btn-history">
+          <span data-i18n="menu_history">发展史</span>
+        </button>
+        <button class="text-tab-link" onclick="switchArchiveTab('materials')" id="tab-btn-materials">
+          <span data-i18n="menu_materials">资料类</span>
+        </button>
+      </nav>
     </section>
-
-    <!-- Submenu Navigation Bar (可扩展菜单栏) -->
-    <nav class="archive-subnav-wrapper" id="archive-subnav" aria-label="Archive menu">
-      <div class="archive-subnav-container">
-        <button class="subnav-tab-btn active" onclick="switchArchiveTab('history')" id="tab-btn-history">
-          <span class="tab-index">01</span>
-          <div class="tab-text-wrap">
-            <span class="tab-main" data-i18n="menu_history">发展史</span>
-            <span class="tab-sub" data-i18n="menu_history_sub">机械与工艺演进</span>
-          </div>
-        </button>
-
-        <button class="subnav-tab-btn" onclick="switchArchiveTab('materials')" id="tab-btn-materials">
-          <span class="tab-index">02</span>
-          <div class="tab-text-wrap">
-            <span class="tab-main" data-i18n="menu_materials">资料类</span>
-            <span class="tab-sub" data-i18n="menu_materials_sub">机针与技术手册</span>
-          </div>
-        </button>
-
-        <button class="subnav-tab-btn tab-future" disabled title="持续更新整理中">
-          <span class="tab-index">03</span>
-          <div class="tab-text-wrap">
-            <span class="tab-main" data-i18n="menu_more">更多专栏</span>
-            <span class="tab-sub" data-i18n="menu_more_sub">持续更新中...</span>
-          </div>
-        </button>
-      </div>
-    </nav>
 
     <!-- ============================================================
          PANE 01: 发展史 (SEWING MACHINERY EVOLUTION TIMELINE)
