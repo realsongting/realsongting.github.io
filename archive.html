@@ -207,50 +207,14 @@
       text-transform: lowercase;
     }
 
-    /* Archive Hero Section */
-    .archive-hero {
-      max-width: 1100px;
-      margin: 4rem auto 2.5rem;
-      padding: 0 2rem;
-      text-align: center;
-    }
-
-    .archive-badge {
-      display: inline-block;
-      font-size: 0.76rem;
-      letter-spacing: 0.28em;
-      text-transform: uppercase;
-      color: var(--accent-terracotta);
-      margin-bottom: 1rem;
-      font-weight: 500;
-    }
-
-    .archive-title {
-      font-family: var(--font-display);
-      font-size: 3.2rem;
-      font-weight: 400;
-      line-height: 1.25;
-      color: var(--text-dark);
-      margin-bottom: 1.2rem;
-    }
-
-    .archive-desc {
-      font-family: var(--font-serif);
-      font-size: 1rem;
-      line-height: 2.1;
-      color: var(--text-muted);
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
     /* Typographic Section Switcher (如 Jess Brown / India Flint 般克制无框纯文字排版) */
     .archive-text-nav {
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 3.5rem;
-      margin: 3rem auto 0;
-      padding: 0;
+      margin: 0 auto;
+      padding: 7.5rem 1.5rem 4rem;
       background: none;
       border: none;
     }
@@ -292,92 +256,6 @@
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(6px); }
       to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* Section Headers */
-    .pane-header {
-      max-width: 860px;
-      margin: 0 auto 3rem;
-      text-align: center;
-      padding: 0 1.5rem;
-    }
-
-    .pane-header-tag {
-      font-size: 0.76rem;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: var(--accent-terracotta);
-      display: block;
-      margin-bottom: 0.6rem;
-    }
-
-    .pane-header-title {
-      font-family: var(--font-display);
-      font-size: 2.4rem;
-      font-weight: 400;
-      color: var(--text-dark);
-      line-height: 1.3;
-      margin-bottom: 0.8rem;
-    }
-
-    .pane-header-desc {
-      font-family: var(--font-serif);
-      font-size: 0.96rem;
-      line-height: 2;
-      color: var(--text-muted);
-    }
-
-    /* Fast Year Jump Navigator (Groz-Beckert inspired, restrained & borderless) */
-    .timeline-nav-wrapper {
-      position: sticky;
-      top: 68px;
-      background: rgba(250, 248, 245, 0.94);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(230, 224, 214, 0.5);
-      z-index: 850;
-      padding: 0.75rem 1rem;
-      margin-bottom: 3.5rem;
-    }
-
-    .timeline-nav-scroll {
-      max-width: 1280px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: center;
-      gap: 1.2rem;
-      overflow-x: auto;
-      white-space: nowrap;
-      scrollbar-width: none;
-      -ms-overflow-style: none;
-      padding: 0.1rem 0.5rem;
-    }
-
-    .timeline-nav-scroll::-webkit-scrollbar { display: none; }
-
-    .time-nav-pill {
-      display: inline-flex;
-      align-items: center;
-      padding: 0.25rem 0.4rem;
-      border: none;
-      background: none;
-      font-size: 0.8rem;
-      letter-spacing: 0.08em;
-      color: var(--text-light);
-      text-decoration: none;
-      transition: color 0.25s ease;
-      cursor: pointer;
-    }
-
-    .time-nav-pill:hover, .time-nav-pill.active {
-      background: none;
-      color: var(--accent-terracotta);
-      border: none;
-    }
-
-    .time-nav-pill strong {
-      font-family: var(--font-display);
-      margin-right: 0.3rem;
-      font-size: 0.92rem;
     }
 
     /* Groz-Beckert Style Interactive Timeline */
@@ -793,15 +671,15 @@
       .brand-logo h1 { font-size: 1.65rem; }
       .brand-logo span { font-size: 0.58rem; }
 
-      .archive-hero { margin: 2.5rem auto 1.8rem; padding: 0 1.2rem; }
-      .archive-title { font-size: 2.2rem; }
-      .archive-desc { font-size: 0.92rem; }
+      .archive-text-nav {
+        gap: 2rem;
+        padding: 5.5rem 1rem 2.5rem;
+      }
+      .text-tab-link {
+        font-size: 1.15rem;
+        letter-spacing: 0.16em;
+      }
 
-      .archive-text-nav { gap: 2rem; margin-top: 2rem; }
-      .text-tab-link { font-size: 1.15rem; letter-spacing: 0.16em; }
-
-      .timeline-nav-wrapper { top: 60px; }
-      .timeline-nav-scroll { justify-content: flex-start; gap: 0.8rem; }
       .timeline-section { padding: 0 1.2rem; margin-bottom: 4rem; }
       .timeline-spine { left: 18px; }
       .timeline-node { grid-template-columns: 1fr; gap: 1.5rem; padding-left: 40px; margin-bottom: 4rem; }
@@ -890,52 +768,22 @@
     </div>
   </div>
 
-  <!-- Main Hero Section -->
+  <!-- Main Content -->
   <main>
-    <section class="archive-hero">
-      <span class="archive-badge" data-i18n="arch_hero_badge">KNOWLEDGE & CRAFT ARCHIVE · 缝纫工学与专业资料</span>
-      <h1 class="archive-title" data-i18n="arch_hero_title">工艺资料</h1>
-      <p class="archive-desc" data-i18n="arch_hero_desc">
-        记录两百年世界缝纫机械发展历程，整理专业缝制技术手册与机针选用指南。供手工艺爱好者与从业伙伴学习交流。
-      </p>
-
-      <!-- Typographic Section Switcher (如 Jess Brown / India Flint 般克制无框纯文字排版) -->
-      <nav class="archive-text-nav" id="archive-subnav" aria-label="Archive sections">
-        <button class="text-tab-link active" onclick="switchArchiveTab('history')" id="tab-btn-history">
-          <span data-i18n="menu_history">发展史</span>
-        </button>
-        <button class="text-tab-link" onclick="switchArchiveTab('materials')" id="tab-btn-materials">
-          <span data-i18n="menu_materials">资料类</span>
-        </button>
-      </nav>
-    </section>
+    <!-- Typographic Section Switcher (如 Jess Brown / India Flint 般克制无框纯文字排版) -->
+    <nav class="archive-text-nav" id="archive-subnav" aria-label="Archive sections">
+      <button class="text-tab-link active" onclick="switchArchiveTab('history')" id="tab-btn-history">
+        <span data-i18n="menu_history">发展史</span>
+      </button>
+      <button class="text-tab-link" onclick="switchArchiveTab('materials')" id="tab-btn-materials">
+        <span data-i18n="menu_materials">资料类</span>
+      </button>
+    </nav>
 
     <!-- ============================================================
          PANE 01: 发展史 (SEWING MACHINERY EVOLUTION TIMELINE)
          ============================================================ -->
     <section class="archive-tab-pane active" id="pane-history">
-      <div class="pane-header">
-        <span class="pane-header-tag" data-i18n="p1_tag">TWO CENTURIES OF INNOVATION · 机械发明与线迹演进</span>
-        <h2 class="pane-header-title" data-i18n="p1_title">世界缝纫机械进化史</h2>
-        <p class="pane-header-desc" data-i18n="p1_desc">
-          我们理解织物与服装，始于理解针线的进化。从工业革命初期对手工缝纫极限的突围、Elias Howe 革命性的双线锁式线迹发明，到德国精密机针制造与当代高级定制微缩工学——两百余年的机械工程沉淀，构成了手作最扎实的专业底蕴。
-        </p>
-      </div>
-
-      <!-- Fast Year Jump Navigator -->
-      <nav class="timeline-nav-wrapper" aria-label="Timeline navigation">
-        <div class="timeline-nav-scroll">
-          <a href="#era-1790" class="time-nav-pill"><strong>1790</strong> <span data-i18n="t_1790">英国机械专利</span></a>
-          <a href="#era-1830" class="time-nav-pill"><strong>1830</strong> <span data-i18n="t_1830">法国实用链缝机</span></a>
-          <a href="#era-1845" class="time-nav-pill"><strong>1845</strong> <span data-i18n="t_1845">锁式线迹发明</span></a>
-          <a href="#era-1851" class="time-nav-pill"><strong>1851</strong> <span data-i18n="t_1851">胜家与平缝普及</span></a>
-          <a href="#era-1852" class="time-nav-pill"><strong>1852</strong> <span data-i18n="t_1852">格罗茨精密制针</span></a>
-          <a href="#era-1854" class="time-nav-pill"><strong>1854</strong> <span data-i18n="t_1854">黑船来航与东亚</span></a>
-          <a href="#era-1938" class="time-nav-pill"><strong>1938</strong> <span data-i18n="t_1938">现代工业专机崛起</span></a>
-          <a href="#era-contemporary" class="time-nav-pill"><strong>当代</strong> <span data-i18n="t_cont">微缩高定手作</span></a>
-        </div>
-      </nav>
-
       <!-- Interactive Dynamic Timeline -->
       <section class="timeline-section">
         <div class="timeline-spine"></div>
@@ -1114,14 +962,6 @@
          PANE 02: 资料类 (TECHNICAL REFERENCE & MANUALS)
          ============================================================ -->
     <section class="archive-tab-pane" id="pane-materials">
-      <div class="pane-header">
-        <span class="pane-header-tag" data-i18n="p2_tag">TECHNICAL HANDBOOKS & GUIDES · 专业缝纫技术手册</span>
-        <h2 class="pane-header-title" data-i18n="p2_title">工艺手册与参考资料</h2>
-        <p class="pane-header-desc" data-i18n="p2_desc">
-          精选整理微观机针穿刺动力学、皮革刀嘴切削力学及工业线环稳定体系参考手册。提供高清在线查阅与本地 PDF 下载，帮助深入理解不同材质的缝制物理机理。
-        </p>
-      </div>
-
       <section class="docs-section">
         <div class="docs-grid">
 
