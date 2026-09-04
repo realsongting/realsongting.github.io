@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://realsongting.github.io/sitemap.xml
