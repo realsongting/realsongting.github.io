@@ -278,29 +278,29 @@
     }
 
     .subnav-tab-btn:hover:not(:disabled) {
-      background: #FAF7F2;
-      border-color: #CBBCA9;
+      border-color: var(--accent-terracotta);
       transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(34,32,30,0.05);
+      box-shadow: 0 4px 12px rgba(34,32,30,0.04);
+    }
+
+    .subnav-tab-btn:hover:not(:disabled) .tab-main,
+    .subnav-tab-btn:hover:not(:disabled) .tab-index {
+      color: var(--accent-terracotta);
     }
 
     .subnav-tab-btn.active {
-      background: #EAE2D5;
+      background: var(--bg-pure);
       border-color: var(--accent-terracotta);
-      box-shadow: 0 4px 14px rgba(78,62,45,0.08);
-    }
-
-    .subnav-tab-btn.active:hover {
-      background: #E4DCCD;
-      border-color: var(--accent-terracotta);
+      box-shadow: 0 4px 14px rgba(155, 99, 78, 0.08);
     }
 
     .subnav-tab-btn .tab-index {
       font-family: var(--font-display);
       font-size: 1.35rem;
-      color: var(--accent-terracotta);
+      color: var(--text-light);
       font-weight: 500;
       line-height: 1;
+      transition: color 0.25s ease;
     }
 
     .subnav-tab-btn.active .tab-index {
@@ -319,11 +319,12 @@
       letter-spacing: 0.08em;
       color: var(--text-dark);
       line-height: 1.2;
+      transition: color 0.25s ease;
     }
 
     .subnav-tab-btn.active .tab-main {
-      color: var(--text-dark);
-      font-weight: 600;
+      color: var(--accent-terracotta);
+      font-weight: 500;
     }
 
     .subnav-tab-btn .tab-sub {
@@ -331,10 +332,12 @@
       letter-spacing: 0.04em;
       color: var(--text-light);
       margin-top: 0.2rem;
+      transition: color 0.25s ease;
     }
 
     .subnav-tab-btn.active .tab-sub {
-      color: var(--text-muted);
+      color: var(--accent-terracotta);
+      opacity: 0.85;
     }
 
     .subnav-tab-btn.tab-future {
@@ -435,8 +438,8 @@
     }
 
     .time-nav-pill:hover, .time-nav-pill.active {
-      background: #EAE2D5;
-      color: var(--text-dark);
+      background: var(--bg-pure);
+      color: var(--accent-terracotta);
       border-color: var(--accent-terracotta);
     }
 
