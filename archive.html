@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>工艺资料 · 缝纫发展史、技术手册与工坊心得 | LUMI SONG</title>
-  <meta name="description" content="Lumi Song 工艺资料：收录两百年世界缝纫机械发展史、服装及皮革缝纫机针技术手册、面料穿刺机理与工坊实操心得。资料仅供个人学习交流使用。">
-  <meta name="keywords" content="缝纫发展史, 缝纫工艺资料, 缝纫机针技术手册, Groz-Beckert手册, 皮革缝纫机针, 双线锁式线迹, JUKI工业缝纫机, 布艺实操手记, 布偶打样纸样">
+  <title>工艺资料 · 缝纫发展史与专业技术手册 | LUMI SONG</title>
+  <meta name="description" content="Lumi Song 工艺资料：收录两百年世界缝纫机械发展史、服装及皮革缝纫机针技术手册与面料穿刺机理。资料仅供个人学习交流使用。">
+  <meta name="keywords" content="缝纫发展史, 缝纫工艺资料, 缝纫机针技术手册, Groz-Beckert手册, 皮革缝纫机针, 双线锁式线迹, JUKI工业缝纫机">
 
   <!-- Open Graph / SEO -->
-  <meta property="og:title" content="工艺资料 · 缝纫发展史、技术手册与工坊心得 | LUMI SONG">
-  <meta property="og:description" content="记录两百年世界缝纫机械发展历程，整理专业缝制技术手册与工坊一线实操心得。">
+  <meta property="og:title" content="工艺资料 · 缝纫发展史与专业技术手册 | LUMI SONG">
+  <meta property="og:description" content="记录两百年世界缝纫机械发展历程，整理专业缝制技术手册与机针选用指南。">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://realsongting.github.io/archive.html">
 
@@ -257,10 +257,10 @@
     }
 
     .archive-subnav-container {
-      max-width: 1180px;
+      max-width: 1040px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 1.2rem;
     }
 
@@ -268,7 +268,7 @@
       display: flex;
       align-items: center;
       gap: 0.85rem;
-      padding: 0.8rem 1.2rem;
+      padding: 0.85rem 1.25rem;
       background: var(--bg-pure);
       border: 1px solid var(--line-subtle);
       border-radius: 4px;
@@ -278,15 +278,21 @@
     }
 
     .subnav-tab-btn:hover:not(:disabled) {
-      border-color: var(--accent-terracotta);
+      background: #FAF7F2;
+      border-color: #CBBCA9;
       transform: translateY(-2px);
       box-shadow: 0 6px 16px rgba(34,32,30,0.05);
     }
 
     .subnav-tab-btn.active {
-      background: var(--text-dark);
-      border-color: var(--text-dark);
-      box-shadow: 0 8px 20px rgba(34,32,30,0.12);
+      background: #EAE2D5;
+      border-color: var(--accent-terracotta);
+      box-shadow: 0 4px 14px rgba(78,62,45,0.08);
+    }
+
+    .subnav-tab-btn.active:hover {
+      background: #E4DCCD;
+      border-color: var(--accent-terracotta);
     }
 
     .subnav-tab-btn .tab-index {
@@ -298,7 +304,8 @@
     }
 
     .subnav-tab-btn.active .tab-index {
-      color: var(--accent-ochre);
+      color: var(--accent-terracotta);
+      font-weight: 600;
     }
 
     .subnav-tab-btn .tab-text-wrap {
@@ -315,7 +322,8 @@
     }
 
     .subnav-tab-btn.active .tab-main {
-      color: var(--bg-cream);
+      color: var(--text-dark);
+      font-weight: 600;
     }
 
     .subnav-tab-btn .tab-sub {
@@ -326,7 +334,7 @@
     }
 
     .subnav-tab-btn.active .tab-sub {
-      color: rgba(250, 248, 245, 0.72);
+      color: var(--text-muted);
     }
 
     .subnav-tab-btn.tab-future {
@@ -427,9 +435,9 @@
     }
 
     .time-nav-pill:hover, .time-nav-pill.active {
-      background: var(--text-dark);
-      color: var(--bg-cream);
-      border-color: var(--text-dark);
+      background: #EAE2D5;
+      color: var(--text-dark);
+      border-color: var(--accent-terracotta);
     }
 
     .time-nav-pill strong {
@@ -723,107 +731,6 @@
       border-color: var(--accent-terracotta);
     }
 
-    /* Section 3: Artisan Notes Cards */
-    .notes-section {
-      max-width: 1360px;
-      margin: 0 auto 6rem;
-      padding: 0 2rem;
-    }
-
-    .notes-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2.5rem;
-    }
-
-    .note-card {
-      background: var(--bg-pure);
-      border: 1px solid var(--line-subtle);
-      border-radius: 2px;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      box-shadow: 0 6px 20px rgba(34,32,30,0.03);
-      transition: all 0.3s ease;
-    }
-
-    .note-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 14px 36px rgba(34,32,30,0.08);
-      border-color: var(--accent-terracotta);
-    }
-
-    .note-cover-wrap {
-      width: 100%;
-      height: 240px;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .note-cover-wrap img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.6s ease;
-    }
-
-    .note-card:hover .note-cover-wrap img {
-      transform: scale(1.05);
-    }
-
-    .note-body {
-      padding: 2rem 1.8rem;
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
-      justify-content: space-between;
-    }
-
-    .note-tag {
-      font-size: 0.72rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--accent-sage);
-      margin-bottom: 0.5rem;
-      display: block;
-      font-weight: 500;
-    }
-
-    .note-title {
-      font-family: var(--font-display);
-      font-size: 1.35rem;
-      font-weight: 400;
-      color: var(--text-dark);
-      line-height: 1.35;
-      margin-bottom: 0.8rem;
-    }
-
-    .note-desc {
-      font-family: var(--font-serif);
-      font-size: 0.88rem;
-      color: var(--text-muted);
-      line-height: 1.9;
-      margin-bottom: 1.4rem;
-      text-align: justify;
-    }
-
-    .note-points {
-      background: var(--bg-warm-oat);
-      padding: 0.8rem 1rem;
-      border-left: 3px solid var(--accent-terracotta);
-      font-size: 0.8rem;
-      color: var(--text-dark);
-      line-height: 1.7;
-      margin-bottom: 1.5rem;
-    }
-
-    .note-actions {
-      display: flex;
-      gap: 0.8rem;
-      margin-top: auto;
-      border-top: 1px dashed var(--line-subtle);
-      padding-top: 1.2rem;
-    }
 
     /* PDF In-browser Modal Previewer */
     .pdf-modal {
@@ -932,8 +839,8 @@
     }
 
     @media (max-width: 1024px) {
-      .archive-subnav-container { grid-template-columns: repeat(2, 1fr); gap: 0.8rem; }
-      .docs-grid, .notes-grid { grid-template-columns: repeat(2, 1fr); }
+      .archive-subnav-container { grid-template-columns: repeat(3, 1fr); gap: 0.8rem; }
+      .docs-grid { grid-template-columns: repeat(2, 1fr); }
       .timeline-node { gap: 2.5rem; }
     }
 
@@ -957,11 +864,11 @@
       .archive-desc { font-size: 0.92rem; }
 
       .archive-subnav-wrapper { top: 60px; padding: 0.5rem 0.8rem; margin-bottom: 2.5rem; }
-      .archive-subnav-container { grid-template-columns: repeat(2, 1fr); gap: 0.6rem; }
-      .subnav-tab-btn { padding: 0.6rem 0.8rem; gap: 0.6rem; }
-      .subnav-tab-btn .tab-index { font-size: 1.15rem; }
-      .subnav-tab-btn .tab-main { font-size: 0.84rem; }
-      .subnav-tab-btn .tab-sub { font-size: 0.62rem; }
+      .archive-subnav-container { grid-template-columns: repeat(3, 1fr); gap: 0.5rem; }
+      .subnav-tab-btn { padding: 0.6rem 0.6rem; gap: 0.5rem; }
+      .subnav-tab-btn .tab-index { font-size: 1.1rem; }
+      .subnav-tab-btn .tab-main { font-size: 0.82rem; }
+      .subnav-tab-btn .tab-sub { font-size: 0.58rem; }
 
       .timeline-nav-wrapper { top: 120px; }
       .timeline-section { padding: 0 1.2rem; margin-bottom: 4rem; }
@@ -970,8 +877,13 @@
       .timeline-node:nth-child(even) { direction: ltr; padding-left: 40px; }
       .timeline-node::after { left: 18px; top: 30px; }
 
-      .docs-section, .notes-section { padding: 0 1.2rem; margin-bottom: 4rem; }
-      .docs-grid, .notes-grid { grid-template-columns: 1fr; gap: 1.8rem; }
+      .docs-section { padding: 0 1.2rem; margin-bottom: 4rem; }
+      .docs-grid { grid-template-columns: 1fr; gap: 1.8rem; }
+    }
+
+    @media (max-width: 540px) {
+      .archive-subnav-container { grid-template-columns: 1fr; gap: 0.6rem; }
+      .subnav-tab-btn { padding: 0.75rem 1rem; }
     }
   </style>
 
@@ -980,8 +892,8 @@
   {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    "headline": "工艺资料 · 缝纫发展史、技术手册与工坊心得 | LUMI SONG",
-    "description": "系统梳理自18世纪工业革命缝纫机械进化史、服装与皮革缝纫机针技术手册及工坊实操心得。",
+    "headline": "工艺资料 · 缝纫发展史与专业技术手册 | LUMI SONG",
+    "description": "系统梳理自18世纪工业革命缝纫机械进化史、服装与皮革缝纫机针技术手册及机针选用指南。",
     "publisher": {
       "@type": "Organization",
       "name": "Lumi Song Atelier",
@@ -1058,7 +970,7 @@
       <span class="archive-badge" data-i18n="arch_hero_badge">KNOWLEDGE & CRAFT ARCHIVE · 缝纫工学与手作资料</span>
       <h1 class="archive-title" data-i18n="arch_hero_title">工艺资料</h1>
       <p class="archive-desc" data-i18n="arch_hero_desc">
-        记录两百年世界缝纫机械发展历程，整理专业缝制技术手册、机针选用指南与工坊一线实操手记。供手工艺爱好者与从业伙伴学习交流。
+        记录两百年世界缝纫机械发展历程，整理专业缝制技术手册与机针选用指南。供手工艺爱好者与从业伙伴学习交流。
       </p>
     </section>
 
@@ -1081,16 +993,8 @@
           </div>
         </button>
 
-        <button class="subnav-tab-btn" onclick="switchArchiveTab('notes')" id="tab-btn-notes">
-          <span class="tab-index">03</span>
-          <div class="tab-text-wrap">
-            <span class="tab-main" data-i18n="menu_notes">心得类</span>
-            <span class="tab-sub" data-i18n="menu_notes_sub">工坊打样与实操</span>
-          </div>
-        </button>
-
         <button class="subnav-tab-btn tab-future" disabled title="持续更新整理中">
-          <span class="tab-index">04</span>
+          <span class="tab-index">03</span>
           <div class="tab-text-wrap">
             <span class="tab-main" data-i18n="menu_more">更多专栏</span>
             <span class="tab-sub" data-i18n="menu_more_sub">持续更新中...</span>
@@ -1381,104 +1285,6 @@
       </section>
     </section>
 
-    <!-- ============================================================
-         PANE 03: 心得类 (ARTISAN CRAFT NOTES & INSIGHTS)
-         ============================================================ -->
-    <section class="archive-tab-pane" id="pane-notes">
-      <div class="pane-header">
-        <span class="pane-header-tag" data-i18n="p3_tag">MAKER NOTES & ATELIER EXPERIENCES · 工坊一线创作手记</span>
-        <h2 class="pane-header-title" data-i18n="p3_title">工坊实操心得与手记</h2>
-        <p class="pane-header-desc" data-i18n="p3_desc">
-          宋婷婷多年一线手作的实战沉淀：从家用普通打印机拼接 A3 图纸、微缩纸样打样剪裁，到植物草木染与 JUKI 专机的走线张力适配。真实记录手艺人工作台上的每一次尝试。
-        </p>
-      </div>
-
-      <section class="notes-section">
-        <div class="notes-grid">
-
-          <!-- Note 1: Pattern & Micro-Tailoring -->
-          <div class="note-card">
-            <div class="note-cover-wrap">
-              <img src="images/studio/studio-doll-cutting-table.jpg" alt="布偶纸样打样与微缩制衣" loading="lazy">
-            </div>
-            <div class="note-body">
-              <div>
-                <span class="note-tag" data-i18n="n1_tag">纸样与微缩工程 · 实操手记 01</span>
-                <h3 class="note-title" data-i18n="n1_title">从工业标准到家庭手工：布偶纸样与微缩剪裁</h3>
-                <p class="note-desc" data-i18n="n1_desc">
-                  做玩偶衣服本来需要 A3 大小的图纸，家里只有普通 A4 打印机，就将图纸分块打在多张 A4 纸上再精准对角拼裁。微缩比例下维多利亚立领与褶皱放量极其微妙，搭配日本进口 Fujix 细线走暗缝，才能呈现没有工业粗粝感的灵动弧线。
-                </p>
-              </div>
-              <div>
-                <div class="note-points" data-i18n="n1_points">
-                  • 家用 A4 拼接完整 A3 图纸技巧<br>
-                  • 3mm 微缩领口与袖口褶皱放量计算<br>
-                  • 日本手缝绗缝细线与藏针法心得
-                </div>
-                <div class="note-actions">
-                  <a href="visit.html" class="btn-doc btn-doc-preview" data-i18n="btn_visit_spot">🏡 走进诞生地现场</a>
-                  <a href="about.html" class="btn-doc btn-doc-download" data-i18n="btn_read_artist">📖 阅览主理人手记</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Note 2: Botanical Dyeing & Fabric Handling -->
-          <div class="note-card">
-            <div class="note-cover-wrap">
-              <img src="images/studio/studio-indigo-fabric-rack.jpg" alt="日式蓝染与草木染面料" loading="lazy">
-            </div>
-            <div class="note-body">
-              <div>
-                <span class="note-tag" data-i18n="n2_tag">草木染色与纤维 · 实操手记 02</span>
-                <h3 class="note-title" data-i18n="n2_title">四季天然草木染与面料水洗实操体会</h3>
-                <p class="note-desc" data-i18n="n2_desc">
-                  坚持以四季天然植物为原料提取色彩：秋季石榴皮煮出温润金茶，核桃硬壳淬炼深沉木褐，紫苏与紫甘蓝调出粉紫与暮霭灰蓝。结合传统明矾与铁媒染让天然色素在纯棉、亚麻纤维上缓缓扎根，多次水洗晾晒出工业染色无法替代的岁月呼吸感。
-                </p>
-              </div>
-              <div>
-                <div class="note-points" data-i18n="n2_points">
-                  • 石榴皮、核桃壳与紫苏天然萃取比率<br>
-                  • 明矾与铁媒染剂对植物纤维收缩率调和<br>
-                  • 经过自然日光晾晒的棉麻手感体验
-                </div>
-                <div class="note-actions">
-                  <a href="visit.html" class="btn-doc btn-doc-preview" style="flex:1;" data-i18n="btn_visit_spot">🏡 走进诞生地现场</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Note 3: Desk Tools & Machine Tension -->
-          <div class="note-card">
-            <div class="note-cover-wrap">
-              <img src="images/studio/studio-juki-sewing-workstation.jpg" alt="JUKI 缝纫机与桌面剪刀分工" loading="lazy">
-            </div>
-            <div class="note-body">
-              <div>
-                <span class="note-tag" data-i18n="n3_tag">工具器物与动力学 · 实操手记 03</span>
-                <h3 class="note-title" data-i18n="n3_title">JUKI 缝纫机张力调校与多把剪刀分工心得</h3>
-                <p class="note-desc" data-i18n="n3_desc">
-                  桌上几把剪刀分工严格：黑色大钢剪专裁厚实面料，红柄中剪用来剪纸样与胶版，蓝色小纱剪随手剪线头。主力 JUKI 缝纫机调配草木染未漂白粗麻与轻薄纱线时，面线夹线器与梭心套弹簧张力微调是走线平直不发皱的底层秘诀。
-                </p>
-              </div>
-              <div>
-                <div class="note-points" data-i18n="n3_points">
-                  • 钢剪裁布、纸样剪与剪线头纱剪精准分工<br>
-                  • JUKI 平缝机应对多层粗麻吃厚压脚力道<br>
-                  • 线下淘来的皮靴笔筒与原木锥子常用搭配
-                </div>
-                <div class="note-actions">
-                  <a href="visit.html" class="btn-doc btn-doc-preview" style="flex:1;" data-i18n="btn_visit_spot">🏡 走进诞生地现场</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </section>
-    </section>
-
   </main>
 
   <!-- PDF Modal Viewer -->
@@ -1500,7 +1306,7 @@
   <!-- Footer with Simple Discrete Footnote -->
   <footer>
     <p data-i18n="footer_copy">© 2026 LUMI SONG (宋婷婷). 保留所有权利.</p>
-    <p data-i18n="footer_sub">LUMI SONG ATELIER · 缝纫工学、工艺资料与手作手记.</p>
+    <p data-i18n="footer_sub">LUMI SONG ATELIER · 缝纫工学与专业工艺技术资料.</p>
     <p class="footer-footnote" data-i18n="footer_disclaimer">* 资料仅供个人学习交流使用，版权归原著所有，如有侵权联系即删。</p>
   </footer>
 
@@ -1517,16 +1323,14 @@
         nav_archive: "工艺资料",
         nav_inquiries: "合作洽谈",
 
-        arch_hero_badge: "KNOWLEDGE & CRAFT ARCHIVE · 缝纫工学与手作资料",
+        arch_hero_badge: "KNOWLEDGE & CRAFT ARCHIVE · 缝纫工学与技术资料",
         arch_hero_title: "工艺资料",
-        arch_hero_desc: "记录两百年世界缝纫机械发展历程，整理专业缝制技术手册、机针选用指南与工坊一线实操手记。供手工艺爱好者与从业伙伴学习交流。",
+        arch_hero_desc: "记录两百年世界缝纫机械发展历程，整理专业缝制技术手册与机针选用指南。供手工艺爱好者与从业伙伴学习交流。",
 
         menu_history: "发展史",
         menu_history_sub: "机械与工艺演进",
         menu_materials: "资料类",
         menu_materials_sub: "机针与技术手册",
-        menu_notes: "心得类",
-        menu_notes_sub: "工坊打样与实操",
         menu_more: "更多专栏",
         menu_more_sub: "持续更新中...",
 
@@ -1618,30 +1422,8 @@
         btn_preview: "📖 在线查阅",
         btn_download: "📥 下载 PDF",
 
-        p3_tag: "MAKER NOTES & ATELIER EXPERIENCES · 工坊一线创作手记",
-        p3_title: "工坊实操心得与手记",
-        p3_desc: "宋婷婷多年一线手作的实战沉淀：从家用普通打印机拼接 A3 图纸、微缩纸样打样剪裁，到植物草木染与 JUKI 专机的走线张力适配。真实记录手艺人工作台上的每一次尝试。",
-
-        n1_tag: "纸样与微缩工程 · 实操手记 01",
-        n1_title: "从工业标准到家庭手工：布偶纸样与微缩剪裁",
-        n1_desc: "做玩偶衣服本来需要 A3 大小的图纸，家里只有普通 A4 打印机，就将图纸分块打在多张 A4 纸上再精准对角拼裁。微缩比例下维多利亚立领与褶皱放量极其微妙，搭配日本进口 Fujix 细线走暗缝，才能呈现没有工业粗粝感的灵动弧线。",
-        n1_points: "• 家用 A4 拼接完整 A3 图纸技巧<br>• 3mm 微缩领口与袖口褶皱放量计算<br>• 日本手缝绗缝细线与藏针法心得",
-
-        n2_tag: "草木染色与纤维 · 实操手记 02",
-        n2_title: "四季天然草木染与面料水洗实操体会",
-        n2_desc: "坚持以四季天然植物为原料提取色彩：秋季石榴皮煮出温润金茶，核桃硬壳淬炼深沉木褐，紫苏与紫甘蓝调出粉紫与暮霭灰蓝。结合传统明矾与铁媒染让天然色素在纯棉、亚麻纤维上缓缓扎根，多次水洗晾晒出工业染色无法替代的岁月呼吸感。",
-        n2_points: "• 石榴皮、核桃壳与紫苏天然萃取比率<br>• 明矾与铁媒染剂对植物纤维收缩率调和<br>• 经过自然日光晾晒的棉麻手感体验",
-
-        n3_tag: "工具器物与动力学 · 实操手记 03",
-        n3_title: "JUKI 缝纫机张力调校与多把剪刀分工心得",
-        n3_desc: "桌上几把剪刀分工严格：黑色大钢剪专裁厚实面料，红柄中剪用来剪纸样与胶版，蓝色小纱剪随手剪线头。主力 JUKI 缝纫机调配草木染未漂白粗麻与轻薄纱线时，面线夹线器与梭心套弹簧张力微调是走线平直不发皱的底层秘诀。",
-        n3_points: "• 钢剪裁布、纸样剪与剪线头纱剪精准分工<br>• JUKI 平缝机应对多层粗麻吃厚压脚力道<br>• 线下淘来的皮靴笔筒与原木锥子常用搭配",
-
-        btn_visit_spot: "🏡 走进诞生地现场",
-        btn_read_artist: "📖 阅览主理人手记",
-
         footer_copy: "© 2026 LUMI SONG (宋婷婷). 保留所有权利.",
-        footer_sub: "LUMI SONG ATELIER · 缝纫工学、工艺资料与手作手记.",
+        footer_sub: "LUMI SONG ATELIER · 缝纫工学与专业工艺技术资料.",
         footer_disclaimer: "* 资料仅供个人学习交流使用，版权归原著所有，如有侵权联系即删。"
       },
       en: {
@@ -1654,16 +1436,14 @@
         nav_archive: "craft archive",
         nav_inquiries: "inquiries",
 
-        arch_hero_badge: "KNOWLEDGE & CRAFT ARCHIVE · SEWING RESEARCH & NOTES",
+        arch_hero_badge: "KNOWLEDGE & CRAFT ARCHIVE · SEWING RESEARCH & ARCHIVE",
         arch_hero_title: "Craft Archive",
-        arch_hero_desc: "Documenting two centuries of sewing machinery evolution, curated technical handbooks, and firsthand studio craft notes for fellow artisans and enthusiasts.",
+        arch_hero_desc: "Documenting two centuries of sewing machinery evolution and curated technical handbooks for fellow artisans and enthusiasts.",
 
         menu_history: "History",
         menu_history_sub: "Mechanical & Seam Evolution",
         menu_materials: "Materials",
         menu_materials_sub: "Needles & Technical Guides",
-        menu_notes: "Studio Notes",
-        menu_notes_sub: "Pattern & Practice Insights",
         menu_more: "More Columns",
         menu_more_sub: "Coming soon...",
 
@@ -1755,30 +1535,8 @@
         btn_preview: "📖 View Document",
         btn_download: "📥 Download PDF",
 
-        p3_tag: "MAKER NOTES & ATELIER EXPERIENCES · STUDIO LOG",
-        p3_title: "Studio Craft Notes & Insights",
-        p3_desc: "Real-world crafting insights by Lumi Song: assembling full A3 patterns with home A4 printers, miniature pattern tailoring, natural botanical dyeing, and tuning JUKI machine tensions.",
-
-        n1_tag: "Pattern & Micro-Tailoring · Note 01",
-        n1_title: "From Industrial Standards to Home Couture: Miniature Pattern Craft Notes",
-        n1_desc: "Firsthand studio insights by Lumi Song: taping A3 master patterns from standard A4 home prints, miniature gathered collar ease calculations, blind stitching, and tuning JUKI tensions for botanical dyes.",
-        n1_points: "• Taping full A3 master prints from home A4 printers<br>• 3mm miniature collar & cuff ease calculations<br>• Japanese blind stitching & invisible seam notes",
-
-        n2_tag: "Botanical Dyes & Fibers · Note 02",
-        n2_title: "Seasonal Botanical Dyeing & Fabric Washes in Practice",
-        n2_desc: "Extracting pure colors from nature: golden tea from pomegranate peels, deep wood browns from walnut husks, and dusty periwinkle blues from perilla leaves. Grounded with alum and iron mordants for timeless texture.",
-        n2_points: "• Extraction ratios for pomegranate, walnut & perilla<br>• Modulating fiber shrinkage with alum & iron mordants<br>• Tactile breathing feel of sun-dried cotton & linen",
-
-        n3_tag: "Tools & Stitch Dynamics · Note 03",
-        n3_title: "JUKI Thread Tension Balancing & Dedicated Scissors Hierarchy",
-        n3_desc: "Specialized cutting tools: heavy tailor shears for cloth, red handles for paper patterns, and blue thread nippers. Micro-calibrating needle and bobbin tensions on the JUKI station for puckering-free seams.",
-        n3_points: "• Strict separation of fabric, pattern & snipping shears<br>• Presser foot calibration for multi-layer heavy linen<br>• Curated boot pencil holder & wood punch awl setup",
-
-        btn_visit_spot: "🏡 Visit Birthplace",
-        btn_read_artist: "📖 Read Artist Monograph",
-
         footer_copy: "© 2026 LUMI SONG (TINGTING SONG). ALL RIGHTS RESERVED.",
-        footer_sub: "LUMI SONG ATELIER · SEWING ENGINEERING, REFERENCE & STUDIO NOTES.",
+        footer_sub: "LUMI SONG ATELIER · SEWING ENGINEERING & TECHNICAL ARCHIVE.",
         footer_disclaimer: "* Materials shared for personal study and educational exchange. All copyrights belong to original owners; takedown immediately upon request."
       }
     };
@@ -1818,9 +1576,9 @@
       document.documentElement.lang = isZh ? 'zh-CN' : 'en';
     }
 
-    /* Submenu Tab Switcher (发展史 / 资料类 / 心得类) */
+    /* Submenu Tab Switcher (发展史 / 资料类) */
     function switchArchiveTab(tabName, shouldScroll = false) {
-      const validTabs = ['history', 'materials', 'notes'];
+      const validTabs = ['history', 'materials'];
       if (!validTabs.includes(tabName)) tabName = 'history';
 
       // Update button active state
@@ -1851,8 +1609,8 @@
       const queryTab = (params.get('tab') || '').toLowerCase();
       
       const target = hash || queryTab;
-      if (target === 'materials' || target === 'notes' || target === 'history') {
-        switchArchiveTab(target, false);
+      if (target === 'materials') {
+        switchArchiveTab('materials', false);
       } else {
         switchArchiveTab('history', false);
       }
